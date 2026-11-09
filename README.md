@@ -2,7 +2,7 @@
 
 Portfólio pessoal responsivo em português. Esta cópia usa React, TypeScript e Next.js com exportação estática para GitHub Pages em `/portfolio/`. Sem banco de dados, formulário de envio, analytics ou integrações com contas externas.
 
-**Destino previsto:** https://luigiscofano.github.io/portfolio/ (a preparação local não publica o site).
+**Portfólio publicado:** https://luigiscofano.github.io/portfolio/
 
 A versão existente no Sites permanece independente: https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/.
 
@@ -34,9 +34,9 @@ git clone https://github.com/luigiscofano/portfolio.git
 cd portfolio
 npm ci
 npm run dev
-node --test tests/content.test.mjs
-npx tsc --noEmit
+npm test
 npm run build
+npm run typecheck
 ```
 
 Para esta cópia, `npm run build` gera a pasta estática `out/`, sem servidor Node.js ou Cloudflare em produção. `npm start` permite conferir a exportação em http://127.0.0.1:4173/portfolio/. Os arquivos antigos de integração com Sites são mantidos apenas como referência e não são usados pelo build padrão. Nunca salve tokens de acesso em arquivos.
