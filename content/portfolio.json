@@ -1,0 +1,307 @@
+{
+  "profile": {
+    "name": "Luigi Scofano de Araujo",
+    "shortName": "Luigi Scofano",
+    "education": "Engenharia de Computação · Poli-USP",
+    "location": "São Paulo, Brasil",
+    "eyebrow": "IA · DADOS · SOFTWARE",
+    "headline": "Curiosidade em código.",
+    "headlineAccent": "Ideias em movimento.",
+    "intro": "Sou graduando em Engenharia de Computação na Poli-USP. Exploro inteligência artificial e dados construindo aplicações, experimentos e ferramentas que tornam ideias concretas.",
+    "about": [
+      "Gosto de entender como as coisas funcionam: como um algoritmo escolhe uma jogada, como uma imagem vira informação e como organizar dados sem perder o contexto.",
+      "Meu percurso conecta pesquisa acadêmica, desenvolvimento de software e análise de dados. Hoje, aprofundo meus estudos em machine learning, IA generativa e engenharia de dados.",
+      "Também sou professor de jiu-jítsu. O ensino faz parte da forma como penso meus projetos: explicações claras, prática e espaço para aprender experimentando."
+    ],
+    "photo": "/images/luigi.webp",
+    "photoAlt": "Luigi Scofano em uma paisagem à beira-mar, com um pequeno bem-te-vi em pixel art na foto",
+    "github": "https://github.com/luigiscofano",
+    "linkedin": "https://br.linkedin.com/in/luigi-scofano-de-araujo-233102261/en",
+    "email": "luigiscofano.dev@gmail.com",
+    "source": "https://github.com/luigiscofano/luigiscofano/blob/main/README.md",
+    "aboutOverview": [
+      "Sou Luigi Scofano de Araujo, graduando em Engenharia de Computação na Escola Politécnica da Universidade de São Paulo. Minha trajetória reúne pesquisa acadêmica, desenvolvimento de software, análise de dados e ensino.",
+      "Tenho interesse em inteligência artificial, machine learning e engenharia de dados. Gosto de entender como um algoritmo toma decisões, como recuperar informação de documentos e como transformar dados em aplicações que outras pessoas possam explorar.",
+      "Pesquiso PLN e OCR aplicados ao Tupi Antigo no IME-USP e contribuo para um museu virtual da computação no LASSu-USP. Também sou professor de jiu-jítsu."
+    ],
+    "documentation": "https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md",
+    "nameSprite": {
+      "enabled": true,
+      "image": "/images/sintonia/chibi-user-roster.svg",
+      "label": "Bem-te-vi do jogo Sintonia",
+      "backgroundSize": "400% 400%",
+      "backgroundPosition": "66.66666666666666% 0%",
+      "source": "https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg"
+    }
+  },
+  "navigation": [
+    {
+      "id": "sobre",
+      "label": "Sobre"
+    },
+    {
+      "id": "projetos",
+      "label": "Projetos"
+    },
+    {
+      "id": "pesquisa",
+      "label": "Pesquisa"
+    },
+    {
+      "id": "formacao",
+      "label": "Formação"
+    },
+    {
+      "id": "trajetoria",
+      "label": "Trajetória"
+    },
+    {
+      "id": "contato",
+      "label": "Contato"
+    }
+  ],
+  "projects": [
+    {
+      "id": "intuicao",
+      "name": "Intuição",
+      "subtitle": "Aprender pela descoberta",
+      "category": "IA",
+      "type": "Projeto autoral · IA clássica e jogos",
+      "featured": true,
+      "summary": "Jogos de lógica, geometria e estratégia que transformam conceitos em decisões visíveis. A IA calcula suas jogadas no próprio navegador.",
+      "technologies": [
+        "JavaScript",
+        "Busca de estados",
+        "Minimax",
+        "Web Workers"
+      ],
+      "details": "Plataforma com 11 jogos, oito campanhas solo e três jogos Versus. DESVIO usa busca exata com memoização nos mapas suportados; CERCO combina minimax, poda alfa-beta e heurísticas.",
+      "contribution": "Desenvolvimento de mecânicas, fases, interface, dicas e documentação. O repositório distingue código autoral, recursos visuais e créditos de terceiros.",
+      "limitation": "IA clássica para jogos, sem modelo generativo. A busca de CERCO é limitada e não garante jogo perfeito; BROTO é um duelo entre duas pessoas, sem bot nesta versão.",
+      "url": "https://github.com/luigiscofano/intuicao",
+      "demo": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
+      "demoLabel": "Jogar no navegador",
+      "image": "/images/intuicao-cerco.webp",
+      "imageAlt": "Tabuleiro real do jogo CERCO, do Intuição, com duas equipes de animais e uma barreira",
+      "caption": "CERCO · captura do aplicativo no repositório",
+      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/imagens/jogos/cerco.jpg",
+      "showImagePreview": true,
+      "imageWidth": 1154,
+      "imageHeight": 1000
+    },
+    {
+      "id": "tupi",
+      "name": "IC · Tupi Antigo",
+      "subtitle": "Da fonte histórica ao dado",
+      "category": "Dados",
+      "type": "Pesquisa · IME-USP",
+      "featured": false,
+      "summary": "Ferramentas para estruturar e revisar dados lexicográficos, preservando a fonte, a grafia original e as decisões humanas de revisão.",
+      "technologies": [
+        "Python",
+        "PLN",
+        "OCR",
+        "Unicode"
+      ],
+      "details": "Pipeline TSV de importação, normalização NFC, auditoria e exportação, com métricas CER/WER e OCR opcional via Tesseract. Pesquisa orientada pelo Prof. Dr. Marcelo Finger.",
+      "contribution": "Pesquisa e ferramentas documentadas por Luigi. A documentação reconhece a parceria acadêmica com o Dicionário Tupi-Português de Calebe Rezende.",
+      "limitation": "A demonstração usa registros fictícios. O repositório não distribui o corpus integral validado nem oferece tradução automática de frases.",
+      "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "kaggle",
+      "name": "Kaggle-oRF",
+      "subtitle": "Decisões em outras direções",
+      "category": "IA",
+      "type": "Projeto acadêmico colaborativo",
+      "featured": false,
+      "summary": "Implementação de uma floresta de decisão oblíqua para investigar fronteiras que combinam várias características em cada nó.",
+      "technologies": [
+        "Python",
+        "NumPy",
+        "PCA / SVD",
+        "Entropia"
+      ],
+      "details": "Trabalho de PCS 3838, Inteligência Artificial, na Poli-USP. Reúne árvores ortogonais e oblíquas, florestas e exportação de predições. Cada nó aprende suas direções por PCA/SVD e seleciona cortes por ganho de informação.",
+      "contribution": "Projeto acadêmico colaborativo. A implementação e o histórico de contribuições estão no repositório; não é apresentado como trabalho de autoria exclusiva.",
+      "limitation": "Demonstração com dados sintéticos. Não são apresentados pontuação, posição no Kaggle ou resultados experimentais da competição. A figura é didática, não um benchmark.",
+      "url": "https://github.com/luigiscofano/Kaggle-oRF",
+      "demo": "",
+      "demoLabel": "",
+      "image": "/images/kaggle-fronteiras.webp",
+      "imageAlt": "Figura didática comparando cortes ortogonais e oblíquos em pontos de duas classes",
+      "caption": "Ilustração didática do repositório · não é resultado experimental",
+      "imageSource": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png",
+      "showImagePreview": false,
+      "imageWidth": 1400,
+      "imageHeight": 818
+    },
+    {
+      "id": "gesturelab",
+      "name": "GestureLab",
+      "subtitle": "O movimento como interface",
+      "category": "IA",
+      "type": "Aplicação local · visão computacional",
+      "featured": false,
+      "summary": "Um laboratório com webcam para rastrear mãos, reconhecer gestos, desenhar no ar e comparar poses com um catálogo local.",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "MediaPipe",
+        "NumPy"
+      ],
+      "details": "Quatro modos independentes: hands, gestures, airwrite e posematch. A aplicação conecta coordenadas detectadas a estados de interação, suavização de traços, exportação e comparação geométrica.",
+      "contribution": "Integração, lógica de interação, interface local, descritor geométrico, catálogo reproduzível e testes. Os modelos de detecção são pré-treinados do MediaPipe.",
+      "limitation": "Não há treinamento de modelos próprios nem reconhecimento de palavras na escrita no ar. A prévia de poses usa entrada sintética e não representa uma medição de desempenho.",
+      "url": "https://github.com/luigiscofano/gesturelab",
+      "demo": "",
+      "demoLabel": "",
+      "image": "/images/gesturelab.webp",
+      "imageAlt": "Prévia sintética do PoseMatch mostrando uma pose e a referência do catálogo",
+      "caption": "PoseMatch · demonstração com entrada sintética",
+      "imageSource": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png",
+      "showImagePreview": false,
+      "imageWidth": 1128,
+      "imageHeight": 612
+    },
+    {
+      "id": "pokedex",
+      "name": "Pokédex",
+      "subtitle": "Dados para explorar",
+      "category": "Software",
+      "type": "Aplicação web · projeto de fã",
+      "featured": false,
+      "summary": "Uma interface para explorar espécies, formas, evoluções e informações por jogo, com dados versionados e importação reproduzível.",
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "PokéAPI",
+        "Testes"
+      ],
+      "details": "Catálogo pesquisável com filtros, favoritos no navegador, modo Shiny, atributos e famílias evolutivas. O exercício Java original permanece em um módulo independente.",
+      "contribution": "Aplicação de fã desenvolvida por Luigi, com interface responsiva, preparação dos dados, testes e documentação. Dados e imagens têm suas fontes identificadas no repositório.",
+      "limitation": "As consultas refletem a cobertura da base importada. Favoritos ficam no navegador. Pokémon e seus recursos pertencem aos respectivos titulares; o projeto não é oficial.",
+      "url": "https://github.com/luigiscofano/Pokedex",
+      "demo": "https://pokedex-luigi-explorer.luigiscofano.chatgpt.site",
+      "demoLabel": "Explorar a Pokédex",
+      "image": "/images/pokedex.webp",
+      "imageAlt": "Página inicial real da Pokédex de Luigi, com catálogo de espécies",
+      "caption": "Captura real da aplicação · versão documentada 1.3.2",
+      "imageSource": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-inicio.jpg",
+      "showImagePreview": true,
+      "imageWidth": 1165,
+      "imageHeight": 747
+    },
+    {
+      "id": "labdig",
+      "name": "Laboratório Digital",
+      "subtitle": "Do código ao circuito",
+      "category": "Hardware",
+      "type": "Projetos acadêmicos em grupo",
+      "featured": false,
+      "summary": "Circuitos e jogos em FPGA que conectam máquinas de estados, sensores, comunicação serial e interfaces no computador.",
+      "technologies": [
+        "Verilog",
+        "FPGA",
+        "UART / PWM",
+        "Processing"
+      ],
+      "details": "Acervo de Laboratório Digital I e II da Poli-USP, com experimentos e os projetos Math Genius e Guardião do Paredão. Reúne fontes, relatórios, simulações e ferramentas de verificação.",
+      "contribution": "Trabalhos em grupo, com autoria, materiais docentes e organização posterior identificados na documentação de implementações do repositório.",
+      "limitation": "Simulação e compilação não equivalem à validação em hardware. A validação física das revisões desta edição permanece pendente; não há alegação de eficácia terapêutica.",
+      "url": "https://github.com/luigiscofano/usp-labdig",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    }
+  ],
+  "research": [
+    {
+      "title": "Tupi Antigo, OCR e dados linguísticos",
+      "institution": "IME-USP · Iniciação científica",
+      "text": "Digitalização e organização de material lexicográfico, com preservação de fontes e revisão de dados. Orientação do Prof. Dr. Marcelo Finger.",
+      "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo",
+      "linkLabel": "Código e metodologia"
+    },
+    {
+      "title": "Museu virtual da computação",
+      "institution": "LASSu-USP · Pesquisa e desenvolvimento",
+      "text": "Contribuição a um ambiente 3D no navegador sobre a história da computação, com navegação, interação e conteúdo educativo. Three.js, TypeScript e Vite.",
+      "url": "https://github.com/luigiscofano/luigiscofano#pesquisa-e-desenvolvimento",
+      "linkLabel": "Contexto no perfil"
+    }
+  ],
+  "education": [
+    {
+      "title": "Engenharia de Computação",
+      "institution": "Escola Politécnica · Universidade de São Paulo",
+      "status": "Graduação em andamento · conclusão prevista em 2027"
+    },
+    {
+      "title": "Formação em inteligência artificial",
+      "institution": "IBM / edX",
+      "status": "Em andamento · Python, machine learning e IA generativa"
+    },
+    {
+      "title": "CS50",
+      "institution": "Harvard / edX",
+      "status": "Curso de introdução à computação concluído"
+    }
+  ],
+  "experience": [
+    {
+      "company": "TRIA Commodities",
+      "area": "Comercial, dados e automação",
+      "text": "Atuação comercial e desenvolvimento de protótipos para prospecção, cruzamento de informações, deduplicação e organização de oportunidades."
+    },
+    {
+      "company": "BTG Pactual",
+      "area": "Summer Job · Foreign Exchange",
+      "text": "Apoio a análises de mercado e modelos quantitativos para a equipe de câmbio internacional, além do desenvolvimento de interfaces front-end."
+    },
+    {
+      "company": "Núclea",
+      "area": "Dados e indicadores de RH",
+      "text": "Preparação de bases, dashboards em Power BI e análises com Excel e MySQL. Indicadores e automação da consolidação de informações."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Investigar",
+      "text": "Python, machine learning, PLN, OCR e visão computacional."
+    },
+    {
+      "title": "Estruturar",
+      "text": "SQL, preparação de dados, Power BI, Power Query e DAX."
+    },
+    {
+      "title": "Construir",
+      "text": "Software, interfaces web, algoritmos, testes e documentação."
+    }
+  ],
+  "contactText": "Tenho interesse em projetos e oportunidades que aproximem inteligência artificial, dados e desenvolvimento de software. Vamos conversar?",
+  "updated": "Novembro de 2026",
+  "sourcesDate": "2026-11-06",
+  "visualSignature": {
+    "enabled": true,
+    "image": "/images/assinatura-bem-te-vi.svg",
+    "alt": "Assinatura visual de Luigi: um bem-te-vi em pixel art pousado em um ramo com folhas",
+    "width": 180,
+    "height": 64
+  }
+}

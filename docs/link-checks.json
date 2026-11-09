@@ -1,0 +1,84 @@
+[
+  {
+    "url": "https://br.linkedin.com/in/luigi-scofano-de-araujo-233102261/en",
+    "error": "HTTP Error 999: Unknown"
+  },
+  {
+    "url": "https://github.com/luigiscofano",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano"
+  },
+  {
+    "url": "https://github.com/luigiscofano/Kaggle-oRF",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/Kaggle-oRF"
+  },
+  {
+    "url": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png"
+  },
+  {
+    "url": "https://github.com/luigiscofano/Pokedex",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/Pokedex"
+  },
+  {
+    "url": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-inicio.jpg",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-inicio.jpg"
+  },
+  {
+    "url": "https://github.com/luigiscofano/gesturelab",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/gesturelab"
+  },
+  {
+    "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png"
+  },
+  {
+    "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/ic-pln-tupi-antigo"
+  },
+  {
+    "url": "https://github.com/luigiscofano/intuicao",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/intuicao"
+  },
+  {
+    "url": "https://github.com/luigiscofano/intuicao/blob/main/docs/imagens/jogos/cerco.jpg",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/intuicao/blob/main/docs/imagens/jogos/cerco.jpg"
+  },
+  {
+    "url": "https://github.com/luigiscofano/luigiscofano#pesquisa-e-desenvolvimento",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/luigiscofano#pesquisa-e-desenvolvimento"
+  },
+  {
+    "url": "https://github.com/luigiscofano/luigiscofano/blob/main/README.md",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/luigiscofano/blob/main/README.md"
+  },
+  {
+    "url": "https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md"
+  },
+  {
+    "url": "https://github.com/luigiscofano/usp-labdig",
+    "status": 200,
+    "final_url": "https://github.com/luigiscofano/usp-labdig"
+  },
+  {
+    "url": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://pokedex-luigi-explorer.luigiscofano.chatgpt.site",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]
