@@ -39,3 +39,14 @@ test('OCR example never claims measured or historical results', () => {
   assert.ok(s.includes('não apresenta resultados medidos'));
   assert.ok(s.includes('PROCEDENCIA.md'));
 });
+
+test('personal link opens details without losing keyboard focus to native hash navigation', () => {
+  const source = fs.readFileSync('app/page.tsx', 'utf8').replace(/\s+/g, '');
+  assert.ok(source.includes('event.preventDefault()'));
+  assert.ok(source.includes("history.pushState(null,'','#mais-sobre-mim')"));
+  assert.ok(
+    source.includes(
+      "details.querySelector('summary')?.focus({preventScroll:true})",
+    ),
+  );
+});

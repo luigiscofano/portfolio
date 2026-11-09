@@ -368,13 +368,26 @@ export default function Home() {
                 </p>
                 <a
                   href="#mais-sobre-mim"
-                  onClick={() => {
+                  onClick={(event) => {
+                    if (
+                      event.metaKey ||
+                      event.ctrlKey ||
+                      event.shiftKey ||
+                      event.altKey
+                    )
+                      return;
                     const details = document.getElementById(
                       'mais-sobre-mim',
                     ) as HTMLDetailsElement | null;
                     if (details) {
+                      // A navegação nativa ao fragmento rouba o foco do summary em alguns navegadores.
+                      event.preventDefault();
                       details.open = true;
-                      details.querySelector('summary')?.focus();
+                      history.pushState(null, '', '#mais-sobre-mim');
+                      details.scrollIntoView({ block: 'start' });
+                      details
+                        .querySelector('summary')
+                        ?.focus({ preventScroll: true });
                     }
                   }}
                 >
