@@ -38,7 +38,7 @@ test('self-hosted fonts and clear icon licenses exist',()=>{
  const icons=JSON.parse(fs.readFileSync(path.join(root,'content/icons.json'),'utf8'));for(const name of ['github','linkedin','envelope','graduation-cap','book-open']){assert.ok(icons[name].viewBox);assert.ok(icons[name].paths.length);}
 });
 test('education uses accessible controlled accordion and content stays editable',()=>{
- const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');assert.ok(page.includes('aria-controls={`education-panel-${index}`}'));assert.ok(page.includes('hidden={educationOpen!==index}'));assert.ok(page.includes('aria-expanded={educationOpen===index}'));assert.equal(data.profile.aboutOverview.length,3);assert.ok(data.profile.documentation.startsWith('https://github.com/'));
+ const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');assert.ok(page.includes('aria-controls={`education-panel-${index}`}'));assert.ok(page.includes('hidden={educationOpen!==index}'));assert.ok(page.includes('aria-expanded={educationOpen===index}'));assert.equal(data.profile.aboutOverview.length,5);assert.ok(data.profile.documentation.startsWith('https://github.com/'));
 });
 test('approved section order matches navigation and rendered sections',()=>{
  const expected=['sobre','projetos','pesquisa','formacao','trajetoria','contato'];
@@ -93,4 +93,9 @@ test('CTA arrows use SVG rather than font-dependent glyphs',()=>{
  const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
  assert.ok(!/[↗↘→]/.test(page));
  assert.equal((page.match(/className="cta-arrow"/g)||[]).length,3);
+});
+
+test('approved biography credits the LASSu coordinator without implying individual supervision',()=>{
+ assert.ok(data.profile.aboutOverview[1].includes('laboratório coordenado pela professora Tereza Cristina Melo de Brito Carvalho'));
+ assert.ok(data.profile.aboutOverview[1].includes('sob orientação do professor Marcelo Finger'));
 });

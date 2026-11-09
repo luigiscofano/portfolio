@@ -39,3 +39,7 @@ Direitos reservados a Luigi Scofano de Araujo, fora da licença MIT do código: 
 ## Foto de perfil em alta resolução
 
 A foto principal usa o original enviado por Luigi (1152 × 1536 px), preservado sem retoque, regeneração facial ou ampliação artificial. O enquadramento é feito somente por CSS. Ela substitui na página o avatar público do GitHub de 460 × 460 px, insuficiente para telas de alta densidade. Arquivo: `public/images/luigi-original.jpg`.
+
+## Texto Sobre aprovado
+
+Texto integral aprovado pelo titular em 9 de novembro de 2026, com menção à professora Tereza Cristina Melo de Brito Carvalho como coordenadora do LASSu, sem atribuir orientação individual. Papel verificado no perfil institucional: https://app.poli.usp.br/lattes/docentes/8587567074814594.
