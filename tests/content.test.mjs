@@ -58,7 +58,7 @@ test('personal signature remains editable and has accessible text',()=>{
 });
 test('authentic Sintonia sprite uses the exact original atlas and frame',async()=>{
  const {createHash}=await import('node:crypto');const sprite=data.profile.nameSprite;
- assert.ok(sprite.enabled);assert.equal(sprite.backgroundSize,'400% 400%');assert.equal(sprite.backgroundPosition,'66.66666666666666% 0%');
+ assert.equal(sprite.enabled,false, 'O sprite junto ao nome fica desativado conforme solicitado');assert.equal(sprite.backgroundSize,'400% 400%');assert.equal(sprite.backgroundPosition,'66.66666666666666% 0%');
  assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,'public',sprite.image))).digest('hex'),'d7d4b80f054b8f16d44c0d0b8805bf0f5074caaae443e69394156ccc84211b18');
  const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');assert.equal((page.match(/<NameSprite\/>/g)||[]).length,1);assert.equal((page.match(/<ProfileName\/>/g)||[]).length,2);
  assert.equal(sprite.source,'https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg');

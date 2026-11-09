@@ -26,7 +26,7 @@
     ],
     "documentation": "https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md",
     "nameSprite": {
-      "enabled": true,
+      "enabled": false,
       "image": "/images/sintonia/chibi-user-roster.svg",
       "label": "Bem-te-vi do jogo Sintonia",
       "backgroundSize": "400% 400%",
