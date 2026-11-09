@@ -67,7 +67,7 @@ test('full name and sprite stay together on the last name line',()=>{
  assert.equal(data.profile.name,'Luigi Scofano de Araujo');
  const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');const css=fs.readFileSync(path.join(root,'app/globals.css'),'utf8');
  assert.ok(page.includes('const words=data.profile.name.trim().split'));assert.ok(page.includes('className="name-ending">{suffix}<NameSprite/>'));
- assert.ok(css.includes('.name-ending{white-space:nowrap}'));assert.ok(css.includes('vertical-align:calc(var(--sprite-size) * -0.0494417863)'));
+ assert.ok(/\.name-ending\s*\{\s*white-space:\s*nowrap/.test(css));assert.ok(css.includes('vertical-align: calc(var(--sprite-size) * -0.0494417863)'));
 });
 
 test('personal and professional emails remain separate and editable',()=>{
@@ -76,4 +76,15 @@ test('personal and professional emails remain separate and editable',()=>{
  const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
  assert.ok(page.includes('email:data.profile.personalEmail'));
  assert.ok(page.includes('onClick={()=>copyEmail(email)}'));
+});
+
+test('editorial opening preserves navigation, contacts and the approved signature',()=>{
+ const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
+ assert.equal(data.profile.hero.title,'IA, dados\ne software.');
+ assert.equal(data.profile.hero.subtitle,'Da pesquisa à prática.');
+ for(const className of ['hero-portrait','sidebar-links','research-feature','featured-secondary','about-details']) assert.ok(page.includes(`className="${className}"`));
+ assert.ok(page.includes('href="#projetos"'));
+ assert.ok(page.includes('href="#trajetoria"'));
+ assert.equal(data.profile.nameSprite.enabled,false);
+ assert.equal(data.visualSignature.enabled,true);
 });

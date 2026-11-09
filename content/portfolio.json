@@ -33,6 +33,12 @@
       "backgroundSize": "400% 400%",
       "backgroundPosition": "66.66666666666666% 0%",
       "source": "https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg"
+    },
+    "hero": {
+      "eyebrow": "Olá, sou Luigi.",
+      "title": "IA, dados\ne software.",
+      "subtitle": "Da pesquisa à prática.",
+      "description": "Graduando na Poli-USP, pesquiso PLN e OCR aplicados ao Tupi Antigo e desenvolvo ferramentas para explorar dados, ideias e decisões."
     }
   },
   "navigation": [

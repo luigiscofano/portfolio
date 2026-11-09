@@ -47,41 +47,73 @@ export default function Home(){
    update();window.addEventListener('scroll',update,{passive:true});window.addEventListener('hashchange',update);
    return()=>{window.removeEventListener('scroll',update);window.removeEventListener('hashchange',update);};
  },[]);
+ // O menu móvel prende o foco e devolve a navegação ao botão ao fechar.
  useEffect(()=>{
    if(!menuOpen)return;
-   const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setMenuOpen(false);menuButton.current?.focus();}};
+   const previousOverflow=document.body.style.overflow;
+   document.body.style.overflow='hidden';
+   const desktop=window.matchMedia('(min-width:769px)');
+   const closeOnDesktop=()=>{if(desktop.matches)setMenuOpen(false);};
+   const onKey=(event:KeyboardEvent)=>{
+     if(event.key==='Escape'){setMenuOpen(false);menuButton.current?.focus();return;}
+     if(event.key!=='Tab')return;
+     const links=[menuButton.current,...document.querySelectorAll<HTMLElement>('.sidebar a[href], .sidebar button')].filter((item):item is HTMLElement=>Boolean(item));
+     const first=links[0],last=links.at(-1);
+     if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+     else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+   };
    document.addEventListener('keydown',onKey);
-   return()=>document.removeEventListener('keydown',onKey);
+   desktop.addEventListener('change',closeOnDesktop);
+   return()=>{document.body.style.overflow=previousOverflow;document.removeEventListener('keydown',onKey);desktop.removeEventListener('change',closeOnDesktop);};
  },[menuOpen]);
  async function copyEmail(email:string){try{await navigator.clipboard.writeText(email);setCopied(email);setCopyError(null);setTimeout(()=>setCopied(null),2500);}catch{setCopyError(email);}}
  const filtered=data.projects.filter(project=>filter==='Todos'||project.category===filter);
  const profileLinks=[
-  {label:'GitHub',icon:'github' as IconName,url:data.profile.github,color:'#d9a62b',internal:false},
-  {label:'LinkedIn',icon:'linkedin' as IconName,url:data.profile.linkedin,color:'#2c98f0',internal:false},
-  {label:'E-mail',icon:'envelope' as IconName,url:`mailto:${data.profile.email}`,color:'#2fa499',internal:true},
-  {label:'Pesquisa',icon:'graduation-cap' as IconName,url:'#pesquisa',color:'#467c58',internal:true},
-  {label:'Projetos',icon:'code' as IconName,url:'#projetos',color:'#a16bb2',internal:true},
-  {label:'Documentação',icon:'file-lines' as IconName,url:data.profile.documentation,color:'#d95a65',internal:false}
+  {label:'GitHub',icon:'github' as IconName,url:data.profile.github,color:'#9b761c',internal:false},
+  {label:'LinkedIn',icon:'linkedin' as IconName,url:data.profile.linkedin,color:'#467ca3',internal:false},
+  {label:'E-mail',icon:'envelope' as IconName,url:`mailto:${data.profile.email}`,color:'#427569',internal:true},
+  {label:'Pesquisa',icon:'graduation-cap' as IconName,url:'#pesquisa',color:'#507556',internal:true},
+  {label:'Projetos',icon:'code' as IconName,url:'#projetos',color:'#88689e',internal:true},
+  {label:'Documentação',icon:'file-lines' as IconName,url:data.profile.documentation,color:'#ad626d',internal:false}
  ];
  return <>
   <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <div className="site-shell" id="inicio">
-   <header className="mobile-header"><a href="#sobre" aria-label={data.profile.name}><img src={sitePath(data.profile.photo)} alt="" width="34" height="34"/><ProfileName/></a><button ref={menuButton} aria-label={menuOpen?'Fechar menu':'Abrir menu'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(!menuOpen)}><Icon name={menuOpen?'xmark':'bars'} size={23}/></button></header>
-   {menuOpen&&<button className="menu-overlay" aria-label="Fechar menu de navegação" onClick={()=>{setMenuOpen(false);menuButton.current?.focus();}}/>}
-   <aside className={`sidebar ${menuOpen?'is-open':''}`}>
-    <a href="#sobre" onClick={()=>setMenuOpen(false)} className="portrait-link"><img className="portrait" src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="150" height="150"/></a>
+   <header className="mobile-header"><a href="#sobre" aria-label={data.profile.name}><ProfileName/></a><button ref={menuButton} aria-label={menuOpen?'Fechar menu':'Abrir menu'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(!menuOpen)}><Icon name={menuOpen?'xmark':'bars'} size={23}/></button></header>
+   {menuOpen&&<button className="menu-overlay" tabIndex={-1} aria-label="Fechar menu de navegação" onClick={()=>{setMenuOpen(false);menuButton.current?.focus();}}/>}
+   <aside className={`sidebar ${menuOpen?'is-open':''}`} aria-label="Perfil e navegação">
     <a href="#sobre" aria-label={data.profile.name} className="sidebar-name" onClick={()=>setMenuOpen(false)}><ProfileName/></a>
     <p className="sidebar-description">ENGENHARIA DE COMPUTAÇÃO<br/><a href="#formacao" onClick={()=>setMenuOpen(false)}>POLI-USP</a></p>
-    <nav id="main-nav" aria-label="Navegação principal">{data.navigation.map(item=><a key={item.id} href={`#${item.id}`} className={active===item.id?'active':''} aria-current={active===item.id?'location':undefined} onClick={()=>{setActive(item.id);setMenuOpen(false);}}>{item.label}</a>)}</nav>
-    <div className="sidebar-social"><a href={data.profile.github} aria-label="GitHub de Luigi" {...external}><Icon name="github" size={19}/></a><a href={data.profile.linkedin} aria-label="LinkedIn de Luigi" {...external}><Icon name="linkedin" size={19}/></a><a href={`mailto:${data.profile.email}`} aria-label="E-mail de Luigi"><Icon name="envelope" size={19}/></a></div>
-    {data.visualSignature.enabled&&<div className="sidebar-signature"><img src={sitePath(data.visualSignature.image)} alt={data.visualSignature.alt} width={data.visualSignature.width} height={data.visualSignature.height}/></div>}
-    <p className="sidebar-footer">© 2026 {data.profile.name}<br/>{data.profile.location}<br/><a href={sitePath("/atualizar/")} >Como atualizar</a><span aria-hidden="true"> · </span><a href={sitePath("/creditos/")} >Créditos</a></p>
+    <nav id="main-nav" aria-label="Navegação principal">{data.navigation.map((item,index)=><a key={item.id} href={`#${item.id}`} style={{"--nav-color":['#d6ac37','#548eb7','#6e9675','#977bad'][index%4]} as React.CSSProperties} className={active===item.id?'active':''} aria-current={active===item.id?'location':undefined} onClick={()=>{setActive(item.id);setMenuOpen(false);}}>{item.label}</a>)}</nav>
+    <div className="sidebar-links" aria-label="Links de Luigi">{profileLinks.map(item=><a key={item.label} href={item.url} {...(!item.internal?external:{})} onClick={()=>setMenuOpen(false)} style={{"--link-color":item.color} as React.CSSProperties}><Icon name={item.icon} size={22}/><span>{item.label}</span></a>)}</div>
+    <div className="sidebar-bottom">
+     {data.visualSignature.enabled&&<div className="sidebar-signature"><img src={sitePath(data.visualSignature.image)} alt={data.visualSignature.alt} width={data.visualSignature.width} height={data.visualSignature.height}/></div>}
+     <p className="sidebar-footer">© 2026 {data.profile.name}<br/>{data.profile.location}<br/><a href={sitePath("/atualizar/")}>Como atualizar</a><span aria-hidden="true"> · </span><a href={sitePath("/creditos/")}>Créditos</a></p>
+    </div>
    </aside>
-   <main id="conteudo"><h1 className="sr-only">{data.profile.name} · Portfólio</h1>
+   <main id="conteudo" inert={menuOpen}>
     <section id="sobre" className="section about-section">
-     <SectionTitle>Sobre mim</SectionTitle>
-     <div className="about-prose">{data.profile.aboutOverview.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div>
-     <div className="profile-links">{profileLinks.map(item=><a className="profile-card" key={item.label} href={item.url} {...(!item.internal?external:{})} style={{"--card-color":item.color} as React.CSSProperties}><Icon name={item.icon} size={29}/><span>{item.label}</span></a>)}</div>
+     <div className="editorial-topline"><span>Portfólio · pesquisa, dados e software</span><span>{data.updated}</span></div>
+     <div className="hero">
+      <div className="hero-copy">
+       <p className="hero-eyebrow">{data.profile.hero.eyebrow}</p>
+       <h1>{data.profile.hero.title}</h1>
+       <p className="hero-subtitle">{data.profile.hero.subtitle}</p>
+       <p className="hero-description">{data.profile.hero.description}</p>
+       <div className="hero-actions"><a className="primary-link" href="#projetos">Explorar projetos <span aria-hidden="true">↘</span></a><a href="#trajetoria">Minha trajetória <span aria-hidden="true">→</span></a></div>
+      </div>
+      <figure className="hero-portrait"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="467" height="390" fetchPriority="high"/><figcaption>{data.profile.name}</figcaption></figure>
+     </div>
+     <div className="featured-heading"><h2>Pesquisa &amp; projetos em destaque</h2><a href="#projetos">Ver todos <span aria-hidden="true">↗</span></a></div>
+     <div className="research-feature">
+      <div className="research-feature-title"><p className="feature-eyebrow">Iniciação científica · IME-USP</p><h3>Tupi Antigo</h3><p>Linguagem, memória e computação.</p><p className="research-process">Fonte original <span aria-hidden="true">→</span> OCR &amp; PLN <span aria-hidden="true">→</span> Revisão humana</p></div>
+      <div className="research-feature-description"><h4>Tecnologia a serviço<br/>da pesquisa linguística.</h4><p>{data.projects.find(project=>project.id==='tupi')?.summary}</p><a href={data.projects.find(project=>project.id==='tupi')?.url} {...external}>Explorar a pesquisa <span aria-hidden="true">↗</span></a></div>
+     </div>
+     <div className="featured-secondary">
+      <article className="intuicao-feature"><img src={sitePath(data.projects.find(project=>project.id==='intuicao')!.image)} alt={data.projects.find(project=>project.id==='intuicao')!.imageAlt} width="154" height="171"/><div><p className="feature-eyebrow">IA clássica &amp; jogos</p><h3>Intuição</h3><p>Jogos de lógica e estratégia.<br/>IA no próprio navegador.</p><a href={data.projects.find(project=>project.id==='intuicao')?.url} {...external}>Conhecer o projeto <span aria-hidden="true">↗</span></a></div></article>
+      <article className="beyond-feature"><p className="feature-eyebrow">Pesquisa, desenvolvimento &amp; ensino</p><h3>Além do código.</h3><p>Pesquisa no IME-USP, museu virtual no LASSu-USP e ensino de jiu-jítsu. Uma trajetória entre áreas.</p><a href="#trajetoria">Conhecer minha trajetória <span aria-hidden="true">→</span></a></article>
+     </div>
+     <details className="about-details"><summary>Mais sobre mim</summary><div className="about-prose">{data.profile.aboutOverview.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div></details>
     </section>
     <section id="projetos" className="section projects-section">
      <SectionTitle>Projetos e recursos</SectionTitle>

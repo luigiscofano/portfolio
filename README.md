@@ -93,3 +93,7 @@ Rotas geradas: `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/`. 
 O prefixo é definido em `next.config.ts`, `lib/site-path.ts`, `app/globals.css` e no favicon/metadados de `app/layout.tsx`. Imagens no JSON mantêm caminhos relativos à raiz de `public/`; a renderização adiciona `/portfolio`. Se o repositório mudar de nome, revise esses pontos, o servidor de prévia e os testes.
 
 O contato continua sendo um link `mailto:` e um botão de copiar e-mail. Não há serviço de envio de mensagens. Alterar a cópia no GitHub não altera a versão no Sites, nem o inverso.
+
+## Apresentação editorial
+
+A abertura implementa a prévia aprovada em 9 de novembro de 2026. Leia [as decisões de design](docs/DESIGN.md) para manter a barra lateral, os destaques e a adaptação móvel. Os textos principais ficam em `profile.hero`, no arquivo de conteúdo.
