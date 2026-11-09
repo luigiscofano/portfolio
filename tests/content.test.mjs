@@ -117,10 +117,10 @@ test('approved section order matches navigation and rendered sections', () => {
     expected,
   );
 });
-test('only real approved screenshots are promoted to project previews', () => {
+test('all projects have attributed visual previews', () => {
   assert.deepEqual(
     data.projects.filter((p) => p.showImagePreview).map((p) => p.id),
-    ['intuicao', 'pokedex'],
+    ['intuicao', 'tupi', 'kaggle', 'gesturelab', 'pokedex', 'labdig'],
   );
   for (const p of data.projects.filter((p) => p.showImagePreview)) {
     assert.ok(p.imageWidth > 0);

@@ -48,9 +48,9 @@
       "downloadName": "Luigi-Scofano-Resume-EN.pdf"
     },
     "resumePt": {
-      "url": "/documents/luigi-scofano-curriculo-pt.docx",
-      "label": "Currículo em português (DOCX, 450 KB)",
-      "downloadName": "Luigi-Scofano-Curriculo-PT.docx"
+      "url": "/documents/luigi-scofano-curriculo-pt.pdf",
+      "label": "Currículo em português (PDF)",
+      "downloadName": "Luigi-Scofano-Curriculo-PT.pdf"
     }
   },
   "navigation": [
@@ -100,13 +100,13 @@
       "url": "https://github.com/luigiscofano/intuicao",
       "demo": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
       "demoLabel": "Jogar no navegador",
-      "image": "/images/intuicao-cerco.webp",
-      "imageAlt": "Tabuleiro real do jogo CERCO, do Intuição, com duas equipes de animais e uma barreira",
-      "caption": "CERCO · captura do aplicativo no repositório",
-      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/imagens/jogos/cerco.jpg",
+      "image": "/images/intuicao-catalogo-publico.webp",
+      "imageAlt": "Catálogo público do Intuição: folhas de ícones de frente e perfil",
+      "caption": "Página 4 do catálogo público: folhas originais de ícones.",
+      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/pdfs/marca-e-arte/03-catalogo-sprites-icones-acessorios.pdf#page=4",
       "showImagePreview": true,
-      "imageWidth": 1154,
-      "imageHeight": 1000
+      "imageWidth": 1273,
+      "imageHeight": 1800
     },
     {
       "id": "tupi",
@@ -123,13 +123,13 @@
       "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
-      "caption": "",
-      "imageSource": "",
-      "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "image": "/images/tupi-capa-original.svg",
+      "imageAlt": "Capa do repositório de pesquisa Tupi Antigo",
+      "caption": "Capa documental do projeto; não é resultado de OCR.",
+      "imageSource": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/6601214310ff5125d9f81fb7a1c988548bef7ab0/assets/capa.svg",
+      "showImagePreview": true,
+      "imageWidth": 1200,
+      "imageHeight": 250
     },
     {
       "id": "kaggle",
@@ -150,7 +150,7 @@
       "imageAlt": "Figura didática comparando cortes ortogonais e oblíquos em pontos de duas classes",
       "caption": "Ilustração didática do repositório · não é resultado experimental",
       "imageSource": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png",
-      "showImagePreview": false,
+      "showImagePreview": true,
       "imageWidth": 1400,
       "imageHeight": 818
     },
@@ -173,7 +173,7 @@
       "imageAlt": "Prévia sintética do PoseMatch mostrando uma pose e a referência do catálogo",
       "caption": "PoseMatch · demonstração com entrada sintética",
       "imageSource": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png",
-      "showImagePreview": false,
+      "showImagePreview": true,
       "imageWidth": 1128,
       "imageHeight": 612
     },
@@ -215,13 +215,13 @@
       "url": "https://github.com/luigiscofano/usp-labdig",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
-      "caption": "",
-      "imageSource": "",
-      "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "image": "/images/labdig-readme.jpg",
+      "imageAlt": "README do acervo de Laboratório Digital da Poli-USP",
+      "caption": "Captura do README; documentação do acervo, não validação de hardware.",
+      "imageSource": "https://github.com/luigiscofano/usp-labdig#readme",
+      "showImagePreview": true,
+      "imageWidth": 777,
+      "imageHeight": 520
     }
   ],
   "research": [

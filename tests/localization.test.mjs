@@ -119,11 +119,11 @@ test('Localized title has one owner and approved PDF remains downloadable', () =
   assert.ok(includesCode(page, 'download={resume.downloadName}'));
 });
 
-test('Portuguese resume is the reviewed native document', () => {
+test('Portuguese PDF is the reviewed faithful conversion', () => {
   assert.equal(pt.profile.resumePt.url, en.profile.resumePt.url);
   const docx = fs.readFileSync(`public${pt.profile.resumePt.url}`);
   assert.equal(
     createHash('sha256').update(docx).digest('hex'),
-    '576f67b1633b6c6f9e7bb5321be6103b469233a00139bf6d4e0c2de3bd020f42',
+    'c1d7aeb50bf204aed862aa30b60b5034eb2bab39ffa3b826f27be13bbf69c87c',
   );
 });

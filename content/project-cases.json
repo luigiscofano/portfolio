@@ -1,0 +1,168 @@
+{
+  "pt": {
+    "intuicao": [
+      {
+        "title": "Problema",
+        "text": "Tornar conceitos de lógica e estratégia exploráveis por meio de jogos, com decisões e respostas que podem ser observadas durante a partida.",
+        "url": "https://github.com/luigiscofano/intuicao"
+      },
+      {
+        "title": "Minha contribuição",
+        "text": "Desenvolvimento de mecânicas, fases, interface, dicas e documentação de uma plataforma com 11 jogos: oito campanhas solo e três jogos Versus. O repositório identifica recursos e créditos de terceiros.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/docs/arquitetura/README.md"
+      },
+      {
+        "title": "Decisões técnicas",
+        "text": "DESVIO usa busca exata com memoização nos mapas suportados de até 16 casas. CERCO combina minimax, poda alfa-beta e aprofundamento limitado. Os cálculos de IA são executados no navegador.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/dist/cerco/bot.mjs"
+      },
+      {
+        "title": "Como experimentar/reproduzir",
+        "text": "Abra a demonstração indicada no repositório para jogar no navegador. Consulte o código e a documentação para acompanhar as regras e as decisões dos algoritmos.",
+        "url": "https://github.com/luigiscofano/intuicao"
+      },
+      {
+        "title": "Limites",
+        "text": "A IA é clássica, sem modelo generativo. A busca limitada de CERCO não garante jogo perfeito. BROTO é um duelo entre duas pessoas e não tem bot nesta versão.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/README.md"
+      }
+    ],
+    "tupi": [
+      {
+        "title": "Problema",
+        "text": "Organizar e revisar dados lexicográficos de Tupi Antigo sem perder a grafia original, a localização na fonte ou a distinção entre extração automática e revisão humana.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo"
+      },
+      {
+        "title": "Minha contribuição",
+        "text": "Pesquisa e ferramentas para organizar, auditar e exportar registros. As ferramentas desta edição de portfólio documentam esse trabalho, sem representar todas as etapas da iniciação científica original.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/docs/PROCEDENCIA.md"
+      },
+      {
+        "title": "Decisões técnicas",
+        "text": "O pipeline preserva lemma_raw, mantém a normalização NFC separada e registra fonte, página e linha. O estado pending_review sinaliza revisão pendente, e as exportações incluem CSV e JSONL.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/tupi/pipeline.py"
+      },
+      {
+        "title": "Como experimentar/reproduzir",
+        "text": "Siga as instruções do repositório para executar a demonstração com três registros sintéticos e inspecionar os campos, os estados de revisão e os arquivos exportados.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/data/demo.tsv"
+      },
+      {
+        "title": "Limites",
+        "text": "A demonstração não contém o corpus integral validado e não oferece tradução automática de frases. Os registros sintéticos ilustram o fluxo de trabalho, não resultados de validação do corpus.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/docs/PROCEDENCIA.md"
+      }
+    ],
+    "gesturelab": [
+      {
+        "title": "Problema",
+        "text": "Explorar como mãos, gestos e poses capturados por uma webcam podem se tornar comandos, desenhos e referências para comparação em uma interface local.",
+        "url": "https://github.com/luigiscofano/gesturelab"
+      },
+      {
+        "title": "Minha contribuição",
+        "text": "Integração dos detectores, lógica de interação, suavização de traços, exportação em PNG e JSON e comparação com um catálogo local. A aplicação reúne quatro modos: hands, gestures, airwrite e posematch.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/ARQUITETURA.md"
+      },
+      {
+        "title": "Decisões técnicas",
+        "text": "Modelos pré-treinados do MediaPipe fornecem as detecções. A comparação de poses usa um descritor de 12 articulações e distância RMS para ordenar as referências do catálogo local.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/pose_matching.py"
+      },
+      {
+        "title": "Como experimentar/reproduzir",
+        "text": "Siga a instalação e os comandos do repositório para executar cada modo localmente. Consulte os testes com entradas sintéticas e fotos para inspecionar a lógica sem depender de uma sessão de webcam.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
+      },
+      {
+        "title": "Limites",
+        "text": "Não há treinamento de modelos próprios nem OCR para reconhecer palavras escritas no ar. Os testes documentados usam dados sintéticos e fotos, sem validação com webcam física; não são uma medição de desempenho ao vivo.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
+      }
+    ]
+  },
+  "en": {
+    "intuicao": [
+      {
+        "title": "Problem",
+        "text": "Make logic and strategy concepts explorable through games, with decisions and responses that players can observe as they play.",
+        "url": "https://github.com/luigiscofano/intuicao"
+      },
+      {
+        "title": "My contribution",
+        "text": "Development of mechanics, levels, interface, hints, and documentation for a platform with 11 games: eight solo campaigns and three Versus games. The repository identifies third-party assets and credits.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/docs/arquitetura/README.md"
+      },
+      {
+        "title": "Technical decisions",
+        "text": "DESVIO uses exact search with memoization on supported maps of up to 16 cells. CERCO combines minimax, alpha-beta pruning, and depth-limited search. AI calculations run in the browser.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/dist/cerco/bot.mjs"
+      },
+      {
+        "title": "Try it / reproduce it",
+        "text": "Open the demo linked in the repository to play in your browser. Explore the code and documentation to follow the rules and the algorithms’ decisions.",
+        "url": "https://github.com/luigiscofano/intuicao"
+      },
+      {
+        "title": "Limitations",
+        "text": "The AI uses classical algorithms, with no generative model. CERCO’s bounded search does not guarantee perfect play. BROTO is a two-player duel with no bot in this version.",
+        "url": "https://github.com/luigiscofano/intuicao/blob/main/README.md"
+      }
+    ],
+    "tupi": [
+      {
+        "title": "Problem",
+        "text": "Organize and review Tupi Antigo lexicographic data without losing its original spelling, source location, or the distinction between automated extraction and human review.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo"
+      },
+      {
+        "title": "My contribution",
+        "text": "Research and tools for organizing, auditing, and exporting records. The tools in this portfolio edition document that work without representing every stage of the original undergraduate research project.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/docs/PROCEDENCIA.md"
+      },
+      {
+        "title": "Technical decisions",
+        "text": "The pipeline preserves lemma_raw, keeps NFC normalization separate, and records source, page, and line. The pending_review status flags records awaiting review, and exports include CSV and JSONL.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/tupi/pipeline.py"
+      },
+      {
+        "title": "Try it / reproduce it",
+        "text": "Follow the repository instructions to run the demonstration with three synthetic records and inspect the fields, review statuses, and exported files.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/data/demo.tsv"
+      },
+      {
+        "title": "Limitations",
+        "text": "The demo does not include the complete validated corpus or provide automatic sentence translation. Its synthetic records illustrate the workflow, not corpus validation results.",
+        "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/docs/PROCEDENCIA.md"
+      }
+    ],
+    "gesturelab": [
+      {
+        "title": "Problem",
+        "text": "Explore how hands, gestures, and poses captured by a webcam can become commands, drawings, and comparison references in a local interface.",
+        "url": "https://github.com/luigiscofano/gesturelab"
+      },
+      {
+        "title": "My contribution",
+        "text": "Detector integration, interaction logic, stroke smoothing, PNG and JSON export, and comparison with a local catalog. The application has four modes: hands, gestures, airwrite, and posematch.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/ARQUITETURA.md"
+      },
+      {
+        "title": "Technical decisions",
+        "text": "Pretrained MediaPipe models provide the detections. Pose comparison uses a 12-joint descriptor and RMS distance to rank references in the local catalog.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/pose_matching.py"
+      },
+      {
+        "title": "Try it / reproduce it",
+        "text": "Follow the repository’s setup instructions and commands to run each mode locally. Inspect the tests with synthetic inputs and photos to explore the logic without a webcam session.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
+      },
+      {
+        "title": "Limitations",
+        "text": "No custom models are trained, and there is no OCR for recognizing words written in the air. The documented tests use synthetic data and photos, with no physical webcam validation; they do not measure live performance.",
+        "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
+      }
+    ]
+  }
+}

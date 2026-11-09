@@ -4,12 +4,12 @@ Levantamento público inicial: 6 de novembro de 2026. Atualizações posteriores
 
 - Perfil, formação, trajetória e contatos: https://github.com/luigiscofano/luigiscofano/blob/main/README.md
 - Foto histórica, substituída na página pelo original descrito abaixo: avatar público https://avatars.githubusercontent.com/u/145711556?s=460&v=4, ligado pelo perfil https://github.com/luigiscofano. A foto já inclui o bem-te-vi em pixel art; não foi inventada nem alterada semanticamente.
-- Intuição: https://github.com/luigiscofano/intuicao. Imagem real de CERCO: `docs/imagens/jogos/cerco.jpg`. IA clássica de busca; não se afirma uso de LLM. Direitos visuais e créditos: documentação `docs/recursos/` do projeto.
-- IC Tupi: https://github.com/luigiscofano/ic-pln-tupi-antigo. Demonstração fictícia, sem corpus completo validado. A ilustração visual do portfólio é um diagrama conceitual, não captura do projeto.
+- Intuição: https://github.com/luigiscofano/intuicao. A prévia atual vem da página 4 do [catálogo público de sprites, ícones e acessórios](https://github.com/luigiscofano/intuicao/blob/main/docs/pdfs/marca-e-arte/03-catalogo-sprites-icones-acessorios.pdf), entregue em `public/images/intuicao-catalogo-publico.webp`. É uma página documental de arte, não uma captura da aplicação. A captura anterior de CERCO permanece como material histórico. IA clássica de busca; não se afirma uso de LLM. Direitos visuais e créditos: documentação `docs/recursos/` do projeto.
+- IC Tupi: https://github.com/luigiscofano/ic-pln-tupi-antigo. Demonstração fictícia, sem corpus completo validado. A imagem atual é a [capa documental original](https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/6601214310ff5125d9f81fb7a1c988548bef7ab0/assets/capa.svg), preservada em `public/images/tupi-capa-original.svg`; não é resultado de OCR.
 - Kaggle-oRF: https://github.com/luigiscofano/Kaggle-oRF. Imagem didática `docs/imagens/fronteiras.png`, que não é benchmark. Projeto colaborativo; sem pontuação ou posição declarada na competição.
 - GestureLab: https://github.com/luigiscofano/gesturelab. Prévia `docs/assets/posematch_preview.png` usa dados sintéticos. Detectores pré-treinados do MediaPipe; aplicação não treina modelos próprios.
 - Pokédex: https://github.com/luigiscofano/Pokedex. Captura real `docs/imagens/pokedex-inicio.jpg`. Projeto de fã com dados da PokéAPI e recursos de terceiros; não oficial.
-- LabDig: https://github.com/luigiscofano/usp-labdig. Autoria em grupo e validação física das revisões pendente. A ilustração vetorial do portfólio é conceitual, não registro experimental.
+- LabDig: https://github.com/luigiscofano/usp-labdig. Autoria em grupo e validação física das revisões pendente. A prévia usa uma captura real do [README](https://github.com/luigiscofano/usp-labdig#readme), em `public/images/labdig-readme.jpg` (777 × 520 px). A legenda a identifica como documentação do acervo, não validação de hardware. O antigo diagrama conceitual não é apresentado como registro experimental.
 - Referência de organização solicitada: https://arturjordao.github.io/. Apenas inspiração no uso de menu lateral e seções acadêmicas. Texto, desenho e identidade próprios.
 
 Capturas de projetos foram convertidas para WebP para entrega eficiente, preservando conteúdo. A foto original atual permanece em JPEG e os desenhos vetoriais em SVG. As descrições não inventam cargos, datas de emprego, publicações acadêmicas, certificados, métricas de desempenho ou resultados de competição. Não há alegações de autoria exclusiva em projetos colaborativos.
@@ -22,9 +22,9 @@ Naquela revisão, a pedido do titular, a estrutura passou a se aproximar mais da
 - Ícones: SVGs oficiais de Font Awesome Free 6, ícones sob CC BY 4.0. Origem: https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs. Arquivos e caminhos SVG preservados, licença completa incluída.
 - Documentação adicional do perfil: https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md.
 
-## Capturas em destaque e assinatura pessoal
+## Capturas históricas e assinatura pessoal
 
-Intuição e Pokédex agora mostram suas capturas reais diretamente nos cards, sem duplicá-las nos detalhes. Os JPEGs locais foram conferidos com os blobs Git: Intuição `17d6e8f7dd35495abdc22e84915a8380e0f0e71f` (1200 × 1040, 76.645 bytes); Pokédex `4f0192f4a0a1942dae52ec3f9bf719e0fc0d081a` (1165 × 747, 58.628 bytes).
+Uma revisão anterior promoveu as capturas de Intuição e Pokédex aos cards. Intuição passou a usar o catálogo original; Pokédex mantém sua captura. Os JPEGs locais foram conferidos com os blobs Git: Intuição `17d6e8f7dd35495abdc22e84915a8380e0f0e71f` (1200 × 1040, 76.645 bytes); Pokédex `4f0192f4a0a1942dae52ec3f9bf719e0fc0d081a` (1165 × 747, 58.628 bytes).
 
 A assinatura de bem-te-vi em pixel art com folhas é um desenho SVG original criado para o portfólio. Não deriva de uma captura de terceiros, não é fotografia e não adiciona alegações biográficas.
 
@@ -48,9 +48,21 @@ Texto integral aprovado pelo titular em 9 de novembro de 2026, com menção à p
 
 ## Currículos fornecidos pelo titular
 
-Os arquivos distribuídos são `public/documents/luigi-scofano-curriculo-pt.docx` e `public/documents/luigi-scofano-resume-en.pdf`. Correspondem a versões existentes de épocas diferentes; não são traduções sincronizadas nem uma consolidação dos fatos mais recentes da página.
+Os arquivos distribuídos são `public/documents/luigi-scofano-curriculo-pt.pdf` e `public/documents/luigi-scofano-resume-en.pdf`. Correspondem a versões existentes de épocas diferentes; não são traduções sincronizadas nem uma consolidação dos fatos mais recentes da página.
 
-O DOCX português teve endereço residencial e telefone substituídos por espaços, preservando o restante do conteúdo original e a estrutura do documento. O PDF inglês teve o telefone removido por redação definitiva e limpeza de metadados. Os demais conteúdos profissionais foram preservados. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
+O PDF português de quatro páginas foi preparado a partir do DOCX sanitizado; o DOCX permanece intacto no repositório para preservação, mas não é o download principal da página. O DOCX português teve endereço residencial e telefone substituídos por espaços, preservando o restante do conteúdo original e a estrutura do documento. O PDF inglês teve o telefone removido por redação definitiva e limpeza de metadados. Os demais conteúdos profissionais foram preservados. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
+
+## Estudos de caso e exemplo de pesquisa
+
+`content/project-cases.json` reúne estudos de caso bilíngues de Intuição, Tupi e GestureLab, com links para seus repositórios. Esses textos distinguem contribuição, decisões técnicas e limitações, sem transformar demonstrações em resultados de pesquisa.
+
+O componente de exemplo de pesquisa usa a palavra portuguesa “casa”, a leitura fictícia “c8sa” e a revisão “casa”. É uma explicação simulada de rastreabilidade, não verbete em Tupi, material do corpus, execução de OCR ou medição CER/WER. As fontes primárias vinculadas são:
+
+- [Pipeline de dados](https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/tupi/pipeline.py).
+- [Demonstração com três registros sintéticos](https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/data/demo.tsv).
+- [Procedência e limites](https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/docs/PROCEDENCIA.md).
+
+A existência dessas ferramentas na edição de portfólio não implica que todo o pipeline tenha sido usado na etapa original da iniciação científica.
 
 ## Tipografia atual
 

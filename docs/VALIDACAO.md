@@ -29,14 +29,24 @@ Os testes em `tests/` verificam contratos de conteúdo, IDs e seções, caminhos
 - Abrir `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/` diretamente e recarregar cada rota.
 - Conferir imagem original de 1152 × 1536 px, fontes de sistema, ausência de sprite junto ao nome e presença da assinatura independente.
 - Alternar Português / English; testar `?lang=en`, `?lang=pt`, recarga e armazenamento bloqueado. Conferir idioma do documento, título, rótulos, textos alternativos e conteúdo biográfico.
-- Verificar navegação por âncoras, estado ativo, seis projetos, filtros, detalhes e acordeão de formação.
+- Verificar navegação por âncoras, estado ativo, seis projetos, filtros, detalhes e acordeão de formação. Abrir os estudos de caso de Intuição, Tupi e GestureLab nos dois idiomas; conferir os links de evidência.
+- Conferir os botões separados “Experimentar” e “Ver código” de Intuição, e o link “Mais sobre mim”, que deve expandir e focalizar a biografia.
+- Conferir o exemplo casa/c8sa, seu aviso de simulação em português, a ausência de alegação de OCR real e os links de pipeline, dados sintéticos e procedência.
+- Revisar as prévias de catálogo (Intuição), capa (Tupi), ilustração (Kaggle), entrada sintética (GestureLab) e captura real (Pokédex). Conferir também a captura real do README de LabDig (777 × 520 px), com legenda que a distingue de validação de hardware.
+- Conferir a contextualização inglesa de Poli-USP e Tupi Antigo.
 - Usar teclado: link para pular, foco visível, seletor, abertura/fechamento do menu móvel, Escape, Tab/Shift+Tab e retorno do foco.
 - Conferir desktop, largura de 390 px e largura de 320 px, inclusive nome, botões, downloads e textos ingleses; verificar rolagem horizontal e sobreposições. Rever zoom e movimento reduzido.
 - Testar separadamente cópia dos dois e-mails e fallback sem permissão. Abrir `mailto:` não significa enviar uma mensagem.
-- Baixar DOCX português e PDF inglês, conferir formato e abertura, sem inferir equivalência entre seus conteúdos.
+- Baixar os PDFs português e inglês, verificar quatro e duas páginas respectivamente, conferir formato e abertura, a prioridade pelo idioma e o hash do PDF PT registrado na documentação de idiomas, sem inferir equivalência entre seus conteúdos.
 - Examinar console, falhas de rede e links externos relevantes. Arquivos de checagem HTTP antigos não garantem disponibilidade atual.
 
 Este roteiro descreve verificações a realizar. Não é uma declaração de que foram executadas nesta revisão documental.
+
+## Atualização editorial local ainda sujeita à QA final
+
+A revisão acrescenta estudos de caso bilíngues, exemplo fictício de OCR/revisão, fontes primárias, links separados para demonstração/código, expansão direta da biografia, contexto internacional e prévias com proveniência. Os dois downloads principais passam a ser PDFs, priorizados pelo idioma; o DOCX português sanitizado é preservado. A captura real do README de LabDig está integrada; a validação física das revisões do projeto continua pendente.
+
+Essas alterações foram documentadas por inspeção do código e dos arquivos. Não se declara aqui nova execução da suíte, build, publicação ou aprovação visual; o resultado da QA final deve ser registrado separadamente.
 
 ## Histórico preservado como contexto
 
@@ -63,3 +73,12 @@ Verificações executadas após a separação dos componentes e hooks, em Node.j
 - Revisão independente do código: sem bloqueador identificado; cobriu fallbacks de projetos, destaques opcionais, temporizadores de cópia e limpeza de eventos/animações.
 
 Essas verificações não substituem o teste do commit publicado. O workflow usa Node.js 22 e executa a mesma validação antes do deploy. O comportamento visual e as interações devem ser reconferidos no site após essa publicação.
+
+### Verificação local das oito melhorias (9 de novembro de 2026)
+
+`npm run validate` terminou com código 0: 29 testes passaram, formatação correta,
+lint sem erros (seis avisos existentes `no-img-element`), compilação estática,
+TypeScript e verificação de 24 recursos/rotas locais. O PDF português e o DOCX
+saneado preservado têm hashes fixados em testes. O exemplo de OCR é fictício;
+essa validação não executou OCR nem mediu qualidade dos projetos apresentados.
+A verificação visual e funcional da publicação permanece uma etapa separada.

@@ -1339,3 +1339,15 @@ main:focus {
   flex-wrap: wrap;
   gap: 0 20px;
 }
+
+/* Aprofundamentos usam os mesmos detalhes nativos e mantêm a leitura opcional. */
+.research-example h4 {
+  margin: 22px 0 8px;
+  font-size: 14px;
+}
+.feature-code-link {
+  margin-left: 18px;
+}
+#mais-sobre-mim {
+  scroll-margin-top: 28px;
+}

@@ -29,16 +29,19 @@ npm start
 - `content/portfolio.json`: conteúdo em português, incluindo perfil, abertura em `profile.hero`, projetos, pesquisa, formação, trajetória, contato, navegação e data editorial `updated`.
 - `content/portfolio.en.json`: versão inglesa com a mesma estrutura. Atualize os dois arquivos quando um fato mudar.
 - `content/ui.en.json`: traduções de rótulos da interface, usando o texto português como chave. Um rótulo sem tradução recai no português.
+- `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab, em português e inglês, com problema, contribuição, decisões técnicas, reprodução, limites e links de evidência.
 - `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
-- `public/documents/`: currículo português em DOCX e currículo inglês em PDF. São documentos de épocas diferentes, não traduções sincronizadas. Não atualize datas ou conteúdos por inferência.
+- `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. São documentos de épocas diferentes, não traduções sincronizadas. Não atualize datas ou conteúdos por inferência.
 
 Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual tem seis projetos; seus testes e destaques precisam ser revistos se essa estrutura mudar.
 
-`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição e Pokédex usam capturas reais. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
+`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição usa uma página do catálogo original de ícones; Tupi, a capa documental original; Kaggle, uma ilustração didática; GestureLab, uma prévia sintética; Pokédex, uma captura real. LabDig mostra uma captura real do README, como documentação do acervo, não como validação de hardware. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
 
 A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
-O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. As páginas `/atualizar/` e `/creditos/` permanecem em português. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
+O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. A ordem dos currículos prioriza o PDF do idioma selecionado. A introdução inglesa explica Poli-USP e Tupi Antigo para leitores internacionais. As páginas `/atualizar/` e `/creditos/` permanecem em português. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
+
+O destaque de Intuição separa “Experimentar” e “Ver código”. O link “Mais sobre mim” abre os detalhes da biografia. O exemplo de pesquisa em `components/portfolio/research-example.tsx` usa “casa” → “c8sa” → “casa” para explicar extração e revisão: é uma simulação em português, não um verbete Tupi nem um resultado real de OCR. Preserve esse aviso e os links às fontes primárias ao editar.
 
 ## Publicação manual
 

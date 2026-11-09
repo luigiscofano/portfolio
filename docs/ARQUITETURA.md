@@ -16,7 +16,9 @@ A página principal é pré-renderizada em português e hidratada para oferecer 
 - `app/atualizar/page.tsx` e `app/creditos/page.tsx`: páginas auxiliares.
 - `components/portfolio/icon.tsx`: renderização dos ícones locais definidos em `content/icons.json`.
 - `components/portfolio/profile-name.tsx`: nome completo e suporte ao sprite opcional, atualmente desativado.
-- `components/portfolio/project-card.tsx`: card de projeto, captura opcional, links, tecnologias, autoria e limites.
+- `components/portfolio/project-card.tsx`: card de projeto, imagem opcional, links, tecnologias, autoria, limites e estudos de caso bilíngues.
+- `components/portfolio/research-example.tsx`: exemplo fictício de extração e revisão, com referências ao pipeline, dados de demonstração e procedência do projeto Tupi. Não executa OCR.
+- `lib/project-presentation.mjs`: ícones e cores por projeto, com fallback para novos IDs.
 - `hooks/use-portfolio-language.ts`: seleção de conteúdo, tradução dos rótulos, preferência local, parâmetro de URL e idioma do documento.
 - `hooks/use-section-navigation.ts`: seção ativa, navegação e comportamento do menu móvel.
 - `hooks/use-email-copy.ts`: cópia de e-mail e feedback, incluindo falha de permissão.
@@ -28,13 +30,17 @@ Os destaques da abertura dependem dos IDs editoriais de projetos, como `tupi` e 
 
 ## Conteúdo e ativos
 
-Os JSONs `content/portfolio.json` e `content/portfolio.en.json` compartilham estrutura, IDs e referências de arquivos, mas contêm textos em idiomas diferentes. `content/ui.en.json` traduz rótulos portugueses usados pela interface; chaves ausentes recaem no português.
+Os JSONs `content/portfolio.json` e `content/portfolio.en.json` compartilham estrutura, IDs e referências de arquivos, mas contêm textos em idiomas diferentes. `content/project-cases.json` mantém os estudos de caso em `pt` e `en`, indexados por ID de projeto. Cada item tem título, texto e URL de evidência. `content/ui.en.json` traduz rótulos portugueses usados pela interface; chaves ausentes recaem no português.
 
-`public/images/` contém foto original, capturas, diagramas e assinatura. `public/documents/` contém apenas as versões de currículo destinadas à distribuição pública. `public/fonts/` preserva fontes de uma revisão anterior; o CSS vigente usa fontes de sistema. `public/licenses/` guarda atribuições e licenças dos recursos correspondentes.
+`public/images/` contém foto original, capturas, diagramas e assinatura. `public/documents/` contém os PDFs português e inglês oferecidos na página e o DOCX português sanitizado preservado. Como essa pasta é copiada para a exportação, mesmo um arquivo sem botão de download continua sendo público. `public/fonts/` preserva fontes de uma revisão anterior; o CSS vigente usa fontes de sistema. `public/licenses/` guarda atribuições e licenças dos recursos correspondentes.
 
 Dados no JSON usam caminhos a partir de `public/`, como `/images/luigi-original.jpg`, sem o prefixo do repositório. A renderização aplica `sitePath`. Se o nome do repositório mudar, revise `next.config.ts`, `lib/site-path.ts`, metadados/favicon, servidor de prévia, testes e quaisquer caminhos absolutos no CSS. Não substitua caminhos indiscriminadamente dentro de URLs externas.
 
-A foto original tem 1152 × 1536 px e é enquadrada por CSS, sem alteração semântica. O sprite junto ao nome está desativado, mas seu arquivo e os créditos permanecem. A assinatura independente de bem-te-vi com folhas continua habilitada. Currículos português e inglês são documentos de épocas distintas, preservados após remoção dos dados pessoais indicados em [IDIOMAS-E-ACESSIBILIDADE.md](IDIOMAS-E-ACESSIBILIDADE.md).
+A foto original tem 1152 × 1536 px e é enquadrada por CSS, sem alteração semântica. O sprite junto ao nome está desativado, mas seu arquivo e os créditos permanecem. A assinatura independente de bem-te-vi com folhas continua habilitada. Os PDFs são ordenados conforme o idioma escolhido, mantendo ambos disponíveis. Currículos português e inglês são documentos de épocas distintas, preservados após remoção dos dados pessoais indicados em [IDIOMAS-E-ACESSIBILIDADE.md](IDIOMAS-E-ACESSIBILIDADE.md).
+
+A abertura oferece links separados de demonstração e código para Intuição. “Mais sobre mim” abre o elemento `details` da biografia e focaliza seu resumo. A descrição inglesa contextualiza a Polytechnic School da University of São Paulo e Old Tupi.
+
+As prévias diferenciam catálogo de arte original (Intuição), capa documental (Tupi), ilustração didática (Kaggle), dados sintéticos (GestureLab) e captura real (Pokédex). LabDig usa `public/images/labdig-readme.jpg`, captura real do README de 777 × 520 px. A imagem documenta o acervo, não comprova validação de hardware.
 
 ## Build, testes e publicação
 

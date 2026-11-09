@@ -4,6 +4,7 @@ import { sitePath } from '@/lib/site-path';
 import { externalLink as external } from '@/lib/portfolio';
 import { Icon, ExternalIcon, type IconName } from '@/components/portfolio/icon';
 import { ProfileName } from '@/components/portfolio/profile-name';
+import { ResearchExample } from '@/components/portfolio/research-example';
 import { ProjectCard } from '@/components/portfolio/project-card';
 import { usePortfolioLanguage } from '@/hooks/use-portfolio-language';
 import { useSectionNavigation } from '@/hooks/use-section-navigation';
@@ -244,19 +245,20 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="resume-links">
-                  {[data.profile.resumePt, data.profile.resume].map(
-                    (resume) => (
-                      <a
-                        key={resume.url}
-                        className="resume-link"
-                        href={sitePath(resume.url)}
-                        download={resume.downloadName}
-                      >
-                        <Icon name="file-lines" size={16} />
-                        {resume.label}
-                      </a>
-                    ),
-                  )}
+                  {(language === 'en'
+                    ? [data.profile.resume, data.profile.resumePt]
+                    : [data.profile.resumePt, data.profile.resume]
+                  ).map((resume) => (
+                    <a
+                      key={resume.url}
+                      className="resume-link"
+                      href={sitePath(resume.url)}
+                      download={resume.downloadName}
+                    >
+                      <Icon name="file-lines" size={16} />
+                      {resume.label}
+                    </a>
+                  ))}
                 </div>
               </div>
               <figure className="hero-portrait">
@@ -317,6 +319,7 @@ export default function Home() {
                 </div>
               </div>
             )}
+            {featuredTupi && <ResearchExample language={language} />}
             <div className="featured-secondary">
               {featuredIntuicao && (
                 <article className="intuicao-feature">
@@ -336,9 +339,19 @@ export default function Home() {
                       <br />
                       {t('IA no próprio navegador.')}
                     </p>
-                    <a href={featuredIntuicao?.url} {...external}>
-                      {t('Conhecer o projeto')}{' '}
+                    <a
+                      href={featuredIntuicao.demo || featuredIntuicao.url}
+                      {...external}
+                    >
+                      {t('Experimentar')}{' '}
                       <Icon name="arrow-up" size={13} className="cta-arrow" />
+                    </a>
+                    <a
+                      href={featuredIntuicao.url}
+                      {...external}
+                      className="feature-code-link"
+                    >
+                      {t('Ver código')} <ExternalIcon />
                     </a>
                   </div>
                 </article>
@@ -353,13 +366,24 @@ export default function Home() {
                     'Pesquisa no IME-USP, museu virtual no LASSu-USP e ensino de jiu-jítsu. Uma trajetória entre áreas.',
                   )}
                 </p>
-                <a href="#trajetoria">
-                  {t('Conhecer minha trajetória')}{' '}
+                <a
+                  href="#mais-sobre-mim"
+                  onClick={() => {
+                    const details = document.getElementById(
+                      'mais-sobre-mim',
+                    ) as HTMLDetailsElement | null;
+                    if (details) {
+                      details.open = true;
+                      details.querySelector('summary')?.focus();
+                    }
+                  }}
+                >
+                  {t('Mais sobre mim')}{' '}
                   <Icon name="arrow-up" size={13} className="cta-arrow-right" />
                 </a>
               </article>
             </div>
-            <details className="about-details">
+            <details id="mais-sobre-mim" className="about-details">
               <summary>{t('Mais sobre mim')}</summary>
               <div className="about-prose">
                 {data.profile.aboutOverview.map((paragraph, index) => (
@@ -404,7 +428,12 @@ export default function Home() {
             </div>
             <div className="resource-grid">
               {filtered.map((project) => (
-                <ProjectCard key={project.id} project={project} t={t} />
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  t={t}
+                  language={language}
+                />
               ))}
             </div>
             <a

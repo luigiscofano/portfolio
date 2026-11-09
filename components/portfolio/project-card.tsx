@@ -1,3 +1,4 @@
+import cases from '@/content/project-cases.json';
 import type data from '@/content/portfolio.json';
 import { sitePath } from '@/lib/site-path';
 import { Icon, ExternalIcon, type IconName } from './icon';
@@ -10,11 +11,16 @@ type Project = (typeof data.projects)[number];
 export function ProjectCard({
   project,
   t,
+  language,
 }: {
   project: Project;
   t: Translate;
+  language: 'pt' | 'en';
 }) {
   const presentation = projectPresentation(project.id);
+  const caseStudy = Object.hasOwn(cases[language], project.id)
+    ? cases[language][project.id as keyof typeof cases.pt]
+    : null;
   return (
     <article
       className="resource-card"
@@ -73,6 +79,26 @@ export function ProjectCard({
           </a>
         )}
       </div>
+      {caseStudy && (
+        <details className="project-details">
+          <summary>
+            {t('Estudo de caso')}{' '}
+            <span className="details-symbol" aria-hidden="true" />
+          </summary>
+          <div className="project-details-body">
+            {caseStudy.map((item) => (
+              <div key={item.title}>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
+                <a href={item.url} {...external}>
+                  {t('Evidência e documentação')}
+                  <ExternalIcon />
+                </a>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
       <details className="project-details">
         <summary>
           {t('Detalhes, autoria e limites')}{' '}

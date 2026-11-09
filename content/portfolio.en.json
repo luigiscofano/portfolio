@@ -40,7 +40,7 @@
       "eyebrow": "Hi, I’m Luigi.",
       "title": "AI, data\nand software.",
       "subtitle": "From research to practice.",
-      "description": "As an undergraduate at Poli-USP, I research NLP and OCR applied to Tupi Antigo and develop tools to explore data, ideas, and decisions."
+      "description": "I am a Computer Engineering undergraduate at the Polytechnic School of the University of São Paulo, Brazil. My research applies NLP and OCR to Old Tupi, an Indigenous language of Brazil, preserving sources and human review decisions."
     },
     "resume": {
       "url": "/documents/luigi-scofano-resume-en.pdf",
@@ -48,9 +48,9 @@
       "downloadName": "Luigi-Scofano-Resume-EN.pdf"
     },
     "resumePt": {
-      "url": "/documents/luigi-scofano-curriculo-pt.docx",
-      "label": "Resume in Portuguese (DOCX, 450 KB)",
-      "downloadName": "Luigi-Scofano-Curriculo-PT.docx"
+      "url": "/documents/luigi-scofano-curriculo-pt.pdf",
+      "label": "Portuguese résumé (PDF)",
+      "downloadName": "Luigi-Scofano-Curriculo-PT.pdf"
     }
   },
   "navigation": [
@@ -100,13 +100,13 @@
       "url": "https://github.com/luigiscofano/intuicao",
       "demo": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
       "demoLabel": "Play in the browser",
-      "image": "/images/intuicao-cerco.webp",
-      "imageAlt": "Actual CERCO game board from Intuição, with two teams of animals and a barrier",
-      "caption": "CERCO · Application screenshot from the repository",
-      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/imagens/jogos/cerco.jpg",
+      "image": "/images/intuicao-catalogo-publico.webp",
+      "imageAlt": "Public Intuição catalog: front and side-view icon sheets",
+      "caption": "Page 4 of the public catalog: original icon sheets.",
+      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/pdfs/marca-e-arte/03-catalogo-sprites-icones-acessorios.pdf#page=4",
       "showImagePreview": true,
-      "imageWidth": 1154,
-      "imageHeight": 1000
+      "imageWidth": 1273,
+      "imageHeight": 1800
     },
     {
       "id": "tupi",
@@ -123,13 +123,13 @@
       "url": "https://github.com/luigiscofano/ic-pln-tupi-antigo",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
-      "caption": "",
-      "imageSource": "",
-      "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "image": "/images/tupi-capa-original.svg",
+      "imageAlt": "Old Tupi research repository cover",
+      "caption": "Project cover; not an OCR result.",
+      "imageSource": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/6601214310ff5125d9f81fb7a1c988548bef7ab0/assets/capa.svg",
+      "showImagePreview": true,
+      "imageWidth": 1200,
+      "imageHeight": 250
     },
     {
       "id": "kaggle",
@@ -150,7 +150,7 @@
       "imageAlt": "Educational figure comparing orthogonal and oblique splits across points from two classes",
       "caption": "Educational illustration from the repository · Not an experimental result",
       "imageSource": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png",
-      "showImagePreview": false,
+      "showImagePreview": true,
       "imageWidth": 1400,
       "imageHeight": 818
     },
@@ -173,7 +173,7 @@
       "imageAlt": "Synthetic PoseMatch preview showing a pose and the catalog reference",
       "caption": "PoseMatch · Demonstration with synthetic input",
       "imageSource": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png",
-      "showImagePreview": false,
+      "showImagePreview": true,
       "imageWidth": 1128,
       "imageHeight": 612
     },
@@ -215,13 +215,13 @@
       "url": "https://github.com/luigiscofano/usp-labdig",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
-      "caption": "",
-      "imageSource": "",
-      "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "image": "/images/labdig-readme.jpg",
+      "imageAlt": "README of the Poli-USP Digital Laboratory archive",
+      "caption": "README screenshot; archive documentation, not hardware validation.",
+      "imageSource": "https://github.com/luigiscofano/usp-labdig#readme",
+      "showImagePreview": true,
+      "imageWidth": 777,
+      "imageHeight": 520
     }
   ],
   "research": [
