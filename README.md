@@ -97,3 +97,7 @@ O contato continua sendo um link `mailto:` e um botão de copiar e-mail. Não h�
 ## Apresentação editorial
 
 A abertura implementa a prévia aprovada em 9 de novembro de 2026. Leia [as decisões de design](docs/DESIGN.md) para manter a barra lateral, os destaques e a adaptação móvel. Os textos principais ficam em `profile.hero`, no arquivo de conteúdo.
+
+## Português e inglês
+
+A página principal tem seletor Português / English, com preferência local e links compartilháveis `?lang=en` e `?lang=pt`. Conteúdo e controles ficam em JSON editável. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para manutenção, verificações e limites.

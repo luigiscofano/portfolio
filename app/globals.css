@@ -280,3 +280,19 @@ main { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-widt
   html { scroll-behavior: auto; }
   *,*:before,*:after { animation: none!important; transition: none!important; }
 }
+
+/* Language is always visible, including when mobile navigation is closed. */
+.language-row { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 16px; font-size: 13px; }
+.language-row select { min-height: 44px; min-width: 128px; padding: 8px 32px 8px 12px; border: 1px solid #697a6e; border-radius: 4px; background: var(--paper); color: var(--ink); font: inherit; }
+select:focus-visible { outline: 3px solid #3d7095; outline-offset: 4px; }
+/* Keep small links and symbols usable without relying on color alone. */
+.resource-links a,.inline-link,.all-projects,.education-panel a { min-height: 44px; }
+.sidebar-footer a { display: inline-block; min-height: 24px; }
+main:focus { outline: none; }
+@media (max-width:360px) {
+  .section { padding-inline: 20px; }
+  .featured-heading { flex-wrap: wrap; gap: 8px; }
+  .intuicao-feature { grid-template-columns: 1fr; }
+  .intuicao-feature img { max-width: 140px; }
+}
+nav a.active { font-weight: 700; border-left-color: var(--blue); }
