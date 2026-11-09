@@ -19,3 +19,9 @@
 - Testes de contraste cobrem as principais combinações de texto: razão mínima 4,5:1. Subtítulo grande e ícones gráficos têm mínimo 3:1. Cores decorativas não são usadas como única indicação do item ativo.
 
 A revisão e os testes locais não constituem certificação de conformidade WCAG nem substituem avaliação com usuários e leitores de tela. Testes reais de navegador devem ser registrados no relatório de publicação.
+
+## Currículo
+
+O botão discreto na apresentação baixa `public/documents/luigi-scofano-resume-en.pdf`, versão em inglês aprovada pelo titular. Telefone removido por redação definitiva do conteúdo, com limpeza de metadados e verificação de texto extraível. E-mail, LinkedIn e conteúdo profissional foram preservados. Para substituir, envie um PDF revisado, atualize o arquivo e os rótulos de tamanho em ambos os JSONs. O PDF tem duas páginas e texto extraível, mas não possui marcação estrutural de acessibilidade; a biografia e a trajetória em HTML continuam disponíveis no site.
+
+O título da página principal é declarado por React junto ao estado do idioma, evitando disputa com metadados estáticos durante a hidratação. As páginas auxiliares têm títulos próprios.

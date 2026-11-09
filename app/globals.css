@@ -296,3 +296,4 @@ main:focus { outline: none; }
   .intuicao-feature img { max-width: 140px; }
 }
 nav a.active { font-weight: 700; border-left-color: var(--blue); }
+.resume-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }

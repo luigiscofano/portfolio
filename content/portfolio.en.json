@@ -41,6 +41,11 @@
       "title": "AI, data\nand software.",
       "subtitle": "From research to practice.",
       "description": "As an undergraduate at Poli-USP, I research NLP and OCR applied to Tupi Antigo and develop tools to explore data, ideas, and decisions."
+    },
+    "resume": {
+      "url": "/documents/luigi-scofano-resume-en.pdf",
+      "label": "Resume in English (PDF, 59 KB)",
+      "downloadName": "Luigi-Scofano-Resume-EN.pdf"
     }
   },
   "navigation": [

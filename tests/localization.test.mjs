@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 const pt=JSON.parse(fs.readFileSync('content/portfolio.json','utf8'));
 const en=JSON.parse(fs.readFileSync('content/portfolio.en.json','utf8'));
 test('English content preserves structure, links, assets and factual scope',()=>{
@@ -32,4 +33,17 @@ test('Key text and focus palettes meet WCAG AA contrast thresholds',()=>{
  for(const [fg,bg] of [['59675e','faf9f5'],['3d7095','faf9f5'],['3d7095','eff2f5'],['626e68','ffffff'],['4f7057','eaf0e8'],['4d6277','edf2f7'],['6e5d7b','f0edf5'],['73578a','f0edf5'],['ffffff','4d6b57']])assert.ok(contrast(fg,bg)>=4.5,`${fg}/${bg}`);
  // The hero subtitle is large text; timeline icons are graphical objects.
  for(const [fg,bg] of [['627b66','faf9f5'],['ffffff','548eb7'],['ffffff','6e9675']])assert.ok(contrast(fg,bg)>=3,`${fg}/${bg}`);
+});
+test('Localized title has one owner and approved PDF remains downloadable',()=>{
+ const page=fs.readFileSync('app/page.tsx','utf8');
+ const layout=fs.readFileSync('app/layout.tsx','utf8');
+ assert.ok(page.includes("<title>{language==='en'?"));
+ assert.ok(!page.includes('document.title='));
+ assert.ok(!layout.includes('title:'));
+ assert.equal(pt.profile.resume.url,en.profile.resume.url);
+ const pdf=fs.readFileSync(`public${pt.profile.resume.url}`);
+ assert.equal(pdf.subarray(0,5).toString(),'%PDF-');
+ assert.equal(pdf.length,60476);
+ assert.equal(createHash('sha256').update(pdf).digest('hex'),'a299b5606f33a17892e97022d90a1a315453b8a5e0edc1b1c50e2ee17b37d81a');
+ assert.ok(page.includes('download={data.profile.resume.downloadName}'));
 });

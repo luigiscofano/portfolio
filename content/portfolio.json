@@ -41,6 +41,11 @@
       "title": "IA, dados\ne software.",
       "subtitle": "Da pesquisa à prática.",
       "description": "Graduando na Poli-USP, pesquiso PLN e OCR aplicados ao Tupi Antigo e desenvolvo ferramentas para explorar dados, ideias e decisões."
+    },
+    "resume": {
+      "url": "/documents/luigi-scofano-resume-en.pdf",
+      "label": "Currículo em inglês (PDF, 59 KB)",
+      "downloadName": "Luigi-Scofano-Resume-EN.pdf"
     }
   },
   "navigation": [

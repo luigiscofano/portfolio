@@ -50,7 +50,6 @@ export default function Home(){
  },[]);
  useEffect(()=>{
    document.documentElement.lang=language==='en'?'en':'pt-BR';
-   document.title=language==='en'?'Luigi Scofano | AI, data and software':'Luigi Scofano | IA, dados e software';
  },[language]);
  function changeLanguage(value:'pt'|'en'){
    setLanguage(value);
@@ -104,6 +103,7 @@ export default function Home(){
   {label:t('Documentação'),icon:'file-lines' as IconName,url:data.profile.documentation,color:'#ad626d',internal:false}
  ];
  return <>
+  <title>{language==='en'?'Luigi Scofano | AI, data and software':'Luigi Scofano | IA, dados e software'}</title>
   <a className="skip-link" href="#conteudo">{t("Ir para o conteúdo")}</a>
   <div className="site-shell" id="inicio">
    <header className="mobile-header"><a tabIndex={menuOpen?-1:undefined} href="#sobre" aria-label={data.profile.name}><ProfileName/></a><button ref={menuButton} aria-label={menuOpen?t('Fechar menu'):t('Abrir menu')} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(!menuOpen)}><Icon name={menuOpen?'xmark':'bars'} size={23}/></button></header>
@@ -129,6 +129,7 @@ export default function Home(){
        <p className="hero-subtitle">{data.profile.hero.subtitle}</p>
        <p className="hero-description">{data.profile.hero.description}</p>
        <div className="hero-actions"><a className="primary-link" href="#projetos">{t("Explorar projetos")}{" "}<Icon name="arrow-up" size={13} className="cta-arrow-down"/></a><a href="#trajetoria">{t("Minha trajetória")}{" "}<Icon name="arrow-up" size={13} className="cta-arrow-right"/></a></div>
+       <a className="resume-link" href={sitePath(data.profile.resume.url)} download={data.profile.resume.downloadName}><Icon name="file-lines" size={16}/>{data.profile.resume.label}</a>
       </div>
       <figure className="hero-portrait"><div className="portrait-frame"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="1152" height="1536" fetchPriority="high"/></div><figcaption>{data.profile.name}</figcaption></figure>
      </div>
