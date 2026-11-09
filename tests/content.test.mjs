@@ -69,3 +69,11 @@ test('full name and sprite stay together on the last name line',()=>{
  assert.ok(page.includes('const words=data.profile.name.trim().split'));assert.ok(page.includes('className="name-ending">{suffix}<NameSprite/>'));
  assert.ok(css.includes('.name-ending{white-space:nowrap}'));assert.ok(css.includes('vertical-align:calc(var(--sprite-size) * -0.0494417863)'));
 });
+
+test('personal and professional emails remain separate and editable',()=>{
+ assert.equal(data.profile.personalEmail,'luigiaraujo23@gmail.com');
+ assert.equal(data.profile.email,'luigiscofano.dev@gmail.com');
+ const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
+ assert.ok(page.includes('email:data.profile.personalEmail'));
+ assert.ok(page.includes('onClick={()=>copyEmail(email)}'));
+});

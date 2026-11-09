@@ -39,8 +39,8 @@ export default function Home(){
  const [menuOpen,setMenuOpen]=useState(false);
  const [educationOpen,setEducationOpen]=useState<number|null>(0);
  const [filter,setFilter]=useState("Todos");
- const [copied,setCopied]=useState(false);
- const [copyError,setCopyError]=useState(false);
+ const [copied,setCopied]=useState<string|null>(null);
+ const [copyError,setCopyError]=useState<string|null>(null);
  const menuButton=useRef<HTMLButtonElement>(null);
  useEffect(()=>{
    const update=()=>{const sections=[...document.querySelectorAll<HTMLElement>('main > section[id]')];let current=sections[0]?.id||'sobre';for(const section of sections){if(section.getBoundingClientRect().top<180)current=section.id;}if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-8)current='contato';setActive(current);};
@@ -53,7 +53,7 @@ export default function Home(){
    document.addEventListener('keydown',onKey);
    return()=>document.removeEventListener('keydown',onKey);
  },[menuOpen]);
- async function copyEmail(){try{await navigator.clipboard.writeText(data.profile.email);setCopied(true);setCopyError(false);setTimeout(()=>setCopied(false),2500);}catch{setCopyError(true);}}
+ async function copyEmail(email:string){try{await navigator.clipboard.writeText(email);setCopied(email);setCopyError(null);setTimeout(()=>setCopied(null),2500);}catch{setCopyError(email);}}
  const filtered=data.projects.filter(project=>filter==='Todos'||project.category===filter);
  const profileLinks=[
   {label:'GitHub',icon:'github' as IconName,url:data.profile.github,color:'#d9a62b',internal:false},
@@ -109,7 +109,8 @@ export default function Home(){
     <section id="contato" className="section contact-section">
      <SectionTitle>Contato</SectionTitle>
      <p className="section-intro">{data.contactText}</p>
-     <div className="contact-item"><span className="contact-icon"><Icon name="envelope" size={29}/></span><div><a className="contact-email" href={`mailto:${data.profile.email}`}>{data.profile.email}</a><button className="copy-email" onClick={copyEmail} aria-label={copied?'E-mail copiado':'Copiar e-mail'}><Icon name={copied?'check':'copy'} size={16}/></button><span className="copy-feedback" aria-live="polite">{copied?'E-mail copiado.':copyError?'Selecione o endereço para copiá-lo.':''}</span></div></div>
+     {/* Cada endereço mantém seu próprio feedback de cópia. */}
+     {[{label:"E-mail profissional",email:data.profile.email},{label:"E-mail pessoal",email:data.profile.personalEmail}].map(({label,email})=><div className="contact-item" key={email}><span className="contact-icon"><Icon name="envelope" size={29}/></span><div><p>{label}</p><a className="contact-email" href={`mailto:${email}`}>{email}</a><button className="copy-email" onClick={()=>copyEmail(email)} aria-label={copied===email?`${label} copiado`:`Copiar ${label.toLowerCase()}`}><Icon name={copied===email?'check':'copy'} size={16}/></button><span className="copy-feedback" aria-live="polite">{copied===email?'E-mail copiado.':copyError===email?'Selecione o endereço para copiá-lo.':''}</span></div></div>)}
      <div className="contact-item"><span className="contact-icon"><Icon name="location-dot" size={29}/></span><div><p>{data.profile.location}</p><span>Engenharia de Computação · Poli-USP</span></div></div>
      <div className="contact-social"><a href={data.profile.github} {...external}><Icon name="github" size={18}/>GitHub<ExternalIcon/></a><a href={data.profile.linkedin} {...external}><Icon name="linkedin" size={18}/>LinkedIn<ExternalIcon/></a></div>
     </section>
