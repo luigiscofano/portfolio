@@ -129,7 +129,7 @@ export default function Home(){
        <p className="hero-subtitle">{data.profile.hero.subtitle}</p>
        <p className="hero-description">{data.profile.hero.description}</p>
        <div className="hero-actions"><a className="primary-link" href="#projetos">{t("Explorar projetos")}{" "}<Icon name="arrow-up" size={13} className="cta-arrow-down"/></a><a href="#trajetoria">{t("Minha trajetória")}{" "}<Icon name="arrow-up" size={13} className="cta-arrow-right"/></a></div>
-       <a className="resume-link" href={sitePath(data.profile.resume.url)} download={data.profile.resume.downloadName}><Icon name="file-lines" size={16}/>{data.profile.resume.label}</a>
+       <div className="resume-links">{[data.profile.resumePt,data.profile.resume].map(resume=><a key={resume.url} className="resume-link" href={sitePath(resume.url)} download={resume.downloadName}><Icon name="file-lines" size={16}/>{resume.label}</a>)}</div>
       </div>
       <figure className="hero-portrait"><div className="portrait-frame"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="1152" height="1536" fetchPriority="high"/></div><figcaption>{data.profile.name}</figcaption></figure>
      </div>

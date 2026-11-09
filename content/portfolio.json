@@ -44,8 +44,13 @@
     },
     "resume": {
       "url": "/documents/luigi-scofano-resume-en.pdf",
-      "label": "Currículo em inglês (PDF, 59 KB)",
+      "label": "Currículo em inglês (PDF, 43 KB)",
       "downloadName": "Luigi-Scofano-Resume-EN.pdf"
+    },
+    "resumePt": {
+      "url": "/documents/luigi-scofano-curriculo-pt.docx",
+      "label": "Currículo em português (DOCX, 450 KB)",
+      "downloadName": "Luigi-Scofano-Curriculo-PT.docx"
     }
   },
   "navigation": [

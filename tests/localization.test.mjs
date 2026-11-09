@@ -43,7 +43,13 @@ test('Localized title has one owner and approved PDF remains downloadable',()=>{
  assert.equal(pt.profile.resume.url,en.profile.resume.url);
  const pdf=fs.readFileSync(`public${pt.profile.resume.url}`);
  assert.equal(pdf.subarray(0,5).toString(),'%PDF-');
- assert.equal(pdf.length,60476);
- assert.equal(createHash('sha256').update(pdf).digest('hex'),'a299b5606f33a17892e97022d90a1a315453b8a5e0edc1b1c50e2ee17b37d81a');
- assert.ok(page.includes('download={data.profile.resume.downloadName}'));
+ assert.equal(pdf.length,43686);
+ assert.equal(createHash('sha256').update(pdf).digest('hex'),'49b07b4cbf364e2cda982e3f82388610a0b070f6eb12d1ff6f8c643bc689d13d');
+ assert.ok(page.includes('download={resume.downloadName}'));
+});
+
+test('Portuguese resume is the reviewed native document',()=>{
+ assert.equal(pt.profile.resumePt.url,en.profile.resumePt.url);
+ const docx=fs.readFileSync(`public${pt.profile.resumePt.url}`);
+ assert.equal(createHash('sha256').update(docx).digest('hex'),'576f67b1633b6c6f9e7bb5321be6103b469233a00139bf6d4e0c2de3bd020f42');
 });
