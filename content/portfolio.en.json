@@ -116,12 +116,7 @@
       "type": "Research · IME-USP",
       "featured": false,
       "summary": "Tools for structuring and reviewing lexicographic data while preserving sources, original spelling, and human review decisions.",
-      "technologies": [
-        "Python",
-        "NLP",
-        "OCR",
-        "Unicode"
-      ],
+      "technologies": ["Python", "NLP", "OCR", "Unicode"],
       "details": "A TSV pipeline for importing, NFC normalization, auditing, and exporting, with CER/WER metrics and optional OCR via Tesseract. Research supervised by Professor Marcelo Finger, PhD.",
       "contribution": "Research and tools documented by Luigi. The documentation acknowledges the academic partnership with Calebe Rezende’s Dicionário Tupi-Português.",
       "limitation": "The demo uses fictional records. The repository does not distribute the complete validated corpus or provide automatic sentence translation.",
@@ -144,12 +139,7 @@
       "type": "Collaborative academic project",
       "featured": false,
       "summary": "An oblique decision forest implementation for investigating boundaries that combine multiple features at each node.",
-      "technologies": [
-        "Python",
-        "NumPy",
-        "PCA / SVD",
-        "Entropy"
-      ],
+      "technologies": ["Python", "NumPy", "PCA / SVD", "Entropy"],
       "details": "Coursework for PCS 3838, Artificial Intelligence, at Poli-USP. Includes orthogonal and oblique trees, forests, and prediction export. Each node learns its directions through PCA/SVD and selects splits based on information gain.",
       "contribution": "A collaborative academic project. The implementation and contribution history are available in the repository; it is not presented as solely authored work.",
       "limitation": "A demonstration using synthetic data. No score, Kaggle ranking, or experimental competition results are presented. The figure is educational, not a benchmark.",
@@ -172,12 +162,7 @@
       "type": "Local application · Computer vision",
       "featured": false,
       "summary": "A webcam-based lab for tracking hands, recognizing gestures, drawing in the air, and comparing poses with a local catalog.",
-      "technologies": [
-        "Python",
-        "OpenCV",
-        "MediaPipe",
-        "NumPy"
-      ],
+      "technologies": ["Python", "OpenCV", "MediaPipe", "NumPy"],
       "details": "Four independent modes: hands, gestures, airwrite, and posematch. The application connects detected coordinates to interaction states, stroke smoothing, export, and geometric comparison.",
       "contribution": "Integration, interaction logic, local interface, geometric descriptor, reproducible catalog, and tests. The detection models are pretrained MediaPipe models.",
       "limitation": "No custom models are trained, and air writing does not include word recognition. The pose preview uses synthetic input and does not represent a performance measurement.",
@@ -200,12 +185,7 @@
       "type": "Web application · Fan project",
       "featured": false,
       "summary": "An interface for exploring species, forms, evolutions, and game-specific information, with versioned data and reproducible imports.",
-      "technologies": [
-        "JavaScript",
-        "Node.js",
-        "PokéAPI",
-        "Testing"
-      ],
+      "technologies": ["JavaScript", "Node.js", "PokéAPI", "Testing"],
       "details": "A searchable catalog with filters, browser-stored favorites, Shiny mode, stats, and evolution families. The original Java exercise remains in a separate module.",
       "contribution": "A fan application developed by Luigi, with a responsive interface, data preparation, tests, and documentation. Sources for data and images are identified in the repository.",
       "limitation": "Queries reflect the coverage of the imported dataset. Favorites are stored in the browser. Pokémon and its assets belong to their respective rights holders; this is an unofficial project.",
@@ -228,12 +208,7 @@
       "type": "Academic group projects",
       "featured": false,
       "summary": "FPGA circuits and games that connect state machines, sensors, serial communication, and computer interfaces.",
-      "technologies": [
-        "Verilog",
-        "FPGA",
-        "UART / PWM",
-        "Processing"
-      ],
+      "technologies": ["Verilog", "FPGA", "UART / PWM", "Processing"],
       "details": "A collection from Poli-USP’s Digital Laboratory I and II courses, with experiments and the Math Genius and Guardião do Paredão projects. Includes source files, reports, simulations, and verification tools.",
       "contribution": "Group projects, with authorship, teaching materials, and subsequent organization identified in the repository’s implementation documentation.",
       "limitation": "Simulation and compilation are not equivalent to hardware validation. Physical validation of the revisions in this edition remains pending; no claims of therapeutic effectiveness are made.",

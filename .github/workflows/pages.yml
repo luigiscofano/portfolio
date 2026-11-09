@@ -1,6 +1,6 @@
 name: Publish portfolio to GitHub Pages
 
-# Manual only: preparing this repository does not publish the site.
+# Somente execução manual: um commit não publica o site.
 on:
   workflow_dispatch:
 
@@ -23,9 +23,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm test
-      - run: npm run build
-      - run: npm run typecheck
+      - run: npm run validate
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

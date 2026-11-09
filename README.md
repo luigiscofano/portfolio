@@ -1,103 +1,63 @@
 # Portfólio de Luigi Scofano de Araujo
 
-Portfólio pessoal responsivo em português. Esta cópia usa React, TypeScript e Next.js com exportação estática para GitHub Pages em `/portfolio/`. Sem banco de dados, formulário de envio, analytics ou integrações com contas externas.
+Portfólio pessoal com página principal em português e inglês, desenvolvido em React, TypeScript e Next.js. A exportação estática é publicada no [GitHub Pages](https://luigiscofano.github.io/portfolio/), sob `/portfolio/`.
 
-**Portfólio publicado:** https://luigiscofano.github.io/portfolio/
+Não há autenticação, banco de dados, analytics ou serviço de envio de mensagens em execução no site. O contato usa `mailto:` e cópia de endereço. A [versão no Sites](https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/) é independente: nenhuma das duas publicações sincroniza a outra.
 
-A versão existente no Sites permanece independente: https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/.
+## Desenvolvimento
 
-## Atualizar conteúdo
-
-Edite **content/portfolio.json**. O conteúdo está organizado em:
-
-- `profile`: nome, apresentação (em `aboutOverview`), foto, contato e links.
-- `navigation`: nomes e IDs das seções.
-- `projects`: descrição, tecnologias, autoria, limites, repositório, demonstração e imagem.
-- `research`: iniciativas de pesquisa e respectivos links.
-- `education`: formação, instituição e estado atual.
-- `experience`: experiências e descrições, sem datas ou cargos presumidos.
-- `skills`: síntese de áreas de trabalho.
-- `updated`: mês e ano da revisão mostrados no rodapé.
-
-Imagens ficam em `public/images/`. Use caminhos como `/images/foto.webp` e texto alternativo descritivo. Registre a fonte em `docs/FONTES.md`. Preserve créditos de terceiros e não publique informação privada.
-
-Para adicionar um projeto, copie uma entrada de `projects`, altere seu `id` único, textos, links e `category` (`IA`, `Dados`, `Software` ou `Hardware`). Imagem, demo e campos relacionados podem ficar vazios quando não houver material real. Não apresente ilustração ou dados sintéticos como evidência experimental.
-
-O guia `/atualizar` também explica como pedir atualizações pela conversa do ChatGPT. Não existe CMS nem editor com salvamento local. Conteúdo alterado precisa de uma nova publicação para aparecer na URL.
-
-## Desenvolvimento e validação
-
-Requisitos: Node.js 22.13.0 ou superior e npm.
+Requisitos: Node.js 22.13.0 ou superior e npm. O workflow usa Node.js 22.
 
 ```sh
 git clone https://github.com/luigiscofano/portfolio.git
 cd portfolio
 npm ci
 npm run dev
-npm test
-npm run build
-npm run typecheck
 ```
 
-Para esta cópia, `npm run build` gera a pasta estática `out/`, sem servidor Node.js ou Cloudflare em produção. `npm start` permite conferir a exportação em http://127.0.0.1:4173/portfolio/. Os arquivos antigos de integração com Sites são mantidos apenas como referência e não são usados pelo build padrão. Nunca salve tokens de acesso em arquivos.
+Antes de propor uma publicação:
 
-## Estrutura
+```sh
+npm run validate
+npm start
+```
 
-- `app/page.tsx`: página acadêmica, acordeão de formação, filtros e navegação.
-- `app/globals.css`: identidade visual e layouts responsivos.
-- `app/atualizar/page.tsx`: guia de atualização.
-- `content/portfolio.json`: conteúdo centralizado.
-- `public/images/`: imagens otimizadas de fontes públicas verificadas.
-- `docs/FONTES.md`: proveniência e limites editoriais.
-- `tests/content.test.mjs`: verificação de estrutura, fontes e recursos locais.
+`npm run validate` reúne formatação, testes, lint, build, TypeScript e checagem dos arquivos exportados. `npm run format` formata o código ativo selecionado; revise o diff antes de publicar. O build gera `out/`. A prévia estática abre em `http://127.0.0.1:4173/portfolio/`. `typecheck` vem depois do build para incluir os tipos gerados pelo Next.js. Os testes automatizados não substituem revisão de teclado, leitura, downloads e layout no navegador. Consulte [validação](docs/VALIDACAO.md).
 
-## Acesso e publicação
+## Editar conteúdo
 
-O portfólio tem acesso público desde 9 de novembro de 2026. O código deste repositório parte da versão 5 do Site e inclui a atualização de direitos autorais de 9 de novembro de 2026, com documentação adaptada para o GitHub. O código não implementa autenticação própria.
+- `content/portfolio.json`: conteúdo em português, incluindo perfil, abertura em `profile.hero`, projetos, pesquisa, formação, trajetória, contato, navegação e data editorial `updated`.
+- `content/portfolio.en.json`: versão inglesa com a mesma estrutura. Atualize os dois arquivos quando um fato mudar.
+- `content/ui.en.json`: traduções de rótulos da interface, usando o texto português como chave. Um rótulo sem tradução recai no português.
+- `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
+- `public/documents/`: currículo português em DOCX e currículo inglês em PDF. São documentos de épocas diferentes, não traduções sincronizadas. Não atualize datas ou conteúdos por inferência.
 
-Este repositório e o Site não têm sincronização automática: commits no GitHub não alteram a página publicada. Atualizações do Site precisam ser salvas e publicadas separadamente no mesmo projeto.
+Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual tem seis projetos; seus testes e destaques precisam ser revistos se essa estrutura mudar.
 
-## Acessibilidade
+`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição e Pokédex usam capturas reais. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
 
-HTML semântico, navegação por âncoras, skip link, texto alternativo, foco visível, filtros com `aria-pressed`, menu móvel com estado acessível, detalhes nativos, suporte a movimento reduzido e contato com fallback para copiar manualmente.
+A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
-## Identidade visual e licenças
+O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. As páginas `/atualizar/` e `/creditos/` permanecem em português. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
 
-A segunda versão aproxima a composição da referência acadêmica solicitada: foto circular, lateral clara, cards com ícones, acordeão de formação e linhas do tempo. O código é próprio. Quicksand e Playfair Display são hospedadas em `public/fonts/`, com licenças SIL OFL em `public/licenses/`. Os ícones SVG são Font Awesome Free 6, sob CC BY 4.0, com caminhos em `content/icons.json`. A página `/creditos` reúne as atribuições.
+## Publicação manual
 
-## Imagens em destaque e assinatura
+1. Revise código, conteúdo, privacidade dos documentos e resultados dos testes. Obtenha autorização antes de enviar/publicar alterações em nome do titular.
+2. No repositório `luigiscofano/portfolio`, configure Settings → Pages → **GitHub Actions**.
+3. Execute manualmente **Publish portfolio to GitHub Pages**, na aba Actions.
+4. O workflow instala dependências, executa `npm run validate` e publica somente `out/`.
+5. Confira a execução e teste a URL pública, inclusive recarga direta das páginas auxiliares e os dois downloads.
 
-Em `content/portfolio.json`, `showImagePreview` controla se a imagem de um projeto aparece no card sem abrir os detalhes. Intuição e Pokédex usam capturas reais dos repositórios. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. A lista `navigation` acompanha a ordem das seções na página: Sobre, Projetos, Pesquisa, Formação, Trajetória, Contato.
+Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare ou banco de dados em produção. As rotas são `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/`. Não salve tokens ou outros segredos no repositório.
 
-`visualSignature` centraliza o arquivo, texto alternativo, dimensões e opção `enabled` do bem-te-vi com folhas. O SVG original está em `public/images/assinatura-bem-te-vi.svg`. A assinatura é estática, sem rastreamento ou interação.
+## Documentação
 
-## Sprite de SINTONIA ao lado do nome
+- [Arquitetura e estrutura](docs/ARQUITETURA.md)
+- [Design vigente e histórico visual](docs/DESIGN.md)
+- [Fontes, imagens e limites editoriais](docs/FONTES.md)
+- [Idiomas, acessibilidade e currículos](docs/IDIOMAS-E-ACESSIBILIDADE.md)
+- [Validação e roteiro de revisão](docs/VALIDACAO.md)
 
-`profile.nameSprite` controla o sprite exibido junto ao nome na lateral desktop e no cabeçalho móvel. O atlas original está em `public/images/sintonia/chibi-user-roster.svg`, sem modificação. O bem-te-vi é o frame 2 do atlas 4 × 4; `backgroundSize` e `backgroundPosition` reproduzem o enquadramento do jogo. Para trocar o ativo, atualize arquivo, posição, fonte e créditos. As artes têm direitos reservados ao titular e não herdam a licença MIT do código.
+O visual atual usa Georgia/Times New Roman e Arial/Helvetica, fontes de sistema. Quicksand e Playfair Display são recursos históricos preservados com suas licenças, não a tipografia ativa. Os ícones locais de Font Awesome Free 6 têm atribuições em `/creditos/` e licenças em `public/licenses/`.
 
-O nome mostrado no topo usa `profile.name` por extenso. A última parte do sobrenome fica junto ao sprite quando há quebra de linha. O alinhamento considera a margem transparente inferior do frame original (15,5 px em uma célula de 313,5 px) para posicionar os pés na linha de base do texto. `profile.shortName` continua disponível para a assinatura curta do rodapé.
-
-## Direitos autorais
-
-© 2026 Luigi Scofano de Araujo. Aviso relativo ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos, créditos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).
-
-## Publicar esta cópia no GitHub Pages
-
-1. Revise as alterações e envie o código ao repositório `luigiscofano/portfolio` somente após autorizar a publicação.
-2. Em Settings → Pages, selecione **GitHub Actions** como origem.
-3. Na aba Actions, execute manualmente **Publish portfolio to GitHub Pages**.
-4. O workflow testa o conteúdo, gera `out/` e publica o artefato estático. Ele não executa automaticamente ao fazer push.
-
-Rotas geradas: `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/`. As páginas auxiliares funcionam com acesso direto e recarga, sem fallback de SPA. `public/.nojekyll` evita processamento Jekyll quando a saída é publicada por outro método.
-
-O prefixo é definido em `next.config.ts`, `lib/site-path.ts`, `app/globals.css` e no favicon/metadados de `app/layout.tsx`. Imagens no JSON mantêm caminhos relativos à raiz de `public/`; a renderização adiciona `/portfolio`. Se o repositório mudar de nome, revise esses pontos, o servidor de prévia e os testes.
-
-O contato continua sendo um link `mailto:` e um botão de copiar e-mail. Não há serviço de envio de mensagens. Alterar a cópia no GitHub não altera a versão no Sites, nem o inverso.
-
-## Apresentação editorial
-
-A abertura implementa a prévia aprovada em 9 de novembro de 2026. Leia [as decisões de design](docs/DESIGN.md) para manter a barra lateral, os destaques e a adaptação móvel. Os textos principais ficam em `profile.hero`, no arquivo de conteúdo.
-
-## Português e inglês
-
-A página principal tem seletor Português / English, com preferência local e links compartilháveis `?lang=en` e `?lang=pt`. Conteúdo e controles ficam em JSON editável. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para manutenção, verificações e limites.
+© 2026 Luigi Scofano de Araujo, quanto ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).

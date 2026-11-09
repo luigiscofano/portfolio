@@ -1,3 +1,81 @@
-import { sitePath } from "@/lib/site-path";
-export const metadata={title:"Créditos | Luigi Scofano"};
-export default function Credits(){return <article className="update-page"><a href={sitePath("/")} >← Voltar ao portfólio</a><h1>Créditos e licenças</h1><p>© 2026 Luigi Scofano de Araujo. Este aviso aplica-se ao conteúdo original de sua autoria neste portfólio. Recursos de terceiros conservam seus próprios direitos, créditos e licenças.</p><p>Este portfólio usa uma implementação própria, com organização acadêmica inspirada no <a href="https://arturjordao.github.io/">site de Artur Jordão</a>. Textos, projetos, fotografia e trajetória pertencem ao contexto de Luigi Scofano.</p><ul className="credit-list"><li><strong>Quicksand e Playfair Display:</strong> fontes distribuídas sob SIL Open Font License 1.1, preservadas no acervo do projeto. A apresentação atual usa fontes de sistema; os arquivos anteriores continuam hospedados junto ao site. <a href={sitePath("/licenses/Quicksand-OFL.txt")} >Licença Quicksand</a> · <a href={sitePath("/licenses/PlayfairDisplay-OFL.txt")} >Licença Playfair Display</a>.</li><li><strong>Font Awesome Free 6:</strong> ícones da coleção gratuita oficial, com ícones SVG sob CC BY 4.0. <a href="https://fontawesome.com/">Font Awesome</a> · <a href={sitePath("/licenses/FontAwesome-LICENSE.txt")} >Licenças completas</a>.</li><li><strong>Foto:</strong> avatar público de <a href="https://github.com/luigiscofano">Luigi no GitHub</a>. O bem-te-vi em pixel art já faz parte da imagem original.</li><li><strong>Sprite opcional junto ao nome (desativado):</strong> Bem-te-vi de SINTONIA, por Luigi Scofano de Araujo. Usa o atlas original e o mesmo enquadramento do jogo. Arte com direitos reservados, utilizada neste portfólio a pedido do titular. <a href="https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg">Arquivo original</a> · <a href="https://github.com/luigiscofano/intuicao/blob/main/docs/recursos/declaracao-autoria.md">Declaração de autoria</a>.</li><li><strong>Assinatura visual:</strong> desenho vetorial original de um bem-te-vi em pixel art com um ramo de folhas, criado para este portfólio. Não é uma fotografia ou um ativo copiado de outro site.</li><li><strong>Imagens dos projetos:</strong> os detalhes de cada projeto indicam sua fonte e distinguem capturas reais, dados sintéticos e figuras didáticas. Recursos de terceiros mantêm seus respectivos direitos.</li></ul><p>O código, os textos, a foto e o pacote de ícones do site de referência não foram reutilizados.</p></article>}
+import { sitePath } from '@/lib/site-path';
+export const metadata = { title: 'Créditos | Luigi Scofano' };
+export default function Credits() {
+  return (
+    <article className="update-page">
+      <a href={sitePath('/')}>← Voltar ao portfólio</a>
+      <h1>Créditos e licenças</h1>
+      <p>
+        © 2026 Luigi Scofano de Araujo. Este aviso aplica-se ao conteúdo
+        original de sua autoria neste portfólio. Recursos de terceiros conservam
+        seus próprios direitos, créditos e licenças.
+      </p>
+      <p>
+        Este portfólio usa uma implementação própria, com organização acadêmica
+        inspirada no{' '}
+        <a href="https://arturjordao.github.io/">site de Artur Jordão</a>.
+        Textos, projetos, fotografia e trajetória pertencem ao contexto de Luigi
+        Scofano.
+      </p>
+      <ul className="credit-list">
+        <li>
+          <strong>Quicksand e Playfair Display:</strong> fontes distribuídas sob
+          SIL Open Font License 1.1, preservadas no acervo do projeto. A
+          apresentação atual usa fontes de sistema; os arquivos anteriores
+          continuam hospedados junto ao site.{' '}
+          <a href={sitePath('/licenses/Quicksand-OFL.txt')}>
+            Licença Quicksand
+          </a>{' '}
+          ·{' '}
+          <a href={sitePath('/licenses/PlayfairDisplay-OFL.txt')}>
+            Licença Playfair Display
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Font Awesome Free 6:</strong> ícones da coleção gratuita
+          oficial, com ícones SVG sob CC BY 4.0.{' '}
+          <a href="https://fontawesome.com/">Font Awesome</a> ·{' '}
+          <a href={sitePath('/licenses/FontAwesome-LICENSE.txt')}>
+            Licenças completas
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Foto:</strong> arquivo original fornecido por Luigi, com 1152
+          × 1536 pixels, preservado sem retoque facial. O bem-te-vi em pixel art
+          já faz parte da imagem; o enquadramento é feito por CSS.
+        </li>
+        <li>
+          <strong>Sprite opcional junto ao nome (desativado):</strong> Bem-te-vi
+          de SINTONIA, por Luigi Scofano de Araujo. Usa o atlas original e o
+          mesmo enquadramento do jogo. Arte com direitos reservados, utilizada
+          neste portfólio a pedido do titular.{' '}
+          <a href="https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg">
+            Arquivo original
+          </a>{' '}
+          ·{' '}
+          <a href="https://github.com/luigiscofano/intuicao/blob/main/docs/recursos/declaracao-autoria.md">
+            Declaração de autoria
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Assinatura visual:</strong> desenho vetorial original de um
+          bem-te-vi em pixel art com um ramo de folhas, criado para este
+          portfólio. Não é uma fotografia ou um ativo copiado de outro site.
+        </li>
+        <li>
+          <strong>Imagens dos projetos:</strong> os detalhes de cada projeto
+          indicam sua fonte e distinguem capturas reais, dados sintéticos e
+          figuras didáticas. Recursos de terceiros mantêm seus respectivos
+          direitos.
+        </li>
+      </ul>
+      <p>
+        O código, os textos, a foto e o pacote de ícones do site de referência
+        não foram reutilizados.
+      </p>
+    </article>
+  );
+}

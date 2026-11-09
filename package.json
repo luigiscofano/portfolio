@@ -1,5 +1,5 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "luigi-scofano-portfolio",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -13,7 +13,11 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "test": "node --test tests/*.test.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"app/{page,layout}.tsx\" \"app/{atualizar,creditos}/page.tsx\" \"app/globals.css\" \"components/portfolio/**/*.tsx\" \"hooks/use-{portfolio-language,section-navigation,email-copy}.ts\" \"lib/{portfolio,site-path}.ts\" \"content/*.json\" \"scripts/{serve-static,check-export}.mjs\" \"lib/project-presentation.mjs\" \"tests/**/*.mjs\"",
+    "format:check": "prettier --check \"app/{page,layout}.tsx\" \"app/{atualizar,creditos}/page.tsx\" \"app/globals.css\" \"components/portfolio/**/*.tsx\" \"hooks/use-{portfolio-language,section-navigation,email-copy}.ts\" \"lib/{portfolio,site-path}.ts\" \"content/*.json\" \"scripts/{serve-static,check-export}.mjs\" \"lib/project-presentation.mjs\" \"tests/**/*.mjs\"",
+    "check:export": "node scripts/check-export.mjs",
+    "validate": "npm run format:check && npm test && npm run lint && npm run build && npm run typecheck && npm run check:export"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -54,6 +58,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.3.4",
     "json-rpc-2.0": "1.7.1",
+    "prettier": "3.6.2",
     "raw-body": "3.0.2",
     "react-server-dom-webpack": "19.2.6",
     "tailwindcss": "4.2.1",
