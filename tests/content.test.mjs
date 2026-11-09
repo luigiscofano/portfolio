@@ -91,6 +91,6 @@ test('editorial opening preserves navigation, contacts and the approved signatur
 
 test('CTA arrows use SVG rather than font-dependent glyphs',()=>{
  const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
- assert.ok(!page.includes('↗'));
+ assert.ok(!/[↗↘→]/.test(page));
  assert.equal((page.match(/className="cta-arrow"/g)||[]).length,3);
 });

@@ -23,7 +23,10 @@ img { display: block; max-width: 100%; }
 svg { flex-shrink: 0; }
 .icon { display: inline-block; vertical-align: -.12em; }
 /* Seta em SVG: independe da cobertura Unicode da fonte do dispositivo. */
-.cta-arrow { transform: rotate(45deg); margin-left: 3px; }
+.cta-arrow,.cta-arrow-down,.cta-arrow-right { margin-left: 3px; }
+.cta-arrow { transform: rotate(45deg); }
+.cta-arrow-down { transform: rotate(135deg); }
+.cta-arrow-right { transform: rotate(90deg); }
 strong { font-weight: 700; color: var(--ink); }
 ::selection { color: #fff; background: var(--green); }
 a:focus-visible,button:focus-visible,summary:focus-visible { outline: 3px solid #3d7095; outline-offset: 5px; }
