@@ -104,13 +104,13 @@ export default function Home(){
       </div>
       <figure className="hero-portrait"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="467" height="390" fetchPriority="high"/><figcaption>{data.profile.name}</figcaption></figure>
      </div>
-     <div className="featured-heading"><h2>Pesquisa &amp; projetos em destaque</h2><a href="#projetos">Ver todos <span aria-hidden="true">↗</span></a></div>
+     <div className="featured-heading"><h2>Pesquisa &amp; projetos em destaque</h2><a href="#projetos">Ver todos <Icon name="arrow-up" size={13} className="cta-arrow"/></a></div>
      <div className="research-feature">
       <div className="research-feature-title"><p className="feature-eyebrow">Iniciação científica · IME-USP</p><h3>Tupi Antigo</h3><p>Linguagem, memória e computação.</p><p className="research-process">Fonte original <span aria-hidden="true">→</span> OCR &amp; PLN <span aria-hidden="true">→</span> Revisão humana</p></div>
-      <div className="research-feature-description"><h4>Tecnologia a serviço<br/>da pesquisa linguística.</h4><p>{data.projects.find(project=>project.id==='tupi')?.summary}</p><a href={data.projects.find(project=>project.id==='tupi')?.url} {...external}>Explorar a pesquisa <span aria-hidden="true">↗</span></a></div>
+      <div className="research-feature-description"><h4>Tecnologia a serviço<br/>da pesquisa linguística.</h4><p>{data.projects.find(project=>project.id==='tupi')?.summary}</p><a href={data.projects.find(project=>project.id==='tupi')?.url} {...external}>Explorar a pesquisa <Icon name="arrow-up" size={13} className="cta-arrow"/></a></div>
      </div>
      <div className="featured-secondary">
-      <article className="intuicao-feature"><img src={sitePath(data.projects.find(project=>project.id==='intuicao')!.image)} alt={data.projects.find(project=>project.id==='intuicao')!.imageAlt} width="154" height="171"/><div><p className="feature-eyebrow">IA clássica &amp; jogos</p><h3>Intuição</h3><p>Jogos de lógica e estratégia.<br/>IA no próprio navegador.</p><a href={data.projects.find(project=>project.id==='intuicao')?.url} {...external}>Conhecer o projeto <span aria-hidden="true">↗</span></a></div></article>
+      <article className="intuicao-feature"><img src={sitePath(data.projects.find(project=>project.id==='intuicao')!.image)} alt={data.projects.find(project=>project.id==='intuicao')!.imageAlt} width="154" height="171"/><div><p className="feature-eyebrow">IA clássica &amp; jogos</p><h3>Intuição</h3><p>Jogos de lógica e estratégia.<br/>IA no próprio navegador.</p><a href={data.projects.find(project=>project.id==='intuicao')?.url} {...external}>Conhecer o projeto <Icon name="arrow-up" size={13} className="cta-arrow"/></a></div></article>
       <article className="beyond-feature"><p className="feature-eyebrow">Pesquisa, desenvolvimento &amp; ensino</p><h3>Além do código.</h3><p>Pesquisa no IME-USP, museu virtual no LASSu-USP e ensino de jiu-jítsu. Uma trajetória entre áreas.</p><a href="#trajetoria">Conhecer minha trajetória <span aria-hidden="true">→</span></a></article>
      </div>
      <details className="about-details"><summary>Mais sobre mim</summary><div className="about-prose">{data.profile.aboutOverview.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div></details>
