@@ -35,3 +35,7 @@ Consulta: 7 de novembro de 2026. Atlas público original, sem alteração: https
 Identificação no catálogo: https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/animal-roster.mjs. Enquadramento original: função spriteMarkup em https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/ui.mjs. Proveniência: https://github.com/luigiscofano/intuicao/blob/main/docs/sintonia-sprites/roster-sources.json.
 
 Direitos reservados a Luigi Scofano de Araujo, fora da licença MIT do código: https://github.com/luigiscofano/intuicao/blob/main/docs/recursos/declaracao-autoria.md. Uso solicitado explicitamente pelo titular. O atlas histórico bemtevi.png não é o ativo atualmente escolhido pelo catálogo e não foi usado. A assinatura SVG com folhas do rodapé continua distinta desse sprite e foi preservada.
+
+## Foto de perfil em alta resolução
+
+A foto principal usa o original enviado por Luigi (1152 × 1536 px), preservado sem retoque, regeneração facial ou ampliação artificial. O enquadramento é feito somente por CSS. Ela substitui na página o avatar público do GitHub de 460 × 460 px, insuficiente para telas de alta densidade. Arquivo: `public/images/luigi-original.jpg`.

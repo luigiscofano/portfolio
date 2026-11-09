@@ -102,7 +102,7 @@ export default function Home(){
        <p className="hero-description">{data.profile.hero.description}</p>
        <div className="hero-actions"><a className="primary-link" href="#projetos">Explorar projetos <Icon name="arrow-up" size={13} className="cta-arrow-down"/></a><a href="#trajetoria">Minha trajetória <Icon name="arrow-up" size={13} className="cta-arrow-right"/></a></div>
       </div>
-      <figure className="hero-portrait"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="467" height="390" fetchPriority="high"/><figcaption>{data.profile.name}</figcaption></figure>
+      <figure className="hero-portrait"><div className="portrait-frame"><img src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="1152" height="1536" fetchPriority="high"/></div><figcaption>{data.profile.name}</figcaption></figure>
      </div>
      <div className="featured-heading"><h2>Pesquisa &amp; projetos em destaque</h2><a href="#projetos">Ver todos <Icon name="arrow-up" size={13} className="cta-arrow"/></a></div>
      <div className="research-feature">

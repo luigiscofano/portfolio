@@ -73,7 +73,9 @@ main { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-widt
 .hero-actions a { min-height: 48px; display: inline-flex; align-items: center; gap: 6px; }
 .primary-link { background: var(--green); color: #fff; padding: 12px 20px; }
 .primary-link:hover { background: #355740; text-decoration: none; }
-.hero-portrait img { width: 100%; aspect-ratio: 467/390; height: auto; object-fit: cover; object-position: center; border-radius: 26px; }
+/* Use the original pixels; the frame preserves the previous avatar crop without resampling the source. */
+.portrait-frame { position: relative; aspect-ratio: 467/390; overflow: hidden; border-radius: 26px; }
+.hero-portrait img { position: absolute; width: 112.5%; max-width: none; height: auto; left: -8.8%; top: -43.5%; }
 .hero-portrait figcaption { margin-top: 8px; font-size: 10px; text-transform: uppercase; color: #64716a; }
 .hero-portrait figcaption:before { content: ''; display: block; height: 4px; margin-bottom: 5px; background: linear-gradient(to right,#d6ac37 25%,#548eb7 25%,#548eb7 50%,#6e9675 50%,#6e9675 75%,#977bad 75%); }
 .featured-heading { border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0 22px; }
@@ -230,7 +232,7 @@ main { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-widt
   .hero-subtitle { font-size: 29px; }
   .hero-description { font-size: 14px; }
   .hero-actions { gap: 10px 18px; }
-  .hero-portrait img { border-radius: 22px; }
+  .portrait-frame { border-radius: 22px; }
   .featured-heading h2 { font-size: 27px; }
   .research-feature { padding: 24px; gap: 24px; }
   .research-feature h3 { font-size: 38px; }
