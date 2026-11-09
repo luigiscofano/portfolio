@@ -1,8 +1,10 @@
 # Portfólio de Luigi Scofano de Araujo
 
-Portfólio pessoal responsivo em português. Criado com React, TypeScript e Vinext; publicado no Sites com acesso público. Sem banco de dados, formulário de envio, analytics ou integrações com contas externas.
+Portfólio pessoal responsivo em português. Esta cópia usa React, TypeScript e Next.js com exportação estática para GitHub Pages em `/portfolio/`. Sem banco de dados, formulário de envio, analytics ou integrações com contas externas.
 
-**[Abrir o portfólio](https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/)**
+**Destino previsto:** https://luigiscofano.github.io/portfolio/ (a preparação local não publica o site).
+
+A versão existente no Sites permanece independente: https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/.
 
 ## Atualizar conteúdo
 
@@ -37,7 +39,7 @@ npx tsc --noEmit
 npm run build
 ```
 
-No ambiente gerenciado de Sites, use os auxiliares de instalação, build e sincronização fornecidos pela plataforma. A configuração de identidade está em `.openai/hosting.json`; reutilize o `project_id` nas próximas versões. Não crie outro Site para atualizar este portfólio. Nunca salve tokens de acesso em arquivos.
+Para esta cópia, `npm run build` gera a pasta estática `out/`, sem servidor Node.js ou Cloudflare em produção. `npm start` permite conferir a exportação em http://127.0.0.1:4173/portfolio/. Os arquivos antigos de integração com Sites são mantidos apenas como referência e não são usados pelo build padrão. Nunca salve tokens de acesso em arquivos.
 
 ## Estrutura
 
@@ -78,3 +80,16 @@ O nome mostrado no topo usa `profile.name` por extenso. A última parte do sobre
 ## Direitos autorais
 
 © 2026 Luigi Scofano de Araujo. Aviso relativo ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos, créditos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).
+
+## Publicar esta cópia no GitHub Pages
+
+1. Revise as alterações e envie o código ao repositório `luigiscofano/portfolio` somente após autorizar a publicação.
+2. Em Settings → Pages, selecione **GitHub Actions** como origem.
+3. Na aba Actions, execute manualmente **Publish portfolio to GitHub Pages**.
+4. O workflow testa o conteúdo, gera `out/` e publica o artefato estático. Ele não executa automaticamente ao fazer push.
+
+Rotas geradas: `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/`. As páginas auxiliares funcionam com acesso direto e recarga, sem fallback de SPA. `public/.nojekyll` evita processamento Jekyll quando a saída é publicada por outro método.
+
+O prefixo é definido em `next.config.ts`, `lib/site-path.ts`, `app/globals.css` e no favicon/metadados de `app/layout.tsx`. Imagens no JSON mantêm caminhos relativos à raiz de `public/`; a renderização adiciona `/portfolio`. Se o repositório mudar de nome, revise esses pontos, o servidor de prévia e os testes.
+
+O contato continua sendo um link `mailto:` e um botão de copiar e-mail. Não há serviço de envio de mensagens. Alterar a cópia no GitHub não altera a versão no Sites, nem o inverso.

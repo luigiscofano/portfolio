@@ -1,4 +1,5 @@
 "use client";
+import { sitePath } from "@/lib/site-path";
 import { useEffect, useRef, useState } from "react";
 import data from "@/content/portfolio.json";
 import icons from "@/content/icons.json";
@@ -12,7 +13,7 @@ function Icon({ name, size=20, className="" }: {name:IconName;size?:number;class
   const icon=icons[name];
   return <svg className={`icon ${className}`} width={size} height={size} viewBox={icon.viewBox} fill="currentColor" aria-hidden="true" focusable="false">{icon.paths.map((d,i)=><path key={i} d={d}/>)}</svg>;
 }
-function NameSprite(){return data.profile.nameSprite.enabled?<span className="name-sprite" title={data.profile.nameSprite.label} aria-hidden="true" style={{backgroundImage:`url(${data.profile.nameSprite.image})`,backgroundSize:data.profile.nameSprite.backgroundSize,backgroundPosition:data.profile.nameSprite.backgroundPosition}}/>:null;}
+function NameSprite(){return data.profile.nameSprite.enabled?<span className="name-sprite" title={data.profile.nameSprite.label} aria-hidden="true" style={{backgroundImage:`url(${sitePath(data.profile.nameSprite.image)})`,backgroundSize:data.profile.nameSprite.backgroundSize,backgroundPosition:data.profile.nameSprite.backgroundPosition}}/>:null;}
 function ProfileName(){
  const words=data.profile.name.trim().split(/\s+/);
  const suffixLength=['de','da','do','das','dos'].includes(words.at(-2)?.toLowerCase()||'')?2:1;
@@ -24,13 +25,13 @@ function ExternalIcon(){return <Icon name="arrow-up-right-from-square" size={12}
 function SectionTitle({children}:{children:React.ReactNode}){return <h2 className="section-title">{children}</h2>;}
 function ProjectCard({project}:{project:Project}){
  return <article className="resource-card" style={{"--card-color":projectColors[project.id]} as React.CSSProperties}>
-   {project.showImagePreview&&project.image&&<figure className="project-preview"><a href={project.imageSource} {...external}><img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" decoding="async"/></a><figcaption>{project.caption} <a href={project.imageSource} {...external}>Fonte<ExternalIcon/></a></figcaption></figure>}
+   {project.showImagePreview&&project.image&&<figure className="project-preview"><a href={project.imageSource} {...external}><img src={sitePath(project.image)} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" decoding="async"/></a><figcaption>{project.caption} <a href={project.imageSource} {...external}>Fonte<ExternalIcon/></a></figcaption></figure>}
    <div className="resource-heading"><Icon name={projectIcons[project.id]} size={29}/><span>{project.type}</span></div>
    <h3><a href={project.url} {...external}>{project.name}<ExternalIcon/></a></h3>
    <p>{project.summary}</p>
    <ul className="tags" aria-label="Tecnologias">{project.technologies.map(tech=><li key={tech}>{tech}</li>)}</ul>
    <div className="resource-links"><a href={project.url} {...external}><Icon name="github" size={15}/>Repositório</a>{project.demo&&<a href={project.demo} {...external}>{project.demoLabel}<ExternalIcon/></a>}</div>
-   <details className="project-details"><summary>Detalhes, autoria e limites <span className="details-symbol" aria-hidden="true"/></summary><div className="project-details-body"><p>{project.details}</p><h4>Contribuição e autoria</h4><p>{project.contribution}</p><h4>Escopo e limites</h4><p>{project.limitation}</p>{project.image&&!project.showImagePreview&&<figure><a href={project.imageSource} {...external}><img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy"/></a><figcaption>{project.caption}</figcaption></figure>}</div></details>
+   <details className="project-details"><summary>Detalhes, autoria e limites <span className="details-symbol" aria-hidden="true"/></summary><div className="project-details-body"><p>{project.details}</p><h4>Contribuição e autoria</h4><p>{project.contribution}</p><h4>Escopo e limites</h4><p>{project.limitation}</p>{project.image&&!project.showImagePreview&&<figure><a href={project.imageSource} {...external}><img src={sitePath(project.image)} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy"/></a><figcaption>{project.caption}</figcaption></figure>}</div></details>
  </article>;
 }
 export default function Home(){
@@ -65,16 +66,16 @@ export default function Home(){
  return <>
   <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <div className="site-shell" id="inicio">
-   <header className="mobile-header"><a href="#sobre" aria-label={data.profile.name}><img src={data.profile.photo} alt="" width="34" height="34"/><ProfileName/></a><button ref={menuButton} aria-label={menuOpen?'Fechar menu':'Abrir menu'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(!menuOpen)}><Icon name={menuOpen?'xmark':'bars'} size={23}/></button></header>
+   <header className="mobile-header"><a href="#sobre" aria-label={data.profile.name}><img src={sitePath(data.profile.photo)} alt="" width="34" height="34"/><ProfileName/></a><button ref={menuButton} aria-label={menuOpen?'Fechar menu':'Abrir menu'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={()=>setMenuOpen(!menuOpen)}><Icon name={menuOpen?'xmark':'bars'} size={23}/></button></header>
    {menuOpen&&<button className="menu-overlay" aria-label="Fechar menu de navegação" onClick={()=>{setMenuOpen(false);menuButton.current?.focus();}}/>}
    <aside className={`sidebar ${menuOpen?'is-open':''}`}>
-    <a href="#sobre" onClick={()=>setMenuOpen(false)} className="portrait-link"><img className="portrait" src={data.profile.photo} alt={data.profile.photoAlt} width="150" height="150"/></a>
+    <a href="#sobre" onClick={()=>setMenuOpen(false)} className="portrait-link"><img className="portrait" src={sitePath(data.profile.photo)} alt={data.profile.photoAlt} width="150" height="150"/></a>
     <a href="#sobre" aria-label={data.profile.name} className="sidebar-name" onClick={()=>setMenuOpen(false)}><ProfileName/></a>
     <p className="sidebar-description">ENGENHARIA DE COMPUTAÇÃO<br/><a href="#formacao" onClick={()=>setMenuOpen(false)}>POLI-USP</a></p>
     <nav id="main-nav" aria-label="Navegação principal">{data.navigation.map(item=><a key={item.id} href={`#${item.id}`} className={active===item.id?'active':''} aria-current={active===item.id?'location':undefined} onClick={()=>{setActive(item.id);setMenuOpen(false);}}>{item.label}</a>)}</nav>
     <div className="sidebar-social"><a href={data.profile.github} aria-label="GitHub de Luigi" {...external}><Icon name="github" size={19}/></a><a href={data.profile.linkedin} aria-label="LinkedIn de Luigi" {...external}><Icon name="linkedin" size={19}/></a><a href={`mailto:${data.profile.email}`} aria-label="E-mail de Luigi"><Icon name="envelope" size={19}/></a></div>
-    {data.visualSignature.enabled&&<div className="sidebar-signature"><img src={data.visualSignature.image} alt={data.visualSignature.alt} width={data.visualSignature.width} height={data.visualSignature.height}/></div>}
-    <p className="sidebar-footer">© 2026 {data.profile.name}<br/>{data.profile.location}<br/><a href="/atualizar">Como atualizar</a><span aria-hidden="true"> · </span><a href="/creditos">Créditos</a></p>
+    {data.visualSignature.enabled&&<div className="sidebar-signature"><img src={sitePath(data.visualSignature.image)} alt={data.visualSignature.alt} width={data.visualSignature.width} height={data.visualSignature.height}/></div>}
+    <p className="sidebar-footer">© 2026 {data.profile.name}<br/>{data.profile.location}<br/><a href={sitePath("/atualizar/")} >Como atualizar</a><span aria-hidden="true"> · </span><a href={sitePath("/creditos/")} >Créditos</a></p>
    </aside>
    <main id="conteudo"><h1 className="sr-only">{data.profile.name} · Portfólio</h1>
     <section id="sobre" className="section about-section">
@@ -112,7 +113,7 @@ export default function Home(){
      <div className="contact-item"><span className="contact-icon"><Icon name="location-dot" size={29}/></span><div><p>{data.profile.location}</p><span>Engenharia de Computação · Poli-USP</span></div></div>
      <div className="contact-social"><a href={data.profile.github} {...external}><Icon name="github" size={18}/>GitHub<ExternalIcon/></a><a href={data.profile.linkedin} {...external}><Icon name="linkedin" size={18}/>LinkedIn<ExternalIcon/></a></div>
     </section>
-    <footer className="page-footer"><span className="footer-signature">{data.visualSignature.enabled&&<img src={data.visualSignature.image} alt="" aria-hidden="true" width={data.visualSignature.width} height={data.visualSignature.height}/>}<span>© 2026 {data.profile.name}<br/>{data.updated}</span></span><a href="/atualizar">Como atualizar este portfólio</a><a href="#sobre" aria-label="Voltar ao início"><Icon name="arrow-up" size={16}/></a></footer>
+    <footer className="page-footer"><span className="footer-signature">{data.visualSignature.enabled&&<img src={sitePath(data.visualSignature.image)} alt="" aria-hidden="true" width={data.visualSignature.width} height={data.visualSignature.height}/>}<span>© 2026 {data.profile.name}<br/>{data.updated}</span></span><a href={sitePath("/atualizar/")} >Como atualizar este portfólio</a><a href="#sobre" aria-label="Voltar ao início"><Icon name="arrow-up" size={16}/></a></footer>
    </main>
   </div>
  </>;
