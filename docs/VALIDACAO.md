@@ -58,3 +58,12 @@ Limites: não constitui auditoria WCAG completa nem teste em aparelhos físicos.
 
 - Aviso © 2026 Luigi Scofano de Araujo no rodapé, página de créditos, README e COPYRIGHT.md.
 - Atribuições e licenças de terceiros preservadas; nenhuma nova licença geral imposta ao projeto.
+
+## Publicação no GitHub Pages: 9 de novembro de 2026
+
+- Exportação estática Next.js publicada em https://luigiscofano.github.io/portfolio/.
+- 15 testes, build e TypeScript aprovados localmente e no GitHub Actions. Saída sem servidor de aplicação, com as rotas /portfolio/, /portfolio/atualizar/ e /portfolio/creditos/.
+- Navegador desktop: layout, filtro IA (3 projetos) e retorno a Todos (6 projetos), acordeão CS50, links internos e recarga direta das páginas auxiliares conferidos; sem overflow horizontal observado.
+- Créditos, imagens originais e aviso © 2026 preservados. Perfil e metadados do repositório apontam para o Pages.
+- Publicação é manual pelo workflow Publish portfolio to GitHub Pages. A versão no Sites permanece independente. Verificação específica de viewport móvel não refeita nesta publicação.
+- Execução validada: https://github.com/luigiscofano/portfolio/actions/runs/42633298293.
