@@ -40,7 +40,7 @@ A foto original tem 1152 × 1536 px e é enquadrada por CSS, sem alteração sem
 
 A abertura oferece links separados de demonstração e código para Intuição. “Mais sobre mim” abre o elemento `details` da biografia e focaliza seu resumo. A descrição inglesa contextualiza a Polytechnic School da University of São Paulo e Old Tupi.
 
-As prévias diferenciam catálogo de arte original (Intuição), capa documental (Tupi), ilustração didática (Kaggle), dados sintéticos (GestureLab) e captura real (Pokédex). LabDig usa `public/images/labdig-readme.jpg`, captura real do README de 777 × 520 px. A imagem documenta o acervo, não comprova validação de hardware.
+As prévias diferenciam ícones originais sem página de catálogo (Intuição), capa documental (Tupi), ilustração didática (Kaggle), dados sintéticos (GestureLab) e captura real (Pokédex). LabDig usa `public/images/labdig-readme.jpg`, captura real do README de 777 × 520 px. A imagem documenta o acervo, não comprova validação de hardware.
 
 ## Build, testes e publicação
 

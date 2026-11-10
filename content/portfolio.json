@@ -100,13 +100,13 @@
       "url": "https://github.com/luigiscofano/intuicao",
       "demo": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
       "demoLabel": "Jogar no navegador",
-      "image": "/images/intuicao-catalogo-publico.webp",
-      "imageAlt": "Catálogo público do Intuição: folhas de ícones de frente e perfil",
-      "caption": "Página 4 do catálogo público: folhas originais de ícones.",
-      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/docs/pdfs/marca-e-arte/03-catalogo-sprites-icones-acessorios.pdf#page=4",
+      "image": "/images/intuicao-icones-frente.png",
+      "imageAlt": "Quinze ícones verdes de animais do Intuição, organizados em uma grade",
+      "caption": "Ícones originais do Intuição.",
+      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/dist/platform-assets/fauna-green-original.png",
       "showImagePreview": true,
-      "imageWidth": 1273,
-      "imageHeight": 1800
+      "imageWidth": 1079,
+      "imageHeight": 1458
     },
     {
       "id": "tupi",

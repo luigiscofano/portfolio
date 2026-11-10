@@ -50,3 +50,11 @@ test('personal link opens details without losing keyboard focus to native hash n
     ),
   );
 });
+
+test('Intuicao preview uses original icons rather than a catalog page', () => {
+  const project = pt.projects.find((project) => project.id === 'intuicao');
+  assert.equal(project.image, '/images/intuicao-icones-frente.png');
+  assert.equal(project.imageWidth, 1079);
+  assert.equal(project.imageHeight, 1458);
+  assert.ok(project.imageSource.endsWith('/fauna-green-original.png'));
+});

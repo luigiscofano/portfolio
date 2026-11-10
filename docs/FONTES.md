@@ -4,7 +4,7 @@ Levantamento público inicial: 6 de novembro de 2026. Atualizações posteriores
 
 - Perfil, formação, trajetória e contatos: https://github.com/luigiscofano/luigiscofano/blob/main/README.md
 - Foto histórica, substituída na página pelo original descrito abaixo: avatar público https://avatars.githubusercontent.com/u/145711556?s=460&v=4, ligado pelo perfil https://github.com/luigiscofano. A foto já inclui o bem-te-vi em pixel art; não foi inventada nem alterada semanticamente.
-- Intuição: https://github.com/luigiscofano/intuicao. A prévia atual vem da página 4 do [catálogo público de sprites, ícones e acessórios](https://github.com/luigiscofano/intuicao/blob/main/docs/pdfs/marca-e-arte/03-catalogo-sprites-icones-acessorios.pdf), entregue em `public/images/intuicao-catalogo-publico.webp`. É uma página documental de arte, não uma captura da aplicação. A captura anterior de CERCO permanece como material histórico. IA clássica de busca; não se afirma uso de LLM. Direitos visuais e créditos: documentação `docs/recursos/` do projeto.
+- Intuição: https://github.com/luigiscofano/intuicao. A prévia usa somente os quinze ícones verdes de frente do arquivo original [fauna-green-original.png](https://github.com/luigiscofano/intuicao/blob/main/dist/platform-assets/fauna-green-original.png), preservado sem alteração em `public/images/intuicao-icones-frente.png` (1079 × 1458). Não exibe página, texto ou títulos do catálogo. Fonte e atribuição ficam fora da arte. IA clássica de busca; não se afirma uso de LLM. Direitos visuais e créditos: documentação `docs/recursos/` do projeto.
 - IC Tupi: https://github.com/luigiscofano/ic-pln-tupi-antigo. Demonstração fictícia, sem corpus completo validado. A imagem atual é a [capa documental original](https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/6601214310ff5125d9f81fb7a1c988548bef7ab0/assets/capa.svg), preservada em `public/images/tupi-capa-original.svg`; não é resultado de OCR.
 - Kaggle-oRF: https://github.com/luigiscofano/Kaggle-oRF. Imagem didática `docs/imagens/fronteiras.png`, que não é benchmark. Projeto colaborativo; sem pontuação ou posição declarada na competição.
 - GestureLab: https://github.com/luigiscofano/gesturelab. Prévia `docs/assets/posematch_preview.png` usa dados sintéticos. Detectores pré-treinados do MediaPipe; aplicação não treina modelos próprios.
@@ -24,7 +24,7 @@ Naquela revisão, a pedido do titular, a estrutura passou a se aproximar mais da
 
 ## Capturas históricas e assinatura pessoal
 
-Uma revisão anterior promoveu as capturas de Intuição e Pokédex aos cards. Intuição passou a usar o catálogo original; Pokédex mantém sua captura. Os JPEGs locais foram conferidos com os blobs Git: Intuição `17d6e8f7dd35495abdc22e84915a8380e0f0e71f` (1200 × 1040, 76.645 bytes); Pokédex `4f0192f4a0a1942dae52ec3f9bf719e0fc0d081a` (1165 × 747, 58.628 bytes).
+Uma revisão anterior promoveu as capturas de Intuição e Pokédex aos cards. Intuição passou a usar apenas os ícones originais; Pokédex mantém sua captura. Os JPEGs locais foram conferidos com os blobs Git: Intuição `17d6e8f7dd35495abdc22e84915a8380e0f0e71f` (1200 × 1040, 76.645 bytes); Pokédex `4f0192f4a0a1942dae52ec3f9bf719e0fc0d081a` (1165 × 747, 58.628 bytes).
 
 A assinatura de bem-te-vi em pixel art com folhas é um desenho SVG original criado para o portfólio. Não deriva de uma captura de terceiros, não é fotografia e não adiciona alegações biográficas.
 

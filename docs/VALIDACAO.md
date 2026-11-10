@@ -32,7 +32,7 @@ Os testes em `tests/` verificam contratos de conteúdo, IDs e seções, caminhos
 - Verificar navegação por âncoras, estado ativo, seis projetos, filtros, detalhes e acordeão de formação. Abrir os estudos de caso de Intuição, Tupi e GestureLab nos dois idiomas; conferir os links de evidência.
 - Conferir os botões separados “Experimentar” e “Ver código” de Intuição, e o link “Mais sobre mim”, que deve expandir e focalizar a biografia.
 - Conferir o exemplo casa/c8sa, seu aviso de simulação em português, a ausência de alegação de OCR real e os links de pipeline, dados sintéticos e procedência.
-- Revisar as prévias de catálogo (Intuição), capa (Tupi), ilustração (Kaggle), entrada sintética (GestureLab) e captura real (Pokédex). Conferir também a captura real do README de LabDig (777 × 520 px), com legenda que a distingue de validação de hardware.
+- Revisar as prévias de ícones (Intuição), capa (Tupi), ilustração (Kaggle), entrada sintética (GestureLab) e captura real (Pokédex). Conferir também a captura real do README de LabDig (777 × 520 px), com legenda que a distingue de validação de hardware.
 - Conferir a contextualização inglesa de Poli-USP e Tupi Antigo.
 - Usar teclado: link para pular, foco visível, seletor, abertura/fechamento do menu móvel, Escape, Tab/Shift+Tab e retorno do foco.
 - Conferir desktop, largura de 390 px e largura de 320 px, inclusive nome, botões, downloads e textos ingleses; verificar rolagem horizontal e sobreposições. Rever zoom e movimento reduzido.

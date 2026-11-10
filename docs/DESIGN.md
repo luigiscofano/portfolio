@@ -17,7 +17,7 @@ A ordem das seções é Sobre, Projetos, Pesquisa, Formação, Trajetória e Con
 
 Textos de abertura e dados biográficos ficam nos JSONs português e inglês em `content/`. Rótulos ingleses da interface ficam em `content/ui.en.json`. Os estilos estão em `app/globals.css`; a organização do código está descrita em [ARQUITETURA.md](ARQUITETURA.md).
 
-Preserve distinção entre captura real, diagrama conceitual e imagem com dados sintéticos. Intuição mostra uma página do catálogo original de ícones, Tupi usa sua capa documental original, Kaggle uma ilustração didática, GestureLab uma prévia sintética e Pokédex uma captura real. LabDig mostra uma captura real do README, identificada como documentação do acervo e não como validação de hardware. Os avisos de “prévia visual” da maquete não fazem parte da apresentação publicada.
+Preserve distinção entre captura real, diagrama conceitual e imagem com dados sintéticos. Intuição mostra uma página do ícones originais, Tupi usa sua capa documental original, Kaggle uma ilustração didática, GestureLab uma prévia sintética e Pokédex uma captura real. LabDig mostra uma captura real do README, identificada como documentação do acervo e não como validação de hardware. Os avisos de “prévia visual” da maquete não fazem parte da apresentação publicada.
 
 ## Aprofundamento sem inventar resultados
 

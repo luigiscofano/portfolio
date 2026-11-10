@@ -35,7 +35,7 @@ npm start
 
 Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual tem seis projetos; seus testes e destaques precisam ser revistos se essa estrutura mudar.
 
-`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição usa uma página do catálogo original de ícones; Tupi, a capa documental original; Kaggle, uma ilustração didática; GestureLab, uma prévia sintética; Pokédex, uma captura real. LabDig mostra uma captura real do README, como documentação do acervo, não como validação de hardware. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
+`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição usa uma página do ícones originais; Tupi, a capa documental original; Kaggle, uma ilustração didática; GestureLab, uma prévia sintética; Pokédex, uma captura real. LabDig mostra uma captura real do README, como documentação do acervo, não como validação de hardware. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
 
 A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
