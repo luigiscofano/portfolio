@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">MAC0321 Lista 08: interface Swing e adaptação por composição</title>
+<desc id="desc">Diagrama didático criado a partir das classes públicas. Não representa uma captura da aplicação. A interface de fatorial chama seu controlador. Em exercício independente, MultisetAdapter usa MultisetArrayList e HashSet para iterar valores únicos sem ordem garantida.</desc>
+<rect width="1200" height="720" fill="#f7f9fb"/><path d="M0 0H1200V10H0Z" fill="#3d7095"/>
+<g font-family="Arial,sans-serif" fill="#26343f"><text x="64" y="64" font-size="17" fill="#3d7095" letter-spacing="2">JAVA · SWING · COMPOSIÇÃO</text><text x="64" y="115" font-size="36" font-weight="700">MAC0321 · Lista 08</text><text x="64" y="151" font-size="19" fill="#526371">Diagrama didático baseado no código público — não é uma captura de tela.</text>
+<text x="64" y="211" font-size="21" font-weight="700">1. Interface e cálculo de fatorial</text>
+<rect x="64" y="238" width="450" height="124" rx="8" fill="#e7eef4" stroke="#3d7095"/><text x="88" y="274" font-size="23" font-weight="700">FactorialView</text><text x="88" y="307" font-size="18">Swing: campo, botão e resultado</text><text x="88" y="338" font-size="18">ActionListener lê e valida a entrada</text>
+<path d="M530 299H634M621 289L634 299L621 309" fill="none" stroke="#3d7095" stroke-width="3"/>
+<rect x="652" y="238" width="484" height="124" rx="8" fill="#fff" stroke="#bac8d2"/><text x="676" y="274" font-size="23" font-weight="700">FactorialController</text><text x="676" y="307" font-size="18">calculateFactorial(int number)</text><text x="676" y="338" font-size="18">Laço de multiplicação → resultado long</text>
+<text x="64" y="419" font-size="21" font-weight="700">2. Adaptador de valores únicos — exercício independente</text>
+<rect x="64" y="447" width="320" height="125" rx="8" fill="#fff" stroke="#bac8d2"/><text x="84" y="484" font-size="22" font-weight="700">MultisetArrayList</text><text x="84" y="519" font-size="18">Coleção com repetições</text><text x="84" y="549" font-size="18">Exemplo: A · A · B</text>
+<path d="M396 508H431M420 498L431 508L420 518" fill="none" stroke="#28665e" stroke-width="3"/>
+<rect x="449" y="447" width="320" height="125" rx="8" fill="#eaf3ef" stroke="#28665e"/><text x="469" y="484" font-size="22" font-weight="700">MultisetAdapter</text><text x="469" y="519" font-size="18">Usa composição e HashSet</text><text x="469" y="549" font-size="18">Implementa Iterable</text>
+<path d="M781 508H816M805 498L816 508L805 518" fill="none" stroke="#28665e" stroke-width="3"/>
+<rect x="834" y="447" width="302" height="125" rx="8" fill="#fff" stroke="#bac8d2"/><text x="854" y="484" font-size="22" font-weight="700">Iterador</text><text x="854" y="519" font-size="18">Sem valores repetidos</text><text x="854" y="549" font-size="18">Ordem não garantida</text>
+<path d="M64 610H1136" stroke="#cbd5dd"/><text x="64" y="645" font-size="17" fill="#526371">O adaptador não implementa toda a interface Set. Os dois fluxos pertencem a exercícios distintos.</text><text x="64" y="677" font-size="16" fill="#526371">Fonte: luigiscofano/MAC0321-Lista08 · classes dos exercícios 1 e 4.</text></g></svg>

@@ -74,3 +74,30 @@ test('maintenance guide is repository-only, not a visitor route', () => {
       .includes("sitePath('/atualizar/')"),
   );
 });
+
+test('section visual maps are local, bilingual and have no executable content', () => {
+  for (const section of ['formacao', 'trajetoria', 'pesquisa'])
+    for (const lang of ['pt', 'en']) {
+      const svg = fs.readFileSync(
+        'public/images/sections/' + section + '-' + lang + '.svg',
+        'utf8',
+      );
+      assert.match(svg, /<svg/);
+      assert.doesNotMatch(
+        svg,
+        /<script|<foreignObject|onload=|https?:\/\/(?!www.w3.org)/i,
+      );
+    }
+});
+
+test('every public project has a sourced local image with honest alt text', () => {
+  for (const lang of ['portfolio.json', 'portfolio.en.json']) {
+    const data = JSON.parse(fs.readFileSync('content/' + lang, 'utf8'));
+    assert.equal(data.projects.length, 14);
+    for (const p of data.projects) {
+      assert.ok(p.image && p.imageAlt && p.imageSource, p.id);
+      assert.ok(p.imageWidth > 0 && p.imageHeight > 0, p.id);
+      assert.ok(fs.existsSync('public' + p.image), p.id);
+    }
+  }
+});

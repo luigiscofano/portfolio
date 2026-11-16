@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">Laboratório Digital: controle e fluxo de dados</title><desc id="desc">Entradas chegam à unidade de controle, que habilita operações no fluxo de dados. Sinais de condição retornam ao controle. O fluxo produz saídas e registradores.</desc>
+<defs><marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#315b7c"/></marker></defs>
+<rect width="1200" height="600" fill="#f5f8fb"/>
+<g font-family="Arial, sans-serif" fill="#18364e"><text x="60" y="68" font-size="34" font-weight="700">Controle e fluxo de dados</text><text x="60" y="105" font-size="20">Laboratório Digital · diagrama da documentação do acervo</text></g>
+<g fill="#fff" stroke="#315b7c" stroke-width="2"><rect x="60" y="230" width="180" height="100" rx="8"/><rect x="330" y="230" width="240" height="100" rx="8"/><rect x="700" y="230" width="200" height="100" rx="8"/><rect x="970" y="230" width="180" height="100" rx="8"/></g>
+<g font-family="Arial, sans-serif" fill="#18364e" text-anchor="middle" font-size="24"><text x="150" y="288">Entradas</text><text x="450" y="274">Unidade de</text><text x="450" y="306">controle</text><text x="800" y="274">Fluxo de</text><text x="800" y="306">dados</text><text x="1060" y="274">Saídas e</text><text x="1060" y="306">registradores</text></g>
+<g fill="none" stroke="#315b7c" stroke-width="3" marker-end="url(#seta)"><path d="M240 280H325"/><path d="M570 260H695"/><path d="M900 280H965"/><path d="M800 330V410H450V337"/></g>
+<g font-family="Arial, sans-serif" fill="#315b7c" text-anchor="middle" font-size="19"><text x="635" y="195">Habilita</text><text x="635" y="218">operações</text><text x="625" y="445">Sinais de condição</text></g>
+<g font-family="Arial, sans-serif" fill="#536978" font-size="18"><text x="60" y="520">Representação fiel do diagrama Mermaid de docs/DIAGRAMAS.md.</text><text x="60" y="550">Não é captura da aplicação, simulação temporal nem validação em placa física.</text></g></svg>

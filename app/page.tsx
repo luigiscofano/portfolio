@@ -40,6 +40,48 @@ function SectionTitle({
     </h2>
   );
 }
+function SectionVisual({
+  section,
+  language,
+}: {
+  section: 'formacao' | 'trajetoria' | 'pesquisa';
+  language: 'pt' | 'en';
+}) {
+  const labels = {
+    formacao: { pt: 'Mapa da formação', en: 'Education map' },
+    trajetoria: { pt: 'Mapa das áreas de atuação', en: 'Experience map' },
+    pesquisa: { pt: 'Mapa das iniciativas de pesquisa', en: 'Research map' },
+  };
+  return (
+    <details className="about-details section-visual">
+      <summary>
+        <span className="control-label">
+          <Icon name="diagram-project" size={16} />
+          {labels[section][language]}
+        </span>
+      </summary>
+      <figure>
+        <img
+          src={sitePath(
+            '/images/sections/' + section + '-' + language + '.svg',
+          )}
+          alt={labels[section][language]}
+          width={560}
+          height={
+            section === 'trajetoria' ? 684 : section === 'formacao' ? 354 : 244
+          }
+          loading="lazy"
+        />
+        <figcaption>
+          {language === 'en'
+            ? 'Informational diagram based on the profile, not a photograph or an institutional endorsement.'
+            : 'Diagrama informativo baseado no perfil, não uma fotografia nem endosso institucional.'}
+        </figcaption>
+      </figure>
+    </details>
+  );
+}
+
 export default function Home() {
   const { language, data, t, changeLanguage } = usePortfolioLanguage();
   const { active, menuOpen, setMenuOpen, menuButton, followSection } =
@@ -59,7 +101,7 @@ export default function Home() {
       label: 'GitHub',
       icon: 'github' as IconName,
       url: data.profile.github,
-      color: '#3d7095',
+      color: '#946c19',
       internal: false,
     },
     {
@@ -73,7 +115,7 @@ export default function Home() {
       label: t('E-mail'),
       icon: 'envelope' as IconName,
       url: `mailto:${data.profile.email}`,
-      color: '#3d7095',
+      color: '#ad4946',
       internal: true,
     },
     {
@@ -94,7 +136,7 @@ export default function Home() {
       label: t('Documentação'),
       icon: 'file-lines' as IconName,
       url: data.profile.documentation,
-      color: '#3d7095',
+      color: '#28725d',
       internal: false,
     },
   ];
@@ -445,6 +487,7 @@ export default function Home() {
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
+                <SectionVisual section="pesquisa" language={language} />
                 <p className="section-intro">
                   {t(
                     'Iniciativas que conectam computação, linguagem, educação e interação.',
@@ -510,6 +553,7 @@ export default function Home() {
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
+                <SectionVisual section="formacao" language={language} />
                 <div className="education-accordion">
                   {data.education.map((item, index) => (
                     <div
@@ -575,6 +619,7 @@ export default function Home() {
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
+                <SectionVisual section="trajetoria" language={language} />
                 <p className="section-intro">
                   {t(
                     'Experiências com dados, tecnologia e necessidades de negócio.',

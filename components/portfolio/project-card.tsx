@@ -106,7 +106,7 @@ export function ProjectCard({
                   loading="lazy"
                 />
               </a>
-              <figcaption>{project.caption}</figcaption>
+              <figcaption>{project.caption || project.imageAlt}</figcaption>
             </figure>
           )}
         </div>
