@@ -1695,3 +1695,44 @@ nav a > .icon {
     padding: 16px;
   }
 }
+
+/* Controles compactos; o alvo de toque permanece confortável. */
+.section:has(> .section-disclosure) {
+  padding-block: 14px;
+}
+.section-disclosure > summary {
+  min-height: 44px;
+  padding-block: 6px;
+  gap: 10px;
+}
+.section-disclosure > summary .section-title {
+  font-size: clamp(24px, 2.4vw, 29px);
+}
+.hero-actions .primary-link {
+  padding: 7px 12px;
+  font-size: 13px;
+}
+.resume-links {
+  margin-block: 8px 12px;
+  gap: 2px 18px;
+}
+.resume-links .resume-link {
+  margin-top: 0;
+}
+.filters button {
+  padding: 5px 8px;
+  font-size: 12px;
+}
+.gallery-empty {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+@media (pointer: coarse), (max-width: 999px) {
+  .hero-actions a,
+  .filters button,
+  .resume-link {
+    min-height: 44px;
+  }
+}
