@@ -10,7 +10,6 @@ export function ProjectGallery({
   language: 'pt' | 'en' | 'es';
 }) {
   const items = gallery.filter((item) => item.projectId === projectId);
-  if (!items.length) return null;
   const labels = {
     pt: ['Imagens reais do projeto', 'Fonte da imagem'],
     en: ['Actual project images', 'Image source'],
@@ -22,6 +21,17 @@ export function ProjectGallery({
         <span>{labels[0]}</span>
         <span className="details-symbol" aria-hidden="true" />
       </summary>
+      {!items.length && (
+        <p className="gallery-empty">
+          {
+            {
+              pt: 'Ainda não há imagens reais verificadas disponíveis para este projeto. O repositório reúne os materiais e a documentação existentes.',
+              en: 'No verified actual images are available for this project yet. The repository contains the existing materials and documentation.',
+              es: 'Todavía no hay imágenes reales verificadas disponibles para este proyecto. El repositorio reúne los materiales y la documentación existentes.',
+            }[language]
+          }
+        </p>
+      )}
       <div className="project-gallery-items">
         {items.map((item) => (
           <figure key={item.image}>

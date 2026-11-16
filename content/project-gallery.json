@@ -1,17 +1,5 @@
 [
   {
-    "projectId": "pokedex",
-    "image": "/images/projects/captures/pokedex-ficha.jpg",
-    "width": 1165,
-    "height": 747,
-    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-destaque-ficha.jpg",
-    "caption": {
-      "pt": "Ficha real de Bulbasaur: atributos, tipos e formas na aplicação.",
-      "en": "Actual Bulbasaur detail screen: stats, types and forms in the application.",
-      "es": "Ficha real de Bulbasaur: atributos, tipos y formas en la aplicación."
-    }
-  },
-  {
     "projectId": "trilha-viva",
     "image": "/images/projects/captures/trilha-viva-painel.jpg",
     "width": 1165,
@@ -106,6 +94,107 @@
       "pt": "Guardião — slide real da apresentação versionada, não fotografia de hardware.",
       "en": "Guardião — actual slide from the versioned presentation, not a hardware photograph.",
       "es": "Guardião — diapositiva real de la presentación versionada, no fotografía del hardware."
+    }
+  },
+  {
+    "projectId": "intuicao",
+    "image": "/images/projects/captures/intuicao-pulso.png",
+    "width": 1348,
+    "height": 871,
+    "crop": "",
+    "source": "https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/docs/imagens/galeria-atual/pulso.png",
+    "caption": {
+      "pt": "Pulso no modo normal: tabuleiro e controles do jogo de lógica.",
+      "en": "Pulso in normal mode: the logic game board and controls.",
+      "es": "Pulso en modo normal: tablero y controles del juego de lógica."
+    }
+  },
+  {
+    "projectId": "intuicao",
+    "image": "/images/projects/captures/intuicao-renovo.png",
+    "width": 1348,
+    "height": 960,
+    "crop": "",
+    "source": "https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/docs/imagens/galeria-atual/renovo.png",
+    "caption": {
+      "pt": "Renovo: sementes e folhas na área de jogo atual.",
+      "en": "Renovo: seeds and leaves in the current game area.",
+      "es": "Renovo: semillas y hojas en el área de juego actual."
+    }
+  },
+  {
+    "projectId": "intuicao",
+    "image": "/images/projects/captures/intuicao-sintonia.png",
+    "width": 1348,
+    "height": 585,
+    "crop": "",
+    "source": "https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/docs/imagens/galeria-atual/sintonia.png",
+    "caption": {
+      "pt": "Sintonia: os mascotes e a composição do tabuleiro atual.",
+      "en": "Sintonia: mascots and the layout of the current board.",
+      "es": "Sintonia: mascotas y disposición del tablero actual."
+    }
+  },
+  {
+    "projectId": "intuicao",
+    "image": "/images/projects/captures/intuicao-cerco.png",
+    "width": 1348,
+    "height": 932,
+    "crop": "",
+    "source": "https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/docs/imagens/galeria-atual/cerco.png",
+    "caption": {
+      "pt": "Cerco: tabuleiro de versus com identificação dos jogadores.",
+      "en": "Cerco: versus board with identification of the players.",
+      "es": "Cerco: tablero versus con identificación de los jugadores."
+    }
+  },
+  {
+    "projectId": "intuicao",
+    "image": "/images/projects/captures/intuicao-refugio.png",
+    "width": 1348,
+    "height": 845,
+    "crop": "",
+    "source": "https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/docs/imagens/galeria-atual/refugio.png",
+    "caption": {
+      "pt": "Refúgio: regiões, folhas e controles na interface atual.",
+      "en": "Refúgio: regions, leaves and controls in the current interface.",
+      "es": "Refúgio: regiones, hojas y controles de la interfaz actual."
+    }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-inicio-atual.jpg",
+    "width": 1165,
+    "height": 747,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/docs/imagens/pokedex-inicio-atual.jpg",
+    "caption": {
+      "pt": "Página inicial atual da Pokédex com Pokémon em destaque.",
+      "en": "Current Pokédex home page with featured Pokémon.",
+      "es": "Página inicial actual de la Pokédex con Pokémon destacados."
+    }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-ficha.jpg",
+    "width": 1165,
+    "height": 747,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/docs/imagens/pokedex-destaque-ficha.jpg",
+    "caption": {
+      "pt": "Ficha de Pokémon com atributos, registro de versão anterior.",
+      "en": "Pokémon details and attributes, recorded in an earlier version.",
+      "es": "Ficha de Pokémon con atributos, registro de una versión anterior."
+    }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-evolucoes.jpg",
+    "width": 1165,
+    "height": 747,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/docs/imagens/pokedex-evolucoes.jpg",
+    "caption": {
+      "pt": "Família evolutiva de Eevee, registro real de versão anterior.",
+      "en": "Eevee evolution family, actual capture from an earlier version.",
+      "es": "Familia evolutiva de Eevee, captura real de una versión anterior."
     }
   }
 ]
