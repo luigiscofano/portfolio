@@ -1252,3 +1252,43 @@ main:focus {
     grid-template-columns: 24px 1fr 16px;
   }
 }
+
+/* Seções preservadas, reveladas sob demanda sem uma página inicial extensa. */
+.section:has(> .section-disclosure) {
+  padding-block: 22px;
+  min-height: 0;
+}
+.section-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  padding-block: 10px;
+}
+.section-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.section-disclosure > summary .section-title {
+  margin: 0;
+}
+.section-disclosure > summary > svg {
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+.section-disclosure[open] > summary > svg {
+  transform: rotate(45deg);
+}
+.section-disclosure-content {
+  padding-block: 22px 10px;
+}
+.section-disclosure > summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-disclosure > summary > svg {
+    transition: none;
+  }
+}

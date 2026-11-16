@@ -27,12 +27,25 @@ export function useSectionNavigation() {
     const schedule = () => {
       if (frame === null) frame = requestAnimationFrame(update);
     };
-    schedule();
+    // Links diretos e a barra lateral abrem apenas a seção solicitada.
+    const openHashSection = () => {
+      const section = document.getElementById(window.location.hash.slice(1));
+      const disclosure = section?.querySelector<HTMLDetailsElement>(
+        ':scope > .section-disclosure',
+      );
+      if (disclosure) disclosure.open = true;
+      if (section)
+        requestAnimationFrame(() => section.scrollIntoView({ block: 'start' }));
+      schedule();
+    };
+    openHashSection();
+    window.addEventListener('hashchange', openHashSection);
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('hashchange', schedule);
     return () => {
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('hashchange', schedule);
+      window.removeEventListener('hashchange', openHashSection);
       if (frame !== null) cancelAnimationFrame(frame);
     };
   }, []);
@@ -77,6 +90,10 @@ export function useSectionNavigation() {
     };
   }, [menuOpen]);
   function followSection(id: string) {
+    const disclosure = document
+      .getElementById(id)
+      ?.querySelector<HTMLDetailsElement>(':scope > .section-disclosure');
+    if (disclosure) disclosure.open = true;
     setActive(id);
     setMenuOpen(false);
     requestAnimationFrame(() =>

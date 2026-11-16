@@ -207,7 +207,7 @@ test('editorial opening preserves navigation, contacts and the approved signatur
   ])
     assert.ok(includesCode(page, `className="${className}"`));
   assert.ok(includesCode(page, 'href="#projetos"'));
-  assert.ok(includesCode(page, 'href="#trajetoria"'));
+  assert.ok(includesCode(page, 'href={`#${item.id}`}'));
   assert.equal(data.profile.nameSprite.enabled, false);
   assert.equal(data.visualSignature.enabled, true);
 });

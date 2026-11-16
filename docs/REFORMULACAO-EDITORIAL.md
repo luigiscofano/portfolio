@@ -14,3 +14,7 @@ O GitHub Pages exporta a aplicação Next.js em /portfolio/. O endereço Sites �
 
 ## Verificação
 31 testes automatizados aprovados; build de produção, TypeScript e validação dos recursos exportados aprovados. ESLint sem erros, com quatro avisos existentes sobre img em exportação estática. Busca, filtros, troca PT/EN e fechamento do menu por Escape conferidos no navegador. Layout conferido em desktop, 390 px e 320 px, sem rolagem horizontal; imagens carregadas.
+
+## Exploração progressiva
+
+A entrada mantém uma única ação principal. Currículos permanecem em Mais sobre mim; os destaques e o catálogo completo estão na seção Projetos. Pesquisa, Formação, Trajetória e Contato abrem sob demanda, sem excluir conteúdo. Links da barra lateral e URLs com fragmentos abrem a seção correspondente. Os controles nativos details/summary funcionam por teclado e não dependem de animação.
