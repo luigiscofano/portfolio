@@ -48,9 +48,9 @@ Texto integral aprovado pelo titular em 9 de novembro de 2026, com menção à p
 
 ## Currículos fornecidos pelo titular
 
-Os arquivos distribuídos são `public/documents/luigi-scofano-curriculo-pt.pdf` e `public/documents/luigi-scofano-resume-en.pdf`. Correspondem a versões existentes de épocas diferentes; não são traduções sincronizadas nem uma consolidação dos fatos mais recentes da página.
+Os arquivos distribuídos são `public/documents/luigi-scofano-curriculo-pt.pdf` e `public/documents/luigi-scofano-resume-en.pdf`. A edição em inglês traduz o currículo em português de novembro de 2026.
 
-Luigi forneceu o PDF português de duas páginas em novembro de 2026. O DOCX sanitizado corresponde à edição anterior e está preservado como registro histórico. O PDF inglês teve o telefone removido por redação definitiva e limpeza de metadados. Os demais conteúdos profissionais foram preservados. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
+Luigi forneceu o PDF português de duas páginas em novembro de 2026. O DOCX sanitizado corresponde à edição anterior e está preservado como registro histórico. A tradução mantém as duas páginas, as seções e os seis links do original. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
 
 ## Estudos de caso e exemplo de pesquisa
 
