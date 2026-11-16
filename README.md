@@ -1,6 +1,6 @@
 # Portfólio de Luigi Scofano de Araujo
 
-Portfólio pessoal com página principal em português e inglês, desenvolvido em React, TypeScript e Next.js. A exportação estática é publicada no [GitHub Pages](https://luigiscofano.github.io/portfolio/), sob `/portfolio/`.
+Portfólio pessoal com página principal em português, inglês e espanhol, desenvolvido em React, TypeScript e Next.js. A exportação estática é publicada no [GitHub Pages](https://luigiscofano.github.io/portfolio/), sob `/portfolio/`.
 
 Não há autenticação, banco de dados, analytics ou serviço de envio de mensagens em execução no site. O contato usa `mailto:` e cópia de endereço. A [versão no Sites](https://luigi-scofano-portfolio.luigiscofano.chatgpt.site/) é independente: nenhuma das duas publicações sincroniza a outra.
 
@@ -27,9 +27,10 @@ npm start
 ## Editar conteúdo
 
 - `content/portfolio.json`: conteúdo em português, incluindo perfil, abertura em `profile.hero`, projetos, pesquisa, formação, trajetória, contato, navegação e data editorial `updated`.
-- `content/portfolio.en.json`: versão inglesa com a mesma estrutura. Atualize os dois arquivos quando um fato mudar.
-- `content/ui.en.json`: traduções de rótulos da interface, usando o texto português como chave. Um rótulo sem tradução recai no português.
-- `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab, em português e inglês, com problema, contribuição, decisões técnicas, reprodução, limites e links de evidência.
+- `content/portfolio.en.json` e `content/portfolio.es.json`: versões inglesa e espanhola com a mesma estrutura. Atualize os três arquivos quando um fato mudar.
+- `content/ui.en.json` e `content/ui.es.json`: traduções de rótulos da interface, usando o texto português como chave. Um rótulo sem tradução recai no português.
+- `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab, em português, inglês e espanhol, com problema, contribuição, decisões técnicas, reprodução, limites e links de evidência.
+- `content/credits.json`: créditos e licenças nos três idiomas.
 - `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
 - `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. O PDF inglês é uma tradução da edição portuguesa de novembro de 2026. Não atualize datas ou conteúdos por inferência.
 
@@ -37,9 +38,9 @@ Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícit
 
 `showImagePreview` permanece desativado: não mostramos prévias de interfaces. Logos próprias verificadas (Intuição, Pokédex e Trilha Viva) aparecem primeiro nos cartões; gráficos, capas e diagramas documentais permanecem nos detalhes. `imageKind` distingue `logo`, `document` e `none`. Quando não há arte adequada, `imageOmissionReason` registra o motivo, sem inventar uma marca. A logo B/Páginas do Trilha Viva usa o mesmo recorte CSS do projeto de origem.
 
-A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
+A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos três idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
-O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. A ordem dos currículos prioriza o PDF do idioma selecionado. A introdução inglesa explica Poli-USP e Tupi Antigo para leitores internacionais. A página `/creditos/` permanece em português. O [guia de manutenção](docs/COMO-ATUALIZAR.md) fica apenas no repositório. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
+O seletor de idioma aceita `?lang=pt`, `?lang=en` e `?lang=es` e salva uma preferência local quando disponível. Os currículos disponíveis são português e inglês: PT e ES exibem o PDF português primeiro; EN prioriza o inglês. Não há PDF espanhol. A introdução inglesa explica Poli-USP e Tupi Antigo para leitores internacionais. A página `/creditos/` acompanha o idioma selecionado e preserva essa escolha no link de retorno. O [guia de manutenção](docs/COMO-ATUALIZAR.md) fica apenas no repositório. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
 
 O destaque de Intuição separa “Experimentar” e “Ver código”. O link “Mais sobre mim” abre os detalhes da biografia. O exemplo de pesquisa em `components/portfolio/research-example.tsx` usa “casa” → “c8sa” → “casa” para explicar extração e revisão: é uma simulação em português, não um verbete Tupi nem um resultado real de OCR. Preserve esse aviso e os links às fontes primárias ao editar.
 
@@ -59,6 +60,7 @@ Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare
 - [Design vigente e histórico visual](docs/DESIGN.md)
 - [Fontes, imagens e limites editoriais](docs/FONTES.md)
 - [Idiomas, acessibilidade e currículos](docs/IDIOMAS-E-ACESSIBILIDADE.md)
+- [Arquivos e manutenção das três traduções](docs/IDIOMAS.md)
 - [Validação e roteiro de revisão](docs/VALIDACAO.md)
 
 O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospedadas localmente com suas licenças. A direção editorial combina branco, cinza claro e azul, aproximando-se da referência de Artur Jordão sem copiar seu conteúdo. Os ícones locais de Font Awesome Free 6 têm atribuições em `/creditos/` e licenças em `public/licenses/`.
@@ -67,7 +69,7 @@ O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospeda
 
 ## Imagens e mapas visuais
 
-As logos verificadas abrem os cartões; outras imagens documentais ficam nos detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerá-los depois de editar os dados PT/EN, execute `node scripts/generate-section-visuals.mjs`.
+As logos verificadas abrem os cartões; outras imagens documentais ficam nos detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerar as versões PT/EN depois de editar seus dados, execute `node scripts/generate-section-visuals.mjs`. O script ainda gera somente português e inglês. Os mapas espanhóis `public/images/sections/*-es.svg` foram traduzidos manualmente, mantendo a mesma composição; atualize-os e revise seus textos separadamente quando as informações mudarem.
 
 ## Assinatura visual pessoal
 
