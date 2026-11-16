@@ -350,6 +350,22 @@ export default function Home() {
                 <figcaption>{data.profile.name}</figcaption>
               </figure>
             </div>
+            <div className="resume-links">
+              {(language === 'en'
+                ? [data.profile.resume, data.profile.resumePt]
+                : [data.profile.resumePt, data.profile.resume]
+              ).map((resume) => (
+                <a
+                  key={resume.url}
+                  className="resume-link"
+                  href={sitePath(resume.url)}
+                  download={resume.downloadName}
+                >
+                  <Icon name="file-lines" size={16} />
+                  {resume.label}
+                </a>
+              ))}
+            </div>
             <details id="mais-sobre-mim" className="about-details">
               <summary>
                 <span className="control-label">
@@ -357,22 +373,6 @@ export default function Home() {
                   {t('Mais sobre mim')}
                 </span>
               </summary>
-              <div className="resume-links">
-                {(language === 'en'
-                  ? [data.profile.resume, data.profile.resumePt]
-                  : [data.profile.resumePt, data.profile.resume]
-                ).map((resume) => (
-                  <a
-                    key={resume.url}
-                    className="resume-link"
-                    href={sitePath(resume.url)}
-                    download={resume.downloadName}
-                  >
-                    <Icon name="file-lines" size={16} />
-                    {resume.label}
-                  </a>
-                ))}
-              </div>
               <div className="about-prose">
                 {data.profile.aboutOverview.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
