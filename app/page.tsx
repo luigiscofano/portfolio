@@ -390,7 +390,7 @@ export default function Home() {
                 <SectionTitle icon="code">
                   {t('Projetos e recursos')}
                 </SectionTitle>
-                <Icon name="plus" size={18} />
+                <span className="section-toggle" aria-hidden="true" />
               </summary>
               <div className="section-disclosure-content">
                 {' '}
@@ -518,7 +518,7 @@ export default function Home() {
             <details className="section-disclosure">
               <summary>
                 <SectionTitle icon="flask">{t('Pesquisa')}</SectionTitle>
-                <Icon name="plus" size={18} />
+                <span className="section-toggle" aria-hidden="true" />
               </summary>
               <div className="section-disclosure-content">
                 <SectionVisual section="pesquisa" language={language} />
@@ -586,7 +586,7 @@ export default function Home() {
                 <SectionTitle icon="graduation-cap">
                   {t('Formação')}
                 </SectionTitle>
-                <Icon name="plus" size={18} />
+                <span className="section-toggle" aria-hidden="true" />
               </summary>
               <div className="section-disclosure-content">
                 <SectionVisual section="formacao" language={language} />
@@ -653,7 +653,7 @@ export default function Home() {
                 <SectionTitle icon="diagram-project">
                   {t('Trajetória')}
                 </SectionTitle>
-                <Icon name="plus" size={18} />
+                <span className="section-toggle" aria-hidden="true" />
               </summary>
               <div className="section-disclosure-content">
                 <SectionVisual section="trajetoria" language={language} />
@@ -704,7 +704,7 @@ export default function Home() {
             <details className="section-disclosure">
               <summary>
                 <SectionTitle icon="envelope">{t('Contato')}</SectionTitle>
-                <Icon name="plus" size={18} />
+                <span className="section-toggle" aria-hidden="true" />
               </summary>
               <div className="section-disclosure-content">
                 <p className="section-intro">{data.contactText}</p>
