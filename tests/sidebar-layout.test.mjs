@@ -20,9 +20,17 @@ test('modelo de larguras mantém espaço do conteúdo e não extrapola viewport'
     320, 390, 768, 769, 1024, 1200, 1440, 1600, 1920, 2560,
   ]) {
     const shell = Math.min(viewport, 1600);
-    const sidebar = viewport <= 768 ? 0 : viewport <= 1200 ? 240 : 282;
+    const sidebar =
+      viewport <= 768 ? 0 : Math.min(420, Math.max(220, viewport * 0.2066));
     const content = shell - sidebar;
     assert.ok(content > 0);
     assert.ok(sidebar + content <= viewport);
   }
+});
+
+test('proporção corresponde à referência e preserva limites de leitura', () => {
+  const css = fs.readFileSync('app/globals.css', 'utf8');
+  assert.ok(css.includes('--sidebar-width: clamp(220px, 20.66vw, 420px)'));
+  assert.ok(css.includes('@media (min-width: 769px)'));
+  assert.ok(Math.abs(1365 * 0.2066 - 282) < 1);
 });
