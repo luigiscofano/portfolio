@@ -176,15 +176,14 @@
       "url": "https://github.com/luigiscofano/gesturelab",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
-      "caption": "",
-      "imageSource": "",
+      "image": "/images/projects/gesturelab-marca.png",
+      "imageAlt": "GestureLab logo with parallel black and teal strokes",
+      "caption": "Official GestureLab logo",
+      "imageSource": "https://github.com/luigiscofano/gesturelab/tree/main/docs/marca",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0,
-      "imageKind": "none",
-      "imageOmissionReason": "No verified standalone project logo or suitable documentary image; interface previews intentionally omitted."
+      "imageWidth": 840,
+      "imageHeight": 280,
+      "imageKind": "logo"
     },
     {
       "id": "pokedex",
