@@ -19,7 +19,7 @@ export default function Home() {
   const { active, menuOpen, setMenuOpen, menuButton, followSection } =
     useSectionNavigation();
   const { copied, copyError, copyEmail } = useEmailCopy();
-  const [educationOpen, setEducationOpen] = useState<number | null>(0);
+  const [educationOpen, setEducationOpen] = useState<number | null>(null);
   const [filter, setFilter] = useState('Todos');
   const [query, setQuery] = useState('');
   const featured = data.projects.filter((project) =>
@@ -152,25 +152,27 @@ export default function Home() {
             ))}
           </nav>
           <div className="sidebar-links" aria-label={t('Links de Luigi')}>
-            {profileLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.url}
-                {...(!item.internal ? external : {})}
-                onClick={() => {
-                  if (item.url.startsWith('#'))
-                    followSection(item.url.slice(1));
-                  else {
-                    setMenuOpen(false);
-                    if (menuOpen) menuButton.current?.focus();
-                  }
-                }}
-                style={{ '--link-color': item.color } as React.CSSProperties}
-              >
-                <Icon name={item.icon} size={22} />
-                <span>{item.label}</span>
-              </a>
-            ))}
+            {profileLinks
+              .filter((item) => !['#pesquisa', '#projetos'].includes(item.url))
+              .map((item) => (
+                <a
+                  key={item.label}
+                  href={item.url}
+                  {...(!item.internal ? external : {})}
+                  onClick={() => {
+                    if (item.url.startsWith('#'))
+                      followSection(item.url.slice(1));
+                    else {
+                      setMenuOpen(false);
+                      if (menuOpen) menuButton.current?.focus();
+                    }
+                  }}
+                  style={{ '--link-color': item.color } as React.CSSProperties}
+                >
+                  <Icon name={item.icon} size={22} />
+                  <span>{item.label}</span>
+                </a>
+              ))}
           </div>
           <div className="sidebar-bottom">
             {data.visualSignature.enabled && (
@@ -226,7 +228,11 @@ export default function Home() {
                   {data.profile.hero.description}
                 </p>
                 <div className="hero-actions">
-                  <a className="primary-link" href="#projetos">
+                  <a
+                    className="primary-link"
+                    href="#projetos"
+                    onClick={() => followSection('projetos')}
+                  >
                     {t('Explorar projetos')}{' '}
                     <Icon
                       name="arrow-up"
@@ -234,30 +240,6 @@ export default function Home() {
                       className="cta-arrow-down"
                     />
                   </a>
-                  <a href="#trajetoria">
-                    {t('Minha trajetória')}{' '}
-                    <Icon
-                      name="arrow-up"
-                      size={13}
-                      className="cta-arrow-right"
-                    />
-                  </a>
-                </div>
-                <div className="resume-links">
-                  {(language === 'en'
-                    ? [data.profile.resume, data.profile.resumePt]
-                    : [data.profile.resumePt, data.profile.resume]
-                  ).map((resume) => (
-                    <a
-                      key={resume.url}
-                      className="resume-link"
-                      href={sitePath(resume.url)}
-                      download={resume.downloadName}
-                    >
-                      <Icon name="file-lines" size={16} />
-                      {resume.label}
-                    </a>
-                  ))}
                 </div>
               </div>
               <figure className="hero-portrait">
@@ -273,35 +255,24 @@ export default function Home() {
                 <figcaption>{data.profile.name}</figcaption>
               </figure>
             </div>
-            <div className="featured-heading">
-              <h2>{t('Pesquisa & projetos em destaque')}</h2>
-              <a href="#projetos">
-                {t('Ver todos')}{' '}
-                <Icon name="arrow-up" size={13} className="cta-arrow" />
-              </a>
-            </div>
-            <div className="selected-work">
-              {featured.map((project, index) => (
-                <a
-                  key={project.id}
-                  href="#projetos"
-                  className="selected-work-item"
-                  onClick={() => {
-                    setFilter('Todos');
-                    setQuery(project.name);
-                  }}
-                >
-                  <span className="selected-index">0{index + 1}</span>
-                  <div>
-                    <h3>{project.name}</h3>
-                    <p>{project.summary}</p>
-                  </div>
-                  <Icon name="arrow-up" size={16} className="cta-arrow" />
-                </a>
-              ))}
-            </div>
             <details id="mais-sobre-mim" className="about-details">
               <summary>{t('Mais sobre mim')}</summary>
+              <div className="resume-links">
+                {(language === 'en'
+                  ? [data.profile.resume, data.profile.resumePt]
+                  : [data.profile.resumePt, data.profile.resume]
+                ).map((resume) => (
+                  <a
+                    key={resume.url}
+                    className="resume-link"
+                    href={sitePath(resume.url)}
+                    download={resume.downloadName}
+                  >
+                    <Icon name="file-lines" size={16} />
+                    {resume.label}
+                  </a>
+                ))}
+              </div>
               <div className="about-prose">
                 {data.profile.aboutOverview.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
@@ -314,288 +285,372 @@ export default function Home() {
             tabIndex={-1}
             className="section projects-section"
           >
-            <SectionTitle>{t('Projetos e recursos')}</SectionTitle>
-            <p className="section-intro">
-              {t(
-                'Aplicações, experimentos e materiais que desenvolvi ou dos quais participei. Cada projeto apresenta sua autoria, documentação e limites.',
-              )}
-            </p>
-            <label className="project-search">
-              <span>
-                {language === 'en' ? 'Find a project' : 'Encontre um projeto'}
-              </span>
-              <input
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder={
-                  language === 'en'
-                    ? 'Name, technology or subject'
-                    : 'Nome, tecnologia ou assunto'
-                }
-              />
-            </label>
-            <div className="filter-row">
-              <div
-                className="filters"
-                aria-label={t('Filtrar projetos por área')}
-              >
-                {['Todos', 'IA', 'Dados', 'Software', 'Hardware'].map(
-                  (item) => (
-                    <button
-                      key={item}
-                      aria-pressed={filter === item}
-                      className={filter === item ? 'selected' : ''}
-                      onClick={() => setFilter(item)}
+            <details className="section-disclosure">
+              <summary>
+                <SectionTitle>{t('Projetos e recursos')}</SectionTitle>
+                <Icon name="plus" size={18} />
+              </summary>
+              <div className="section-disclosure-content">
+                {' '}
+                <div className="featured-heading">
+                  <h2>{t('Pesquisa & projetos em destaque')}</h2>
+                  <a
+                    href="#projetos"
+                    onClick={() => {
+                      setFilter('Todos');
+                      setQuery('');
+                      followSection('projetos');
+                    }}
+                  >
+                    {t('Ver todos')}{' '}
+                    <Icon name="arrow-up" size={13} className="cta-arrow" />
+                  </a>
+                </div>
+                <div className="selected-work">
+                  {featured.map((project, index) => (
+                    <a
+                      key={project.id}
+                      href="#projetos"
+                      className="selected-work-item"
+                      onClick={() => {
+                        setFilter('Todos');
+                        setQuery(project.name);
+                      }}
                     >
-                      {t(item)}
-                    </button>
-                  ),
+                      <span className="selected-index">0{index + 1}</span>
+                      <div>
+                        <h3>{project.name}</h3>
+                        <p>{project.summary}</p>
+                      </div>
+                      <Icon name="arrow-up" size={16} className="cta-arrow" />
+                    </a>
+                  ))}
+                </div>
+                <p className="section-intro">
+                  {t(
+                    'Aplicações, experimentos e materiais que desenvolvi ou dos quais participei. Cada projeto apresenta sua autoria, documentação e limites.',
+                  )}
+                </p>
+                <label className="project-search">
+                  <span>
+                    {language === 'en'
+                      ? 'Find a project'
+                      : 'Encontre um projeto'}
+                  </span>
+                  <input
+                    type="search"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    placeholder={
+                      language === 'en'
+                        ? 'Name, technology or subject'
+                        : 'Nome, tecnologia ou assunto'
+                    }
+                  />
+                </label>
+                <div className="filter-row">
+                  <div
+                    className="filters"
+                    aria-label={t('Filtrar projetos por área')}
+                  >
+                    {['Todos', 'IA', 'Dados', 'Software', 'Hardware'].map(
+                      (item) => (
+                        <button
+                          key={item}
+                          aria-pressed={filter === item}
+                          className={filter === item ? 'selected' : ''}
+                          onClick={() => setFilter(item)}
+                        >
+                          {t(item)}
+                        </button>
+                      ),
+                    )}
+                  </div>
+                  <span aria-live="polite" className="project-count">
+                    {filtered.length}{' '}
+                    {filtered.length === 1 ? t('projeto') : t('projetos')}
+                  </span>
+                </div>
+                {filtered.length === 0 && (
+                  <p role="status">
+                    {language === 'en'
+                      ? 'No projects match this search.'
+                      : 'Nenhum projeto corresponde à busca.'}
+                  </p>
                 )}
+                <div className="resource-grid">
+                  {filtered.map((project) => (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      t={t}
+                      language={language}
+                    />
+                  ))}
+                </div>
+                <a
+                  className="all-projects"
+                  href={`${data.profile.github}?tab=repositories`}
+                  {...external}
+                >
+                  <Icon name="github" size={17} />
+                  {t('Todos os repositórios no GitHub')}
+                  <ExternalIcon />
+                </a>
               </div>
-              <span aria-live="polite" className="project-count">
-                {filtered.length}{' '}
-                {filtered.length === 1 ? t('projeto') : t('projetos')}
-              </span>
-            </div>
-            {filtered.length === 0 && (
-              <p role="status">
-                {language === 'en'
-                  ? 'No projects match this search.'
-                  : 'Nenhum projeto corresponde à busca.'}
-              </p>
-            )}
-            <div className="resource-grid">
-              {filtered.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  t={t}
-                  language={language}
-                />
-              ))}
-            </div>
-            <a
-              className="all-projects"
-              href={`${data.profile.github}?tab=repositories`}
-              {...external}
-            >
-              <Icon name="github" size={17} />
-              {t('Todos os repositórios no GitHub')}
-              <ExternalIcon />
-            </a>
+            </details>
           </section>
           <section
             id="pesquisa"
             tabIndex={-1}
             className="section research-section"
           >
-            <SectionTitle>{t('Pesquisa')}</SectionTitle>
-            <p className="section-intro">
-              {t(
-                'Iniciativas que conectam computação, linguagem, educação e interação.',
-              )}
-            </p>
-            <div className="timeline">
-              {data.research.map((item, index) => (
-                <article className="timeline-item" key={item.title}>
-                  <a
-                    className={`timeline-icon tone-${index}`}
-                    href={item.url}
-                    aria-label={item.title}
-                    {...external}
-                  >
-                    <Icon
-                      name={index === 0 ? 'book-open' : 'graduation-cap'}
-                      size={21}
-                    />
-                  </a>
-                  <div className="timeline-content">
-                    <span className="item-meta">{item.institution}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                    <a className="inline-link" href={item.url} {...external}>
-                      {item.linkLabel}
-                      <ExternalIcon />
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <details className="about-details">
+            <details className="section-disclosure">
               <summary>
-                {language === 'en'
-                  ? 'Explore a research example'
-                  : 'Explorar um exemplo da pesquisa'}
+                <SectionTitle>{t('Pesquisa')}</SectionTitle>
+                <Icon name="plus" size={18} />
               </summary>
-              <ResearchExample language={language} />
+              <div className="section-disclosure-content">
+                <p className="section-intro">
+                  {t(
+                    'Iniciativas que conectam computação, linguagem, educação e interação.',
+                  )}
+                </p>
+                <div className="timeline">
+                  {data.research.map((item, index) => (
+                    <article className="timeline-item" key={item.title}>
+                      <a
+                        className={`timeline-icon tone-${index}`}
+                        href={item.url}
+                        aria-label={item.title}
+                        {...external}
+                      >
+                        <Icon
+                          name={index === 0 ? 'book-open' : 'graduation-cap'}
+                          size={21}
+                        />
+                      </a>
+                      <div className="timeline-content">
+                        <span className="item-meta">{item.institution}</span>
+                        <h3>{item.title}</h3>
+                        <p>{item.text}</p>
+                        <a
+                          className="inline-link"
+                          href={item.url}
+                          {...external}
+                        >
+                          {item.linkLabel}
+                          <ExternalIcon />
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                <details className="about-details">
+                  <summary>
+                    {language === 'en'
+                      ? 'Explore a research example'
+                      : 'Explorar um exemplo da pesquisa'}
+                  </summary>
+                  <ResearchExample language={language} />
+                </details>
+                <p className="research-note">
+                  {t(
+                    'Código e metodologia estão disponíveis nos links de cada iniciativa.',
+                  )}
+                </p>
+              </div>
             </details>
-            <p className="research-note">
-              {t(
-                'Código e metodologia estão disponíveis nos links de cada iniciativa.',
-              )}
-            </p>
           </section>
           <section
             id="formacao"
             tabIndex={-1}
             className="section education-section"
           >
-            <SectionTitle>{t('Formação')}</SectionTitle>
-            <div className="education-accordion">
-              {data.education.map((item, index) => (
-                <div
-                  className={`education-item ${educationOpen === index ? 'expanded' : ''}`}
-                  key={item.title}
-                >
-                  <h3>
-                    <button
-                      onClick={() =>
-                        setEducationOpen(educationOpen === index ? null : index)
-                      }
-                      aria-expanded={educationOpen === index}
-                      aria-controls={`education-panel-${index}`}
-                      id={`education-heading-${index}`}
+            <details className="section-disclosure">
+              <summary>
+                <SectionTitle>{t('Formação')}</SectionTitle>
+                <Icon name="plus" size={18} />
+              </summary>
+              <div className="section-disclosure-content">
+                <div className="education-accordion">
+                  {data.education.map((item, index) => (
+                    <div
+                      className={`education-item ${educationOpen === index ? 'expanded' : ''}`}
+                      key={item.title}
                     >
-                      {item.title}
-                      <Icon
-                        name={educationOpen === index ? 'minus' : 'plus'}
-                        size={14}
-                      />
-                    </button>
-                  </h3>
-                  <div
-                    role="region"
-                    id={`education-panel-${index}`}
-                    aria-labelledby={`education-heading-${index}`}
-                    hidden={educationOpen !== index}
-                    className="education-panel"
-                  >
-                    <p>
-                      <strong>{item.institution}</strong>
-                    </p>
-                    <p>{item.status}.</p>
-                    <a
-                      href={`${data.profile.source}#formação-e-aprendizado`}
-                      {...external}
-                    >
-                      {t('Informações no perfil público')}
-                      <ExternalIcon />
-                    </a>
-                  </div>
+                      <h3>
+                        <button
+                          onClick={() =>
+                            setEducationOpen(
+                              educationOpen === index ? null : index,
+                            )
+                          }
+                          aria-expanded={educationOpen === index}
+                          aria-controls={`education-panel-${index}`}
+                          id={`education-heading-${index}`}
+                        >
+                          {item.title}
+                          <Icon
+                            name={educationOpen === index ? 'minus' : 'plus'}
+                            size={14}
+                          />
+                        </button>
+                      </h3>
+                      <div
+                        role="region"
+                        id={`education-panel-${index}`}
+                        aria-labelledby={`education-heading-${index}`}
+                        hidden={educationOpen !== index}
+                        className="education-panel"
+                      >
+                        <p>
+                          <strong>{item.institution}</strong>
+                        </p>
+                        <p>{item.status}.</p>
+                        <a
+                          href={`${data.profile.source}#formação-e-aprendizado`}
+                          {...external}
+                        >
+                          {t('Informações no perfil público')}
+                          <ExternalIcon />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            </details>
           </section>
           <section
             id="trajetoria"
             tabIndex={-1}
             className="section experience-section"
           >
-            <SectionTitle>{t('Trajetória')}</SectionTitle>
-            <p className="section-intro">
-              {t(
-                'Experiências com dados, tecnologia e necessidades de negócio.',
-              )}
-            </p>
-            <div className="timeline">
-              {data.experience.map((item, index) => (
-                <article className="timeline-item" key={item.company}>
-                  <span className={`timeline-icon tone-${index}`}>
-                    <Icon
-                      name={
-                        index === 0
-                          ? 'diagram-project'
-                          : index === 1
-                            ? 'code'
-                            : 'database'
-                      }
-                      size={21}
-                    />
-                  </span>
-                  <div className="timeline-content">
-                    <h3>{item.company}</h3>
-                    <span className="item-meta">{item.area}</span>
-                    <p>{item.text}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <a
-              className="inline-link"
-              href={`${data.profile.github}#trajetória-profissional`}
-              {...external}
-            >
-              {t('Mais sobre a trajetória')}
-              <ExternalIcon />
-            </a>
+            <details className="section-disclosure">
+              <summary>
+                <SectionTitle>{t('Trajetória')}</SectionTitle>
+                <Icon name="plus" size={18} />
+              </summary>
+              <div className="section-disclosure-content">
+                <p className="section-intro">
+                  {t(
+                    'Experiências com dados, tecnologia e necessidades de negócio.',
+                  )}
+                </p>
+                <div className="timeline">
+                  {data.experience.map((item, index) => (
+                    <article className="timeline-item" key={item.company}>
+                      <span className={`timeline-icon tone-${index}`}>
+                        <Icon
+                          name={
+                            index === 0
+                              ? 'diagram-project'
+                              : index === 1
+                                ? 'code'
+                                : 'database'
+                          }
+                          size={21}
+                        />
+                      </span>
+                      <div className="timeline-content">
+                        <h3>{item.company}</h3>
+                        <span className="item-meta">{item.area}</span>
+                        <p>{item.text}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                <a
+                  className="inline-link"
+                  href={`${data.profile.github}#trajetória-profissional`}
+                  {...external}
+                >
+                  {t('Mais sobre a trajetória')}
+                  <ExternalIcon />
+                </a>
+              </div>
+            </details>
           </section>
           <section
             id="contato"
             tabIndex={-1}
             className="section contact-section"
           >
-            <SectionTitle>{t('Contato')}</SectionTitle>
-            <p className="section-intro">{data.contactText}</p>
-            {/* Cada endereço mantém seu próprio feedback de cópia. */}
-            {[
-              { label: t('E-mail profissional'), email: data.profile.email },
-              { label: t('E-mail pessoal'), email: data.profile.personalEmail },
-            ].map(({ label, email }) => (
-              <div className="contact-item" key={email}>
-                <span className="contact-icon">
-                  <Icon name="envelope" size={29} />
-                </span>
-                <div>
-                  <p>{label}</p>
-                  <a className="contact-email" href={`mailto:${email}`}>
-                    {email}
-                  </a>
-                  <button
-                    className="copy-email"
-                    onClick={() => copyEmail(email)}
-                    aria-label={
-                      copied === email
-                        ? `${label} ${t('copiado')}`
-                        : `${t('Copiar')} ${label.toLowerCase()}`
-                    }
-                  >
-                    <Icon
-                      name={copied === email ? 'check' : 'copy'}
-                      size={16}
-                    />
-                  </button>
-                  <span className="copy-feedback" aria-live="polite">
-                    {copied === email
-                      ? t('E-mail copiado.')
-                      : copyError === email
-                        ? t('Selecione o endereço para copiá-lo.')
-                        : ''}
+            <details className="section-disclosure">
+              <summary>
+                <SectionTitle>{t('Contato')}</SectionTitle>
+                <Icon name="plus" size={18} />
+              </summary>
+              <div className="section-disclosure-content">
+                <p className="section-intro">{data.contactText}</p>
+                {/* Cada endereço mantém seu próprio feedback de cópia. */}
+                {[
+                  {
+                    label: t('E-mail profissional'),
+                    email: data.profile.email,
+                  },
+                  {
+                    label: t('E-mail pessoal'),
+                    email: data.profile.personalEmail,
+                  },
+                ].map(({ label, email }) => (
+                  <div className="contact-item" key={email}>
+                    <span className="contact-icon">
+                      <Icon name="envelope" size={29} />
+                    </span>
+                    <div>
+                      <p>{label}</p>
+                      <a className="contact-email" href={`mailto:${email}`}>
+                        {email}
+                      </a>
+                      <button
+                        className="copy-email"
+                        onClick={() => copyEmail(email)}
+                        aria-label={
+                          copied === email
+                            ? `${label} ${t('copiado')}`
+                            : `${t('Copiar')} ${label.toLowerCase()}`
+                        }
+                      >
+                        <Icon
+                          name={copied === email ? 'check' : 'copy'}
+                          size={16}
+                        />
+                      </button>
+                      <span className="copy-feedback" aria-live="polite">
+                        {copied === email
+                          ? t('E-mail copiado.')
+                          : copyError === email
+                            ? t('Selecione o endereço para copiá-lo.')
+                            : ''}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                <div className="contact-item">
+                  <span className="contact-icon">
+                    <Icon name="location-dot" size={29} />
                   </span>
+                  <div>
+                    <p>{data.profile.location}</p>
+                    <span>{t('Engenharia de Computação · Poli-USP')}</span>
+                  </div>
+                </div>
+                <div className="contact-social">
+                  <a href={data.profile.github} {...external}>
+                    <Icon name="github" size={18} />
+                    GitHub
+                    <ExternalIcon />
+                  </a>
+                  <a href={data.profile.linkedin} {...external}>
+                    <Icon name="linkedin" size={18} />
+                    LinkedIn
+                    <ExternalIcon />
+                  </a>
                 </div>
               </div>
-            ))}
-            <div className="contact-item">
-              <span className="contact-icon">
-                <Icon name="location-dot" size={29} />
-              </span>
-              <div>
-                <p>{data.profile.location}</p>
-                <span>{t('Engenharia de Computação · Poli-USP')}</span>
-              </div>
-            </div>
-            <div className="contact-social">
-              <a href={data.profile.github} {...external}>
-                <Icon name="github" size={18} />
-                GitHub
-                <ExternalIcon />
-              </a>
-              <a href={data.profile.linkedin} {...external}>
-                <Icon name="linkedin" size={18} />
-                LinkedIn
-                <ExternalIcon />
-              </a>
-            </div>
+            </details>
           </section>
           <footer className="page-footer">
             <span className="footer-signature">

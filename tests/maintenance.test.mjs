@@ -35,3 +35,18 @@ test('Optional highlights and clipboard cleanup have explicit safeguards', () =>
   assert.ok(includesCode(clipboard, 'current !== request.current'));
   assert.ok(includesCode(clipboard, 'request.current += 1'));
 });
+
+test('progressive sections preserve every destination and open direct links', () => {
+  const page = fs.readFileSync('app/page.tsx', 'utf8');
+  assert.equal((page.match(/className="section-disclosure"/g) || []).length, 5);
+  assert.ok(page.includes('data.profile.aboutOverview.map'));
+  assert.ok(page.includes('data.profile.resumePt'));
+  const hero = page.slice(
+    page.indexOf('className="hero-actions"'),
+    page.indexOf('className="hero-portrait"'),
+  );
+  assert.equal((hero.match(/<a\b/g) || []).length, 1);
+  const nav = fs.readFileSync('hooks/use-section-navigation.ts', 'utf8');
+  assert.ok(nav.includes('disclosure.open = true'));
+  assert.ok(nav.includes('openHashSection'));
+});
