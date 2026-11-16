@@ -163,14 +163,14 @@
   },
   {
     "projectId": "pokedex",
-    "image": "/images/projects/captures/pokedex-inicio-atual.jpg",
-    "width": 1165,
-    "height": 747,
-    "source": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/docs/imagens/pokedex-inicio-atual.jpg",
+    "image": "/images/projects/captures/pokedex-inicio-rota001.png",
+    "width": 1811,
+    "height": 741,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-inicio-rota001.png",
     "caption": {
-      "pt": "Página inicial atual da Pokédex com Pokémon em destaque.",
-      "en": "Current Pokédex home page with featured Pokémon.",
-      "es": "Página inicial actual de la Pokédex con Pokémon destacados."
+      "pt": "Página inicial Rota 001 com Charizard em destaque. Captura integral fornecida pelo autor em 16/11/2026, sem cursor.",
+      "en": "Rota 001 home with featured Charizard. Full screenshot supplied by the author on 16 November 2026, without a cursor.",
+      "es": "Inicio Rota 001 con Charizard destacado. Captura completa proporcionada por el autor el 16/11/2026, sin cursor."
     }
   },
   {
