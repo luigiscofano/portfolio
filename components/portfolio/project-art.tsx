@@ -6,6 +6,8 @@ const copy = {
     title: 'Biblioteca visual do Intuição',
     manual: 'Manual da marca',
     fauna: 'Os 15 mascotes',
+    sides: 'Ícones laterais originais dos mascotes',
+    sprites: 'Atlas de sprites utilizado pelo projeto',
     art: 'Ilustrações originais dos jogos',
     caption: 'Identidade e arte do projeto, sem capturas de interface.',
   },
@@ -13,6 +15,8 @@ const copy = {
     title: 'Intuição visual library',
     manual: 'Brand manual',
     fauna: 'The 15 mascots',
+    sides: 'Original side-view mascot icons',
+    sprites: 'Sprite atlas used by the project',
     art: 'Original game illustrations',
     caption: 'Project identity and artwork, not interface screenshots.',
   },
@@ -20,6 +24,8 @@ const copy = {
     title: 'Biblioteca visual de Intuição',
     manual: 'Manual de marca',
     fauna: 'Los 15 personajes',
+    sides: 'Iconos laterales originales de las mascotas',
+    sprites: 'Atlas de sprites utilizado por el proyecto',
     art: 'Ilustraciones originales de los juegos',
     caption: 'Identidad y arte del proyecto, sin capturas de interfaz.',
   },
@@ -89,6 +95,40 @@ export function ProjectArt({
             </figure>
           ))}
         </div>
+        <details className="mascot-art-disclosure">
+          <summary>{text.sprites}</summary>
+          <a
+            href="https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/dist/sintonia/assets/chibi-user-roster.svg"
+            {...externalLink}
+          >
+            <img
+              className="mascot-art-sheet"
+              src="https://raw.githubusercontent.com/luigiscofano/intuicao/0a6334f4dc18e364c9e71adb2c5a2160345550bd/dist/sintonia/assets/chibi-user-roster.svg"
+              alt={text.sprites}
+              width="1254"
+              height="1254"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </details>
+        <details className="mascot-art-disclosure">
+          <summary>{text.sides}</summary>
+          <a
+            href={`${root}docs/identidade/manual/assets/Intuicao_Icones_Fauna_Lado_Verde_sobre_Branco.png`}
+            {...externalLink}
+          >
+            <img
+              className="mascot-art-sheet"
+              src={sitePath('/images/projects/art/intuicao-fauna-lateral.png')}
+              alt={text.sides}
+              width="971"
+              height="1620"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </details>
         <details className="mascot-art-disclosure">
           <summary>{text.fauna}</summary>
           <a
