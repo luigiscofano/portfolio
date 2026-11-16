@@ -1576,3 +1576,110 @@ nav a > .icon {
     min-height: 34px;
   }
 }
+/* A mesma paleta orienta seções e ações, sem substituir títulos ou ícones. */
+#projetos {
+  --section-accent: #28725d;
+}
+#pesquisa {
+  --section-accent: #946c19;
+}
+#formacao {
+  --section-accent: #3d7095;
+}
+#trajetoria {
+  --section-accent: #ad4946;
+}
+#contato {
+  --section-accent: #28725d;
+}
+.section-title .icon,
+.section-disclosure > summary > svg {
+  color: var(--section-accent, var(--blue));
+}
+.sidebar nav a .icon {
+  color: var(--nav-color);
+}
+.sidebar nav a.active {
+  color: var(--nav-color);
+  border-color: var(--nav-color);
+}
+.section-disclosure > summary {
+  border-left: 3px solid var(--section-accent, var(--blue));
+  padding-left: 12px;
+}
+.resource-card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--card-color, var(--blue));
+  padding: 20px;
+  border-radius: 6px;
+}
+.resource-card:focus-within {
+  border-color: var(--card-color, var(--blue));
+  box-shadow: 0 0 0 2px #edf0f3;
+}
+.project-gallery-items {
+  display: grid;
+  gap: 18px;
+  padding-top: 16px;
+}
+.project-gallery-items img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.project-gallery-items figcaption {
+  font-size: 12px;
+  line-height: 1.65;
+  margin-top: 8px;
+}
+/* Recorte de apresentação: o arquivo original é preservado; o cursor no rodapé não aparece. */
+.project-capture-top {
+  aspect-ratio: 2.15;
+  overflow: hidden;
+}
+.project-gallery-items .project-capture-top img {
+  max-width: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .resource-card {
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease;
+  }
+  .resource-card:has(a:active, summary:active) {
+    transform: translateY(1px);
+  }
+  .project-details[open] > :not(summary) {
+    animation: project-reveal 180ms ease-out;
+  }
+  @keyframes project-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #24354b0d;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resource-card,
+  .project-details[open] > :not(summary) {
+    transition: none;
+    animation: none;
+    transform: none;
+  }
+}
+@media (max-width: 480px) {
+  .resource-card {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-ficha.jpg",
+    "width": 1165,
+    "height": 747,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-destaque-ficha.jpg",
+    "caption": {
+      "pt": "Ficha real de Bulbasaur: atributos, tipos e formas na aplicação.",
+      "en": "Actual Bulbasaur detail screen: stats, types and forms in the application.",
+      "es": "Ficha real de Bulbasaur: atributos, tipos y formas en la aplicación."
+    }
+  },
+  {
+    "projectId": "trilha-viva",
+    "image": "/images/projects/captures/trilha-viva-painel.jpg",
+    "width": 1165,
+    "height": 747,
+    "crop": "top",
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/main/docs/images/painel.jpg",
+    "caption": {
+      "pt": "Recorte superior da captura real do painel, publicada na documentação do projeto.",
+      "en": "Top crop of the actual dashboard screenshot published in the project documentation.",
+      "es": "Recorte superior de la captura real del panel publicada en la documentación del proyecto."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-02_bacias.svg",
+    "width": 293.142187,
+    "height": 279.155469,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/tree/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras",
+    "caption": {
+      "pt": "Bacias de atração de Newton — resultado dos notebooks da edição de estudo atual.",
+      "en": "Newton attraction basins — output from the current study-edition notebooks.",
+      "es": "Cuencas de atracción de Newton — resultado de los cuadernos de la edición de estudio actual."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-04_espectro.svg",
+    "width": 495.98125,
+    "height": 279.75625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/tree/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras",
+    "caption": {
+      "pt": "Espectro de Fourier — resultado dos notebooks da edição de estudo atual.",
+      "en": "Fourier spectrum — output from the current study-edition notebooks.",
+      "es": "Espectro de Fourier — resultado de los cuadernos de la edición de estudio actual."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-05_runge.svg",
+    "width": 495.960937,
+    "height": 279.155469,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/tree/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras",
+    "caption": {
+      "pt": "Interpolação de Runge — resultado dos notebooks da edição de estudo atual.",
+      "en": "Runge interpolation — output from the current study-edition notebooks.",
+      "es": "Interpolación de Runge — resultado de los cuadernos de la edición de estudio actual."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-06_chua.svg",
+    "width": 359.319829,
+    "height": 352.8,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/tree/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras",
+    "caption": {
+      "pt": "Circuito de Chua — resultado dos notebooks da edição de estudo atual.",
+      "en": "Chua circuit — output from the current study-edition notebooks.",
+      "es": "Circuito de Chua — resultado de los cuadernos de la edición de estudio actual."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-apresentacao-01.png",
+    "width": 1440,
+    "height": 900,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/apresentacoes/apresentacao.html",
+    "caption": {
+      "pt": "Laboratório Digital — slide real da apresentação versionada, não fotografia de hardware.",
+      "en": "Laboratório Digital — actual slide from the versioned presentation, not a hardware photograph.",
+      "es": "Laboratório Digital — diapositiva real de la presentación versionada, no fotografía del hardware."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-math-genius.png",
+    "width": 1440,
+    "height": 900,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/apresentacoes/apresentacao.html",
+    "caption": {
+      "pt": "Math Genius — slide real da apresentação versionada, não fotografia de hardware.",
+      "en": "Math Genius — actual slide from the versioned presentation, not a hardware photograph.",
+      "es": "Math Genius — diapositiva real de la presentación versionada, no fotografía del hardware."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-guardiao.png",
+    "width": 1440,
+    "height": 900,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/apresentacoes/apresentacao.html",
+    "caption": {
+      "pt": "Guardião — slide real da apresentação versionada, não fotografia de hardware.",
+      "en": "Guardião — actual slide from the versioned presentation, not a hardware photograph.",
+      "es": "Guardião — diapositiva real de la presentación versionada, no fotografía del hardware."
+    }
+  }
+]

@@ -19,6 +19,14 @@ const sectionIcons: Record<string, IconName> = {
   trajetoria: 'diagram-project',
   contato: 'envelope',
 };
+const sectionColors: Record<string, string> = {
+  sobre: '#3d7095',
+  projetos: '#28725d',
+  pesquisa: '#946c19',
+  formacao: '#3d7095',
+  trajetoria: '#ad4946',
+  contato: '#28725d',
+};
 const filterIcons: Record<string, IconName> = {
   Todos: 'diagram-project',
   IA: 'flask',
@@ -222,7 +230,7 @@ export default function Home() {
                 href={`#${item.id}`}
                 style={
                   {
-                    '--nav-color': '#3d7095',
+                    '--nav-color': sectionColors[item.id],
                   } as React.CSSProperties
                 }
                 className={active === item.id ? 'active' : ''}

@@ -1,3 +1,4 @@
+import { ProjectGallery } from './project-gallery';
 import { ProjectArt } from './project-art';
 import cases from '@/content/project-cases.json';
 import type data from '@/content/portfolio.json';
@@ -155,6 +156,7 @@ export function ProjectCard({
           </div>
         </details>
       )}
+      <ProjectGallery projectId={project.id} language={language} />
       <ProjectArt projectId={project.id} language={language} />
       <details className="project-details">
         <summary>
