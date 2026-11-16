@@ -1834,3 +1834,140 @@ nav a > .icon {
     --sidebar-width: 20.66vw;
   }
 }
+
+/* Escala estrutural desktop: referência de 1365 px.
+   Não usamos zoom/transform no documento: foco, rolagem e hitboxes continuam reais.
+   Texto e alvos interativos têm mínimos legíveis; telas móveis não participam. */
+@media (min-width: 769px) {
+  :root {
+    --desktop-unit: 0.073260073vw;
+  }
+  .site-shell {
+    max-width: none;
+  }
+  body {
+    font-size: max(14px, calc(15 * var(--desktop-unit)));
+  }
+  .sidebar {
+    padding: calc(62 * var(--desktop-unit)) calc(35 * var(--desktop-unit))
+      calc(30 * var(--desktop-unit));
+  }
+  .sidebar-name {
+    font-size: max(22px, calc(30 * var(--desktop-unit)));
+    overflow-wrap: anywhere;
+  }
+  .sidebar-description {
+    font-size: max(10px, calc(10 * var(--desktop-unit)));
+    margin-top: calc(20 * var(--desktop-unit));
+  }
+  nav {
+    margin: calc(42 * var(--desktop-unit)) calc(-15 * var(--desktop-unit)) 0;
+    gap: calc(7 * var(--desktop-unit));
+  }
+  nav a {
+    font-size: max(13px, calc(15 * var(--desktop-unit)));
+    padding: calc(10 * var(--desktop-unit)) calc(14 * var(--desktop-unit));
+    gap: calc(15 * var(--desktop-unit));
+    min-height: max(44px, calc(48 * var(--desktop-unit)));
+  }
+  .sidebar-links {
+    gap: calc(10 * var(--desktop-unit)) calc(14 * var(--desktop-unit));
+    margin-top: calc(36 * var(--desktop-unit));
+    padding-top: calc(18 * var(--desktop-unit));
+  }
+  .sidebar-links a {
+    font-size: max(11px, calc(11 * var(--desktop-unit)));
+    overflow-wrap: anywhere;
+  }
+  .sidebar-signature {
+    width: 100%;
+    max-width: calc(190 * var(--desktop-unit));
+  }
+  .sidebar-bottom {
+    padding-top: calc(42 * var(--desktop-unit));
+  }
+  .section {
+    padding: calc(54 * var(--desktop-unit)) calc(60 * var(--desktop-unit))
+      calc(20 * var(--desktop-unit));
+  }
+  .about-section {
+    padding-top: calc(32 * var(--desktop-unit));
+  }
+  .about-section .hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: calc(24 * var(--desktop-unit));
+    padding-block: calc(16 * var(--desktop-unit));
+  }
+  .hero-copy {
+    min-width: 0;
+  }
+  .about-section .hero-copy h1 {
+    font-size: max(32px, calc(56 * var(--desktop-unit)));
+    max-width: calc(440 * var(--desktop-unit));
+  }
+  .about-section .hero-subtitle {
+    font-size: max(23px, calc(38 * var(--desktop-unit)));
+    margin-top: calc(10 * var(--desktop-unit));
+  }
+  .about-section .hero-description {
+    max-width: calc(420 * var(--desktop-unit));
+    margin-top: calc(16 * var(--desktop-unit));
+  }
+  .about-section .hero-portrait {
+    width: 100%;
+    max-width: calc(360 * var(--desktop-unit));
+    justify-self: end;
+  }
+  .hero-portrait figcaption {
+    font-size: max(10px, calc(10 * var(--desktop-unit)));
+    margin-top: calc(8 * var(--desktop-unit));
+  }
+  .hero-eyebrow {
+    font-size: max(10px, calc(10 * var(--desktop-unit)));
+    margin-bottom: calc(12 * var(--desktop-unit));
+  }
+  .about-section .hero-actions {
+    margin-top: calc(14 * var(--desktop-unit));
+  }
+  .hero-actions .primary-link {
+    font-size: max(13px, calc(13 * var(--desktop-unit)));
+    padding: calc(7 * var(--desktop-unit)) calc(12 * var(--desktop-unit));
+    min-height: max(38px, calc(38 * var(--desktop-unit)));
+  }
+  .resume-links {
+    margin-block: calc(8 * var(--desktop-unit)) calc(12 * var(--desktop-unit));
+    gap: calc(2 * var(--desktop-unit)) calc(18 * var(--desktop-unit));
+  }
+  .about-section .about-details {
+    margin-top: calc(18 * var(--desktop-unit));
+  }
+  .section:has(> .section-disclosure) {
+    padding-block: calc(14 * var(--desktop-unit));
+  }
+  .section-disclosure > summary {
+    min-height: max(44px, calc(44 * var(--desktop-unit)));
+    padding-block: calc(6 * var(--desktop-unit));
+  }
+  .section-disclosure > summary .section-title {
+    font-size: max(24px, calc(29 * var(--desktop-unit)));
+  }
+  .section-intro {
+    max-width: calc(780 * var(--desktop-unit));
+  }
+  .language-row {
+    font-size: max(13px, calc(13 * var(--desktop-unit)));
+    gap: calc(12 * var(--desktop-unit));
+    margin-top: calc(16 * var(--desktop-unit));
+  }
+  .page-footer {
+    margin-inline: calc(60 * var(--desktop-unit));
+  }
+  .footer-signature img {
+    width: calc(118 * var(--desktop-unit));
+  }
+}
+@media (min-width: 769px) and (pointer: coarse) {
+  .hero-actions .primary-link {
+    min-height: 44px;
+  }
+}
