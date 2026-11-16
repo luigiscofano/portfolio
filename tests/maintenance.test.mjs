@@ -101,3 +101,12 @@ test('every public project has a sourced local image with honest alt text', () =
     }
   }
 });
+
+test('signature clips only the bird at the original branch curve', () => {
+  const svg = fs.readFileSync('public/images/assinatura-bem-te-vi.svg', 'utf8');
+  assert.ok(svg.includes('clip-path="url(#limite-superior-galho)"'));
+  assert.ok(
+    svg.includes('M0 0H180V34H167C142 49 114 41 89 47C64 53 39 45 12 53H0Z'),
+  );
+  assert.ok(svg.includes('translate(70 5) scale(2)'));
+});

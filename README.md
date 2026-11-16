@@ -68,3 +68,11 @@ O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospeda
 ## Imagens e mapas visuais
 
 As imagens dos projetos ficam nos seus detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerá-los depois de editar os dados PT/EN, execute `node scripts/generate-section-visuals.mjs`.
+
+## Assinatura visual pessoal
+
+![Bem-te-vi em pixel art sobre um ramo com folhas](public/images/assinatura-bem-te-vi.svg)
+
+A assinatura reúne um bem-te-vi em pixel art e um ramo de folhas em verde discreto. Ela acompanha o perfil na barra lateral e reaparece na área de contato, sem substituir o nome ou servir como controle de navegação. O pássaro, suas cores, proporções e o desenho do ramo são preservados. Um recorte vetorial acompanha a curva do galho somente para impedir que pixels dos pés avancem abaixo dele.
+
+O [SVG da assinatura](public/images/assinatura-bem-te-vi.svg) é local, leve e sem scripts. As instâncias no site mantêm texto alternativo e dimensões responsivas. Essa composição é distinta do atlas original do jogo Sintonia, preservado separadamente em `public/images/sintonia/`.
