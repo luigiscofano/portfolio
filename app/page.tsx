@@ -267,7 +267,6 @@ export default function Home() {
           <section id="sobre" tabIndex={-1} className="section about-section">
             <div className="editorial-topline">
               <span>{t('Portfólio · pesquisa, dados e software')}</span>
-              <span>{data.updated}</span>
             </div>
             <div className="language-row">
               <label htmlFor="portfolio-language">{t('Idioma')}</label>
@@ -760,11 +759,7 @@ export default function Home() {
                   height={data.visualSignature.height}
                 />
               )}
-              <span>
-                © 2026 {data.profile.name}
-                <br />
-                {data.updated}
-              </span>
+              <span>© 2026 {data.profile.name}</span>
             </span>
             <a href="#sobre" aria-label={t('Voltar ao início')}>
               <Icon name="arrow-up" size={16} />
