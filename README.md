@@ -92,3 +92,11 @@ A [biblioteca visual do Intuição](docs/ARTE-DOS-PROJETOS.md) apresenta a capa 
 ### Galerias reais e acesso ao currículo
 
 Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob demanda. Intuição tem cinco imagens e Pokédex tem quatro; registros históricos da Pokédex são identificados, sem confundi-los com a interface atual. As lacunas de outros projetos são documentadas, sem usar prévias como se fossem execução real. Consulte [cobertura, fontes e pendências das galerias](docs/galerias-reais.md). Os PDFs do currículo permanecem acessíveis fora de “Mais sobre mim”.
+
+## Marca da Pokédex: Rota 001
+
+![Insígnia aprovada Rota 001, com grama alta e trilha dourada](public/images/projects/pokedex-rota-001.png)
+
+A identidade aprovada em 16/11/2026 substitui o ícone anterior na apresentação da Pokédex no portfólio. A insígnia combina grama alta em pixel art, uma trilha dourada e uma placa vermelha. A arte original, com transparência, foi preservada sem redesenho ou alteração de proporções. É uma marca do projeto de fã, não uma marca oficial de Pokémon.
+
+O catálogo em português, inglês e espanhol usa a mesma arte e identifica o projeto como **Pokédex · Rota 001**. A troca não modifica o favicon bem-te-vi, a assinatura visual do portfólio, as galerias históricas nem as funcionalidades dos projetos. Veja a [documentação da marca](docs/MARCA-ROTA-001.md) e o [repositório da Pokédex](https://github.com/luigiscofano/Pokedex).

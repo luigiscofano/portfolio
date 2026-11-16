@@ -188,7 +188,7 @@
     },
     {
       "id": "pokedex",
-      "name": "Pokédex",
+      "name": "Pokédex · Rota 001",
       "subtitle": "Datos para explorar",
       "category": "Software",
       "type": "Aplicación web · proyecto de fan",
@@ -201,13 +201,13 @@
       "url": "https://github.com/luigiscofano/Pokedex",
       "demo": "https://pokedex-luigi-explorer.luigiscofano.chatgpt.site",
       "demoLabel": "Explorar la Pokédex",
-      "image": "/images/projects/pokedex-icone-original.svg",
-      "imageAlt": "Icono original del proyecto de fan Pokédex; no es una captura de la aplicación",
-      "caption": "Icono original del proyecto · iniciativa de fan, no oficial",
-      "imageSource": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/web/icon.svg",
+      "image": "/images/projects/pokedex-rota-001.png",
+      "imageAlt": "Insignia Rota 001: hierba alta en pixel art, sendero dorado y letrero rojo",
+      "caption": "Marca aprobada Rota 001 · Pokédex de fans, no oficial",
+      "imageSource": "https://github.com/luigiscofano/Pokedex/blob/main/docs/identidade/rota-001.png",
       "showImagePreview": false,
-      "imageWidth": 64,
-      "imageHeight": 64,
+      "imageWidth": 1254,
+      "imageHeight": 1254,
       "imageKind": "logo"
     },
     {
