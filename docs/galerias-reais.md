@@ -23,8 +23,8 @@ O currículo em português e inglês está fora de “Mais sobre mim”, visíve
 
 A biblioteca visual do Intuição inclui os ícones laterais originais e o atlas atual `dist/sintonia/assets/chibi-user-roster.svg`, referenciado por `animal-roster.mjs`. O SVG original público tem cerca de 2,96 MB: é servido diretamente do commit fixado no GitHub e carregado sob demanda, sem duplicá-lo no pacote inicial. Se a origem externa falhar, o link para o arquivo original continua disponível. Não é a prancha PNG histórica de 15 sprites.
 
-A Pokédex também apresenta uma captura real de Charizard shiny, identificada como versão anterior. A captura nova da barra lateral em forma de Pokédex continua pendente: o arquivo desktop disponível contém cursor e não foi utilizado.
+A Pokédex também apresenta uma captura real de Charizard shiny, identificada como versão anterior. A captura anterior da barra lateral tinha cursor e não foi usada; a imagem enviada em 16/11/2026 resolve essa pendência.
 
 ## Pokédex: recortes fornecidos em 16/11/2026
 
-Adicionados catálogo Johto, seletor de gerações em formato Pokédex e ficha Crabominable/Textos dos jogos. PNGs preservados sem edição, sem cursor visível, fornecidos pelo autor. Não são capturas automatizadas desta revisão. A imagem antiga da home continua pendente de substituição; estes recortes não a representam.
+Adicionados catálogo Johto, seletor de gerações em formato Pokédex e ficha Crabominable/Textos dos jogos. PNGs preservados sem edição, sem cursor visível, fornecidos pelo autor. Não são capturas automatizadas desta revisão. A home foi posteriormente substituída pela captura integral Rota 001 enviada pelo autor, sem cursor, em PNG de 1811 × 741 pixels. O original de 214.610 bytes é preservado sem recompressão; somente esse arquivo tem orçamento individual de 250 KB.

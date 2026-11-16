@@ -15,7 +15,11 @@ test('real gallery has sources, translations and valid bounded assets', () => {
     for (const lang of ['pt', 'en', 'es'])
       assert.ok(item.caption[lang].length > 25);
     assert.ok(item.width > 0 && item.height > 0);
-    assert.ok(fs.statSync('public' + item.image).size < 200000);
+    // Preserva o PNG original da home enviado pelo autor, sem compressão com perda.
+    const budget = item.image.endsWith('pokedex-inicio-rota001.png')
+      ? 250000
+      : 200000;
+    assert.ok(fs.statSync('public' + item.image).size < budget);
   }
   assert.ok(!gallery.some((i) => i.projectId === 'tetris-c'));
 });
@@ -93,4 +97,16 @@ test('Pokédex includes the three supplied current screenshots', () => {
       ),
     );
   }
+});
+
+test('Pokédex home uses the current Rota 001 capture', () => {
+  const home = gallery.find((item) =>
+    item.image.endsWith('pokedex-inicio-rota001.png'),
+  );
+  assert.ok(home);
+  assert.equal(home.width, 1811);
+  assert.equal(home.height, 741);
+  assert.ok(
+    !gallery.some((item) => item.image.endsWith('pokedex-inicio-atual.jpg')),
+  );
 });
