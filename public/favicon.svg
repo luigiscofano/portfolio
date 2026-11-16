@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#eaf0e3"/><path d="M22 45V17h5v24h15v4z" fill="#2e5139"/><path d="M35 27c0-9 5-12 14-12 0 8-5 13-14 12" fill="#73905d"/></svg>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="448" height="448" viewBox="0 0 28 28">
+  <title>Bem-te-vi no galho — Luigi Scofano de Araujo</title>
+  <rect width="28" height="28" rx="6" fill="#eaf0e2" />
+  <path fill="#6d826b" d="M4 24H10V23H19V22H22V20H24V19H25V21H24V23H22V24H19V25H10V26H4Z" />
+  <path fill="#829773" d="M22 20V18H23V17H26V19H25V20H24V21H22Z" />
+  <g transform="translate(2 1)" shape-rendering="crispEdges">
+    <path fill="#594a3c" d="M7 13H10V18H7V20H3V21H0V19H3V17H5V15H7Z" />
+    <path fill="#514739" d="M9 8H16V10H19V16H17V19H10V18H7V15H6V11H9Z" />
+    <path fill="#e2b849" d="M13 10H18V12H19V16H17V19H12V18H10V14H13Z" />
+    <path fill="#f0cb56" d="M15 12H19V16H17V18H14V16H13V14H15Z" />
+    <path fill="#776549" d="M8 10H13V12H15V15H12V16H9V14H7V12H8Z" />
+    <path fill="#9b855e" d="M8 11H10V13H13V14H10V13H8Z" />
+    <path fill="#242a27" d="M12 2H17V3H19V9H17V11H12V10H10V4H12Z" />
+    <path fill="#eae8da" d="M12 3H17V4H19V5H10V4H12Z" />
+    <path fill="#f5f0dc" d="M14 9H19V11H17V12H14Z" />
+    <path fill="#292e29" d="M19 6H22V7H23V8H19Z" />
+    <rect x="17" y="5" width="1" height="1" fill="#111b18" />
+    <path fill="#473f32" d="M12 19H13V21H16V22H11V21H12ZM16 18H17V21H20V22H16Z" />
+  </g>
+</svg>
