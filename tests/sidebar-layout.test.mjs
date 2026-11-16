@@ -17,20 +17,22 @@ test('sidebar ancora na viewport sem centralização do shell', () => {
 
 test('modelo de larguras mantém espaço do conteúdo e não extrapola viewport', () => {
   for (const viewport of [
-    320, 390, 768, 769, 1024, 1200, 1440, 1600, 1920, 2560,
+    320, 390, 768, 769, 1024, 1200, 1440, 1600, 1920, 2560, 3840,
   ]) {
     const shell = Math.min(viewport, 1600);
-    const sidebar =
-      viewport <= 768 ? 0 : Math.min(420, Math.max(220, viewport * 0.2066));
+    const sidebar = viewport <= 768 ? 0 : viewport * 0.2066;
     const content = shell - sidebar;
     assert.ok(content > 0);
     assert.ok(sidebar + content <= viewport);
   }
 });
 
-test('proporção corresponde à referência e preserva limites de leitura', () => {
+test('proporção desktop constante corresponde à referência sem limites artificiais', () => {
   const css = fs.readFileSync('app/globals.css', 'utf8');
-  assert.ok(css.includes('--sidebar-width: clamp(220px, 20.66vw, 420px)'));
+  assert.ok(css.includes('--sidebar-width: 20.66vw'));
   assert.ok(css.includes('@media (min-width: 769px)'));
   assert.ok(Math.abs(1365 * 0.2066 - 282) < 1);
+  for (const viewport of [769, 1024, 1365, 1920, 2560, 3840]) {
+    assert.ok(Math.abs((viewport * 0.2066) / viewport - 0.2066) < 0.00001);
+  }
 });
