@@ -1971,3 +1971,8 @@ nav a > .icon {
     min-height: 44px;
   }
 }
+
+/* Destaca apenas a apresentação dos projetos, conforme a referência aprovada. */
+.projects-intro {
+  font-weight: 700;
+}

@@ -428,7 +428,7 @@ export default function Home() {
                     </a>
                   ))}
                 </div>
-                <p className="section-intro">
+                <p className="section-intro projects-intro">
                   {t(
                     'Aplicações, experimentos e materiais que desenvolvi ou dos quais participei. Cada projeto apresenta sua autoria, documentação e limites.',
                   )}

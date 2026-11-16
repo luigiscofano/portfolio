@@ -100,3 +100,7 @@ Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob dema
 A identidade aprovada em 16/11/2026 substitui o ícone anterior na apresentação da Pokédex no portfólio. A insígnia combina grama alta em pixel art, uma trilha dourada e uma placa vermelha. A arte original, com transparência, foi preservada sem redesenho ou alteração de proporções. É uma marca do projeto de fã, não uma marca oficial de Pokémon.
 
 O catálogo em português, inglês e espanhol usa a mesma arte e identifica o projeto como **Pokédex · Rota 001**. A troca não modifica o favicon bem-te-vi, a assinatura visual do portfólio, as galerias históricas nem as funcionalidades dos projetos. Veja a [documentação da marca](docs/MARCA-ROTA-001.md) e o [repositório da Pokédex](https://github.com/luigiscofano/Pokedex).
+
+## Imagens técnicas do LabDig
+
+A [galeria documental do LabDig](docs/labdig-galeria.md) reúne as três capturas de apresentação e quatro novas imagens distintas: Verilog UART, quadro serial, telemetria e máquina de estados do sonar. Cada imagem tem fonte versionada e legenda em três idiomas; diagramas não são apresentados como medições ou fotos de hardware.

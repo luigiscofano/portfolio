@@ -50,3 +50,33 @@ test('every project has an honest gallery section and compact touch controls', (
   const css = fs.readFileSync('app/globals.css', 'utf8');
   assert.ok(css.includes('@media (pointer: coarse), (max-width: 999px)'));
 });
+
+test('LabDig preserves the three slides and adds four distinct source-derived visuals', () => {
+  const items = gallery.filter((item) => item.projectId === 'labdig');
+  assert.ok(items.length >= 7);
+  const added = items.filter((item) =>
+    /labdig-(verilog-uart|quadro-uart|pacote-serial|sonar-estados)\.svg$/.test(
+      item.image,
+    ),
+  );
+  assert.equal(added.length, 4);
+  assert.equal(
+    new Set(added.map((item) => fs.readFileSync('public' + item.image, 'utf8')))
+      .size,
+    4,
+  );
+  for (const item of added) {
+    assert.ok(
+      item.source.includes('/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/'),
+    );
+    const svg = fs.readFileSync('public' + item.image, 'utf8');
+    assert.ok(svg.includes('<title'));
+    assert.ok(!/<script|<image|<foreignObject/i.test(svg));
+  }
+  const page = fs.readFileSync('app/page.tsx', 'utf8');
+  assert.equal(page.split('section-intro projects-intro').length - 1, 1);
+  assert.match(
+    fs.readFileSync('app/globals.css', 'utf8'),
+    /\.projects-intro\s*\{\s*font-weight: 700/,
+  );
+});

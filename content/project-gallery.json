@@ -208,5 +208,53 @@
       "en": "Shiny Charizard detail view, an actual screenshot from an earlier version.",
       "es": "Ficha de Charizard shiny, captura real de una versión anterior."
     }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-verilog-uart.svg",
+    "width": 1200,
+    "height": 720,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/labdig-2/experimentos/exp-02/rtl/tx_serial_7E1_fd.v",
+    "caption": {
+      "pt": "Trecho literal de Verilog do transmissor UART 7E1, renderizado do código-fonte; não é captura de IDE.",
+      "en": "Literal Verilog excerpt from the UART 7E1 transmitter, rendered from source; not an IDE screenshot.",
+      "es": "Fragmento literal de Verilog del transmisor UART 7E1, renderizado desde el código; no es captura de un IDE."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-quadro-uart.svg",
+    "width": 1200,
+    "height": 720,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md",
+    "caption": {
+      "pt": "Esquema documental do quadro UART 7E1: start, sete bits, paridade par e stop; não é medição.",
+      "en": "Documentary UART 7E1 frame diagram: start, seven data bits, even parity and stop; not a measurement.",
+      "es": "Diagrama documental UART 7E1: inicio, siete bits, paridad par y parada; no es una medición."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-pacote-serial.svg",
+    "width": 1200,
+    "height": 720,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md",
+    "caption": {
+      "pt": "Fluxo documental de telemetria: captura conjunta de medida e ângulo e transmissão dos caracteres.",
+      "en": "Documented telemetry flow: capture distance and angle together, then transmit the characters.",
+      "es": "Flujo documental de telemetría: captura conjunta de distancia y ángulo y transmisión de caracteres."
+    }
+  },
+  {
+    "projectId": "labdig",
+    "image": "/images/projects/captures/labdig-sonar-estados.svg",
+    "width": 1200,
+    "height": 720,
+    "source": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md",
+    "caption": {
+      "pt": "Máquina de estados documental do sonar: estabilização, medição, transmissão e oito posições; não é validação física.",
+      "en": "Documentary sonar state machine: settling, measurement, transmission and eight positions; not hardware validation.",
+      "es": "Máquina de estados documental del sonar: estabilización, medición, transmisión y ocho posiciones; no es validación física."
+    }
   }
 ]
