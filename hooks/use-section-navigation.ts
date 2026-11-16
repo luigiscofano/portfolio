@@ -38,11 +38,41 @@ export function useSectionNavigation() {
         requestAnimationFrame(() => section.scrollIntoView({ block: 'start' }));
       schedule();
     };
-    openHashSection();
+    // Uma entrada normal não restaura a rolagem nem os disclosures da visita anterior.
+    // URLs com fragmento continuam sendo navegação intencional para uma seção.
+    const previousRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = 'manual';
+    let openingFrame: number | null = null;
+    const initializeEntry = (event?: PageTransitionEvent) => {
+      // Voltar/avançar pelo histórico conserva a posição intencional da sessão.
+      if (event?.persisted) return;
+      if (window.location.hash) {
+        openHashSection();
+        return;
+      }
+      document
+        .querySelectorAll<HTMLDetailsElement>('main details[open]')
+        .forEach((item) => {
+          item.open = false;
+        });
+      setActive('sobre');
+      setMenuOpen(false);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      openingFrame = requestAnimationFrame(() => {
+        openingFrame = null;
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        schedule();
+      });
+    };
+    initializeEntry();
+    window.addEventListener('pageshow', initializeEntry);
     window.addEventListener('hashchange', openHashSection);
     window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('hashchange', schedule);
     return () => {
+      window.history.scrollRestoration = previousRestoration;
+      window.removeEventListener('pageshow', initializeEntry);
+      if (openingFrame !== null) cancelAnimationFrame(openingFrame);
       window.removeEventListener('scroll', schedule);
       window.removeEventListener('hashchange', schedule);
       window.removeEventListener('hashchange', openHashSection);
