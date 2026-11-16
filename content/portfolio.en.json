@@ -131,7 +131,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 250,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "ime",
+      "institutionSource": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/main/README.md"
     },
     {
       "id": "kaggle",
@@ -155,7 +157,9 @@
       "showImagePreview": false,
       "imageWidth": 1400,
       "imageHeight": 818,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "poli",
+      "institutionSource": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/README.md"
     },
     {
       "id": "gesturelab",
@@ -228,7 +232,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 600,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "poli",
+      "institutionSource": "https://github.com/luigiscofano/usp-labdig/blob/main/README.md"
     },
     {
       "id": "trilha-viva",
@@ -283,7 +289,9 @@
       "showImagePreview": false,
       "imageWidth": 496,
       "imageHeight": 279,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "ime",
+      "institutionSource": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/docs/PROCEDENCIA.md"
     },
     {
       "id": "tetris-c",
@@ -332,7 +340,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 440,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "poli",
+      "institutionSource": "https://github.com/luigiscofano/usp-pcs3225-sistemas-digitais/blob/main/README.md"
     },
     {
       "id": "usp-pcs3616-sistemas-programacao",
@@ -356,7 +366,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 250,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "poli",
+      "institutionSource": "https://github.com/luigiscofano/usp-pcs3616-sistemas-programacao/blob/main/README.md"
     },
     {
       "id": "usp-mac0122-algoritmos",
@@ -380,7 +392,9 @@
       "showImagePreview": false,
       "imageWidth": 800,
       "imageHeight": 150,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "ime",
+      "institutionSource": "https://github.com/luigiscofano/usp-mac0122-algoritmos/blob/main/README.md"
     },
     {
       "id": "usp-mac0321-poo",
@@ -404,7 +418,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 250,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "ime",
+      "institutionSource": "https://github.com/luigiscofano/usp-mac0321-poo/blob/main/README.md"
     },
     {
       "id": "MAC0321-Lista08",
@@ -428,7 +444,9 @@
       "showImagePreview": false,
       "imageWidth": 1200,
       "imageHeight": 720,
-      "imageKind": "document"
+      "imageKind": "document",
+      "institutionBrand": "ime",
+      "institutionSource": "https://github.com/luigiscofano/MAC0321-Lista08/blob/master/README.md"
     }
   ],
   "research": [

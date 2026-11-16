@@ -1,5 +1,6 @@
 import cases from '@/content/project-cases.json';
 import type data from '@/content/portfolio.json';
+import institutions from '@/content/institutions.json';
 import { sitePath } from '@/lib/site-path';
 import { Icon, ExternalIcon, type IconName } from './icon';
 import { externalLink as external } from '@/lib/portfolio';
@@ -7,6 +8,8 @@ import { projectPresentation } from '@/lib/project-presentation.mjs';
 import type { Translate } from '@/hooks/use-portfolio-language';
 type Project = (typeof data.projects)[number] & {
   imageKind?: string;
+  institutionBrand?: string;
+  institutionSource?: string;
   imageCrop?: {
     width: number;
     height: number;
@@ -71,6 +74,31 @@ export function ProjectCard({
           </span>
         </a>
       )}
+      {project.imageKind !== 'logo' &&
+        project.institutionBrand &&
+        Object.hasOwn(institutions, project.institutionBrand) && (
+          <div className="project-institution">
+            <div className="institution-marks">
+              {institutions[
+                project.institutionBrand as keyof typeof institutions
+              ].map((mark) => (
+                <a href={mark.source} {...external} key={mark.image}>
+                  <img
+                    src={sitePath(mark.image)}
+                    alt={mark.label}
+                    width={mark.width}
+                    height={mark.height}
+                    loading="lazy"
+                  />
+                </a>
+              ))}
+            </div>
+            <a href={project.institutionSource} {...external}>
+              {language === 'en' ? 'Academic context' : 'Contexto acadêmico'} ·{' '}
+              {project.institutionBrand === 'poli' ? 'Poli-USP' : 'IME-USP'}
+            </a>
+          </div>
+        )}
       <div className="resource-heading">
         <Icon name={presentation.icon as IconName} size={29} />
         <span>{project.type}</span>

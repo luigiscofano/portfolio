@@ -76,3 +76,7 @@ As logos verificadas abrem os cartões; outras imagens documentais ficam nos det
 A assinatura reúne um bem-te-vi em pixel art e um ramo de folhas em verde discreto. Ela acompanha o perfil na barra lateral e reaparece na área de contato, sem substituir o nome ou servir como controle de navegação. O pássaro, suas cores, proporções e o desenho do ramo são preservados. Um recorte vetorial acompanha a curva do galho somente para impedir que pixels dos pés avancem abaixo dele.
 
 O [SVG da assinatura](public/images/assinatura-bem-te-vi.svg) é local, leve e sem scripts. As instâncias no site mantêm texto alternativo e dimensões responsivas. Essa composição é distinta do atlas original do jogo Sintonia, preservado separadamente em `public/images/sintonia/`.
+
+### Marcas institucionais nos projetos
+
+Projetos acadêmicos sem marca própria apresentam as marcas oficiais da unidade correspondente e da USP, apenas quando o vínculo está documentado. Essa identificação indica contexto acadêmico, não autoria institucional ou endosso. Logos próprias continuam prioritárias. Consulte [fontes, critérios e arquivos](docs/MARCAS-INSTITUCIONAIS.md).

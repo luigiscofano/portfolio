@@ -114,3 +114,41 @@ test('signature clips only the bird at the original branch curve', () => {
   );
   assert.ok(svg.includes('translate(70 5) scale(2)'));
 });
+
+test('institutional marks reflect verified academic contexts only', () => {
+  const data = JSON.parse(fs.readFileSync('content/portfolio.json', 'utf8'));
+  const brands = JSON.parse(
+    fs.readFileSync('content/institutions.json', 'utf8'),
+  );
+  assert.deepEqual(
+    data.projects.filter((p) => p.institutionBrand === 'poli').map((p) => p.id),
+    [
+      'kaggle',
+      'labdig',
+      'usp-pcs3225-sistemas-digitais',
+      'usp-pcs3616-sistemas-programacao',
+    ],
+  );
+  assert.deepEqual(
+    data.projects.filter((p) => p.institutionBrand === 'ime').map((p) => p.id),
+    [
+      'tupi',
+      'usp-metodos-numericos',
+      'usp-mac0122-algoritmos',
+      'usp-mac0321-poo',
+      'MAC0321-Lista08',
+    ],
+  );
+  assert.ok(
+    data.projects
+      .filter((p) => p.imageKind === 'logo')
+      .every((p) => !p.institutionBrand),
+  );
+  for (const marks of Object.values(brands)) {
+    assert.equal(marks.length, 2);
+    for (const m of marks) {
+      assert.ok(fs.existsSync('public' + m.image));
+      assert.ok(new URL(m.source).hostname.endsWith('usp.br'));
+    }
+  }
+});
