@@ -2,34 +2,36 @@
 import { useEffect, useState } from 'react';
 import dataPt from '@/content/portfolio.json';
 import dataEn from '@/content/portfolio.en.json';
+import dataEs from '@/content/portfolio.es.json';
+import spanishLabels from '@/content/ui.es.json';
 import englishLabels from '@/content/ui.en.json';
+export type PortfolioLanguage = 'pt' | 'en' | 'es';
 export type Translate = (text: string) => string;
 
 export function usePortfolioLanguage() {
-  const [language, setLanguage] = useState<'pt' | 'en'>('pt');
-  const data = language === 'en' ? dataEn : dataPt;
-  const t: Translate = (text) =>
-    language === 'en'
-      ? ((englishLabels as Record<string, string>)[text] ?? text)
-      : text;
-  // A URL compartilhada prevalece sobre a preferência local após a hidratação.
+  const [language, setLanguage] = useState<PortfolioLanguage>('pt');
+  const data = { pt: dataPt, en: dataEn, es: dataEs }[language];
+  const labels: Record<string, string> =
+    language === 'es' ? spanishLabels : language === 'en' ? englishLabels : {};
+  const t: Translate = (text) => labels[text] ?? text;
   useEffect(() => {
-    let preferred: string | null = new URLSearchParams(
-      window.location.search,
-    ).get('lang');
+    let preferred = new URLSearchParams(window.location.search).get('lang');
     if (!preferred) {
       try {
         preferred = localStorage.getItem('portfolio-language');
       } catch {
-        /* Navegação privada pode impedir o armazenamento. */
+        /* Armazenamento indisponível: manter português. */
       }
     }
-    if (preferred === 'en') queueMicrotask(() => setLanguage('en'));
+    if (preferred === 'en' || preferred === 'es') {
+      const selected = preferred;
+      queueMicrotask(() => setLanguage(selected));
+    }
   }, []);
   useEffect(() => {
-    document.documentElement.lang = language === 'en' ? 'en' : 'pt-BR';
+    document.documentElement.lang = language === 'pt' ? 'pt-BR' : language;
   }, [language]);
-  function changeLanguage(value: 'pt' | 'en') {
+  function changeLanguage(value: PortfolioLanguage) {
     setLanguage(value);
     try {
       localStorage.setItem('portfolio-language', value);

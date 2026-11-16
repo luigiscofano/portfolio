@@ -469,49 +469,52 @@
     {
       "title": "Computer Engineering",
       "institution": "Polytechnic School · University of São Paulo",
-      "status": "Undergraduate degree in progress · Expected graduation in 2027"
+      "status": "Undergraduate degree in progress · Expected graduation in 2027",
+      "description": "My studies cover programming, algorithms, data structures, object-oriented programming, digital systems, computer architecture and numerical methods. Academic work connects theory and implementation through software, simulators, circuits and technical documentation, in individual and group projects."
     },
     {
       "title": "Artificial intelligence studies",
       "institution": "IBM / edX",
-      "status": "In progress · 16-course program covering Python, machine learning and generative AI"
+      "status": "In progress · 16-course program covering Python, machine learning and generative AI",
+      "description": "An ongoing 16-course pathway covering Python, machine learning and generative AI. It combines courses and labs; ongoing modules are not presented as completed certifications."
     },
     {
       "title": "CS50",
       "institution": "Harvard / edX",
-      "status": "Completed introductory computer science course"
+      "status": "Completed introductory computer science course",
+      "description": "Completed introductory computer science course covering programming fundamentals, algorithms and problem solving."
     }
   ],
   "experience": [
     {
       "company": "TRIA Commodities",
       "area": "Sales, data, and automation",
-      "text": "Sales work and development of a prospecting platform used by the team, combining AI, CRM, CCEE and HubSpot information, deduplication and opportunity organization. Internal data and materials are not published."
+      "text": "I work at the intersection of commercial operations, data and automation. I developed an AI-assisted prospecting platform used by the team, combining lead information, cross-checks against CCEE data and CRM organization. The work includes deduplication, filters and identifying opportunities to support commercial operations. Internal data and materials remain private."
     },
     {
       "company": "BTG Pactual",
       "area": "Summer Job · Foreign Exchange",
-      "text": "Participation in the Summer Job program and contribution to the international transactions web platform, working with the front-end team."
+      "text": "I joined the Summer Job program in Foreign Exchange and collaborated with the front-end team on a web platform for international transactions. My contribution focused on the interface and software implementation, connecting business requirements with the user experience."
     },
     {
       "company": "Núclea",
       "area": "HR data and metrics",
-      "text": "Data preparation, Power BI dashboards, and analysis using Excel and MySQL. Metrics and automation of information consolidation."
+      "text": "I worked with Compensation and Benefits data and built Power BI dashboards. I used Excel and MySQL to prepare information and organize indicators covering headcount, hiring, departures, compensation and performance. I also worked on data consolidation and Git version control to make indicators easier to read and monitor."
     },
     {
       "company": "AMPHIBIA USP",
       "area": "Projects team participation",
-      "text": "Brief participation in the university team’s Projects area."
+      "text": "I briefly participated in the Projects area of AMPHIBIA USP, a university team."
     },
     {
       "company": "Poli-USP Athletics Association",
       "area": "Jiu-jitsu leadership and teaching",
-      "text": "Organization of training, events and resources, people management and communication with students. Also works as a jiu-jitsu and self-defense instructor."
+      "text": "I served as jiu-jitsu director at the Poli-USP athletics association, organizing training sessions, events, resources and student engagement. I also teach jiu-jitsu and self-defense, emphasizing clear explanations, progression and practice."
     },
     {
       "company": "ACEP",
       "area": "Volunteering · Education",
-      "text": "Volunteer teaching of mathematics and Portuguese to public-school students in Rio de Janeiro."
+      "text": "I volunteered as a mathematics and Portuguese teacher for public-school students in Rio de Janeiro, contributing to teaching and learning support."
     }
   ],
   "skills": [

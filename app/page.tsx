@@ -45,12 +45,24 @@ function SectionVisual({
   language,
 }: {
   section: 'formacao' | 'trajetoria' | 'pesquisa';
-  language: 'pt' | 'en';
+  language: 'pt' | 'en' | 'es';
 }) {
   const labels = {
-    formacao: { pt: 'Mapa da formação', en: 'Education map' },
-    trajetoria: { pt: 'Mapa das áreas de atuação', en: 'Experience map' },
-    pesquisa: { pt: 'Mapa das iniciativas de pesquisa', en: 'Research map' },
+    formacao: {
+      pt: 'Mapa da formação',
+      en: 'Education map',
+      es: 'Mapa de formación',
+    },
+    trajetoria: {
+      pt: 'Mapa das áreas de atuação',
+      en: 'Experience map',
+      es: 'Mapa de experiencia',
+    },
+    pesquisa: {
+      pt: 'Mapa das iniciativas de pesquisa',
+      en: 'Research map',
+      es: 'Mapa de investigación',
+    },
   };
   return (
     <details className="about-details section-visual">
@@ -75,7 +87,9 @@ function SectionVisual({
         <figcaption>
           {language === 'en'
             ? 'Informational diagram based on the profile, not a photograph or an institutional endorsement.'
-            : 'Diagrama informativo baseado no perfil, não uma fotografia nem endosso institucional.'}
+            : language === 'es'
+              ? 'Diagrama informativo basado en el perfil, no una fotografía ni un respaldo institucional.'
+              : 'Diagrama informativo baseado no perfil, não uma fotografia nem endosso institucional.'}
         </figcaption>
       </figure>
     </details>
@@ -145,7 +159,9 @@ export default function Home() {
       <title>
         {language === 'en'
           ? 'Luigi Scofano | AI, data and software'
-          : 'Luigi Scofano | IA, dados e software'}
+          : language === 'es'
+            ? 'Luigi Scofano | IA, datos y software'
+            : 'Luigi Scofano | IA, dados e software'}
       </title>
       <a className="skip-link" href="#conteudo">
         {t('Ir para o conteúdo')}
@@ -259,7 +275,9 @@ export default function Home() {
               <br />
               {data.profile.location}
               <br />
-              <a href={sitePath('/creditos/')}>{t('Créditos')}</a>
+              <a href={sitePath('/creditos/') + '?lang=' + language}>
+                {t('Créditos')}
+              </a>
             </p>
           </div>
         </aside>
@@ -274,7 +292,7 @@ export default function Home() {
                 id="portfolio-language"
                 value={language}
                 onChange={(event) =>
-                  changeLanguage(event.target.value as 'pt' | 'en')
+                  changeLanguage(event.target.value as 'pt' | 'en' | 'es')
                 }
               >
                 <option value="pt" lang="pt-BR">
@@ -282,6 +300,9 @@ export default function Home() {
                 </option>
                 <option value="en" lang="en">
                   English
+                </option>
+                <option value="es" lang="es">
+                  Español
                 </option>
               </select>
             </div>
@@ -408,7 +429,9 @@ export default function Home() {
                   <span>
                     {language === 'en'
                       ? 'Find a project'
-                      : 'Encontre um projeto'}
+                      : language === 'es'
+                        ? 'Encuentra un proyecto'
+                        : 'Encontre um projeto'}
                   </span>
                   <input
                     type="search"
@@ -417,7 +440,9 @@ export default function Home() {
                     placeholder={
                       language === 'en'
                         ? 'Name, technology or subject'
-                        : 'Nome, tecnologia ou assunto'
+                        : language === 'es'
+                          ? 'Nombre, tecnología o tema'
+                          : 'Nome, tecnologia ou assunto'
                     }
                   />
                 </label>
@@ -450,7 +475,9 @@ export default function Home() {
                   <p role="status">
                     {language === 'en'
                       ? 'No projects match this search.'
-                      : 'Nenhum projeto corresponde à busca.'}
+                      : language === 'es'
+                        ? 'Ningún proyecto coincide con la búsqueda.'
+                        : 'Nenhum projeto corresponde à busca.'}
                   </p>
                 )}
                 <div className="resource-grid">
@@ -527,7 +554,9 @@ export default function Home() {
                     <Icon name="flask" size={16} />{' '}
                     {language === 'en'
                       ? 'Explore a research example'
-                      : 'Explorar um exemplo da pesquisa'}
+                      : language === 'es'
+                        ? 'Explorar un ejemplo de la investigación'
+                        : 'Explorar um exemplo da pesquisa'}
                   </summary>
                   <ResearchExample language={language} />
                 </details>
@@ -591,6 +620,7 @@ export default function Home() {
                           <strong>{item.institution}</strong>
                         </p>
                         <p>{item.status}.</p>
+                        <p>{item.description}</p>
                         <a
                           href={`${data.profile.source}#formação-e-aprendizado`}
                           {...external}

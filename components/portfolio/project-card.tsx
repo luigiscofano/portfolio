@@ -1,3 +1,4 @@
+import { ProjectArt } from './project-art';
 import cases from '@/content/project-cases.json';
 import type data from '@/content/portfolio.json';
 import institutions from '@/content/institutions.json';
@@ -27,7 +28,7 @@ export function ProjectCard({
 }: {
   project: Project;
   t: Translate;
-  language: 'pt' | 'en';
+  language: 'pt' | 'en' | 'es';
 }) {
   const presentation = projectPresentation(project.id);
   const caseStudy = Object.hasOwn(cases[language], project.id)
@@ -94,8 +95,12 @@ export function ProjectCard({
               ))}
             </div>
             <a href={project.institutionSource} {...external}>
-              {language === 'en' ? 'Academic context' : 'Contexto acadêmico'} ·{' '}
-              {project.institutionBrand === 'poli' ? 'Poli-USP' : 'IME-USP'}
+              {language === 'en'
+                ? 'Academic context'
+                : language === 'es'
+                  ? 'Contexto académico'
+                  : 'Contexto acadêmico'}{' '}
+              · {project.institutionBrand === 'poli' ? 'Poli-USP' : 'IME-USP'}
             </a>
           </div>
         )}
@@ -150,6 +155,7 @@ export function ProjectCard({
           </div>
         </details>
       )}
+      <ProjectArt projectId={project.id} language={language} />
       <details className="project-details">
         <summary>
           <span className="control-label">

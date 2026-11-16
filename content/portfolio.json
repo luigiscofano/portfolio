@@ -469,49 +469,52 @@
     {
       "title": "Engenharia de Computação",
       "institution": "Escola Politécnica · Universidade de São Paulo",
-      "status": "Graduação em andamento · conclusão prevista em 2027"
+      "status": "Graduação em andamento · conclusão prevista em 2027",
+      "description": "Minha formação reúne programação, algoritmos, estruturas de dados, orientação a objetos, sistemas digitais, arquitetura de computadores e métodos numéricos. Nos trabalhos acadêmicos, conecto teoria e implementação por meio de software, simuladores, circuitos e documentação técnica, em projetos individuais e em grupo."
     },
     {
       "title": "Formação em inteligência artificial",
       "institution": "IBM / edX",
-      "status": "Em andamento · Formação com 16 cursos de Python, machine learning e IA generativa"
+      "status": "Em andamento · Formação com 16 cursos de Python, machine learning e IA generativa",
+      "description": "Percurso em andamento com 16 cursos, aprofundando Python, machine learning e IA generativa. O estudo combina cursos e laboratórios; módulos em andamento não são apresentados como certificações concluídas."
     },
     {
       "title": "CS50",
       "institution": "Harvard / edX",
-      "status": "Curso de introdução à computação concluído"
+      "status": "Curso de introdução à computação concluído",
+      "description": "Curso de introdução à computação concluído, voltado aos fundamentos de programação, algoritmos e resolução de problemas."
     }
   ],
   "experience": [
     {
       "company": "TRIA Commodities",
       "area": "Comercial, dados e automação",
-      "text": "Atuação comercial e desenvolvimento de uma plataforma de prospecção usada pela equipe, com IA, CRM, cruzamento de informações da CCEE e HubSpot, deduplicação e organização de oportunidades. Dados e materiais internos não são publicados."
+      "text": "Atuo na interface entre comercial, dados e automação. Desenvolvi uma plataforma de prospecção com IA utilizada pela equipe, reunindo informações de leads, cruzamentos com a base da CCEE e organização no CRM. O trabalho inclui deduplicação, filtros e identificação de oportunidades para apoiar a rotina comercial. Dados e materiais internos permanecem privados."
     },
     {
       "company": "BTG Pactual",
       "area": "Summer Job · Foreign Exchange",
-      "text": "Participação no programa Summer Job e contribuição para a plataforma web de transações internacionais, em colaboração com a equipe de front-end."
+      "text": "Participei do programa Summer Job na área de Foreign Exchange e colaborei com a equipe de front-end no desenvolvimento de uma plataforma web de transações internacionais. Minha contribuição esteve ligada à interface e à implementação de software, aproximando requisitos de negócio e experiência de uso."
     },
     {
       "company": "Núclea",
       "area": "Dados e indicadores de RH",
-      "text": "Preparação de bases, dashboards em Power BI e análises com Excel e MySQL. Indicadores e automação da consolidação de informações."
+      "text": "Trabalhei com bases de Remuneração e Benefícios e a construção de dashboards em Power BI. Utilizei Excel e MySQL para preparar informações e organizar indicadores de quadro de pessoal, contratações, desligamentos, remuneração e desempenho. Também atuei na consolidação de dados e no versionamento com Git, buscando facilitar a leitura e o acompanhamento dos indicadores."
     },
     {
       "company": "AMPHIBIA USP",
       "area": "Participação na área de Projetos",
-      "text": "Participação breve na equipe universitária, na área de Projetos."
+      "text": "Participei brevemente da área de Projetos da AMPHIBIA USP, em contexto de equipe universitária."
     },
     {
       "company": "Atlética da Poli-USP",
       "area": "Diretoria de jiu-jítsu e ensino",
-      "text": "Organização de treinos, eventos e recursos da modalidade, gestão de pessoas e relacionamento com alunos. Atuação também como professor de jiu-jítsu e defesa pessoal."
+      "text": "Fui diretor de jiu-jítsu da Atlética da Poli-USP, atuando na organização de treinos, eventos, recursos e relacionamento com alunos. Também ensino jiu-jítsu e defesa pessoal, valorizando explicações claras, progressão e prática."
     },
     {
       "company": "ACEP",
       "area": "Voluntariado · Educação",
-      "text": "Ensino voluntário de matemática e língua portuguesa para alunos da rede pública no Rio de Janeiro."
+      "text": "Atuei como professor voluntário de matemática e língua portuguesa para alunos da rede pública no Rio de Janeiro. Minha contribuição foi voltada ao ensino e ao apoio à aprendizagem."
     }
   ],
   "skills": [

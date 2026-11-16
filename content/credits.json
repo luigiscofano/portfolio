@@ -1,0 +1,125 @@
+{
+  "pt": {
+    "back": "Voltar ao portfólio",
+    "title": "Créditos e licenças",
+    "copyright": "© 2026 Luigi Scofano de Araujo. Este aviso aplica-se ao conteúdo original de sua autoria neste portfólio. Recursos de terceiros conservam seus próprios direitos, créditos e licenças.",
+    "intro": "Este portfólio usa uma implementação própria, com organização acadêmica inspirada no site de Artur Jordão. Textos, projetos, fotografia e trajetória pertencem ao contexto de Luigi Scofano.",
+    "reference": "Site de Artur Jordão",
+    "end": "O código, os textos, a foto e o pacote de ícones do site de referência não foram reutilizados.",
+    "items": [
+      [
+        "Quicksand e Playfair Display",
+        "Fontes sob SIL Open Font License 1.1, utilizadas na tipografia atual e hospedadas localmente junto ao site."
+      ],
+      [
+        "Font Awesome Free 6",
+        "Ícones da coleção gratuita oficial, com ícones SVG sob CC BY 4.0."
+      ],
+      [
+        "Foto",
+        "Arquivo original fornecido por Luigi, com 1152 × 1536 pixels, preservado sem retoque facial. O bem-te-vi em pixel art já faz parte da imagem; o enquadramento é feito por CSS."
+      ],
+      [
+        "Sprite opcional junto ao nome (desativado)",
+        "Bem-te-vi de SINTONIA, por Luigi Scofano de Araujo. Usa o atlas original e o mesmo enquadramento do jogo. Arte com direitos reservados, utilizada neste portfólio a pedido do titular."
+      ],
+      [
+        "Assinatura visual",
+        "Desenho vetorial original de um bem-te-vi em pixel art com um ramo de folhas, criado para este portfólio. Não é uma fotografia ou um ativo copiado de outro site."
+      ],
+      [
+        "Imagens dos projetos",
+        "Os detalhes de cada projeto indicam sua fonte e distinguem capturas reais, dados sintéticos e figuras didáticas. Recursos de terceiros mantêm seus respectivos direitos."
+      ]
+    ],
+    "links": [
+      "Licença Quicksand",
+      "Licença Playfair Display",
+      "Licenças completas",
+      "Arquivo original",
+      "Declaração de autoria"
+    ]
+  },
+  "en": {
+    "back": "Back to portfolio",
+    "title": "Credits and licenses",
+    "copyright": "© 2026 Luigi Scofano de Araujo. This notice applies to his original content in this portfolio. Third-party assets retain their own rights, credits and licenses.",
+    "intro": "This portfolio uses its own implementation, with academic organization inspired by Artur Jordão’s website. The text, projects, photograph and experience belong to Luigi Scofano’s context.",
+    "reference": "Artur Jordão’s website",
+    "end": "The code, text, photograph and icon package of the reference website were not reused.",
+    "items": [
+      [
+        "Quicksand and Playfair Display",
+        "Fonts under the SIL Open Font License 1.1, used in the current typography and hosted locally with the website."
+      ],
+      [
+        "Font Awesome Free 6",
+        "Icons from the official free collection; SVG icons are licensed under CC BY 4.0."
+      ],
+      [
+        "Photograph",
+        "Original file supplied by Luigi, at 1152 × 1536 pixels, preserved without facial retouching. The pixel-art great kiskadee is already part of the image; CSS controls the framing."
+      ],
+      [
+        "Optional name sprite (disabled)",
+        "SINTONIA great kiskadee by Luigi Scofano de Araujo. Uses the original atlas and the same framing as the game. All rights reserved; used in this portfolio at the rights holder’s request."
+      ],
+      [
+        "Visual signature",
+        "Original vector drawing of a pixel-art great kiskadee on a leafy branch, created for this portfolio. It is not a photograph or an asset copied from another website."
+      ],
+      [
+        "Project images",
+        "Each project’s details identify its sources and distinguish real captures, synthetic data and educational figures. Third-party resources retain their respective rights."
+      ]
+    ],
+    "links": [
+      "Quicksand license",
+      "Playfair Display license",
+      "Full licenses",
+      "Original file",
+      "Authorship declaration"
+    ]
+  },
+  "es": {
+    "back": "Volver al portafolio",
+    "title": "Créditos y licencias",
+    "copyright": "© 2026 Luigi Scofano de Araujo. Este aviso se aplica al contenido original de su autoría en este portafolio. Los recursos de terceros conservan sus propios derechos, créditos y licencias.",
+    "intro": "Este portafolio utiliza una implementación propia, con organización académica inspirada en el sitio de Artur Jordão. Los textos, proyectos, fotografía y trayectoria pertenecen al contexto de Luigi Scofano.",
+    "reference": "Sitio de Artur Jordão",
+    "end": "No se reutilizaron el código, los textos, la fotografía ni el paquete de iconos del sitio de referencia.",
+    "items": [
+      [
+        "Quicksand y Playfair Display",
+        "Fuentes bajo SIL Open Font License 1.1, utilizadas en la tipografía actual y alojadas localmente junto al sitio."
+      ],
+      [
+        "Font Awesome Free 6",
+        "Iconos de la colección gratuita oficial, con iconos SVG bajo CC BY 4.0."
+      ],
+      [
+        "Fotografía",
+        "Archivo original proporcionado por Luigi, de 1152 × 1536 píxeles, conservado sin retoque facial. El benteveo en pixel art ya forma parte de la imagen; el encuadre se realiza mediante CSS."
+      ],
+      [
+        "Sprite opcional junto al nombre (desactivado)",
+        "Benteveo de SINTONIA, por Luigi Scofano de Araujo. Utiliza el atlas original y el mismo encuadre del juego. Arte con derechos reservados, utilizado en este portafolio a petición del titular."
+      ],
+      [
+        "Firma visual",
+        "Dibujo vectorial original de un benteveo en pixel art con una rama de hojas, creado para este portafolio. No es una fotografía ni un recurso copiado de otro sitio."
+      ],
+      [
+        "Imágenes de los proyectos",
+        "Los detalles de cada proyecto indican su fuente y distinguen capturas reales, datos sintéticos y figuras didácticas. Los recursos de terceros mantienen sus respectivos derechos."
+      ]
+    ],
+    "links": [
+      "Licencia de Quicksand",
+      "Licencia de Playfair Display",
+      "Licencias completas",
+      "Archivo original",
+      "Declaración de autoría"
+    ]
+  }
+}

@@ -1413,3 +1413,166 @@ nav a > .icon {
   font-size: 10px;
   color: var(--muted);
 }
+
+/* Microinterações reforçam foco e acionamento sem deslocar o conteúdo ao redor. */
+:where(
+  .primary-link,
+  .resume-link,
+  .filters button,
+  .sidebar-links a,
+  .resource-links a,
+  .inline-link,
+  .copy-email,
+  .mobile-header button,
+  .education-item h3 button,
+  summary
+) {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+:where(
+  .primary-link,
+  .resume-link,
+  .filters button,
+  .sidebar-links a,
+  .resource-links a,
+  .inline-link,
+  .copy-email
+):focus-visible {
+  box-shadow: 0 0 0 4px #e5edf3;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .copy-email
+  ):hover {
+    transform: translateY(-2px);
+  }
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link) .icon {
+    transition: transform 160ms ease;
+  }
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link):hover
+    .icon {
+    transform: translateX(2px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .copy-email,
+    .mobile-header button
+  ):active {
+    transform: translateY(1px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .inline-link,
+    .copy-email,
+    .mobile-header button,
+    .education-item h3 button,
+    summary
+  ),
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link) .icon {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Arte autêntica fica na exploração progressiva, sem alongar a entrada. */
+.brand-manual-card {
+  display: grid;
+  gap: 10px;
+  max-width: 240px;
+  margin-block: 16px;
+}
+.brand-manual-card img {
+  width: 100%;
+  height: auto;
+}
+.project-art-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-block: 16px;
+}
+.project-art-strip figure {
+  margin: 0;
+  min-width: 0;
+}
+.project-art-strip img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+}
+.project-art-strip figcaption {
+  font-size: 11px;
+  text-align: center;
+}
+.mascot-art-sheet {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-block: 14px;
+}
+.mascot-art-disclosure summary {
+  cursor: pointer;
+}
+
+/* Densidade de desktop: controles compactos sem reduzir os alvos de toque. */
+@media (min-width: 1000px) and (pointer: fine) {
+  .hero-actions {
+    gap: 12px 18px;
+  }
+  .hero-actions a {
+    min-height: 38px;
+  }
+  .primary-link {
+    padding: 8px 14px;
+  }
+  .filters button {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .sidebar-links {
+    gap: 4px 12px;
+  }
+  .sidebar-links a {
+    min-height: 34px;
+    gap: 7px;
+  }
+  .resource-links {
+    gap: 6px 12px;
+    margin-bottom: 12px;
+  }
+  .resource-links a,
+  .inline-link,
+  .resume-link,
+  .all-projects,
+  .education-panel a {
+    min-height: 34px;
+  }
+  .copy-email {
+    min-width: 34px;
+    min-height: 34px;
+  }
+}
