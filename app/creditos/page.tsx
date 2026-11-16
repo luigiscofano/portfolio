@@ -1,84 +1,68 @@
+'use client';
 import { Icon } from '@/components/portfolio/icon';
 import { sitePath } from '@/lib/site-path';
-export const metadata = { title: 'Créditos | Luigi Scofano' };
+import { usePortfolioLanguage } from '@/hooks/use-portfolio-language';
+import credits from '@/content/credits.json';
+
 export default function Credits() {
+  const { language } = usePortfolioLanguage();
+  const copy = credits[language];
+  const links = [
+    [
+      { href: sitePath('/licenses/Quicksand-OFL.txt'), label: copy.links[0] },
+      {
+        href: sitePath('/licenses/PlayfairDisplay-OFL.txt'),
+        label: copy.links[1],
+      },
+    ],
+    [
+      { href: 'https://fontawesome.com/', label: 'Font Awesome' },
+      {
+        href: sitePath('/licenses/FontAwesome-LICENSE.txt'),
+        label: copy.links[2],
+      },
+    ],
+    [],
+    [
+      {
+        href: 'https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg',
+        label: copy.links[3],
+      },
+      {
+        href: 'https://github.com/luigiscofano/intuicao/blob/main/docs/recursos/declaracao-autoria.md',
+        label: copy.links[4],
+      },
+    ],
+    [],
+    [],
+  ];
   return (
     <article className="update-page">
-      <a className="return-link" href={sitePath('/')}>
+      <title>{copy.title} | Luigi Scofano</title>
+      <a className="return-link" href={sitePath('/') + '?lang=' + language}>
         <Icon name="arrow-up" size={16} className="return-arrow" />
-        Voltar ao portfólio
+        {copy.back}
       </a>
-      <h1>Créditos e licenças</h1>
+      <h1>{copy.title}</h1>
+      <p>{copy.copyright}</p>
       <p>
-        © 2026 Luigi Scofano de Araujo. Este aviso aplica-se ao conteúdo
-        original de sua autoria neste portfólio. Recursos de terceiros conservam
-        seus próprios direitos, créditos e licenças.
-      </p>
-      <p>
-        Este portfólio usa uma implementação própria, com organização acadêmica
-        inspirada no{' '}
-        <a href="https://arturjordao.github.io/">site de Artur Jordão</a>.
-        Textos, projetos, fotografia e trajetória pertencem ao contexto de Luigi
-        Scofano.
+        {copy.intro}{' '}
+        <a href="https://arturjordao.github.io/">{copy.reference}</a>.
       </p>
       <ul className="credit-list">
-        <li>
-          <strong>Quicksand e Playfair Display:</strong> fontes distribuídas sob
-          SIL Open Font License 1.1, utilizadas na tipografia atual e hospedadas
-          localmente junto ao site.{' '}
-          <a href={sitePath('/licenses/Quicksand-OFL.txt')}>
-            Licença Quicksand
-          </a>{' '}
-          ·{' '}
-          <a href={sitePath('/licenses/PlayfairDisplay-OFL.txt')}>
-            Licença Playfair Display
-          </a>
-          .
-        </li>
-        <li>
-          <strong>Font Awesome Free 6:</strong> ícones da coleção gratuita
-          oficial, com ícones SVG sob CC BY 4.0.{' '}
-          <a href="https://fontawesome.com/">Font Awesome</a> ·{' '}
-          <a href={sitePath('/licenses/FontAwesome-LICENSE.txt')}>
-            Licenças completas
-          </a>
-          .
-        </li>
-        <li>
-          <strong>Foto:</strong> arquivo original fornecido por Luigi, com 1152
-          × 1536 pixels, preservado sem retoque facial. O bem-te-vi em pixel art
-          já faz parte da imagem; o enquadramento é feito por CSS.
-        </li>
-        <li>
-          <strong>Sprite opcional junto ao nome (desativado):</strong> Bem-te-vi
-          de SINTONIA, por Luigi Scofano de Araujo. Usa o atlas original e o
-          mesmo enquadramento do jogo. Arte com direitos reservados, utilizada
-          neste portfólio a pedido do titular.{' '}
-          <a href="https://github.com/luigiscofano/intuicao/blob/main/dist/sintonia/assets/chibi-user-roster.svg">
-            Arquivo original
-          </a>{' '}
-          ·{' '}
-          <a href="https://github.com/luigiscofano/intuicao/blob/main/docs/recursos/declaracao-autoria.md">
-            Declaração de autoria
-          </a>
-          .
-        </li>
-        <li>
-          <strong>Assinatura visual:</strong> desenho vetorial original de um
-          bem-te-vi em pixel art com um ramo de folhas, criado para este
-          portfólio. Não é uma fotografia ou um ativo copiado de outro site.
-        </li>
-        <li>
-          <strong>Imagens dos projetos:</strong> os detalhes de cada projeto
-          indicam sua fonte e distinguem capturas reais, dados sintéticos e
-          figuras didáticas. Recursos de terceiros mantêm seus respectivos
-          direitos.
-        </li>
+        {copy.items.map(([title, text], index) => (
+          <li key={title}>
+            <strong>{title}:</strong> {text}{' '}
+            {links[index].map((link, i) => (
+              <span key={link.href}>
+                {i > 0 ? ' · ' : ''}
+                <a href={link.href}>{link.label}</a>
+              </span>
+            ))}
+          </li>
+        ))}
       </ul>
-      <p>
-        O código, os textos, a foto e o pacote de ícones do site de referência
-        não foram reutilizados.
-      </p>
+      <p>{copy.end}</p>
     </article>
   );
 }

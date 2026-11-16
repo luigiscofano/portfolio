@@ -80,3 +80,9 @@ O [SVG da assinatura](public/images/assinatura-bem-te-vi.svg) é local, leve e s
 ### Marcas institucionais nos projetos
 
 Projetos acadêmicos sem marca própria apresentam as marcas oficiais da unidade correspondente e da USP, apenas quando o vínculo está documentado. Essa identificação indica contexto acadêmico, não autoria institucional ou endosso. Logos próprias continuam prioritárias. Consulte [fontes, critérios e arquivos](docs/MARCAS-INSTITUCIONAIS.md).
+
+### Conteúdo e microinterações
+
+Formação e trajetória descrevem contribuições verificadas no perfil público, sem métricas inventadas nem divulgação de materiais internos. Detalhes acadêmicos permanecem nos painéis expansíveis. Os controles possuem respostas discretas a hover, foco e pressionamento, sem animações contínuas. A preferência por movimento reduzido elimina transformações e transições; foco e rótulos continuam disponíveis no teclado e no toque.
+
+A [biblioteca visual do Intuição](docs/ARTE-DOS-PROJETOS.md) apresenta a capa real do manual, AIIJs e mascotes originais, dentro de uma seção expansível. Logos próprias continuam prioritárias. Não são capturas de interface. Controles desktop usam espaçamento mais compacto somente com ponteiro fino; alvos de toque permanecem preservados.

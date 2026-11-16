@@ -58,7 +58,10 @@ test('control icons retain textual labels and decorative SVG semantics', () => {
   for (const file of ['app/creditos/page.tsx']) {
     const source = fs.readFileSync(file, 'utf8');
     assert.ok(source.includes('return-arrow'));
-    assert.ok(source.includes('Voltar ao portfólio'));
+    assert.ok(source.includes('{copy.back}'));
+    const credits = JSON.parse(fs.readFileSync('content/credits.json', 'utf8'));
+    assert.equal(credits.pt.back, 'Voltar ao portfólio');
+    assert.equal(credits.es.back, 'Volver al portafolio');
   }
   const icon = fs.readFileSync('components/portfolio/icon.tsx', 'utf8');
   assert.ok(icon.includes('aria-hidden="true"'));
