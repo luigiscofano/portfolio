@@ -1,9 +1,13 @@
+import { Icon } from '@/components/portfolio/icon';
 import { sitePath } from '@/lib/site-path';
 export const metadata = { title: 'Créditos | Luigi Scofano' };
 export default function Credits() {
   return (
     <article className="update-page">
-      <a href={sitePath('/')}>← Voltar ao portfólio</a>
+      <a className="return-link" href={sitePath('/')}>
+        <Icon name="arrow-up" size={16} className="return-arrow" />
+        Voltar ao portfólio
+      </a>
       <h1>Créditos e licenças</h1>
       <p>
         © 2026 Luigi Scofano de Araujo. Este aviso aplica-se ao conteúdo

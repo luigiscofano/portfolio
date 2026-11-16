@@ -11,7 +11,7 @@ O seletor Português / English aparece antes da apresentação, inclusive no cel
 
 A exportação é pré-renderizada em português. A seleção inglesa é aplicada após carregar o JavaScript; pode haver uma breve apresentação em português. O atributo de idioma do documento e o título da página acompanham o estado selecionado. Não existe rota inglesa separada, nem tradução completa dos metadados estáticos para indexação.
 
-As páginas auxiliares `/atualizar/` e `/creditos/` permanecem em português, assim como os conteúdos externos que não ofereçam tradução própria. O idioma da interface não modifica o idioma dos documentos baixados: os dois PDFs ficam disponíveis em ambas as seleções, com o português primeiro em PT e o inglês primeiro em EN. A introdução inglesa explica Poli-USP e Tupi Antigo sem pressupor familiaridade com os nomes brasileiros.
+A página auxiliar `/creditos/` permanecem em português, assim como os conteúdos externos que não ofereçam tradução própria. O idioma da interface não modifica o idioma dos documentos baixados: os dois PDFs ficam disponíveis em ambas as seleções, com o português primeiro em PT e o inglês primeiro em EN. A introdução inglesa explica Poli-USP e Tupi Antigo sem pressupor familiaridade com os nomes brasileiros.
 
 ## Recursos implementados e limites
 

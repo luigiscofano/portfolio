@@ -13,7 +13,7 @@ A página principal é pré-renderizada em português e hidratada para oferecer 
 - `app/layout.tsx`: estrutura HTML inicial, descrição e metadados gerais, favicon e importação do CSS.
 - `app/page.tsx`: composição da página principal e de suas seções, com estados de filtro e acordeão.
 - `app/globals.css`: identidade editorial, variáveis de cor e tipografia, componentes visuais, foco e regras responsivas.
-- `app/atualizar/page.tsx` e `app/creditos/page.tsx`: páginas auxiliares.
+- `app/creditos/page.tsx` e o guia de manutenção `docs/COMO-ATUALIZAR.md`: páginas auxiliares.
 - `components/portfolio/icon.tsx`: renderização dos ícones locais definidos em `content/icons.json`.
 - `components/portfolio/profile-name.tsx`: nome completo e suporte ao sprite opcional, atualmente desativado.
 - `components/portfolio/project-card.tsx`: card de projeto, imagem opcional, links, tecnologias, autoria, limites e estudos de caso bilíngues.

@@ -26,7 +26,7 @@ Os testes em `tests/` verificam contratos de conteúdo, IDs e seções, caminhos
 
 ## Roteiro de navegador antes de publicar
 
-- Abrir `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/` diretamente e recarregar cada rota.
+- Abrir `/portfolio/` e `/portfolio/creditos/` diretamente e recarregar cada rota.
 - Conferir imagem original de 1152 × 1536 px, fontes de sistema, ausência de sprite junto ao nome e presença da assinatura independente.
 - Alternar Português / English; testar `?lang=en`, `?lang=pt`, recarga e armazenamento bloqueado. Conferir idioma do documento, título, rótulos, textos alternativos e conteúdo biográfico.
 - Verificar navegação por âncoras, estado ativo, seis projetos, filtros, detalhes e acordeão de formação. Abrir os estudos de caso de Intuição, Tupi e GestureLab nos dois idiomas; conferir os links de evidência.

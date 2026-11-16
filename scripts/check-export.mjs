@@ -46,14 +46,9 @@ async function walk(directory) {
     }
   }
 }
-for (const route of [
-  'index.html',
-  'atualizar/index.html',
-  'creditos/index.html',
-  '.nojekyll',
-])
+for (const route of ['index.html', 'creditos/index.html', '.nojekyll'])
   assert.ok((await stat(path.join(root, route))).isFile(), route);
 await walk(root);
 console.log(
-  `Exportação verificada: três páginas, IDs únicos e ${checked.size} recursos/rotas locais.`,
+  `Exportação verificada: duas páginas, IDs únicos e ${checked.size} recursos/rotas locais.`,
 );

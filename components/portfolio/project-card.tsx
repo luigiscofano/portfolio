@@ -61,7 +61,10 @@ export function ProjectCard({
       {caseStudy && (
         <details className="project-details">
           <summary>
-            {t('Estudo de caso')}{' '}
+            <span className="control-label">
+              <Icon name="flask" size={15} />
+              {t('Estudo de caso')}
+            </span>{' '}
             <span className="details-symbol" aria-hidden="true" />
           </summary>
           <div className="project-details-body">
@@ -80,7 +83,10 @@ export function ProjectCard({
       )}
       <details className="project-details">
         <summary>
-          {t('Detalhes, autoria e limites')}{' '}
+          <span className="control-label">
+            <Icon name="file-lines" size={15} />
+            {t('Detalhes, autoria e limites')}
+          </span>{' '}
           <span className="details-symbol" aria-hidden="true" />
         </summary>
         <div className="project-details-body">
