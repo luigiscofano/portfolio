@@ -91,4 +91,4 @@ A [biblioteca visual do Intuição](docs/ARTE-DOS-PROJETOS.md) apresenta a capa 
 
 ### Galerias reais e acesso ao currículo
 
-Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob demanda. Intuição tem cinco imagens e Pokédex tem três; registros históricos da Pokédex são identificados, sem confundi-los com a interface atual. As lacunas de outros projetos são documentadas, sem usar prévias como se fossem execução real. Consulte [cobertura, fontes e pendências das galerias](docs/galerias-reais.md). Os PDFs do currículo permanecem acessíveis fora de “Mais sobre mim”.
+Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob demanda. Intuição tem cinco imagens e Pokédex tem quatro; registros históricos da Pokédex são identificados, sem confundi-los com a interface atual. As lacunas de outros projetos são documentadas, sem usar prévias como se fossem execução real. Consulte [cobertura, fontes e pendências das galerias](docs/galerias-reais.md). Os PDFs do currículo permanecem acessíveis fora de “Mais sobre mim”.

@@ -196,5 +196,17 @@
       "en": "Eevee evolution family, actual capture from an earlier version.",
       "es": "Familia evolutiva de Eevee, captura real de una versión anterior."
     }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-shiny.jpg",
+    "width": 1165,
+    "height": 747,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/docs/imagens/pokedex-shiny.jpg",
+    "caption": {
+      "pt": "Charizard shiny na ficha de consulta, captura real de versão anterior.",
+      "en": "Shiny Charizard detail view, an actual screenshot from an earlier version.",
+      "es": "Ficha de Charizard shiny, captura real de una versión anterior."
+    }
   }
 ]
