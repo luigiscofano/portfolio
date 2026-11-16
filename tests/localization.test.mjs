@@ -111,10 +111,10 @@ test('Localized title has one owner and approved PDF remains downloadable', () =
   assert.equal(pt.profile.resume.url, en.profile.resume.url);
   const pdf = fs.readFileSync(`public${pt.profile.resume.url}`);
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
-  assert.equal(pdf.length, 43686);
+  assert.equal(pdf.length, 36281);
   assert.equal(
     createHash('sha256').update(pdf).digest('hex'),
-    '49b07b4cbf364e2cda982e3f82388610a0b070f6eb12d1ff6f8c643bc689d13d',
+    'c3968bcf50b3d7ca0d87558e7a980b674aa4c3e2876d74c6e5f9c77f9e3de420',
   );
   assert.ok(includesCode(page, 'download={resume.downloadName}'));
 });

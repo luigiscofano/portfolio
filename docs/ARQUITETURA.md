@@ -36,7 +36,7 @@ Os JSONs `content/portfolio.json` e `content/portfolio.en.json` compartilham est
 
 Dados no JSON usam caminhos a partir de `public/`, como `/images/luigi-original.jpg`, sem o prefixo do repositório. A renderização aplica `sitePath`. Se o nome do repositório mudar, revise `next.config.ts`, `lib/site-path.ts`, metadados/favicon, servidor de prévia, testes e quaisquer caminhos absolutos no CSS. Não substitua caminhos indiscriminadamente dentro de URLs externas.
 
-A foto original tem 1152 × 1536 px e é enquadrada por CSS, sem alteração semântica. O sprite junto ao nome está desativado, mas seu arquivo e os créditos permanecem. A assinatura independente de bem-te-vi com folhas continua habilitada. Os PDFs são ordenados conforme o idioma escolhido, mantendo ambos disponíveis. Currículos português e inglês são documentos de épocas distintas, preservados após remoção dos dados pessoais indicados em [IDIOMAS-E-ACESSIBILIDADE.md](IDIOMAS-E-ACESSIBILIDADE.md).
+A foto original tem 1152 × 1536 px e é enquadrada por CSS, sem alteração semântica. O sprite junto ao nome está desativado, mas seu arquivo e os créditos permanecem. A assinatura independente de bem-te-vi com folhas continua habilitada. Os PDFs são ordenados conforme o idioma escolhido, mantendo ambos disponíveis. A edição em inglês traduz o PDF português com a mesma diagramação de duas páginas. Os detalhes e os hashes estão em [IDIOMAS-E-ACESSIBILIDADE.md](IDIOMAS-E-ACESSIBILIDADE.md).
 
 A abertura oferece links separados de demonstração e código para Intuição. “Mais sobre mim” abre o elemento `details` da biografia e focaliza seu resumo. A descrição inglesa contextualiza a Polytechnic School da University of São Paulo e Old Tupi.
 

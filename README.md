@@ -31,7 +31,7 @@ npm start
 - `content/ui.en.json`: traduções de rótulos da interface, usando o texto português como chave. Um rótulo sem tradução recai no português.
 - `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab, em português e inglês, com problema, contribuição, decisões técnicas, reprodução, limites e links de evidência.
 - `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
-- `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. São documentos de épocas diferentes, não traduções sincronizadas. Não atualize datas ou conteúdos por inferência.
+- `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. O PDF inglês é uma tradução da edição portuguesa de novembro de 2026. Não atualize datas ou conteúdos por inferência.
 
 Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual tem seis projetos; seus testes e destaques precisam ser revistos se essa estrutura mudar.
 

@@ -31,7 +31,7 @@ O DOCX sanitizado da edição anterior continua disponível em `public/documents
 
 ## Currículo inglês: PDF
 
-`public/documents/luigi-scofano-resume-en.pdf` é a versão inglesa aprovada. O registro da preparação informa telefone removido por redação definitiva, limpeza de metadados e verificação do texto extraível. E-mail, LinkedIn e conteúdo profissional foram preservados.
+`public/documents/luigi-scofano-resume-en.pdf` é a tradução do currículo português de novembro de 2026. Preserva o conteúdo, as duas páginas, a tipografia, as divisórias e os links do original. Seu SHA-256 é `c3968bcf50b3d7ca0d87558e7a980b674aa4c3e2876d74c6e5f9c77f9e3de420`.
 
 O PDF tem duas páginas e texto extraível, mas não possui marcação estrutural de acessibilidade. Biografia e trajetória em HTML continuam disponíveis como alternativa de consulta, sem pretender reproduzir integralmente o documento.
 
@@ -41,7 +41,7 @@ O PDF tem duas páginas e texto extraível, mas não possui marcação estrutura
 
 ## Substituição segura
 
-Os currículos são documentos de épocas diferentes, não traduções sincronizadas. A página e os arquivos podem ter níveis de atualização distintos. Não “corrija” datas, formação ou experiência em um arquivo para igualá-lo ao outro sem orientação do titular.
+Os PDFs desta edição compartilham o mesmo conteúdo profissional nos dois idiomas. Nas próximas revisões, use as informações fornecidas pelo titular para atualizar cada versão.
 
 Para substituir um currículo:
 
