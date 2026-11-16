@@ -3,15 +3,21 @@
 ## Conteúdo e seleção de idioma
 
 - `content/portfolio.json`: português, padrão inicial.
-- `content/portfolio.en.json`: conteúdo inglês com a mesma estrutura. Atualize ambos quando um fato mudar, preservando IDs, URLs, categorias internas e referências de arquivos.
-- `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab em `pt` e `en`, preservando contribuição, evidências e limites.
-- `content/ui.en.json`: rótulos ingleses da interface, indexados pelo texto português. Rótulos ausentes recaem no português; revise o dicionário ao mudar um controle.
+- `content/portfolio.en.json` e `content/portfolio.es.json`: conteúdo inglês e espanhol com a mesma estrutura. Atualize os três arquivos quando um fato mudar, preservando IDs, URLs, categorias internas e referências de arquivos.
+- `content/project-cases.json`: estudos de caso de Intuição, Tupi e GestureLab em `pt`, `en` e `es`, preservando contribuição, evidências e limites.
+- `content/ui.en.json` e `content/ui.es.json`: rótulos ingleses e espanhóis da interface, indexados pelo texto português. Rótulos ausentes recaem no português; revise o dicionário ao mudar um controle.
 
-O seletor Português / English aparece antes da apresentação, inclusive no celular. Um parâmetro válido `?lang=en` ou `?lang=pt` prevalece ao abrir a página; sem parâmetro, a aplicação consulta a preferência local. A troca atualiza o parâmetro da URL e tenta salvar `portfolio-language` no armazenamento local. Se esse armazenamento estiver bloqueado, a seleção continua funcionando na página aberta.
+- `content/credits.json`: créditos e licenças nos três idiomas.
 
-A exportação é pré-renderizada em português. A seleção inglesa é aplicada após carregar o JavaScript; pode haver uma breve apresentação em português. O atributo de idioma do documento e o título da página acompanham o estado selecionado. Não existe rota inglesa separada, nem tradução completa dos metadados estáticos para indexação.
+O seletor Português / English / Español aparece antes da apresentação, inclusive no celular. Um parâmetro válido `?lang=pt`, `?lang=en` ou `?lang=es` prevalece ao abrir a página; sem parâmetro, a aplicação consulta a preferência local. A troca atualiza o parâmetro da URL e tenta salvar `portfolio-language` no armazenamento local. Se esse armazenamento estiver bloqueado, a seleção continua funcionando na página aberta.
 
-A página auxiliar `/creditos/` permanecem em português, assim como os conteúdos externos que não ofereçam tradução própria. O idioma da interface não modifica o idioma dos documentos baixados: os dois PDFs ficam disponíveis em ambas as seleções, com o português primeiro em PT e o inglês primeiro em EN. A introdução inglesa explica Poli-USP e Tupi Antigo sem pressupor familiaridade com os nomes brasileiros.
+A exportação é pré-renderizada em português. As seleções inglesa e espanhola são aplicadas após carregar o JavaScript; pode haver uma breve apresentação em português. O atributo de idioma do documento e o título da página acompanham o estado selecionado. Não existem rotas separadas para inglês e espanhol, nem tradução completa dos metadados estáticos para indexação.
+
+A página auxiliar `/creditos/` acompanha o idioma escolhido, incluindo o título, os textos e o retorno ao portfólio. Conteúdos externos e imagens documentais originais mantêm seu próprio idioma. O idioma da interface não modifica o idioma dos documentos baixados: os dois PDFs ficam disponíveis nas três seleções, com o português primeiro em PT e ES e o inglês primeiro em EN. Não há currículo PDF em espanhol. A introdução inglesa explica Poli-USP e Tupi Antigo sem pressupor familiaridade com os nomes brasileiros.
+
+## Mapas informativos
+
+As três seções possuem SVGs localizados em `public/images/sections/`. O script `node scripts/generate-section-visuals.mjs` gera somente PT/EN. Os arquivos `*-es.svg` foram traduzidos manualmente, preservando a composição; devem ser revisados e atualizados separadamente quando formação, trajetória ou pesquisa mudarem. O script não gera nem atualiza automaticamente esses arquivos espanhóis. Consulte [IDIOMAS.md](IDIOMAS.md) para os demais pontos de tradução.
 
 ## Recursos implementados e limites
 
@@ -21,7 +27,7 @@ O menu móvel inclui Escape, contenção de Tab/Shift+Tab, devolução de foco a
 
 Os testes automatizados calculam contraste de combinações de cores selecionadas: 4,5:1 para texto normal e 3:1 para texto grande e alguns elementos gráficos. Isso não mede todas as combinações efetivamente renderizadas, nem garante a acessibilidade de todos os estados.
 
-Essas medidas não constituem certificação WCAG. Faltam uma auditoria completa, avaliação abrangente com leitores de tela e testes em aparelhos físicos. Mudanças precisam de revisão manual em ambos os idiomas, incluindo zoom, teclado, menu móvel e downloads. Veja [VALIDACAO.md](VALIDACAO.md).
+Essas medidas não constituem certificação WCAG. Faltam uma auditoria completa, avaliação abrangente com leitores de tela e testes em aparelhos físicos. Mudanças precisam de revisão manual nos três idiomas, incluindo zoom, teclado, menu móvel e downloads. Veja [VALIDACAO.md](VALIDACAO.md).
 
 ## Currículo português
 
@@ -37,7 +43,7 @@ O PDF tem duas páginas e texto extraível, mas não possui marcação estrutura
 
 ## Conteúdo expansível e exemplo simulado
 
-“Mais sobre mim” no destaque abre o detalhe da biografia e focaliza o resumo. Os estudos de caso e o exemplo de pesquisa usam detalhes expansíveis; revise sua operação por teclado nos dois idiomas. O exemplo mantém “casa” e “c8sa” em português mesmo na interface inglesa e informa explicitamente que é fictício, não conteúdo Tupi nem saída real de OCR.
+“Mais sobre mim” no destaque abre o detalhe da biografia e focaliza o resumo. Os estudos de caso e o exemplo de pesquisa usam detalhes expansíveis; revise sua operação por teclado nos três idiomas. O exemplo mantém “casa” e “c8sa” em português mesmo nas interfaces inglesa e espanhola e informa explicitamente que é fictício, não conteúdo Tupi nem saída real de OCR.
 
 ## Substituição segura
 
@@ -47,7 +53,7 @@ Para substituir um currículo:
 
 1. Use o arquivo aprovado para distribuição pública e revise dados pessoais, metadados e conteúdo oculto.
 2. Preserve o original de trabalho fora da pasta pública; inclua em `public/documents/` somente a versão sanitizada aprovada.
-3. Atualize `profile.resumePt` ou `profile.resume` nos dois JSONs, incluindo URL, nome de download e rótulos aplicáveis.
+3. Atualize `profile.resumePt` ou `profile.resume` nos três JSONs, incluindo URL, nome de download e rótulos aplicáveis.
 4. Atualize as verificações de integridade dos testes somente depois da revisão do novo documento.
 5. Teste os dois PDFs na exportação estática, a prioridade pelo idioma e a abertura dos arquivos. Se preservar um DOCX em `public/`, mantenha apenas sua versão sanitizada, pois também será exportado.
 
