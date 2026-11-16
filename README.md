@@ -64,3 +64,7 @@ Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare
 O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospedadas localmente com suas licenças. A direção editorial combina branco, cinza claro e azul, aproximando-se da referência de Artur Jordão sem copiar seu conteúdo. Os ícones locais de Font Awesome Free 6 têm atribuições em `/creditos/` e licenças em `public/licenses/`.
 
 © 2026 Luigi Scofano de Araujo, quanto ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).
+
+## Imagens e mapas visuais
+
+As imagens dos projetos ficam nos seus detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerá-los depois de editar os dados PT/EN, execute `node scripts/generate-section-visuals.mjs`.

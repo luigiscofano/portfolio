@@ -192,13 +192,13 @@
       "url": "https://github.com/luigiscofano/Pokedex",
       "demo": "https://pokedex-luigi-explorer.luigiscofano.chatgpt.site",
       "demoLabel": "Explorar a Pokédex",
-      "image": "/images/pokedex.webp",
-      "imageAlt": "Página inicial real da Pokédex de Luigi, com catálogo de espécies",
-      "caption": "Captura real da aplicação · versão documentada 1.3.2",
-      "imageSource": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-inicio.jpg",
+      "image": "/images/projects/pokedex-icone-original.svg",
+      "imageAlt": "Ícone original do projeto de fã Pokédex; não é captura da aplicação",
+      "caption": "Ícone original do projeto · iniciativa de fã, não oficial",
+      "imageSource": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/web/icon.svg",
       "showImagePreview": true,
-      "imageWidth": 1165,
-      "imageHeight": 747
+      "imageWidth": 64,
+      "imageHeight": 64
     },
     {
       "id": "labdig",
@@ -215,13 +215,13 @@
       "url": "https://github.com/luigiscofano/usp-labdig",
       "demo": "",
       "demoLabel": "",
-      "image": "/images/labdig-readme.jpg",
-      "imageAlt": "README do acervo de Laboratório Digital da Poli-USP",
-      "caption": "Captura do README; documentação do acervo, não validação de hardware.",
-      "imageSource": "https://github.com/luigiscofano/usp-labdig#readme",
+      "image": "/images/projects/labdig-controle-fluxo.svg",
+      "imageAlt": "Diagrama de controle e fluxo de dados reproduzido da documentação LabDig; não é validação física",
+      "caption": "Diagrama documental · não é fotografia nem validação de hardware",
+      "imageSource": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md",
       "showImagePreview": true,
-      "imageWidth": 777,
-      "imageHeight": 520
+      "imageWidth": 1200,
+      "imageHeight": 600
     },
     {
       "id": "trilha-viva",
@@ -238,13 +238,13 @@
       "url": "https://github.com/luigiscofano/trilha-viva",
       "demo": "https://luigiscofano.github.io/trilha-viva/",
       "demoLabel": "Abrir Trilha Viva",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/trilha-viva-identidade.png",
+      "imageAlt": "Prancha original da identidade do Trilha Viva; a opção B, Páginas, foi adotada. Não é captura da aplicação.",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/trilha-viva/blob/88553d52e4b3efad917c576b4774738255623306/assets/brand-approved-board.png",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1536,
+      "imageHeight": 1024
     },
     {
       "id": "usp-metodos-numericos",
@@ -261,13 +261,13 @@
       "url": "https://github.com/luigiscofano/usp-metodos-numericos",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/metodos-numericos-convergencia.svg",
+      "imageAlt": "Gráfico de convergência produzido pelos experimentos de Métodos Numéricos",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/02_convergencia.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 496,
+      "imageHeight": 279
     },
     {
       "id": "tetris-c",
@@ -284,13 +284,13 @@
       "url": "https://github.com/luigiscofano/tetris-c",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/tetris-replay.svg",
+      "imageAlt": "Visualização documentada de um replay real do Tetris em C, cuja interface original é no terminal",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/tetris-c/blob/5c8995868ad3e1b1162c0fcd4b4e599adae8da45/assets/preview.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1100,
+      "imageHeight": 720
     },
     {
       "id": "usp-pcs3225-sistemas-digitais",
@@ -307,13 +307,13 @@
       "url": "https://github.com/luigiscofano/usp-pcs3225-sistemas-digitais",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/sistemas-digitais-double-dabble.svg",
+      "imageAlt": "Diagrama de sinais da simulação Double-Dabble para a entrada 42",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/usp-pcs3225-sistemas-digitais/blob/b6d14a4c94d892b010676aa4b76b008afaa20e22/assets/double_dabble_42.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1200,
+      "imageHeight": 440
     },
     {
       "id": "usp-pcs3616-sistemas-programacao",
@@ -330,13 +330,13 @@
       "url": "https://github.com/luigiscofano/usp-pcs3616-sistemas-programacao",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/sistemas-programacao-capa.svg",
+      "imageAlt": "Capa documental do projeto Sistemas de Programação; não é captura de execução",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/usp-pcs3616-sistemas-programacao/blob/fcac02fd059b80f5af2659e107ad9a3aa66cf5ea/assets/capa.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1200,
+      "imageHeight": 250
     },
     {
       "id": "usp-mac0122-algoritmos",
@@ -353,13 +353,13 @@
       "url": "https://github.com/luigiscofano/usp-mac0122-algoritmos",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/algoritmos-uniao-intervalos.svg",
+      "imageAlt": "Figura didática de união de intervalos do projeto de algoritmos",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/usp-mac0122-algoritmos/blob/151b801809a8385b95d5221eb0068ec80aa84087/assets/uniao_intervalos.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 800,
+      "imageHeight": 150
     },
     {
       "id": "usp-mac0321-poo",
@@ -376,13 +376,13 @@
       "url": "https://github.com/luigiscofano/usp-mac0321-poo",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/poo-capa.svg",
+      "imageAlt": "Capa documental do projeto de Programação Orientada a Objetos; não é captura da aplicação",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/usp-mac0321-poo/blob/558f044476d78659c2792bae1ba088d973a30c46/assets/capa.svg",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1200,
+      "imageHeight": 250
     },
     {
       "id": "MAC0321-Lista08",
@@ -399,13 +399,13 @@
       "url": "https://github.com/luigiscofano/MAC0321-Lista08",
       "demo": "",
       "demoLabel": "",
-      "image": "",
-      "imageAlt": "",
+      "image": "/images/projects/lista08-swing-adapter.svg",
+      "imageAlt": "Diagrama didático de Swing e Adapter baseado nas classes da Lista 08; não é captura da aplicação",
       "caption": "",
-      "imageSource": "",
+      "imageSource": "https://github.com/luigiscofano/MAC0321-Lista08/tree/master/src/br/usp/ime/mac321/lista08",
       "showImagePreview": false,
-      "imageWidth": 0,
-      "imageHeight": 0
+      "imageWidth": 1200,
+      "imageHeight": 720
     }
   ],
   "research": [
