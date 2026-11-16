@@ -30,27 +30,6 @@ export function ProjectCard({
         } as React.CSSProperties
       }
     >
-      {project.showImagePreview && project.image && (
-        <figure className="project-preview">
-          <a href={project.imageSource} {...external}>
-            <img
-              src={sitePath(project.image)}
-              alt={project.imageAlt}
-              width={project.imageWidth}
-              height={project.imageHeight}
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-          <figcaption>
-            {project.caption}{' '}
-            <a href={project.imageSource} {...external}>
-              {t('Fonte')}
-              <ExternalIcon />
-            </a>
-          </figcaption>
-        </figure>
-      )}
       <div className="resource-heading">
         <Icon name={presentation.icon as IconName} size={29} />
         <span>{project.type}</span>
@@ -110,7 +89,7 @@ export function ProjectCard({
           <p>{project.contribution}</p>
           <h4>{t('Escopo e limites')}</h4>
           <p>{project.limitation}</p>
-          {project.image && !project.showImagePreview && (
+          {project.image && (
             <figure>
               <a href={project.imageSource} {...external}>
                 <img

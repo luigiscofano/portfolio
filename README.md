@@ -33,7 +33,7 @@ npm start
 - `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
 - `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. O PDF inglês é uma tradução da edição portuguesa de novembro de 2026. Não atualize datas ou conteúdos por inferência.
 
-Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual tem seis projetos; seus testes e destaques precisam ser revistos se essa estrutura mudar.
+Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual reúne 14 projetos públicos, com busca sem distinção de acentos e filtros por área. Imagens, autoria e limites são acessíveis em detalhes expansíveis. Veja a [reformulação editorial e suas fontes](docs/REFORMULACAO-EDITORIAL.md).
 
 `showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição usa uma página do ícones originais; Tupi, a capa documental original; Kaggle, uma ilustração didática; GestureLab, uma prévia sintética; Pokédex, uma captura real. LabDig mostra uma captura real do README, como documentação do acervo, não como validação de hardware. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
 
@@ -61,6 +61,6 @@ Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare
 - [Idiomas, acessibilidade e currículos](docs/IDIOMAS-E-ACESSIBILIDADE.md)
 - [Validação e roteiro de revisão](docs/VALIDACAO.md)
 
-O visual atual usa Georgia/Times New Roman e Arial/Helvetica, fontes de sistema. Quicksand e Playfair Display são recursos históricos preservados com suas licenças, não a tipografia ativa. Os ícones locais de Font Awesome Free 6 têm atribuições em `/creditos/` e licenças em `public/licenses/`.
+O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospedadas localmente com suas licenças. A direção editorial combina branco, cinza claro e azul, aproximando-se da referência de Artur Jordão sem copiar seu conteúdo. Os ícones locais de Font Awesome Free 6 têm atribuições em `/creditos/` e licenças em `public/licenses/`.
 
 © 2026 Luigi Scofano de Araujo, quanto ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).

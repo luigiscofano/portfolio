@@ -40,17 +40,6 @@ test('OCR example never claims measured or historical results', () => {
   assert.ok(s.includes('PROCEDENCIA.md'));
 });
 
-test('personal link opens details without losing keyboard focus to native hash navigation', () => {
-  const source = fs.readFileSync('app/page.tsx', 'utf8').replace(/\s+/g, '');
-  assert.ok(source.includes('event.preventDefault()'));
-  assert.ok(source.includes("history.pushState(null,'','#mais-sobre-mim')"));
-  assert.ok(
-    source.includes(
-      "details.querySelector('summary')?.focus({preventScroll:true})",
-    ),
-  );
-});
-
 test('Intuicao preview uses original icons rather than a catalog page', () => {
   const project = pt.projects.find((project) => project.id === 'intuicao');
   assert.equal(project.image, '/images/intuicao-icones-frente.png');

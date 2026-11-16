@@ -27,8 +27,8 @@ test('Known and new project IDs always receive a valid icon and color', () => {
 });
 test('Optional highlights and clipboard cleanup have explicit safeguards', () => {
   const page = fs.readFileSync('app/page.tsx', 'utf8');
-  assert.ok(includesCode(page, 'featuredTupi &&'));
-  assert.ok(includesCode(page, 'featuredIntuicao &&'));
+  assert.ok(includesCode(page, 'data.projects.filter('));
+  assert.ok(includesCode(page, 'featured.map('));
   assert.doesNotMatch(page, /find\([^\n]*\)!/);
   const clipboard = fs.readFileSync('hooks/use-email-copy.ts', 'utf8');
   assert.ok(includesCode(clipboard, 'clearTimeout(timeout.current)'));

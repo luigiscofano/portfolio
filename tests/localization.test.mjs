@@ -89,8 +89,6 @@ test('Main CSS palettes meet their text and graphic contrast thresholds', () => 
     ['a', 'color', '.sidebar', 'background', 4.5],
     ['.tags li', 'color', '.tags li', 'background', 4.5],
     ['.primary-link', 'color', '.primary-link', 'background', 4.5],
-    ['.intuicao-feature', 'color', '.intuicao-feature', 'background', 4.5],
-    ['.beyond-feature', 'color', '.beyond-feature', 'background', 4.5],
     ['.hero-subtitle', 'color', 'body', 'background', 3],
     ['.timeline-icon', 'color', '.timeline-icon', 'background', 3],
   ]) {

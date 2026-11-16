@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { matchesProject } from '@/lib/project-search.mjs';
 import { sitePath } from '@/lib/site-path';
 import { externalLink as external } from '@/lib/portfolio';
 import { Icon, ExternalIcon, type IconName } from '@/components/portfolio/icon';
@@ -20,54 +21,54 @@ export default function Home() {
   const { copied, copyError, copyEmail } = useEmailCopy();
   const [educationOpen, setEducationOpen] = useState<number | null>(0);
   const [filter, setFilter] = useState('Todos');
-  const featuredTupi = data.projects.find((project) => project.id === 'tupi');
-  const featuredIntuicao = data.projects.find(
-    (project) => project.id === 'intuicao',
+  const [query, setQuery] = useState('');
+  const featured = data.projects.filter((project) =>
+    ['tupi', 'intuicao', 'trilha-viva'].includes(project.id),
   );
-  const filtered = data.projects.filter(
-    (project) => filter === 'Todos' || project.category === filter,
+  const filtered = data.projects.filter((project) =>
+    matchesProject(project, filter, query),
   );
   const profileLinks = [
     {
       label: 'GitHub',
       icon: 'github' as IconName,
       url: data.profile.github,
-      color: '#9b761c',
+      color: '#3d7095',
       internal: false,
     },
     {
       label: 'LinkedIn',
       icon: 'linkedin' as IconName,
       url: data.profile.linkedin,
-      color: '#467ca3',
+      color: '#3d7095',
       internal: false,
     },
     {
       label: t('E-mail'),
       icon: 'envelope' as IconName,
       url: `mailto:${data.profile.email}`,
-      color: '#427569',
+      color: '#3d7095',
       internal: true,
     },
     {
       label: t('Pesquisa'),
       icon: 'graduation-cap' as IconName,
       url: '#pesquisa',
-      color: '#507556',
+      color: '#3d7095',
       internal: true,
     },
     {
       label: t('Projetos'),
       icon: 'code' as IconName,
       url: '#projetos',
-      color: '#88689e',
+      color: '#3d7095',
       internal: true,
     },
     {
       label: t('Documentação'),
       icon: 'file-lines' as IconName,
       url: data.profile.documentation,
-      color: '#ad626d',
+      color: '#3d7095',
       internal: false,
     },
   ];
@@ -131,15 +132,13 @@ export default function Home() {
             </a>
           </p>
           <nav id="main-nav" aria-label={t('Navegação principal')}>
-            {data.navigation.map((item, index) => (
+            {data.navigation.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 style={
                   {
-                    '--nav-color': ['#d6ac37', '#548eb7', '#6e9675', '#977bad'][
-                      index % 4
-                    ],
+                    '--nav-color': '#3d7095',
                   } as React.CSSProperties
                 }
                 className={active === item.id ? 'active' : ''}
@@ -281,120 +280,25 @@ export default function Home() {
                 <Icon name="arrow-up" size={13} className="cta-arrow" />
               </a>
             </div>
-            {featuredTupi && (
-              <div className="research-feature">
-                <div className="research-feature-title">
-                  <p className="feature-eyebrow">
-                    {t('Iniciação científica · IME-USP')}
-                  </p>
-                  <h3>Tupi Antigo</h3>
-                  <p>{t('Linguagem, memória e computação.')}</p>
-                  <p className="research-process">
-                    {t('Fonte original')}{' '}
-                    <Icon
-                      name="arrow-up"
-                      size={13}
-                      className="cta-arrow-right"
-                    />{' '}
-                    {t('OCR & PLN')}{' '}
-                    <Icon
-                      name="arrow-up"
-                      size={13}
-                      className="cta-arrow-right"
-                    />{' '}
-                    {t('Revisão humana')}
-                  </p>
-                </div>
-                <div className="research-feature-description">
-                  <h4>
-                    {t('Tecnologia a serviço')}
-                    <br />
-                    {t('da pesquisa linguística.')}
-                  </h4>
-                  <p>{featuredTupi?.summary}</p>
-                  <a href={featuredTupi?.url} {...external}>
-                    {t('Explorar a pesquisa')}{' '}
-                    <Icon name="arrow-up" size={13} className="cta-arrow" />
-                  </a>
-                </div>
-              </div>
-            )}
-            {featuredTupi && <ResearchExample language={language} />}
-            <div className="featured-secondary">
-              {featuredIntuicao && (
-                <article className="intuicao-feature">
-                  <img
-                    src={sitePath(featuredIntuicao.image)}
-                    alt={featuredIntuicao.imageAlt}
-                    width="154"
-                    height="171"
-                  />
-                  <div>
-                    <p className="feature-eyebrow">
-                      {t('IA clássica & jogos')}
-                    </p>
-                    <h3>Intuição</h3>
-                    <p>
-                      {t('Jogos de lógica e estratégia.')}
-                      <br />
-                      {t('IA no próprio navegador.')}
-                    </p>
-                    <a
-                      href={featuredIntuicao.demo || featuredIntuicao.url}
-                      {...external}
-                    >
-                      {t('Experimentar')}{' '}
-                      <Icon name="arrow-up" size={13} className="cta-arrow" />
-                    </a>
-                    <a
-                      href={featuredIntuicao.url}
-                      {...external}
-                      className="feature-code-link"
-                    >
-                      {t('Ver código')} <ExternalIcon />
-                    </a>
-                  </div>
-                </article>
-              )}
-              <article className="beyond-feature">
-                <p className="feature-eyebrow">
-                  {t('Pesquisa, desenvolvimento & ensino')}
-                </p>
-                <h3>{t('Além do código.')}</h3>
-                <p>
-                  {t(
-                    'Pesquisa no IME-USP, museu virtual no LASSu-USP e ensino de jiu-jítsu. Uma trajetória entre áreas.',
-                  )}
-                </p>
+            <div className="selected-work">
+              {featured.map((project, index) => (
                 <a
-                  href="#mais-sobre-mim"
-                  onClick={(event) => {
-                    if (
-                      event.metaKey ||
-                      event.ctrlKey ||
-                      event.shiftKey ||
-                      event.altKey
-                    )
-                      return;
-                    const details = document.getElementById(
-                      'mais-sobre-mim',
-                    ) as HTMLDetailsElement | null;
-                    if (details) {
-                      // A navegação nativa ao fragmento rouba o foco do summary em alguns navegadores.
-                      event.preventDefault();
-                      details.open = true;
-                      history.pushState(null, '', '#mais-sobre-mim');
-                      details.scrollIntoView({ block: 'start' });
-                      details
-                        .querySelector('summary')
-                        ?.focus({ preventScroll: true });
-                    }
+                  key={project.id}
+                  href="#projetos"
+                  className="selected-work-item"
+                  onClick={() => {
+                    setFilter('Todos');
+                    setQuery(project.name);
                   }}
                 >
-                  {t('Mais sobre mim')}{' '}
-                  <Icon name="arrow-up" size={13} className="cta-arrow-right" />
+                  <span className="selected-index">0{index + 1}</span>
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.summary}</p>
+                  </div>
+                  <Icon name="arrow-up" size={16} className="cta-arrow" />
                 </a>
-              </article>
+              ))}
             </div>
             <details id="mais-sobre-mim" className="about-details">
               <summary>{t('Mais sobre mim')}</summary>
@@ -416,6 +320,21 @@ export default function Home() {
                 'Aplicações, experimentos e materiais que desenvolvi ou dos quais participei. Cada projeto apresenta sua autoria, documentação e limites.',
               )}
             </p>
+            <label className="project-search">
+              <span>
+                {language === 'en' ? 'Find a project' : 'Encontre um projeto'}
+              </span>
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={
+                  language === 'en'
+                    ? 'Name, technology or subject'
+                    : 'Nome, tecnologia ou assunto'
+                }
+              />
+            </label>
             <div className="filter-row">
               <div
                 className="filters"
@@ -439,6 +358,13 @@ export default function Home() {
                 {filtered.length === 1 ? t('projeto') : t('projetos')}
               </span>
             </div>
+            {filtered.length === 0 && (
+              <p role="status">
+                {language === 'en'
+                  ? 'No projects match this search.'
+                  : 'Nenhum projeto corresponde à busca.'}
+              </p>
+            )}
             <div className="resource-grid">
               {filtered.map((project) => (
                 <ProjectCard
@@ -496,6 +422,14 @@ export default function Home() {
                 </article>
               ))}
             </div>
+            <details className="about-details">
+              <summary>
+                {language === 'en'
+                  ? 'Explore a research example'
+                  : 'Explorar um exemplo da pesquisa'}
+              </summary>
+              <ResearchExample language={language} />
+            </details>
             <p className="research-note">
               {t(
                 'Código e metodologia estão disponíveis nos links de cada iniciativa.',

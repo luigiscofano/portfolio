@@ -20,9 +20,8 @@ export default function Credits() {
       <ul className="credit-list">
         <li>
           <strong>Quicksand e Playfair Display:</strong> fontes distribuídas sob
-          SIL Open Font License 1.1, preservadas no acervo do projeto. A
-          apresentação atual usa fontes de sistema; os arquivos anteriores
-          continuam hospedados junto ao site.{' '}
+          SIL Open Font License 1.1, utilizadas na tipografia atual e hospedadas
+          localmente junto ao site.{' '}
           <a href={sitePath('/licenses/Quicksand-OFL.txt')}>
             Licença Quicksand
           </a>{' '}

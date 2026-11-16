@@ -22,10 +22,10 @@
     "source": "https://github.com/luigiscofano/luigiscofano/blob/main/README.md",
     "aboutOverview": [
       "I am Luigi Scofano de Araujo, a Computer Engineering student at Poli-USP. I am interested in artificial intelligence and data, especially in understanding how algorithms work and turning that knowledge into applications that other people can use and explore. I enjoy investigating how a program chooses a move, how an image can become information, and how to organize data without losing the context of where it came from.",
-      "In my undergraduate research at IME-USP, I study natural language processing and optical character recognition applied to Tupi Antigo, under the supervision of Professor Marcelo Finger. I work on organizing and reviewing data from historical sources, preserving the original spelling and the context of the information. This means looking beyond the extracted text: recording its source, identifying possible errors, and distinguishing what the software suggests from what still needs review. I also contribute to a virtual museum of computing at LASSu-USP, a laboratory coordinated by Professor Tereza Cristina Melo de Brito Carvalho.",
-      "This curiosity takes different forms in my projects. In Intuição, I develop logic and strategy games that let people explore decisions and how algorithms work. In GestureLab, I work with computer vision to experiment with interactions using hands, gestures, and poses captured by a webcam. In Pokédex, the focus is on organizing data and creating an interface for exploring species, forms, and evolutions. These are different projects, but they all give me room to study, test ideas, and pay attention to how people experience them.",
-      "My experience also includes data analysis and academic group projects, including digital circuits and FPGA applications. Across software, data, and hardware, I try to understand both the parts of a system and how they connect.",
-      "Outside computing, I am a jiu-jitsu instructor. Teaching is also part of how I approach my projects: explaining clearly, encouraging practice, and leaving room to learn through experimentation."
+      "In my undergraduate research at IME-USP, I studied natural language processing and optical character recognition applied to Old Tupi, supervised by Professor Marcelo Finger. The work combined organizing and reviewing historical sources, preserving spelling, traceability and distinguishing software suggestions from human decisions. I also contribute to a virtual museum of computing at LASSu-USP, a laboratory coordinated by Professor Tereza Cristina Melo de Brito Carvalho.",
+      "My projects turn this curiosity into games, tools and experiments. Intuição brings together 19 games with a Brazilian identity; GestureLab explores hands, gestures and poses through computer vision; Pokédex organizes a catalog for exploring species and forms. In Trilha Viva, I develop study organization, PDF processing and source-based review, distinguishing working local features from AI and account integrations that are still pending.",
+      "My experience connects computing with practical needs: dashboards and data analysis at Núclea, front-end collaboration on an international transactions platform at BTG Pactual, and an AI-assisted prospecting platform used by the TRIA Commodities team. I also participated in AMPHIBIA USP’s Projects area and developed academic work in software, numerical methods, algorithms, digital circuits and FPGA.",
+      "Outside computing, I teach jiu-jitsu and self-defense and served as the sport’s director at Poli-USP’s athletics association. I also volunteered as a mathematics and Portuguese teacher at ACEP. Teaching shapes how I build: explain clearly, encourage practice, listen to users and leave room to learn through experimentation."
     ],
     "documentation": "https://github.com/luigiscofano/luigiscofano/blob/main/docs/PROJETOS.md",
     "nameSprite": {
@@ -40,7 +40,7 @@
       "eyebrow": "Hi, I’m Luigi.",
       "title": "AI, data\nand software.",
       "subtitle": "From research to practice.",
-      "description": "I am a Computer Engineering undergraduate at the Polytechnic School of the University of São Paulo, Brazil. My research applies NLP and OCR to Old Tupi, an Indigenous language of Brazil, preserving sources and human review decisions."
+      "description": "A Computer Engineering undergraduate at the Polytechnic School of the University of São Paulo, Brazil, connecting NLP and OCR research, product development and data applied to practical problems."
     },
     "resume": {
       "url": "/documents/luigi-scofano-resume-en.pdf",
@@ -94,7 +94,7 @@
         "Minimax",
         "Web Workers"
       ],
-      "details": "A platform with 11 games: eight solo campaigns and three Versus games. DESVIO uses exact search with memoization on supported maps; CERCO combines minimax, alpha-beta pruning, and heuristics.",
+      "details": "A platform with 19 games across Intuition, Logical Reasoning and Versus. Its Brazilian visual identity includes tiles, mascots and individual game illustrations. DESVIO uses exact search with memoization on supported maps; CERCO combines minimax, alpha-beta pruning and heuristics.",
       "contribution": "Development of mechanics, levels, interface, hints, and documentation. The repository distinguishes original code, visual assets, and third-party credits.",
       "limitation": "Classical game AI, with no generative model. CERCO uses a bounded search and does not guarantee perfect play; BROTO is a two-player duel, with no bot in this version.",
       "url": "https://github.com/luigiscofano/intuicao",
@@ -222,6 +222,190 @@
       "showImagePreview": true,
       "imageWidth": 777,
       "imageHeight": 520
+    },
+    {
+      "id": "trilha-viva",
+      "name": "Trilha Viva",
+      "subtitle": "Materials, sources and review",
+      "category": "Software",
+      "type": "Web application · Study organization",
+      "featured": false,
+      "summary": "Study organization with texts, PDFs, references and review planning.",
+      "technologies": ["JavaScript", "Node.js", "PDF.js", "Tesseract.js"],
+      "details": "PDF extraction, optional local OCR, editable topics and questions, human review, tasks, history and backups. The demo stores data in the browser.",
+      "contribution": "Product, interface, material organization, reference validation, local persistence and integration documentation.",
+      "limitation": "AI, external automations, accounts and synchronization are not active in the demo. Demonstration content is not real generation; references require review.",
+      "url": "https://github.com/luigiscofano/trilha-viva",
+      "demo": "https://luigiscofano.github.io/trilha-viva/",
+      "demoLabel": "Open Trilha Viva",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "usp-metodos-numericos",
+      "name": "Métodos Numéricos",
+      "subtitle": "Mathematics through experiments",
+      "category": "Dados",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "Reproducible experiments exploring precision, convergence and numerical stability.",
+      "technologies": ["Python", "NumPy", "SciPy", "Matplotlib"],
+      "details": "Seven tracks covering Python, Newton and fractals, floating point and PLU, DFT/FFT, interpolation, ODEs and Chua, and synthetic GPS.",
+      "contribution": "Implementations, notebooks, plots and tests, with documented academic context and sources.",
+      "limitation": "Results depend on each experiment’s parameters and assumptions; the GPS example uses synthetic data.",
+      "url": "https://github.com/luigiscofano/usp-metodos-numericos",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "tetris-c",
+      "name": "Tetris em C",
+      "subtitle": "Rules and replay in the terminal",
+      "category": "Software",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "A terminal game with an engine separated from its interface and reproducible matches.",
+      "technologies": ["C11", "Make", "Python"],
+      "details": "Seven pieces, movement, rotation, scoring, levels, pause and seeded replay; rule and command-line tests.",
+      "contribution": "Portfolio implementation, separation of engine and interface, and match verification, with documented provenance.",
+      "limitation": "Requires a C11 compiler and compatible terminal; it is not a web application.",
+      "url": "https://github.com/luigiscofano/tetris-c",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "usp-pcs3225-sistemas-digitais",
+      "name": "Sistemas Digitais II",
+      "subtitle": "Control and datapath",
+      "category": "Hardware",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "Educational projects connecting numerical representation, instructions and processor architecture.",
+      "technologies": ["SystemVerilog", "Icarus Verilog", "GTKWave"],
+      "details": "Binary-to-BCD Double-Dabble converter, programmable calculator with a custom ISA, and a RISC-V subset core, testbenches and waveforms.",
+      "contribution": "Academic control and datapath projects, supported by simulations and architecture documentation.",
+      "limitation": "The core implements an educational subset, not a complete RISC-V processor; simulation does not establish physical validation.",
+      "url": "https://github.com/luigiscofano/usp-pcs3225-sistemas-digitais",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "usp-pcs3616-sistemas-programacao",
+      "name": "Sistemas de Programação",
+      "subtitle": "From instruction to execution",
+      "category": "Software",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "A postfix calculator and educational tools for understanding stacks, subroutines and memory.",
+      "technologies": ["Assembly MVN", "Python"],
+      "details": "Python assembler and executor, byte reader, stack and RPN calculator in MVN Assembly, with execution tracing.",
+      "contribution": "Academic routines, educational machine, examples and tests separating assembly from execution.",
+      "limitation": "MVN is an educational machine; the simulator does not represent a commercial processor.",
+      "url": "https://github.com/luigiscofano/usp-pcs3616-sistemas-programacao",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "usp-mac0122-algoritmos",
+      "name": "Algoritmos e estruturas de dados",
+      "subtitle": "Invariants and complexity",
+      "category": "Software",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "Algorithmic problems explored through contracts, tests and boundary cases.",
+      "technologies": ["Java", "C11", "Python"],
+      "details": "Gene search, interval union and pair counting in Java; an independent C11 extension on the Collatz sequence.",
+      "contribution": "Implementations and organization of exercises, demonstrations and validators with academic context.",
+      "limitation": "Examples check defined cases and do not prove general properties such as the Collatz conjecture.",
+      "url": "https://github.com/luigiscofano/usp-mac0122-algoritmos",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "usp-mac0321-poo",
+      "name": "Programação Orientada a Objetos",
+      "subtitle": "Objects, events and states",
+      "category": "Software",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "Exercises exploring responsibilities, composition, persistence and state transitions.",
+      "technologies": ["Java", "State", "CSV"],
+      "details": "Event agenda and fictional simulation, State/CSV studies and multisets; historical materials separated from newer implementations.",
+      "contribution": "Organization of academic exercises, object modeling, executable examples and tests.",
+      "limitation": "The simulation uses a fictional setting; historical materials may have different requirements from the current suite.",
+      "url": "https://github.com/luigiscofano/usp-mac0321-poo",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
+    },
+    {
+      "id": "MAC0321-Lista08",
+      "name": "MAC0321 · Lista 08",
+      "subtitle": "Interfaces and design patterns",
+      "category": "Software",
+      "type": "Academic project · Documented implementation",
+      "featured": false,
+      "summary": "Exercises in graphical interfaces, testing and adapting collections through composition.",
+      "technologies": ["Java", "Swing", "JUnit", "Adapter"],
+      "details": "Swing factorial interface, JUnit tests, collection wrappers, Adapter and string operations.",
+      "contribution": "Exercises coauthored with Hugo Spadete Arrivabene, preserving context and authorship.",
+      "limitation": "Some exercises require a graphical environment; this is neither a web application nor solely authored work.",
+      "url": "https://github.com/luigiscofano/MAC0321-Lista08",
+      "demo": "",
+      "demoLabel": "",
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0
     }
   ],
   "research": [
@@ -249,7 +433,7 @@
     {
       "title": "Artificial intelligence studies",
       "institution": "IBM / edX",
-      "status": "In progress · Python, machine learning, and generative AI"
+      "status": "In progress · 16-course program covering Python, machine learning and generative AI"
     },
     {
       "title": "CS50",
@@ -261,36 +445,55 @@
     {
       "company": "TRIA Commodities",
       "area": "Sales, data, and automation",
-      "text": "Sales work and prototype development for prospecting, cross-referencing information, deduplication, and organizing opportunities."
+      "text": "Sales work and development of a prospecting platform used by the team, combining AI, CRM, CCEE and HubSpot information, deduplication and opportunity organization. Internal data and materials are not published."
     },
     {
       "company": "BTG Pactual",
       "area": "Summer Job · Foreign Exchange",
-      "text": "Support for market analysis and quantitative models for the international foreign exchange team, alongside front-end interface development."
+      "text": "Participation in the Summer Job program and contribution to the international transactions web platform, working with the front-end team."
     },
     {
       "company": "Núclea",
       "area": "HR data and metrics",
       "text": "Data preparation, Power BI dashboards, and analysis using Excel and MySQL. Metrics and automation of information consolidation."
+    },
+    {
+      "company": "AMPHIBIA USP",
+      "area": "Projects team participation",
+      "text": "Brief participation in the university team’s Projects area."
+    },
+    {
+      "company": "Poli-USP Athletics Association",
+      "area": "Jiu-jitsu leadership and teaching",
+      "text": "Organization of training, events and resources, people management and communication with students. Also works as a jiu-jitsu and self-defense instructor."
+    },
+    {
+      "company": "ACEP",
+      "area": "Volunteering · Education",
+      "text": "Volunteer teaching of mathematics and Portuguese to public-school students in Rio de Janeiro."
     }
   ],
   "skills": [
     {
-      "title": "Investigate",
-      "text": "Python, machine learning, NLP, OCR, and computer vision."
+      "title": "AI and computing",
+      "text": "Python, Java, C, JavaScript/TypeScript, NLP, OCR, OpenCV, MediaPipe and algorithms."
     },
     {
-      "title": "Structure",
-      "text": "SQL, data preparation, Power BI, Power Query, and DAX."
+      "title": "Data and business",
+      "text": "SQL/MySQL, Power BI, Excel, Power Query, DAX, CRM and HubSpot."
     },
     {
-      "title": "Build",
-      "text": "Software, web interfaces, algorithms, testing, and documentation."
+      "title": "Development and automation",
+      "text": "Git/GitHub, testing, React, Node.js, n8n, Make, Zapier, Cursor, v0 and Bolt."
+    },
+    {
+      "title": "Systems and interaction",
+      "text": "Verilog/SystemVerilog, FPGA, RISC-V, MVN Assembly, Three.js and web interfaces."
     }
   ],
   "contactText": "I am interested in projects and opportunities that bring together artificial intelligence, data, and software development. Let’s talk?",
   "updated": "November 2026",
-  "sourcesDate": "2026-11-06",
+  "sourcesDate": "2026-11-16",
   "visualSignature": {
     "enabled": true,
     "image": "/images/assinatura-bem-te-vi.svg",
