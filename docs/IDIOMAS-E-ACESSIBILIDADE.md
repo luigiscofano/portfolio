@@ -23,11 +23,11 @@ Os testes automatizados calculam contraste de combinações de cores selecionada
 
 Essas medidas não constituem certificação WCAG. Faltam uma auditoria completa, avaliação abrangente com leitores de tela e testes em aparelhos físicos. Mudanças precisam de revisão manual em ambos os idiomas, incluindo zoom, teclado, menu móvel e downloads. Veja [VALIDACAO.md](VALIDACAO.md).
 
-## Currículo português: PDF e original sanitizado
+## Currículo português
 
-O botão da página baixa `public/documents/luigi-scofano-curriculo-pt.pdf`, versão portuguesa de quatro páginas preparada a partir do documento sanitizado. Seu SHA-256 é `c1d7aeb50bf204aed862aa30b60b5034eb2bab39ffa3b826f27be13bbf69c87c`. O arquivo `public/documents/luigi-scofano-curriculo-pt.docx` permanece intacto como versão nativa sanitizada, para preservação; não é o download principal. Como permanece em `public/`, ele também integra a exportação pública. Endereço residencial e telefone foram substituídos por espaços, sem atualizar datas ou reescrever informações profissionais. O registro da preparação informa comparação no mesmo renderizador, com quatro páginas preservadas fora da região removida. Isso é evidência daquela preparação, não uma nova renderização nesta revisão de documentação.
+O botão de download abre `public/documents/luigi-scofano-curriculo-pt.pdf`, o PDF de duas páginas fornecido por Luigi em novembro de 2026. O SHA-256 do arquivo é `c5caef25dbe21c9464f04cd5a5fd7a9abf800100b4d3fd98d16666f8d1a1ee36`. O PDF contém texto selecionável e não possui marcação estrutural de acessibilidade.
 
-Word e outros renderizadores podem produzir diferenças de paginação entre versões. Não se afirma identidade de layout entre aplicativos nem auditoria de acessibilidade estrutural do DOCX ou do novo PDF português. A comparação histórica do DOCX não substitui a revisão final deste PDF.
+O DOCX sanitizado da edição anterior continua disponível em `public/documents/luigi-scofano-curriculo-pt.docx` como arquivo histórico. O PDF atual foi fornecido separadamente.
 
 ## Currículo inglês: PDF
 

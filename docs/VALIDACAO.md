@@ -37,7 +37,7 @@ Os testes em `tests/` verificam contratos de conteúdo, IDs e seções, caminhos
 - Usar teclado: link para pular, foco visível, seletor, abertura/fechamento do menu móvel, Escape, Tab/Shift+Tab e retorno do foco.
 - Conferir desktop, largura de 390 px e largura de 320 px, inclusive nome, botões, downloads e textos ingleses; verificar rolagem horizontal e sobreposições. Rever zoom e movimento reduzido.
 - Testar separadamente cópia dos dois e-mails e fallback sem permissão. Abrir `mailto:` não significa enviar uma mensagem.
-- Baixar os PDFs português e inglês, verificar quatro e duas páginas respectivamente, conferir formato e abertura, a prioridade pelo idioma e o hash do PDF PT registrado na documentação de idiomas, sem inferir equivalência entre seus conteúdos.
+- Baixar os PDFs português e inglês, verificar se cada arquivo tem duas páginas, conferir formato e abertura, a prioridade pelo idioma e o hash do PDF PT registrado na documentação de idiomas, sem inferir equivalência entre seus conteúdos.
 - Examinar console, falhas de rede e links externos relevantes. Arquivos de checagem HTTP antigos não garantem disponibilidade atual.
 
 Este roteiro descreve verificações a realizar. Não é uma declaração de que foram executadas nesta revisão documental.

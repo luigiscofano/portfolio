@@ -119,11 +119,11 @@ test('Localized title has one owner and approved PDF remains downloadable', () =
   assert.ok(includesCode(page, 'download={resume.downloadName}'));
 });
 
-test('Portuguese PDF is the reviewed faithful conversion', () => {
+test('Portuguese download matches the supplied PDF', () => {
   assert.equal(pt.profile.resumePt.url, en.profile.resumePt.url);
-  const docx = fs.readFileSync(`public${pt.profile.resumePt.url}`);
+  const pdf = fs.readFileSync(`public${pt.profile.resumePt.url}`);
   assert.equal(
-    createHash('sha256').update(docx).digest('hex'),
-    'c1d7aeb50bf204aed862aa30b60b5034eb2bab39ffa3b826f27be13bbf69c87c',
+    createHash('sha256').update(pdf).digest('hex'),
+    'c5caef25dbe21c9464f04cd5a5fd7a9abf800100b4d3fd98d16666f8d1a1ee36',
   );
 });
