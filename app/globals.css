@@ -1770,3 +1770,25 @@ nav a > .icon {
     justify-self: end;
   }
 }
+
+/* A assinatura ganha presença sem alterar o desenho aprovado. */
+.footer-signature {
+  min-width: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.footer-signature img {
+  width: 118px;
+  height: auto;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .footer-signature {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    font-size: 12px;
+  }
+  .footer-signature img {
+    width: 94px;
+  }
+}
