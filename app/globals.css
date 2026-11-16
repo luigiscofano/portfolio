@@ -1426,55 +1426,83 @@ nav a > .icon {
   color: var(--muted);
 }
 
-/* Uma regra compartilhada cobre botões, links, seletores e disclosures.
-   Estados desativados não reagem; foco funciona sem mouse. */
-:where(button, a[href], summary, select) {
+/* Microinterações reforçam foco e acionamento sem deslocar o conteúdo ao redor. */
+:where(
+  .primary-link,
+  .resume-link,
+  .filters button,
+  .sidebar-links a,
+  .resource-links a,
+  .inline-link,
+  .copy-email,
+  .mobile-header button,
+  .education-item h3 button,
+  summary
+) {
   transition:
     color 160ms ease,
     background-color 160ms ease,
     border-color 160ms ease,
     box-shadow 160ms ease,
-    opacity 160ms ease,
-    filter 160ms ease,
     transform 160ms ease;
 }
-:where(button, a[href], summary, select):focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 3px;
+:where(
+  .primary-link,
+  .resume-link,
+  .filters button,
+  .sidebar-links a,
+  .resource-links a,
+  .inline-link,
+  .copy-email
+):focus-visible {
   box-shadow: 0 0 0 4px #e5edf3;
 }
-@media (hover: hover) and (pointer: fine) {
-  :where(button, a[href], summary, select):not(:disabled):not(
-      [aria-disabled='true']
-    ):hover {
-    filter: brightness(1.1);
-    box-shadow: 0 2px 0 #548eb755;
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .copy-email
+  ):hover {
+    transform: translateY(-2px);
   }
-}
-:where(button, a[href], summary, select):not(:disabled):not(
-    [aria-disabled='true']
-  ):active {
-  opacity: 0.78;
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link) .icon {
+    transition: transform 160ms ease;
+  }
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link):hover
+    .icon {
+    transform: translateX(2px);
+  }
 }
 @media (prefers-reduced-motion: no-preference) {
-  :where(button, summary):not(:disabled):not([aria-disabled='true']):active {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .copy-email,
+    .mobile-header button
+  ):active {
     transform: translateY(1px);
-  }
-  @media (hover: hover) and (pointer: fine) {
-    :where(button, a[href], summary) > .icon {
-      transition: transform 160ms ease;
-    }
-    :where(button, a[href], summary):not(:disabled):not(
-        [aria-disabled='true']
-      ):hover
-      > .icon {
-      transform: translateX(2px);
-    }
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  :where(button, a[href], summary, select),
-  :where(button, a[href], summary) > .icon {
+  :where(
+    .primary-link,
+    .resume-link,
+    .filters button,
+    .sidebar-links a,
+    .resource-links a,
+    .inline-link,
+    .copy-email,
+    .mobile-header button,
+    .education-item h3 button,
+    summary
+  ),
+  :where(.primary-link, .resume-link, .resource-links a, .inline-link) .icon {
     transition: none;
     transform: none;
   }
@@ -1762,5 +1790,16 @@ nav a > .icon {
   }
   .footer-signature img {
     width: 94px;
+  }
+}
+
+/* Apenas os botões de abertura das seções principais ampliam levemente. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .section-disclosure > summary {
+    transform-origin: center;
+    transition: transform 180ms ease;
+  }
+  .section-disclosure > summary:hover {
+    transform: scale(1.01);
   }
 }
