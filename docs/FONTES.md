@@ -50,7 +50,7 @@ Texto integral aprovado pelo titular em 9 de novembro de 2026, com menção à p
 
 Os arquivos distribuídos são `public/documents/luigi-scofano-curriculo-pt.pdf` e `public/documents/luigi-scofano-resume-en.pdf`. Correspondem a versões existentes de épocas diferentes; não são traduções sincronizadas nem uma consolidação dos fatos mais recentes da página.
 
-O PDF português de quatro páginas foi preparado a partir do DOCX sanitizado; o DOCX permanece intacto no repositório para preservação, mas não é o download principal da página. O DOCX português teve endereço residencial e telefone substituídos por espaços, preservando o restante do conteúdo original e a estrutura do documento. O PDF inglês teve o telefone removido por redação definitiva e limpeza de metadados. Os demais conteúdos profissionais foram preservados. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
+Luigi forneceu o PDF português de duas páginas em novembro de 2026. O DOCX sanitizado corresponde à edição anterior e está preservado como registro histórico. O PDF inglês teve o telefone removido por redação definitiva e limpeza de metadados. Os demais conteúdos profissionais foram preservados. A documentação de idioma descreve os limites de acessibilidade e renderização. Novos documentos precisam de revisão de privacidade antes de publicação.
 
 ## Estudos de caso e exemplo de pesquisa
 
