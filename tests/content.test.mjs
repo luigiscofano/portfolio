@@ -121,19 +121,13 @@ test('approved section order matches navigation and rendered sections', () => {
     expected,
   );
 });
-test('all projects have attributed visual previews', () => {
-  assert.deepEqual(
-    data.projects.filter((p) => p.showImagePreview).map((p) => p.id),
-    ['intuicao', 'tupi', 'kaggle', 'gesturelab', 'pokedex', 'labdig'],
-  );
-  for (const p of data.projects.filter((p) => p.showImagePreview)) {
-    assert.ok(p.imageWidth > 0);
-    assert.ok(p.imageHeight > 0);
+test('project assets are documents or official logos, never visual previews', () => {
+  assert.ok(data.projects.every((p) => p.showImagePreview === false));
+  for (const p of data.projects.filter((p) => p.image)) {
+    assert.ok(['logo', 'document'].includes(p.imageKind));
+    assert.ok(p.imageWidth > 0 && p.imageHeight > 0);
     assert.match(p.imageSource, /github\.com\/luigiscofano\//);
-    assert.ok(p.caption);
   }
-  const page = readActiveSource();
-  assert.ok(includesCode(page, 'project.image&&('));
 });
 test('personal signature remains editable and has accessible text', () => {
   assert.equal(data.visualSignature.enabled, true);

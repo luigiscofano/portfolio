@@ -5,7 +5,16 @@ import { Icon, ExternalIcon, type IconName } from './icon';
 import { externalLink as external } from '@/lib/portfolio';
 import { projectPresentation } from '@/lib/project-presentation.mjs';
 import type { Translate } from '@/hooks/use-portfolio-language';
-type Project = (typeof data.projects)[number];
+type Project = (typeof data.projects)[number] & {
+  imageKind?: string;
+  imageCrop?: {
+    width: number;
+    height: number;
+    imageWidth: number;
+    left: number;
+    top: number;
+  };
+};
 
 // Novos IDs continuam utilizáveis antes de receberem um ícone e uma cor próprios.
 export function ProjectCard({
@@ -30,6 +39,38 @@ export function ProjectCard({
         } as React.CSSProperties
       }
     >
+      {project.image && project.imageKind === 'logo' && (
+        <a className="project-logo" href={project.imageSource} {...external}>
+          <span
+            className={project.imageCrop ? 'project-logo-crop' : undefined}
+            style={
+              project.imageCrop
+                ? {
+                    width: project.imageCrop.width,
+                    height: project.imageCrop.height,
+                  }
+                : undefined
+            }
+          >
+            <img
+              src={sitePath(project.image)}
+              alt={project.imageAlt}
+              width={project.imageWidth}
+              height={project.imageHeight}
+              loading="lazy"
+              style={
+                project.imageCrop
+                  ? {
+                      width: project.imageCrop.imageWidth,
+                      left: project.imageCrop.left,
+                      top: project.imageCrop.top,
+                    }
+                  : undefined
+              }
+            />
+          </span>
+        </a>
+      )}
       <div className="resource-heading">
         <Icon name={presentation.icon as IconName} size={29} />
         <span>{project.type}</span>
@@ -95,7 +136,7 @@ export function ProjectCard({
           <p>{project.contribution}</p>
           <h4>{t('Escopo e limites')}</h4>
           <p>{project.limitation}</p>
-          {project.image && (
+          {project.image && project.imageKind !== 'logo' && (
             <figure>
               <a href={project.imageSource} {...external}>
                 <img

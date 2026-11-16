@@ -100,13 +100,14 @@
       "url": "https://github.com/luigiscofano/intuicao",
       "demo": "https://intuicao-luigi-minigames.luigiscofano.chatgpt.site",
       "demoLabel": "Play in the browser",
-      "image": "/images/intuicao-icones-frente.png",
-      "imageAlt": "Fifteen green animal icons from Intuição, arranged in a grid",
-      "caption": "Original Intuição icons.",
-      "imageSource": "https://github.com/luigiscofano/intuicao/blob/main/dist/platform-assets/fauna-green-original.png",
-      "showImagePreview": true,
-      "imageWidth": 1079,
-      "imageHeight": 1458
+      "image": "/images/projects/intuicao-logo-oficial.svg",
+      "imageAlt": "Official Intuição wordmark with blue, yellow and green tiles",
+      "caption": "Official site wordmark",
+      "imageSource": "https://github.com/luigiscofano/intuicao/blob/938a6f56a87d144bb905190ae7b9e462d4f160c6/docs/identidade/logo-site/intuicao-logo-azulejos.svg",
+      "showImagePreview": false,
+      "imageWidth": 600,
+      "imageHeight": 140,
+      "imageKind": "logo"
     },
     {
       "id": "tupi",
@@ -127,9 +128,10 @@
       "imageAlt": "Old Tupi research repository cover",
       "caption": "Project cover; not an OCR result.",
       "imageSource": "https://github.com/luigiscofano/ic-pln-tupi-antigo/blob/6601214310ff5125d9f81fb7a1c988548bef7ab0/assets/capa.svg",
-      "showImagePreview": true,
+      "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 250
+      "imageHeight": 250,
+      "imageKind": "document"
     },
     {
       "id": "kaggle",
@@ -150,9 +152,10 @@
       "imageAlt": "Educational figure comparing orthogonal and oblique splits across points from two classes",
       "caption": "Educational illustration from the repository · Not an experimental result",
       "imageSource": "https://github.com/luigiscofano/Kaggle-oRF/blob/main/docs/imagens/fronteiras.png",
-      "showImagePreview": true,
+      "showImagePreview": false,
       "imageWidth": 1400,
-      "imageHeight": 818
+      "imageHeight": 818,
+      "imageKind": "document"
     },
     {
       "id": "gesturelab",
@@ -169,13 +172,15 @@
       "url": "https://github.com/luigiscofano/gesturelab",
       "demo": "",
       "demoLabel": "",
-      "image": "/images/gesturelab.webp",
-      "imageAlt": "Synthetic PoseMatch preview showing a pose and the catalog reference",
-      "caption": "PoseMatch · Demonstration with synthetic input",
-      "imageSource": "https://github.com/luigiscofano/gesturelab/blob/main/docs/assets/posematch_preview.png",
-      "showImagePreview": true,
-      "imageWidth": 1128,
-      "imageHeight": 612
+      "image": "",
+      "imageAlt": "",
+      "caption": "",
+      "imageSource": "",
+      "showImagePreview": false,
+      "imageWidth": 0,
+      "imageHeight": 0,
+      "imageKind": "none",
+      "imageOmissionReason": "No verified standalone project logo or suitable documentary image; interface previews intentionally omitted."
     },
     {
       "id": "pokedex",
@@ -196,9 +201,10 @@
       "imageAlt": "Original icon from the Pokédex fan project; not an application screenshot",
       "caption": "Original project icon · fan project, not official",
       "imageSource": "https://github.com/luigiscofano/Pokedex/blob/2ca209d175d47ce38c825f9485e29fe8c044aca2/web/icon.svg",
-      "showImagePreview": true,
+      "showImagePreview": false,
       "imageWidth": 64,
-      "imageHeight": 64
+      "imageHeight": 64,
+      "imageKind": "logo"
     },
     {
       "id": "labdig",
@@ -219,9 +225,10 @@
       "imageAlt": "Control and datapath diagram reproduced from the LabDig documentation; not physical hardware validation",
       "caption": "Documentation diagram · not a hardware photograph or validation",
       "imageSource": "https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md",
-      "showImagePreview": true,
+      "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 600
+      "imageHeight": 600,
+      "imageKind": "document"
     },
     {
       "id": "trilha-viva",
@@ -239,12 +246,20 @@
       "demo": "https://luigiscofano.github.io/trilha-viva/",
       "demoLabel": "Open Trilha Viva",
       "image": "/images/projects/trilha-viva-identidade.png",
-      "imageAlt": "Original Trilha Viva brand board; option B, Pages, was adopted. This is not an application screenshot.",
-      "caption": "",
-      "imageSource": "https://github.com/luigiscofano/trilha-viva/blob/88553d52e4b3efad917c576b4774738255623306/assets/brand-approved-board.png",
+      "imageAlt": "Official Trilha Viva Pages symbol B, shown with the same crop as the application",
+      "caption": "Official symbol B · original artwork, not a screen preview",
+      "imageSource": "https://github.com/luigiscofano/trilha-viva/blob/88553d52e4b3efad917c576b4774738255623306/src/brand.mjs",
       "showImagePreview": false,
       "imageWidth": 1536,
-      "imageHeight": 1024
+      "imageHeight": 1024,
+      "imageKind": "logo",
+      "imageCrop": {
+        "width": 60,
+        "height": 41,
+        "imageWidth": 242,
+        "left": -91,
+        "top": -35
+      }
     },
     {
       "id": "usp-metodos-numericos",
@@ -267,7 +282,8 @@
       "imageSource": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/02_convergencia.svg",
       "showImagePreview": false,
       "imageWidth": 496,
-      "imageHeight": 279
+      "imageHeight": 279,
+      "imageKind": "document"
     },
     {
       "id": "tetris-c",
@@ -284,13 +300,15 @@
       "url": "https://github.com/luigiscofano/tetris-c",
       "demo": "",
       "demoLabel": "",
-      "image": "/images/projects/tetris-replay.svg",
-      "imageAlt": "Documented visualization of a real Tetris in C replay; the original interface runs in a terminal",
+      "image": "",
+      "imageAlt": "",
       "caption": "",
-      "imageSource": "https://github.com/luigiscofano/tetris-c/blob/5c8995868ad3e1b1162c0fcd4b4e599adae8da45/assets/preview.svg",
+      "imageSource": "",
       "showImagePreview": false,
-      "imageWidth": 1100,
-      "imageHeight": 720
+      "imageWidth": 0,
+      "imageHeight": 0,
+      "imageKind": "none",
+      "imageOmissionReason": "No verified standalone project logo or suitable documentary image; interface previews intentionally omitted."
     },
     {
       "id": "usp-pcs3225-sistemas-digitais",
@@ -313,7 +331,8 @@
       "imageSource": "https://github.com/luigiscofano/usp-pcs3225-sistemas-digitais/blob/b6d14a4c94d892b010676aa4b76b008afaa20e22/assets/double_dabble_42.svg",
       "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 440
+      "imageHeight": 440,
+      "imageKind": "document"
     },
     {
       "id": "usp-pcs3616-sistemas-programacao",
@@ -336,7 +355,8 @@
       "imageSource": "https://github.com/luigiscofano/usp-pcs3616-sistemas-programacao/blob/fcac02fd059b80f5af2659e107ad9a3aa66cf5ea/assets/capa.svg",
       "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 250
+      "imageHeight": 250,
+      "imageKind": "document"
     },
     {
       "id": "usp-mac0122-algoritmos",
@@ -359,7 +379,8 @@
       "imageSource": "https://github.com/luigiscofano/usp-mac0122-algoritmos/blob/151b801809a8385b95d5221eb0068ec80aa84087/assets/uniao_intervalos.svg",
       "showImagePreview": false,
       "imageWidth": 800,
-      "imageHeight": 150
+      "imageHeight": 150,
+      "imageKind": "document"
     },
     {
       "id": "usp-mac0321-poo",
@@ -382,7 +403,8 @@
       "imageSource": "https://github.com/luigiscofano/usp-mac0321-poo/blob/558f044476d78659c2792bae1ba088d973a30c46/assets/capa.svg",
       "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 250
+      "imageHeight": 250,
+      "imageKind": "document"
     },
     {
       "id": "MAC0321-Lista08",
@@ -405,7 +427,8 @@
       "imageSource": "https://github.com/luigiscofano/MAC0321-Lista08/tree/master/src/br/usp/ime/mac321/lista08",
       "showImagePreview": false,
       "imageWidth": 1200,
-      "imageHeight": 720
+      "imageHeight": 720,
+      "imageKind": "document"
     }
   ],
   "research": [
