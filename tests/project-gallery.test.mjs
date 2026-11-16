@@ -80,3 +80,17 @@ test('LabDig preserves the three slides and adds four distinct source-derived vi
     /\.projects-intro\s*\{\s*font-weight: 700/,
   );
 });
+
+test('Pokédex includes the three supplied current screenshots', () => {
+  for (const name of [
+    'pokedex-grade-johto.png',
+    'pokedex-seletor-geracoes.png',
+    'pokedex-crabominable-textos.png',
+  ]) {
+    assert.ok(
+      gallery.some(
+        (item) => item.projectId === 'pokedex' && item.image.endsWith(name),
+      ),
+    );
+  }
+});

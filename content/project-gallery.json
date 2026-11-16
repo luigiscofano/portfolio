@@ -256,5 +256,41 @@
       "en": "Documentary sonar state machine: settling, measurement, transmission and eight positions; not hardware validation.",
       "es": "Máquina de estados documental del sonar: estabilización, medición, transmisión y ocho posiciones; no es validación física."
     }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-grade-johto.png",
+    "width": 1051,
+    "height": 571,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-grade-johto.png",
+    "caption": {
+      "pt": "Catálogo de Johto: Pokémon organizados em cartões, com tipos e favoritos. Captura enviada em 16/11/2026.",
+      "en": "Johto catalogue: Pokémon cards with types and favourites. Screenshot supplied on 16 November 2026.",
+      "es": "Catálogo de Johto: Pokémon en tarjetas, con tipos y favoritos. Captura enviada el 16/11/2026."
+    }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-seletor-geracoes.png",
+    "width": 201,
+    "height": 607,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-seletor-geracoes.png",
+    "caption": {
+      "pt": "Seletor de gerações na barra lateral em formato de Pokédex, com Johto selecionado. Captura de 16/11/2026.",
+      "en": "Pokédex-shaped generation sidebar with Johto selected. Screenshot supplied on 16 November 2026.",
+      "es": "Selector lateral de generaciones con forma de Pokédex y Johto seleccionado. Captura del 16/11/2026."
+    }
+  },
+  {
+    "projectId": "pokedex",
+    "image": "/images/projects/captures/pokedex-crabominable-textos.png",
+    "width": 1345,
+    "height": 632,
+    "source": "https://github.com/luigiscofano/Pokedex/blob/main/docs/imagens/pokedex-crabominable-textos.png",
+    "caption": {
+      "pt": "Ficha de Crabominable na aba Textos dos jogos, com inglês e Ultra Moon selecionados. Captura de 16/11/2026.",
+      "en": "Crabominable entry on the game-text tab, with English and Ultra Moon selected. Screenshot from 16 November 2026.",
+      "es": "Ficha de Crabominable en Textos de los juegos, con inglés y Ultra Moon seleccionados. Captura del 16/11/2026."
+    }
   }
 ]
