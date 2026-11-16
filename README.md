@@ -39,7 +39,7 @@ Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícit
 
 A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
-O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. A ordem dos currículos prioriza o PDF do idioma selecionado. A introdução inglesa explica Poli-USP e Tupi Antigo para leitores internacionais. As páginas `/atualizar/` e `/creditos/` permanecem em português. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
+O seletor de idioma aceita `?lang=en` e `?lang=pt` e salva uma preferência local quando disponível. A ordem dos currículos prioriza o PDF do idioma selecionado. A introdução inglesa explica Poli-USP e Tupi Antigo para leitores internacionais. A página `/creditos/` permanece em português. O [guia de manutenção](docs/COMO-ATUALIZAR.md) fica apenas no repositório. Consulte [idiomas e acessibilidade](docs/IDIOMAS-E-ACESSIBILIDADE.md) para detalhes e cuidados com os currículos.
 
 O destaque de Intuição separa “Experimentar” e “Ver código”. O link “Mais sobre mim” abre os detalhes da biografia. O exemplo de pesquisa em `components/portfolio/research-example.tsx` usa “casa” → “c8sa” → “casa” para explicar extração e revisão: é uma simulação em português, não um verbete Tupi nem um resultado real de OCR. Preserve esse aviso e os links às fontes primárias ao editar.
 
@@ -51,7 +51,7 @@ O destaque de Intuição separa “Experimentar” e “Ver código”. O link �
 4. O workflow instala dependências, executa `npm run validate` e publica somente `out/`.
 5. Confira a execução e teste a URL pública, inclusive recarga direta das páginas auxiliares e os dois downloads.
 
-Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare ou banco de dados em produção. As rotas são `/portfolio/`, `/portfolio/atualizar/` e `/portfolio/creditos/`. Não salve tokens ou outros segredos no repositório.
+Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare ou banco de dados em produção. As rotas são `/portfolio/` e `/portfolio/creditos/`. Não salve tokens ou outros segredos no repositório.
 
 ## Documentação
 

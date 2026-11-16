@@ -11,8 +11,34 @@ import { usePortfolioLanguage } from '@/hooks/use-portfolio-language';
 import { useSectionNavigation } from '@/hooks/use-section-navigation';
 import { useEmailCopy } from '@/hooks/use-email-copy';
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h2 className="section-title">{children}</h2>;
+const sectionIcons: Record<string, IconName> = {
+  sobre: 'book-open',
+  projetos: 'code',
+  pesquisa: 'flask',
+  formacao: 'graduation-cap',
+  trajetoria: 'diagram-project',
+  contato: 'envelope',
+};
+const filterIcons: Record<string, IconName> = {
+  Todos: 'diagram-project',
+  IA: 'flask',
+  Dados: 'database',
+  Software: 'code',
+  Hardware: 'microchip',
+};
+function SectionTitle({
+  children,
+  icon,
+}: {
+  children: React.ReactNode;
+  icon: IconName;
+}) {
+  return (
+    <h2 className="section-title control-label">
+      <Icon name={icon} size={20} />
+      {children}
+    </h2>
+  );
 }
 export default function Home() {
   const { language, data, t, changeLanguage } = usePortfolioLanguage();
@@ -147,6 +173,7 @@ export default function Home() {
                   followSection(item.id);
                 }}
               >
+                <Icon name={sectionIcons[item.id] || 'file-lines'} size={17} />
                 {item.label}
               </a>
             ))}
@@ -190,8 +217,6 @@ export default function Home() {
               <br />
               {data.profile.location}
               <br />
-              <a href={sitePath('/atualizar/')}>{t('Como atualizar')}</a>
-              <span aria-hidden="true"> · </span>
               <a href={sitePath('/creditos/')}>{t('Créditos')}</a>
             </p>
           </div>
@@ -256,7 +281,12 @@ export default function Home() {
               </figure>
             </div>
             <details id="mais-sobre-mim" className="about-details">
-              <summary>{t('Mais sobre mim')}</summary>
+              <summary>
+                <span className="control-label">
+                  <Icon name="book-open" size={16} />
+                  {t('Mais sobre mim')}
+                </span>
+              </summary>
               <div className="resume-links">
                 {(language === 'en'
                   ? [data.profile.resume, data.profile.resumePt]
@@ -287,7 +317,9 @@ export default function Home() {
           >
             <details className="section-disclosure">
               <summary>
-                <SectionTitle>{t('Projetos e recursos')}</SectionTitle>
+                <SectionTitle icon="code">
+                  {t('Projetos e recursos')}
+                </SectionTitle>
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
@@ -357,10 +389,12 @@ export default function Home() {
                       (item) => (
                         <button
                           key={item}
+                          data-category={item}
                           aria-pressed={filter === item}
                           className={filter === item ? 'selected' : ''}
                           onClick={() => setFilter(item)}
                         >
+                          <Icon name={filterIcons[item]} size={14} />
                           {t(item)}
                         </button>
                       ),
@@ -407,7 +441,7 @@ export default function Home() {
           >
             <details className="section-disclosure">
               <summary>
-                <SectionTitle>{t('Pesquisa')}</SectionTitle>
+                <SectionTitle icon="flask">{t('Pesquisa')}</SectionTitle>
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
@@ -448,6 +482,7 @@ export default function Home() {
                 </div>
                 <details className="about-details">
                   <summary>
+                    <Icon name="flask" size={16} />{' '}
                     {language === 'en'
                       ? 'Explore a research example'
                       : 'Explorar um exemplo da pesquisa'}
@@ -469,7 +504,9 @@ export default function Home() {
           >
             <details className="section-disclosure">
               <summary>
-                <SectionTitle>{t('Formação')}</SectionTitle>
+                <SectionTitle icon="graduation-cap">
+                  {t('Formação')}
+                </SectionTitle>
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
@@ -490,7 +527,10 @@ export default function Home() {
                           aria-controls={`education-panel-${index}`}
                           id={`education-heading-${index}`}
                         >
-                          {item.title}
+                          <span className="control-label">
+                            <Icon name="graduation-cap" size={16} />
+                            {item.title}
+                          </span>
                           <Icon
                             name={educationOpen === index ? 'minus' : 'plus'}
                             size={14}
@@ -529,7 +569,9 @@ export default function Home() {
           >
             <details className="section-disclosure">
               <summary>
-                <SectionTitle>{t('Trajetória')}</SectionTitle>
+                <SectionTitle icon="diagram-project">
+                  {t('Trajetória')}
+                </SectionTitle>
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
@@ -579,7 +621,7 @@ export default function Home() {
           >
             <details className="section-disclosure">
               <summary>
-                <SectionTitle>{t('Contato')}</SectionTitle>
+                <SectionTitle icon="envelope">{t('Contato')}</SectionTitle>
                 <Icon name="plus" size={18} />
               </summary>
               <div className="section-disclosure-content">
@@ -618,7 +660,17 @@ export default function Home() {
                           size={16}
                         />
                       </button>
-                      <span className="copy-feedback" aria-live="polite">
+                      <span
+                        className="copy-feedback"
+                        data-state={
+                          copied === email
+                            ? 'success'
+                            : copyError === email
+                              ? 'error'
+                              : undefined
+                        }
+                        aria-live="polite"
+                      >
                         {copied === email
                           ? t('E-mail copiado.')
                           : copyError === email
@@ -669,9 +721,6 @@ export default function Home() {
                 {data.updated}
               </span>
             </span>
-            <a href={sitePath('/atualizar/')}>
-              {t('Como atualizar este portfólio')}
-            </a>
             <a href="#sobre" aria-label={t('Voltar ao início')}>
               <Icon name="arrow-up" size={16} />
             </a>

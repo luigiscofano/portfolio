@@ -11,11 +11,7 @@ test('static export is configured for a GitHub project site', () => {
   assert.ok(fs.existsSync(new URL('../public/.nojekyll', import.meta.url)));
 });
 test('raw anchors and assets use the project prefix', () => {
-  for (const file of [
-    'app/page.tsx',
-    'app/atualizar/page.tsx',
-    'app/creditos/page.tsx',
-  ]) {
+  for (const file of ['app/page.tsx', 'app/creditos/page.tsx']) {
     const source = read(file);
     assert.doesNotMatch(source, /(?:href|src)="\/(?!\/)/);
     assert.match(source, /sitePath/);

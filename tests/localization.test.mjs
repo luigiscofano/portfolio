@@ -85,6 +85,35 @@ test('Main CSS palettes meet their text and graphic contrast thresholds', () => 
   };
   for (const [fgSelector, fgProperty, bgSelector, bgProperty, minimum] of [
     ['body', 'color', 'body', 'background', 4.5],
+    [
+      ".filters button[data-category='IA']",
+      '--action-tone',
+      ".filters button[data-category='IA']",
+      '--action-wash',
+      4.5,
+    ],
+    [
+      ".filters button[data-category='Dados']",
+      '--action-tone',
+      ".filters button[data-category='Dados']",
+      '--action-wash',
+      4.5,
+    ],
+    [
+      ".filters button[data-category='Hardware']",
+      '--action-tone',
+      ".filters button[data-category='Hardware']",
+      '--action-wash',
+      4.5,
+    ],
+    [
+      ".copy-feedback[data-state='success']",
+      'color',
+      'body',
+      'background',
+      4.5,
+    ],
+    [".copy-feedback[data-state='error']", 'color', 'body', 'background', 4.5],
     ['a', 'color', 'body', 'background', 4.5],
     ['a', 'color', '.sidebar', 'background', 4.5],
     ['.tags li', 'color', '.tags li', 'background', 4.5],

@@ -50,3 +50,27 @@ test('progressive sections preserve every destination and open direct links', ()
   assert.ok(nav.includes('disclosure.open = true'));
   assert.ok(nav.includes('openHashSection'));
 });
+
+test('control icons retain textual labels and decorative SVG semantics', () => {
+  const page = fs.readFileSync('app/page.tsx', 'utf8');
+  assert.ok(page.includes('sectionIcons[item.id]'));
+  assert.ok(page.includes('filterIcons[item]'));
+  for (const file of ['app/creditos/page.tsx']) {
+    const source = fs.readFileSync(file, 'utf8');
+    assert.ok(source.includes('return-arrow'));
+    assert.ok(source.includes('Voltar ao portfólio'));
+  }
+  const icon = fs.readFileSync('components/portfolio/icon.tsx', 'utf8');
+  assert.ok(icon.includes('aria-hidden="true"'));
+  assert.ok(icon.includes('focusable="false"'));
+});
+
+test('maintenance guide is repository-only, not a visitor route', () => {
+  assert.ok(fs.existsSync('docs/COMO-ATUALIZAR.md'));
+  assert.equal(fs.existsSync('app/atualizar/page.tsx'), false);
+  assert.ok(
+    !fs
+      .readFileSync('app/page.tsx', 'utf8')
+      .includes("sitePath('/atualizar/')"),
+  );
+});

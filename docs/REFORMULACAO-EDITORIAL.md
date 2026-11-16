@@ -18,3 +18,11 @@ O GitHub Pages exporta a aplicação Next.js em /portfolio/. O endereço Sites �
 ## Exploração progressiva
 
 A entrada mantém uma única ação principal. Currículos permanecem em Mais sobre mim; os destaques e o catálogo completo estão na seção Projetos. Pesquisa, Formação, Trajetória e Contato abrem sob demanda, sem excluir conteúdo. Links da barra lateral e URLs com fragmentos abrem a seção correspondente. Os controles nativos details/summary funcionam por teclado e não dependem de animação.
+
+## Ícones dos controles
+
+A navegação, os filtros, as seções expansíveis, os detalhes dos projetos e os retornos das páginas auxiliares usam SVGs locais já licenciados. Os textos permanecem como nomes acessíveis; ícones são decorativos e não dependem de fontes externas. Tamanhos de 14–20 px preservam a hierarquia compacta.
+
+## Acentos secundários
+
+O azul continua principal em navegação, CTA e foco. Violeta identifica IA; verde-petróleo, dados e downloads; ocre, hardware. Fundos suaves reforçam seleção junto com sublinhado, texto e aria-pressed. Feedback de cópia usa verde para sucesso e ocre para falha, mantendo mensagens legíveis. Contrastes são verificados nos testes.

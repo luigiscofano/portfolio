@@ -210,14 +210,6 @@ nav a {
   min-height: 48px;
   border-left: 3px solid transparent;
 }
-nav a:before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--nav-color);
-  flex-shrink: 0;
-}
 nav a.active {
   background: #e2e8ed;
   border-left-color: var(--blue);
@@ -1291,4 +1283,69 @@ main:focus {
   .section-disclosure > summary > svg {
     transition: none;
   }
+}
+
+/* Ícones identificam ações sem substituir seus rótulos acessíveis. */
+.control-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.control-label > .icon,
+nav a > .icon {
+  flex-shrink: 0;
+  color: var(--blue);
+}
+.filters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.return-arrow {
+  transform: rotate(-90deg);
+}
+.project-details summary .control-label {
+  flex: 1;
+}
+
+/* Cor reforça categoria e estado; texto, ícone e sublinhado continuam presentes. */
+.filters button[data-category='IA'] {
+  --action-tone: #72518c;
+  --action-wash: #f3eef7;
+}
+.filters button[data-category='Dados'] {
+  --action-tone: #28665e;
+  --action-wash: #eaf3ef;
+}
+.filters button[data-category='Hardware'] {
+  --action-tone: #805923;
+  --action-wash: #f8f1e7;
+}
+.filters button > .icon {
+  color: var(--action-tone, var(--blue));
+}
+.filters button.selected {
+  color: var(--action-tone, var(--blue));
+  border-color: var(--action-tone, var(--blue));
+  background: var(--action-wash, #eef3f7);
+}
+.filters button:hover {
+  background: var(--action-wash, #eef3f7);
+}
+.resume-link {
+  color: #28665e;
+}
+.copy-feedback[data-state='success'] {
+  color: #28665e;
+  background: #ffffff;
+}
+.copy-feedback[data-state='error'] {
+  color: #805923;
+  background: #ffffff;
 }
