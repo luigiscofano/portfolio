@@ -90,12 +90,16 @@ test('section visual maps are local, bilingual and have no executable content', 
     }
 });
 
-test('every public project has a sourced local image with honest alt text', () => {
+test('project images are sourced or their omission is explicit', () => {
   for (const lang of ['portfolio.json', 'portfolio.en.json']) {
     const data = JSON.parse(fs.readFileSync('content/' + lang, 'utf8'));
     assert.equal(data.projects.length, 14);
     for (const p of data.projects) {
-      assert.ok(p.image && p.imageAlt && p.imageSource, p.id);
+      if (!p.image) {
+        assert.ok(p.imageOmissionReason, p.id);
+        continue;
+      }
+      assert.ok(p.imageAlt && p.imageSource, p.id);
       assert.ok(p.imageWidth > 0 && p.imageHeight > 0, p.id);
       assert.ok(fs.existsSync('public' + p.image), p.id);
     }

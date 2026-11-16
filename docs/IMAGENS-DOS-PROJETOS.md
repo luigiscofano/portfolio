@@ -112,3 +112,15 @@ As capturas anteriores de Pokédex e LabDig continham cursor visível. Os arquiv
 - **Fonte:** [docs/DIAGRAMAS.md](https://github.com/luigiscofano/usp-labdig/blob/7696cea8cea57c3c58c45a4a1a4e88167ccb01ba/docs/DIAGRAMAS.md).
 - O acervo não contém imagens raster ou SVG neste commit. A apresentação vetorial conserva os quatro nós, as conexões e os dois rótulos do diagrama público: entradas, unidade de controle, fluxo de dados e saídas/registradores; habilitação de operações e retorno dos sinais de condição. Não acrescenta resultados experimentais.
 - Não contém cursor, scripts nem recursos externos.
+
+## Direção atual: logos e documentação, nunca prévias
+
+A apresentação atual não exibe capturas, mockups de interface nem pranchas de alternativas. As seções anteriores registram a proveniência histórica dos arquivos, não autorização para exibir todos eles. Os arquivos antigos permanecem no acervo sem necessariamente aparecer no site.
+
+- **Intuição:** logo oficial de azulejos, em SVG, copiada de [docs/identidade/logo-site](https://github.com/luigiscofano/intuicao/blob/938a6f56a87d144bb905190ae7b9e462d4f160c6/docs/identidade/logo-site/intuicao-logo-azulejos.svg). Arquivo local: public/images/projects/intuicao-logo-oficial.svg, 600 × 140.
+- **Pokédex:** ícone próprio original verificado, apresentado como logo do projeto de fã.
+- **Trilha Viva:** somente símbolo B/Páginas. Não há arquivo separado no repositório original: o próprio site usa a arte original com recorte CSS, sem modificar pixels. O campo imageCrop replica a regra de src/style.css: janela 60 × 41; imagem com largura 242; deslocamento esquerdo −91 e superior −35. A prancha completa NÃO deve ser exibida. Fonte: [brand.mjs](https://github.com/luigiscofano/trilha-viva/blob/88553d52e4b3efad917c576b4774738255623306/src/brand.mjs) e [style.css](https://github.com/luigiscofano/trilha-viva/blob/88553d52e4b3efad917c576b4774738255623306/src/style.css).
+- **GestureLab e Tetris:** imagens removidas da apresentação; eram prévia sintética de interface e visualização de replay. Nenhuma logo foi inventada como substituição.
+- **Demais projetos:** capas documentais, gráficos ou diagramas classificados como document, não logos. Kaggle é figura geométrica ilustrativa, não resultado de treinamento; Lista08 e LabDig são diagramas didáticos fiéis às fontes, não capturas. Não devem receber rótulos que sugiram aplicação em execução.
+
+imageKind diferencia logo, document e none. imageOmissionReason registra por que um projeto não possui imagem. A interface deve respeitar imageCrop para nunca revelar a prancha de opções do Trilha Viva.

@@ -35,7 +35,7 @@ npm start
 
 Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual reúne 14 projetos públicos, com busca sem distinção de acentos e filtros por área. Imagens, autoria e limites são acessíveis em detalhes expansíveis. Veja a [reformulação editorial e suas fontes](docs/REFORMULACAO-EDITORIAL.md).
 
-`showImagePreview` controla a captura no card. Mantenha `image`, `imageAlt`, `caption`, `imageSource`, `imageWidth` e `imageHeight` coerentes. Intuição usa uma página do ícones originais; Tupi, a capa documental original; Kaggle, uma ilustração didática; GestureLab, uma prévia sintética; Pokédex, uma captura real. LabDig mostra uma captura real do README, como documentação do acervo, não como validação de hardware. Não apresente ilustrações ou dados sintéticos como resultados experimentais.
+`showImagePreview` permanece desativado: não mostramos prévias de interfaces. Logos próprias verificadas (Intuição, Pokédex e Trilha Viva) aparecem primeiro nos cartões; gráficos, capas e diagramas documentais permanecem nos detalhes. `imageKind` distingue `logo`, `document` e `none`. Quando não há arte adequada, `imageOmissionReason` registra o motivo, sem inventar uma marca. A logo B/Páginas do Trilha Viva usa o mesmo recorte CSS do projeto de origem.
 
 A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos dois idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
@@ -67,7 +67,7 @@ O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospeda
 
 ## Imagens e mapas visuais
 
-As imagens dos projetos ficam nos seus detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerá-los depois de editar os dados PT/EN, execute `node scripts/generate-section-visuals.mjs`.
+As logos verificadas abrem os cartões; outras imagens documentais ficam nos detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerá-los depois de editar os dados PT/EN, execute `node scripts/generate-section-visuals.mjs`.
 
 ## Assinatura visual pessoal
 

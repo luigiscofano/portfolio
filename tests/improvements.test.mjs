@@ -40,10 +40,10 @@ test('OCR example never claims measured or historical results', () => {
   assert.ok(s.includes('PROCEDENCIA.md'));
 });
 
-test('Intuicao preview uses original icons rather than a catalog page', () => {
+test('Intuicao uses the official tile logo, not a visual preview', () => {
   const project = pt.projects.find((project) => project.id === 'intuicao');
-  assert.equal(project.image, '/images/intuicao-icones-frente.png');
-  assert.equal(project.imageWidth, 1079);
-  assert.equal(project.imageHeight, 1458);
-  assert.ok(project.imageSource.endsWith('/fauna-green-original.png'));
+  assert.equal(project.image, '/images/projects/intuicao-logo-oficial.svg');
+  assert.equal(project.imageWidth, 600);
+  assert.equal(project.imageHeight, 140);
+  assert.ok(project.imageSource.endsWith('/intuicao-logo-azulejos.svg'));
 });
