@@ -1545,8 +1545,28 @@ nav a > .icon {
   height: auto;
   margin-block: 14px;
 }
-.mascot-art-disclosure summary {
+/* Seta explícita distingue os três títulos da biblioteca de texto estático. */
+.mascot-art-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
   cursor: pointer;
+}
+.mascot-disclosure-arrow {
+  flex-shrink: 0;
+  color: var(--blue);
+  font: 400 24px/1 var(--sans);
+  width: 20px;
+  text-align: center;
+}
+.mascot-art-disclosure[open] > summary .mascot-disclosure-arrow {
+  transform: rotate(90deg);
+}
+.mascot-art-disclosure > summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
 
 /* Densidade de desktop: controles compactos sem reduzir os alvos de toque. */

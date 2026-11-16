@@ -96,7 +96,12 @@ export function ProjectArt({
           ))}
         </div>
         <details className="mascot-art-disclosure">
-          <summary>{text.sprites}</summary>
+          <summary>
+            <span>{text.sprites}</span>
+            <span className="mascot-disclosure-arrow" aria-hidden="true">
+              ›
+            </span>
+          </summary>
           <a
             href="https://github.com/luigiscofano/intuicao/blob/0a6334f4dc18e364c9e71adb2c5a2160345550bd/dist/sintonia/assets/chibi-user-roster.svg"
             {...externalLink}
@@ -113,7 +118,12 @@ export function ProjectArt({
           </a>
         </details>
         <details className="mascot-art-disclosure">
-          <summary>{text.sides}</summary>
+          <summary>
+            <span>{text.sides}</span>
+            <span className="mascot-disclosure-arrow" aria-hidden="true">
+              ›
+            </span>
+          </summary>
           <a
             href={`${root}docs/identidade/manual/assets/Intuicao_Icones_Fauna_Lado_Verde_sobre_Branco.png`}
             {...externalLink}
@@ -130,7 +140,12 @@ export function ProjectArt({
           </a>
         </details>
         <details className="mascot-art-disclosure">
-          <summary>{text.fauna}</summary>
+          <summary>
+            <span>{text.fauna}</span>
+            <span className="mascot-disclosure-arrow" aria-hidden="true">
+              ›
+            </span>
+          </summary>
           <a
             href={`${root}docs/identidade/manual/assets/Intuicao_Icones_Fauna_Frente_Verde_sobre_Branco.png`}
             {...externalLink}
