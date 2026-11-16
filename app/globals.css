@@ -1391,3 +1391,25 @@ nav a > .icon {
   max-width: none;
   height: auto;
 }
+
+.project-institution {
+  margin-bottom: 16px;
+}
+.institution-marks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.institution-marks img {
+  display: block;
+  width: auto;
+  max-width: 145px;
+  height: 46px;
+  object-fit: contain;
+}
+.project-institution > a {
+  font-size: 10px;
+  color: var(--muted);
+}

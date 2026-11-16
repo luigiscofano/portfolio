@@ -1,0 +1,34 @@
+{
+  "ime": [
+    {
+      "label": "Instituto de Matemática e Estatística da USP",
+      "height": 392,
+      "width": 2048,
+      "source": "https://www.ime.usp.br/media/IME-2026-assinatura-horizontal-completa-2048x392.png",
+      "image": "/images/institutions/ime-usp-oficial.png"
+    },
+    {
+      "label": "Universidade de São Paulo",
+      "height": 415,
+      "width": 1024,
+      "source": "https://www.ime.usp.br/media/Logo-USP-1-1024x415.png",
+      "image": "/images/institutions/usp-oficial.png"
+    }
+  ],
+  "poli": [
+    {
+      "label": "Escola Politécnica da USP",
+      "height": 781,
+      "width": 870,
+      "source": "https://www.poli.usp.br/wp-content/uploads/2020/08/Logo_Escola-Polite%CC%81cnica-Minerva-sem-fundo.png",
+      "image": "/images/institutions/poli-usp-oficial.png"
+    },
+    {
+      "label": "Universidade de São Paulo",
+      "height": 415,
+      "width": 1024,
+      "source": "https://www.ime.usp.br/media/Logo-USP-1-1024x415.png",
+      "image": "/images/institutions/usp-oficial.png"
+    }
+  ]
+}
