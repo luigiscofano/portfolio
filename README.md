@@ -88,3 +88,7 @@ Projetos acadêmicos sem marca própria apresentam as marcas oficiais da unidade
 Formação e trajetória descrevem contribuições verificadas no perfil público, sem métricas inventadas nem divulgação de materiais internos. Detalhes acadêmicos permanecem nos painéis expansíveis. Os controles possuem respostas discretas a hover, foco e pressionamento, sem animações contínuas. A preferência por movimento reduzido elimina transformações e transições; foco e rótulos continuam disponíveis no teclado e no toque.
 
 A [biblioteca visual do Intuição](docs/ARTE-DOS-PROJETOS.md) apresenta a capa real do manual, AIIJs e mascotes originais, dentro de uma seção expansível. Logos próprias continuam prioritárias. Não são capturas de interface. Controles desktop usam espaçamento mais compacto somente com ponteiro fino; alvos de toque permanecem preservados.
+
+### Galerias reais e acesso ao currículo
+
+Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob demanda. Intuição tem cinco imagens e Pokédex tem três; registros históricos da Pokédex são identificados, sem confundi-los com a interface atual. As lacunas de outros projetos são documentadas, sem usar prévias como se fossem execução real. Consulte [cobertura, fontes e pendências das galerias](docs/galerias-reais.md). Os PDFs do currículo permanecem acessíveis fora de “Mais sobre mim”.
