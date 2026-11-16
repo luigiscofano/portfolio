@@ -1736,3 +1736,37 @@ nav a > .icon {
     min-height: 44px;
   }
 }
+
+/* A primeira dobra fica mais leve sem cortar a foto nem ocultar conteúdo. */
+.about-section .hero {
+  padding-block: 16px;
+  gap: 24px;
+}
+.about-section .hero-description {
+  margin-top: 16px;
+  line-height: 1.7;
+}
+.about-section .hero-actions {
+  margin-top: 14px;
+}
+.about-section .about-details {
+  margin-top: 18px;
+}
+@media (min-width: 951px) {
+  .about-section {
+    padding-top: 32px;
+  }
+  .about-section .hero-copy h1 {
+    font-size: clamp(40px, 4.1vw, 56px);
+    line-height: 1.1;
+  }
+  .about-section .hero-subtitle {
+    font-size: clamp(28px, 2.7vw, 38px);
+    margin-top: 10px;
+  }
+  .about-section .hero-portrait {
+    width: 100%;
+    max-width: 360px;
+    justify-self: end;
+  }
+}
