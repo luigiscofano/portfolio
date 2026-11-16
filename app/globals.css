@@ -1828,9 +1828,9 @@ nav a > .icon {
 }
 
 /* Referência aprovada: 282 px em 1365 px, cerca de 20,66% da tela.
-   Limites evitam texto espremido e uma navegação excessiva em ultrawide. */
+   Proporção constante no desktop; o menu móvel preserva seu comportamento. */
 @media (min-width: 769px) {
   :root {
-    --sidebar-width: clamp(220px, 20.66vw, 420px);
+    --sidebar-width: 20.66vw;
   }
 }
