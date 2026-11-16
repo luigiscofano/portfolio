@@ -19,7 +19,7 @@ test('modelo de larguras mantém espaço do conteúdo e não extrapola viewport'
   for (const viewport of [
     320, 390, 768, 769, 1024, 1200, 1440, 1600, 1920, 2560, 3840,
   ]) {
-    const shell = Math.min(viewport, 1600);
+    const shell = viewport;
     const sidebar = viewport <= 768 ? 0 : viewport * 0.2066;
     const content = shell - sidebar;
     assert.ok(content > 0);
