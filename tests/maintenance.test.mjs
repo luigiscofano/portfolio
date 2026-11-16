@@ -106,9 +106,13 @@ test('project images are sourced or their omission is explicit', () => {
   }
 });
 
-test('signature clips only the bird at the original branch curve', () => {
+test('signature preserves feet and clips only leaf stems at the branch', () => {
   const svg = fs.readFileSync('public/images/assinatura-bem-te-vi.svg', 'utf8');
-  assert.ok(svg.includes('clip-path="url(#limite-superior-galho)"'));
+  assert.ok(
+    svg.includes('<path clip-path="url(#limite-superior-galho)" d="M133'),
+  );
+  assert.ok(!svg.includes('<g clip-path='));
+  assert.ok(svg.includes('M12 19H13V21H16V22H11V21H12ZM16 18H17V21H20V22H16Z'));
   assert.ok(
     svg.includes('M0 0H180V34H167C142 49 114 41 89 47C64 53 39 45 12 53H0Z'),
   );
@@ -151,4 +155,8 @@ test('institutional marks reflect verified academic contexts only', () => {
       assert.ok(new URL(m.source).hostname.endsWith('usp.br'));
     }
   }
+});
+
+test('interface omits the redundant publication month stamp', () => {
+  assert.ok(!fs.readFileSync('app/page.tsx', 'utf8').includes('data.updated'));
 });
