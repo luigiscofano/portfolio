@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="64" viewBox="0 0 180 64">
   <title>Bem-te-vi e folhas — assinatura visual de Luigi</title>
+  <defs>
+    <!-- Recorta apenas os pixels abaixo do galho, sem redesenhar o mascote. -->
+    <clipPath id="limite-superior-galho">
+      <path d="M0 0H180V34H167C142 49 114 41 89 47C64 53 39 45 12 53H0Z"/>
+    </clipPath>
+  </defs>
   <g fill="none" stroke="#6d826b" stroke-width="1.4" stroke-linecap="round">
     <path d="M12 53C39 45 64 53 89 47S142 49 167 34"/>
     <path d="M31 49L24 39M43 49L49 38M133 45L137 33M150 42L158 45"/>
@@ -10,6 +16,7 @@
     <path d="M136 37C132 29 136 23 141 21C145 29 141 35 136 37Z"/>
     <path d="M156 44C164 38 170 43 172 48C165 52 159 49 156 44Z"/>
   </g>
+  <g clip-path="url(#limite-superior-galho)">
   <g transform="translate(70 5) scale(2)" shape-rendering="crispEdges">
     <path fill="#594a3c" d="M7 13H10V18H7V20H3V21H0V19H3V17H5V15H7Z"/>
     <path fill="#514739" d="M9 8H16V10H19V16H17V19H10V18H7V15H6V11H9Z"/>
@@ -23,5 +30,6 @@
     <path fill="#292e29" d="M19 6H22V7H23V8H19Z"/>
     <rect x="17" y="5" width="1" height="1" fill="#111b18"/>
     <path fill="#473f32" d="M12 19H13V21H16V22H11V21H12ZM16 18H17V21H20V22H16Z"/>
+  </g>
   </g>
 </svg>
