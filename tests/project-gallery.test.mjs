@@ -115,8 +115,8 @@ test('Numerical Methods preserves four visuals and adds six traceable notebook r
   const items = gallery.filter(
     (item) => item.projectId === 'usp-metodos-numericos',
   );
-  assert.equal(items.length, 11);
-  assert.equal(new Set(items.map((item) => item.image)).size, 11);
+  assert.equal(items.length, 14);
+  assert.equal(new Set(items.map((item) => item.image)).size, 14);
   for (const name of [
     '03_cancelamento',
     '04_aliasing',
@@ -137,5 +137,31 @@ test('Numerical Methods preserves four visuals and adds six traceable notebook r
     assert.ok(item.caption.pt.includes('edição de estudo'));
     const svg = fs.readFileSync('public' + item.image, 'utf8');
     assert.ok(!/<script|<foreignObject/i.test(svg));
+  }
+});
+
+test('Approved fractals appear first in the requested order without duplicate legacy thumbnails', () => {
+  const items = gallery.filter(
+    (item) => item.projectId === 'usp-metodos-numericos',
+  );
+  assert.deepEqual(
+    items.slice(0, 5).map((item) => item.image.split('metodos-fractal-')[1]),
+    [
+      'barnsley.webp',
+      'julia.webp',
+      'newton.webp',
+      'burning-ship.webp',
+      'mandelbrot.webp',
+    ],
+  );
+  assert.ok(
+    !items.some((item) =>
+      /metodos-(barnsley\.png|02_bacias\.svg)$/.test(item.image),
+    ),
+  );
+  for (const item of items.slice(0, 5)) {
+    assert.equal(item.width, 1440);
+    assert.equal(item.height, 1080);
+    assert.ok(!item.crop);
   }
 });

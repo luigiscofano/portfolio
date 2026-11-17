@@ -13,12 +13,43 @@ A galeria mantém as quatro figuras anteriores e acrescenta seis resultados já 
 
 ## Preservação e desempenho
 
-Não houve mudança de layout, navegação ou interação. A seção continua recolhível, com carregamento tardio e dimensões declaradas. Cada arquivo permanece abaixo do orçamento de 200 kB. Os testes verificam dez itens únicos, referências fixas ao commit de origem e existência dos arquivos.
+Não houve mudança de layout, navegação ou interação. A seção continua recolhível, com carregamento tardio e dimensões declaradas. Cada arquivo permanece abaixo do orçamento de 200 kB. Os testes verificam quatorze itens únicos, referências fixas ao commit de origem e existência dos arquivos.
 
 [Voltar ao README](../README.md)
 
-## Samambaia de Barnsley
+## Fractais: coleção aprovada
 
-![Samambaia de Barnsley](../public/images/projects/captures/metodos-barnsley.png)
+As cinco imagens abrem a galeria nesta ordem: **Samambaia de Barnsley, Julia, Newton, Burning Ship e Mandelbrot**. Substituem as miniaturas anteriores de Barnsley e Newton, sem apagar seus arquivos originais e sem duplicar os mesmos resultados. Os outros nove gráficos continuam na galeria.
 
-Adição de uma exploração complementar em Python, com 30 mil pontos, cor sólida e sem cursor. [Notebook 08 e código reproduzível](https://github.com/luigiscofano/usp-metodos-numericos/blob/08342834723b490af3f3b0dc8f57cac2fee00475/notebooks/08_fractais_exploracao.ipynb). O PNG aprovado foi preservado integralmente. A galeria passa a onze imagens; as bacias de Newton anteriores permanecem inalteradas.
+São cópias WebP de exibição (1440 × 1080, abaixo de 200 kB cada) dos PNGs aprovados, com título, fórmula e eixos. Não há recorte nem cursor. [Originais em alta resolução e documentação](https://github.com/luigiscofano/usp-metodos-numericos/tree/main/assets/fractais).
+
+| Figura | Parâmetros e procedência |
+| --- | --- |
+| Samambaia de Barnsley | 30.000 passos, 100 iniciais descartados, semente 42; cor sólida. |
+| Julia | c = −0,8 + 0,156i; 80 iterações; recorte essencial e cores sólidas. |
+| Newton | z³ − 1; até 50 iterações; tolerância 10⁻⁸; imagem numérica original da galeria, não a nova versão simplificada. |
+| Burning Ship | Detalhe original com 700 iterações; raio de escape 4 e degradê. |
+| Mandelbrot | Versão original com 700 iterações; raio de escape 4 e degradê. |
+
+Estas explorações não são registros históricos da disciplina. Os parâmetros das figuras aprovadas não são necessariamente os padrões do notebook simplificado: especialmente as versões de 700 iterações e a bacia original de Newton. As legendas nas três línguas tornam essa distinção explícita.
+
+### Samambaia de Barnsley
+
+![Samambaia de Barnsley](../public/images/projects/captures/metodos-fractal-barnsley.webp)
+
+### Julia
+
+![Julia](../public/images/projects/captures/metodos-fractal-julia.webp)
+
+### Newton
+
+![Newton](../public/images/projects/captures/metodos-fractal-newton.webp)
+
+### Burning Ship
+
+![Burning Ship](../public/images/projects/captures/metodos-fractal-burning-ship.webp)
+
+### Mandelbrot
+
+![Mandelbrot](../public/images/projects/captures/metodos-fractal-mandelbrot.webp)
+
