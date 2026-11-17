@@ -110,3 +110,32 @@ test('Pokédex home uses the current Rota 001 capture', () => {
     !gallery.some((item) => item.image.endsWith('pokedex-inicio-atual.jpg')),
   );
 });
+
+test('Numerical Methods preserves four visuals and adds six traceable notebook results', () => {
+  const items = gallery.filter(
+    (item) => item.projectId === 'usp-metodos-numericos',
+  );
+  assert.equal(items.length, 10);
+  assert.equal(new Set(items.map((item) => item.image)).size, 10);
+  for (const name of [
+    '03_cancelamento',
+    '04_aliasing',
+    '05_erros',
+    '06_estabilidade',
+    '06_pendulo',
+    '06_resistencias',
+  ]) {
+    const item = items.find((entry) =>
+      entry.image.endsWith(`metodos-${name}.svg`),
+    );
+    assert.ok(item);
+    assert.ok(
+      item.source.includes(
+        '/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/',
+      ),
+    );
+    assert.ok(item.caption.pt.includes('edição de estudo'));
+    const svg = fs.readFileSync('public' + item.image, 'utf8');
+    assert.ok(!/<script|<foreignObject/i.test(svg));
+  }
+});

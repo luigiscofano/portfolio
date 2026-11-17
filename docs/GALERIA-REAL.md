@@ -11,3 +11,7 @@ A mudança solicitada permite novamente capturas reais das aplicações. Logos e
 Veja [procedência acadêmica](../public/images/projects/captures/PROVENIENCIA-ACADEMICOS.md). As imagens são carregadas sob demanda, com dimensões e textos alternativos PT/EN/ES. A galeria usa disclosure nativo, acessível por teclado.
 
 A paleta mantém azul como base; verde identifica projetos/contato, ocre pesquisa e vermelho trajetória. Títulos, ícones e estado ativo continuam presentes: a cor nunca é o único identificador. Os cartões têm limite discreto e borda superior própria, com hover, foco e feedback ao pressionar ações. Não se transforma o cartão inteiro em um botão. Movimento reduzido desativa animações.
+
+## Métodos Numéricos
+
+A galeria contém dez resultados dos notebooks da edição de estudo. Veja a [procedência e as seis novas figuras](metodos-numericos-galeria.md). Os arquivos originais foram preservados e não incluem cursor.

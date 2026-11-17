@@ -104,3 +104,7 @@ O catálogo em português, inglês e espanhol usa a mesma arte e identifica o pr
 ## Imagens técnicas do LabDig
 
 A [galeria documental do LabDig](docs/labdig-galeria.md) reúne as três capturas de apresentação e quatro novas imagens distintas: Verilog UART, quadro serial, telemetria e máquina de estados do sonar. Cada imagem tem fonte versionada e legenda em três idiomas; diagramas não são apresentados como medições ou fotos de hardware.
+
+### Galeria ampliada de Métodos Numéricos
+
+Dez figuras dos notebooks de estudo ilustram convergência, Fourier, interpolação e sistemas dinâmicos. A [documentação da galeria](docs/metodos-numericos-galeria.md) reúne imagens, fontes e limites de interpretação, sem confundi-las com registros históricos da disciplina.
