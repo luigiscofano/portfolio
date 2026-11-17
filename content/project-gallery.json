@@ -14,14 +14,62 @@
   },
   {
     "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-02_bacias.svg",
-    "width": 293.142187,
-    "height": 279.155469,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/tree/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras",
+    "image": "/images/projects/captures/metodos-fractal-barnsley.webp",
+    "width": 1440,
+    "height": 1080,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/assets/fractais/barnsley.png",
     "caption": {
-      "pt": "Bacias de atração de Newton — resultado dos notebooks da edição de estudo atual.",
-      "en": "Newton attraction basins — output from the current study-edition notebooks.",
-      "es": "Cuencas de atracción de Newton — resultado de los cuadernos de la edición de estudio actual."
+      "pt": "Samambaia de Barnsley: 30 mil pontos, 100 passos iniciais descartados e semente 42. Exploração complementar em Python, não registro histórico da disciplina.",
+      "en": "Barnsley fern: 30,000 points, 100 initial steps discarded and seed 42. Supplementary Python exploration, not a historical course record.",
+      "es": "Helecho de Barnsley: 30 mil puntos, 100 pasos iniciales descartados y semilla 42. Exploración complementaria en Python, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-fractal-julia.webp",
+    "width": 1440,
+    "height": 1080,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/assets/fractais/julia.png",
+    "caption": {
+      "pt": "Conjunto de Julia: recorte essencial, c = −0,8 + 0,156i, 80 iterações e cores sólidas. Exploração complementar em Python, não registro histórico da disciplina.",
+      "en": "Julia set: essential crop, c = −0.8 + 0.156i, 80 iterations and solid colors. Supplementary Python exploration, not a historical course record.",
+      "es": "Conjunto de Julia: recorte esencial, c = −0,8 + 0,156i, 80 iteraciones y colores sólidos. Exploración complementaria en Python, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-fractal-newton.webp",
+    "width": 1440,
+    "height": 1080,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/assets/fractais/newton.png",
+    "caption": {
+      "pt": "Bacias de Newton: z³ − 1, até 50 iterações e tolerância 10⁻⁸. Resultado original da galeria, com apresentação padronizada.",
+      "en": "Newton basins: z³ − 1, up to 50 iterations and tolerance 10⁻⁸. Original gallery output with standardized presentation.",
+      "es": "Cuencas de Newton: z³ − 1, hasta 50 iteraciones y tolerancia 10⁻⁸. Resultado original de la galería con presentación uniforme."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-fractal-burning-ship.webp",
+    "width": 1440,
+    "height": 1080,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/assets/fractais/burning-ship.png",
+    "caption": {
+      "pt": "Burning Ship: detalhe calculado com 700 iterações e raio de escape 4. Exploração complementar em Python, não registro histórico da disciplina.",
+      "en": "Burning Ship: detail computed with 700 iterations and escape radius 4. Supplementary Python exploration, not a historical course record.",
+      "es": "Burning Ship: detalle calculado con 700 iteraciones y radio de escape 4. Exploración complementaria en Python, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-fractal-mandelbrot.webp",
+    "width": 1440,
+    "height": 1080,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/main/assets/fractais/mandelbrot.png",
+    "caption": {
+      "pt": "Conjunto de Mandelbrot: 700 iterações e raio de escape 4. Exploração complementar em Python, não registro histórico da disciplina.",
+      "en": "Mandelbrot set: 700 iterations and escape radius 4. Supplementary Python exploration, not a historical course record.",
+      "es": "Conjunto de Mandelbrot: 700 iteraciones y radio de escape 4. Exploración complementaria en Python, no registro histórico de la asignatura."
     }
   },
   {
@@ -58,6 +106,78 @@
       "pt": "Circuito de Chua — resultado dos notebooks da edição de estudo atual.",
       "en": "Chua circuit — output from the current study-edition notebooks.",
       "es": "Circuito de Chua — resultado de los cuadernos de la edición de estudio actual."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-03_cancelamento.svg",
+    "width": 495.236668,
+    "height": 276.47625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/03_cancelamento.svg",
+    "caption": {
+      "pt": "Cancelamento numérico e racionalização: comparação de erros em ponto flutuante. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Numerical cancellation and rationalization: floating-point error comparison. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Cancelación numérica y racionalización: comparación de errores en punto flotante. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-04_aliasing.svg",
+    "width": 495.923437,
+    "height": 279.35625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/04_aliasing.svg",
+    "caption": {
+      "pt": "Aliasing: efeito da amostragem na representação de um sinal. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Aliasing: the effect of sampling on the representation of a signal. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Aliasing: efecto del muestreo en la representación de una señal. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-05_erros.svg",
+    "width": 495.249168,
+    "height": 279.35625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/05_erros.svg",
+    "caption": {
+      "pt": "Interpolação: comparação dos erros com nós equiespaçados e de Chebyshev. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Interpolation: comparison of errors with equally spaced and Chebyshev nodes. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Interpolación: comparación de errores con nodos equiespaciados y de Chebyshev. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-06_estabilidade.svg",
+    "width": 496.082813,
+    "height": 279.35625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_estabilidade.svg",
+    "caption": {
+      "pt": "Estabilidade numérica na integração de equações diferenciais. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Numerical stability when integrating differential equations. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Estabilidad numérica en la integración de ecuaciones diferenciales. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-06_pendulo.svg",
+    "width": 496.120313,
+    "height": 279.35625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_pendulo.svg",
+    "caption": {
+      "pt": "Pêndulo: simulação numérica da evolução do sistema dinâmico. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Pendulum: numerical simulation of the dynamical system evolution. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Péndulo: simulación numérica de la evolución del sistema dinámico. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
+    }
+  },
+  {
+    "projectId": "usp-metodos-numericos",
+    "image": "/images/projects/captures/metodos-06_resistencias.svg",
+    "width": 494.281612,
+    "height": 279.35625,
+    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_resistencias.svg",
+    "caption": {
+      "pt": "Circuito de Chua: comparação da dinâmica para diferentes resistências. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
+      "en": "Chua circuit: comparison of the dynamics for different resistances. Output of the study-edition notebooks, not a historical course record.",
+      "es": "Circuito de Chua: comparación de la dinámica para distintas resistencias. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
     }
   },
   {
@@ -291,90 +411,6 @@
       "pt": "Ficha de Crabominable na aba Textos dos jogos, com inglês e Ultra Moon selecionados. Captura de 16/11/2026.",
       "en": "Crabominable entry on the game-text tab, with English and Ultra Moon selected. Screenshot from 16 November 2026.",
       "es": "Ficha de Crabominable en Textos de los juegos, con inglés y Ultra Moon seleccionados. Captura del 16/11/2026."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-03_cancelamento.svg",
-    "width": 495.236668,
-    "height": 276.47625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/03_cancelamento.svg",
-    "caption": {
-      "pt": "Cancelamento numérico e racionalização: comparação de erros em ponto flutuante. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Numerical cancellation and rationalization: floating-point error comparison. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Cancelación numérica y racionalización: comparación de errores en punto flotante. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-04_aliasing.svg",
-    "width": 495.923437,
-    "height": 279.35625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/04_aliasing.svg",
-    "caption": {
-      "pt": "Aliasing: efeito da amostragem na representação de um sinal. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Aliasing: the effect of sampling on the representation of a signal. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Aliasing: efecto del muestreo en la representación de una señal. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-05_erros.svg",
-    "width": 495.249168,
-    "height": 279.35625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/05_erros.svg",
-    "caption": {
-      "pt": "Interpolação: comparação dos erros com nós equiespaçados e de Chebyshev. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Interpolation: comparison of errors with equally spaced and Chebyshev nodes. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Interpolación: comparación de errores con nodos equiespaciados y de Chebyshev. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-06_estabilidade.svg",
-    "width": 496.082813,
-    "height": 279.35625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_estabilidade.svg",
-    "caption": {
-      "pt": "Estabilidade numérica na integração de equações diferenciais. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Numerical stability when integrating differential equations. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Estabilidad numérica en la integración de ecuaciones diferenciales. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-06_pendulo.svg",
-    "width": 496.120313,
-    "height": 279.35625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_pendulo.svg",
-    "caption": {
-      "pt": "Pêndulo: simulação numérica da evolução do sistema dinâmico. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Pendulum: numerical simulation of the dynamical system evolution. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Péndulo: simulación numérica de la evolución del sistema dinámico. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-06_resistencias.svg",
-    "width": 494.281612,
-    "height": 279.35625,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/5b9a625ba1f065884c054d0fdc6d11cfe258bf7f/assets/figuras/06_resistencias.svg",
-    "caption": {
-      "pt": "Circuito de Chua: comparação da dinâmica para diferentes resistências. Resultado dos notebooks da edição de estudo, não registro histórico da disciplina.",
-      "en": "Chua circuit: comparison of the dynamics for different resistances. Output of the study-edition notebooks, not a historical course record.",
-      "es": "Circuito de Chua: comparación de la dinámica para distintas resistencias. Resultado de los cuadernos de estudio, no registro histórico de la asignatura."
-    }
-  },
-  {
-    "projectId": "usp-metodos-numericos",
-    "image": "/images/projects/captures/metodos-barnsley.png",
-    "width": 1800,
-    "height": 1224,
-    "source": "https://github.com/luigiscofano/usp-metodos-numericos/blob/08342834723b490af3f3b0dc8f57cac2fee00475/notebooks/08_fractais_exploracao.ipynb",
-    "caption": {
-      "pt": "Samambaia de Barnsley: 30 mil pontos gerados por transformações afins iteradas, em uma única cor. Exploração complementar em Python, não registro histórico da disciplina.",
-      "en": "Barnsley fern: 30,000 points generated by iterated affine transformations, in a single color. Supplementary Python exploration, not a historical course record.",
-      "es": "Helecho de Barnsley: 30 mil puntos generados mediante transformaciones afines iteradas, en un solo color. Exploración complementaria en Python, no registro histórico de la asignatura."
     }
   }
 ]

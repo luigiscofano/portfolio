@@ -107,4 +107,4 @@ A [galeria documental do LabDig](docs/labdig-galeria.md) reúne as três captura
 
 ### Galeria ampliada de Métodos Numéricos
 
-Dez figuras dos notebooks de estudo ilustram convergência, Fourier, interpolação e sistemas dinâmicos. A [documentação da galeria](docs/metodos-numericos-galeria.md) reúne imagens, fontes e limites de interpretação, sem confundi-las com registros históricos da disciplina.
+Quatorze figuras ilustram fractais, convergência, Fourier, interpolação e sistemas dinâmicos. A galeria começa com Samambaia de Barnsley, Julia, Newton, Burning Ship e Mandelbrot, nessa ordem, com fórmulas e eixos padronizados. A [documentação da galeria](docs/metodos-numericos-galeria.md) reúne imagens, fontes e limites de interpretação, sem confundi-las com registros históricos da disciplina.
