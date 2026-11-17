@@ -16,3 +16,9 @@ A galeria mantém as quatro figuras anteriores e acrescenta seis resultados já 
 Não houve mudança de layout, navegação ou interação. A seção continua recolhível, com carregamento tardio e dimensões declaradas. Cada arquivo permanece abaixo do orçamento de 200 kB. Os testes verificam dez itens únicos, referências fixas ao commit de origem e existência dos arquivos.
 
 [Voltar ao README](../README.md)
+
+## Samambaia de Barnsley
+
+![Samambaia de Barnsley](../public/images/projects/captures/metodos-barnsley.png)
+
+Adição de uma exploração complementar em Python, com 30 mil pontos, cor sólida e sem cursor. [Notebook 08 e código reproduzível](https://github.com/luigiscofano/usp-metodos-numericos/blob/08342834723b490af3f3b0dc8f57cac2fee00475/notebooks/08_fractais_exploracao.ipynb). O PNG aprovado foi preservado integralmente. A galeria passa a onze imagens; as bacias de Newton anteriores permanecem inalteradas.

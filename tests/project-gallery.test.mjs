@@ -115,8 +115,8 @@ test('Numerical Methods preserves four visuals and adds six traceable notebook r
   const items = gallery.filter(
     (item) => item.projectId === 'usp-metodos-numericos',
   );
-  assert.equal(items.length, 10);
-  assert.equal(new Set(items.map((item) => item.image)).size, 10);
+  assert.equal(items.length, 11);
+  assert.equal(new Set(items.map((item) => item.image)).size, 11);
   for (const name of [
     '03_cancelamento',
     '04_aliasing',
