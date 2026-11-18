@@ -412,5 +412,77 @@
       "en": "Crabominable entry on the game-text tab, with English and Ultra Moon selected. Screenshot from 16 November 2026.",
       "es": "Ficha de Crabominable en Textos de los juegos, con inglés y Ultra Moon seleccionados. Captura del 16/11/2026."
     }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-inicio.jpg",
+    "width": 502,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/inicio.jpg",
+    "caption": {
+      "pt": "Menu inicial e capa inspirada na Tijuca. Captura real de computador, sem cursor.",
+      "en": "Main menu and cover inspired by Tijuca. Actual desktop screenshot, without a cursor.",
+      "es": "Menú inicial y portada inspirada en Tijuca. Captura real de escritorio, sin cursor."
+    }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-selecao-jogos.jpg",
+    "width": 502,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/selecao-jogos.jpg",
+    "caption": {
+      "pt": "Seleção dos minigames com ícones próprios. Captura real de computador, sem cursor.",
+      "en": "Minigame selection with individual icons. Actual desktop screenshot, without a cursor.",
+      "es": "Selección de minijuegos con iconos propios. Captura real de escritorio, sin cursor."
+    }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-selecao-niveis.jpg",
+    "width": 502,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/selecao-niveis.jpg",
+    "caption": {
+      "pt": "Dificuldades e Caminho Novo de Maré Miúda. Captura real de computador, sem cursor.",
+      "en": "Difficulty levels and Caminho Novo in Maré Miúda. Actual desktop screenshot, without a cursor.",
+      "es": "Dificultades y Caminho Novo de Maré Miúda. Captura real de escritorio, sin cursor."
+    }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-partida-mare.jpg",
+    "width": 341,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/partida-mare.jpg",
+    "caption": {
+      "pt": "Maré Miúda: partida no nível Puxado. Captura real de computador, sem cursor.",
+      "en": "Maré Miúda: gameplay on Puxado difficulty. Actual desktop screenshot, without a cursor.",
+      "es": "Maré Miúda: partida en dificultad Puxado. Captura real de escritorio, sin cursor."
+    }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-volta-bairro.jpg",
+    "width": 502,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/volta-bairro.jpg",
+    "caption": {
+      "pt": "Volta no Bairro: percurso com dez paradas. Captura real de computador, sem cursor.",
+      "en": "Volta no Bairro: a route with ten stops. Actual desktop screenshot, without a cursor.",
+      "es": "Volta no Bairro: recorrido con diez paradas. Captura real de escritorio, sin cursor."
+    }
+  },
+  {
+    "projectId": "miudezas",
+    "image": "/images/projects/captures/miudezas-configuracoes.jpg",
+    "width": 502,
+    "height": 502,
+    "source": "https://github.com/luigiscofano/Miudezas/blob/37e7d3c4719c27dc12548794ee1c565f873c637c/docs/imagens/telas/configuracoes.jpg",
+    "caption": {
+      "pt": "Configurações de música e efeitos sonoros. Captura real de computador, sem cursor.",
+      "en": "Music and sound effect settings. Actual desktop screenshot, without a cursor.",
+      "es": "Configuración de música y efectos sonoros. Captura real de escritorio, sin cursor."
+    }
   }
 ]
