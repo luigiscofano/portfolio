@@ -96,7 +96,7 @@ test('section visual maps are local, bilingual and have no executable content', 
 test('project images are sourced or their omission is explicit', () => {
   for (const lang of ['portfolio.json', 'portfolio.en.json']) {
     const data = JSON.parse(fs.readFileSync('content/' + lang, 'utf8'));
-    assert.equal(data.projects.length, 14);
+    assert.equal(data.projects.length, 15);
     for (const p of data.projects) {
       if (!p.image) {
         assert.ok(p.imageOmissionReason, p.id);
