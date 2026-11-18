@@ -6,6 +6,9 @@ Não há autenticação, banco de dados, analytics ou serviço de envio de mensa
 
 ## Desenvolvimento
 
+<details>
+<summary>Expandir Desenvolvimento</summary>
+
 Requisitos: Node.js 22.13.0 ou superior e npm. O workflow usa Node.js 22.
 
 ```sh
@@ -24,7 +27,13 @@ npm start
 
 `npm run validate` reúne formatação, testes, lint, build, TypeScript e checagem dos arquivos exportados. `npm run format` formata o código ativo selecionado; revise o diff antes de publicar. O build gera `out/`. A prévia estática abre em `http://127.0.0.1:4173/portfolio/`. `typecheck` vem depois do build para incluir os tipos gerados pelo Next.js. Os testes automatizados não substituem revisão de teclado, leitura, downloads e layout no navegador. Consulte [validação](docs/VALIDACAO.md).
 
+
+</details>
+
 ## Editar conteúdo
+
+<details>
+<summary>Expandir Editar conteúdo</summary>
 
 - `content/portfolio.json`: conteúdo em português, incluindo perfil, abertura em `profile.hero`, projetos, pesquisa, formação, trajetória, contato, navegação e data editorial `updated`.
 - `content/portfolio.en.json` e `content/portfolio.es.json`: versões inglesa e espanhola com a mesma estrutura. Atualize os três arquivos quando um fato mudar.
@@ -44,7 +53,13 @@ O seletor de idioma aceita `?lang=pt`, `?lang=en` e `?lang=es` e salva uma prefe
 
 O destaque de Intuição separa “Experimentar” e “Ver código”. O link “Mais sobre mim” abre os detalhes da biografia. O exemplo de pesquisa em `components/portfolio/research-example.tsx` usa “casa” → “c8sa” → “casa” para explicar extração e revisão: é uma simulação em português, não um verbete Tupi nem um resultado real de OCR. Preserve esse aviso e os links às fontes primárias ao editar.
 
+
+</details>
+
 ## Publicação manual
+
+<details>
+<summary>Expandir Publicação manual</summary>
 
 1. Revise código, conteúdo, privacidade dos documentos e resultados dos testes. Obtenha autorização antes de enviar/publicar alterações em nome do titular.
 2. No repositório `luigiscofano/portfolio`, configure Settings → Pages → **GitHub Actions**.
@@ -54,7 +69,13 @@ O destaque de Intuição separa “Experimentar” e “Ver código”. O link �
 
 Pushes não disparam o workflow. O build não exige servidor Node.js, Cloudflare ou banco de dados em produção. As rotas são `/portfolio/` e `/portfolio/creditos/`. Não salve tokens ou outros segredos no repositório.
 
+
+</details>
+
 ## Documentação
+
+<details>
+<summary>Expandir Documentação</summary>
 
 - [Arquitetura e estrutura](docs/ARQUITETURA.md)
 - [Design vigente e histórico visual](docs/DESIGN.md)
@@ -67,11 +88,23 @@ O visual atual usa Quicksand nos textos e Playfair Display nos títulos, hospeda
 
 © 2026 Luigi Scofano de Araujo, quanto ao conteúdo original de sua autoria. Recursos de terceiros conservam seus próprios direitos e licenças. Consulte [COPYRIGHT.md](COPYRIGHT.md).
 
+
+</details>
+
 ## Imagens e mapas visuais
+
+<details>
+<summary>Expandir Imagens e mapas visuais</summary>
 
 As logos verificadas abrem os cartões; outras imagens documentais ficam nos detalhes para manter a entrada leve. As origens e classificações estão em [Imagens dos projetos](docs/IMAGENS-DOS-PROJETOS.md). Pesquisa, formação e trajetória possuem mapas informativos opcionais, não fotografias ou endossos institucionais. Para regenerar as versões PT/EN depois de editar seus dados, execute `node scripts/generate-section-visuals.mjs`. O script ainda gera somente português e inglês. Os mapas espanhóis `public/images/sections/*-es.svg` foram traduzidos manualmente, mantendo a mesma composição; atualize-os e revise seus textos separadamente quando as informações mudarem.
 
+
+</details>
+
 ## Assinatura visual pessoal
+
+<details>
+<summary>Expandir Assinatura visual pessoal</summary>
 
 ![Bem-te-vi em pixel art sobre um ramo com folhas](public/images/assinatura-bem-te-vi.svg)
 
@@ -93,7 +126,13 @@ A [biblioteca visual do Intuição](docs/ARTE-DOS-PROJETOS.md) apresenta a capa 
 
 Todos os projetos têm uma seção **Imagens reais do projeto**, aberta sob demanda. Intuição tem cinco imagens e Pokédex tem quatro; registros históricos da Pokédex são identificados, sem confundi-los com a interface atual. As lacunas de outros projetos são documentadas, sem usar prévias como se fossem execução real. Consulte [cobertura, fontes e pendências das galerias](docs/galerias-reais.md). Os PDFs do currículo permanecem acessíveis fora de “Mais sobre mim”.
 
+
+</details>
+
 ## Marca da Pokédex: Rota 001
+
+<details>
+<summary>Expandir Marca da Pokédex: Rota 001</summary>
 
 ![Insígnia aprovada Rota 001, com grama alta e trilha dourada](public/images/projects/pokedex-rota-001.png)
 
@@ -101,10 +140,19 @@ A identidade aprovada em 16/11/2026 substitui o ícone anterior na apresentaçã
 
 O catálogo em português, inglês e espanhol usa a mesma arte e identifica o projeto como **Pokédex · Rota 001**. A troca não modifica o favicon bem-te-vi, a assinatura visual do portfólio, as galerias históricas nem as funcionalidades dos projetos. Veja a [documentação da marca](docs/MARCA-ROTA-001.md) e o [repositório da Pokédex](https://github.com/luigiscofano/Pokedex).
 
+
+</details>
+
 ## Imagens técnicas do LabDig
+
+<details>
+<summary>Expandir Imagens técnicas do LabDig</summary>
 
 A [galeria documental do LabDig](docs/labdig-galeria.md) reúne as três capturas de apresentação e quatro novas imagens distintas: Verilog UART, quadro serial, telemetria e máquina de estados do sonar. Cada imagem tem fonte versionada e legenda em três idiomas; diagramas não são apresentados como medições ou fotos de hardware.
 
 ### Galeria ampliada de Métodos Numéricos
 
 Quatorze figuras ilustram fractais, convergência, Fourier, interpolação e sistemas dinâmicos. A galeria começa com Samambaia de Barnsley, Julia, Newton, Burning Ship e Mandelbrot, nessa ordem, com fórmulas e eixos padronizados. A [documentação da galeria](docs/metodos-numericos-galeria.md) reúne imagens, fontes e limites de interpretação, sem confundi-las com registros históricos da disciplina.
+
+
+</details>
