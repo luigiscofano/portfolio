@@ -39,7 +39,7 @@ test('only the approved original PNGs are published and captions explain their o
     'mundo-01-baixa.png':
       '3f93a690085c916b244a9dbab60b8fa423bd8a0a5403a07e013b9900f277e8b8',
     'porto.png':
-      '255521be2b890430445477f7f8020858e7117bbe79106439b16f729fb25d09c4',
+      'd2e9d3b99193b52af04489b5651fff82000a3d357c487ad411d7bf380c8ad48f',
     'logo-oficial.png':
       '3d96700e26c84adb3d222ade23c741fea37a3828606e415c5a949eec8e762e7c',
     'mundo-01-alta.png':
@@ -64,6 +64,9 @@ test('only the approved original PNGs are published and captions explain their o
   );
   assert.equal(gallery.length, 5);
   assert.equal(gallery[0].crop, 'menu');
+  const porto = fs.readFileSync(dir + 'porto.png');
+  assert.equal(porto.readUInt32BE(16), gallery[0].width);
+  assert.equal(porto.readUInt32BE(20), gallery[0].height);
   for (const item of gallery) {
     assert.ok(
       item.source.startsWith('https://github.com/luigiscofano/portfolio/'),
@@ -71,8 +74,8 @@ test('only the approved original PNGs are published and captions explain their o
     for (const lang of ['pt', 'en', 'es'])
       assert.ok(item.caption[lang].length > 50);
   }
-  assert.match(gallery[0].caption.pt, /não uma captura de execução/);
-  assert.match(gallery[0].caption.en, /not a runtime screenshot/);
+  assert.match(gallery[0].caption.pt, /captura do jogo em execução/);
+  assert.match(gallery[0].caption.en, /live gameplay screenshot/);
   assert.ok(
     gallery.every(
       (item) =>

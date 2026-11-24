@@ -539,9 +539,9 @@
     "height": 900,
     "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/porto.png",
     "caption": {
-      "pt": "Porto de Partida: quadro de divulgação recomposto com a arte e o estado real da interface, não uma captura de execução.",
-      "en": "Departure Harbour: promotional frame recomposed from the actual interface artwork and state, not a runtime screenshot.",
-      "es": "Puerto de Partida: cuadro promocional recompuesto con el arte y el estado real de la interfaz, no una captura de ejecución."
+      "pt": "Porto de Partida na edição Sem Direcional: captura do jogo em execução, com tipografia legível nos controles e a marca original em pixel art.",
+      "en": "Departure Harbour in the No Directional Pad edition: a live gameplay screenshot, with readable control labels and the original pixel-art logo.",
+      "es": "Puerto de Partida en la edición sin cruceta: captura del juego en ejecución, con etiquetas legibles y la marca original en pixel art."
     },
     "crop": "menu"
   },
