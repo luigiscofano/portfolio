@@ -150,7 +150,7 @@
       ],
       "details": "Campanha com 200 fases regulares, 16 chefes opcionais e 15 bônus. A Ilha de Improviso oferece fases avulsas com filtros próprios. A interface inclui mapa em texto, avisos para leitores de tela e preferência de movimento reduzido.",
       "contribution": "Projeto autoral de Luigi Scofano de Araujo: regras, progressão da campanha, implementação, identidade visual em pixel art, interface e áudio. JavaScript organiza os turnos e Canvas 2D desenha o tabuleiro; Python monta a edição offline.",
-      "limitation": "Código e edição jogável permanecem privados. Este portfólio apresenta somente a marca e dois quadros autorizados, sem vídeo completo nem download do jogo. A troca PT/EN não reinicia a partida; ao reabrir ou recarregar normalmente, o jogo começa em português. Progresso e preferências ficam no navegador, sem conta ou sincronização.",
+      "limitation": "O jogo completo não é hospedado neste portfólio. A vitrine apresenta somente a marca e dois quadros autorizados, sem vídeo completo nem download do jogo. A troca PT/EN não reinicia a partida; ao reabrir ou recarregar normalmente, o jogo começa em português. Progresso e preferências ficam no navegador, sem conta ou sincronização.",
       "url": "",
       "demo": "",
       "demoLabel": "",
@@ -162,7 +162,7 @@
       "imageWidth": 180,
       "imageHeight": 94,
       "imageKind": "logo",
-      "sourceAccess": "private"
+      "sourceAccess": "showcase"
     },
     {
       "id": "tupi",

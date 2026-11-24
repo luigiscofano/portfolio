@@ -5,12 +5,12 @@ import { createHash } from 'node:crypto';
 import { matchesProject } from '../lib/project-search.mjs';
 const read = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
 
-test('Maré keeps its private release separate from the multilingual showcase', () => {
+test('Maré keeps its playable release separate from the multilingual showcase', () => {
   for (const suffix of ['', '.en', '.es']) {
     const project = read(`content/portfolio${suffix}.json`).projects.find(
       (p) => p.id === 'mare-miuda',
     );
-    assert.equal(project.sourceAccess, 'private');
+    assert.equal(project.sourceAccess, 'showcase');
     assert.equal(project.url, '');
     assert.equal(project.demo, '');
     assert.equal(project.showImagePreview, false);
@@ -29,7 +29,7 @@ test('Maré keeps its private release separate from the multilingual showcase', 
   const card = fs.readFileSync('components/portfolio/project-card.tsx', 'utf8');
   assert.match(card, /id=\{`projeto-\$\{project.id\}`\}/);
   assert.match(card, /project.url \?/);
-  assert.match(card, /Código privado/);
+  assert.match(card, /Vitrine do projeto/);
 });
 
 test('only three approved original PNGs are published and captions explain their origin', () => {

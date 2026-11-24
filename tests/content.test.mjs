@@ -27,7 +27,7 @@ test('complete distinct catalog and required truthful content', () => {
     ])
       assert.ok(p[key], `${p.id}.${key}`);
     assert.ok(['IA', 'Dados', 'Software', 'Hardware'].includes(p.category));
-    if (p.sourceAccess === 'private') {
+    if (p.sourceAccess === 'showcase') {
       assert.equal(p.url, '');
       assert.equal(p.demo, '');
     } else assert.ok(p.url.startsWith('https://github.com/luigiscofano/'));

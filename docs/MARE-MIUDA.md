@@ -1,6 +1,6 @@
 # Maré Miúda no portfólio
 
-Vitrine pública de **Maré Miúda: Entre Ilhas / Tiny Tide: Between Islands**, projeto de Luigi Scofano de Araujo. O jogo e seu código permanecem privados; esta entrada não oferece demonstração, download nem link para um repositório inacessível. A publicação limita-se ao resumo, à marca aprovada e a dois quadros de divulgação. Todos os direitos reservados.
+Vitrine pública de **Maré Miúda: Entre Ilhas / Tiny Tide: Between Islands**, projeto de Luigi Scofano de Araujo. O jogo completo não é hospedado no portfólio; esta entrada não oferece demonstração ou download. A publicação limita-se ao resumo, à marca aprovada e a dois quadros de divulgação. Todos os direitos reservados.
 
 ## Conteúdo e origem
 
@@ -12,6 +12,6 @@ Nenhum HTML executável do jogo, fonte privada, trilha sonora, vídeo ou catálo
 
 ## Manutenção
 
-Atualize os três catálogos `content/portfolio*.json` em conjunto. `sourceAccess: private` exige `url` e `demo` vazios; o cartão mostra um título sem link e a indicação de código privado. Os projetos públicos mantêm seus links. A âncora estável é `#projeto-mare-miuda`; para inglês use `?lang=en#projeto-mare-miuda`. As imagens permanecem em galeria expansível e com carregamento preguiçoso.
+Atualize os três catálogos `content/portfolio*.json` em conjunto. `sourceAccess: showcase` exige `url` e `demo` vazios; o cartão mostra um título sem link e a indicação de vitrine do projeto. Os projetos públicos mantêm seus links. A âncora estável é `#projeto-mare-miuda`; para inglês use `?lang=en#projeto-mare-miuda`. As imagens permanecem em galeria expansível e com carregamento preguiçoso.
 
 Execute `npm run validate`. Confira os idiomas, busca por Maré/Tiny Tide, filtro Software, abertura da galeria, ausência de links privados e layout desktop/móvel. O README principal e esta página são os documentos afetados.

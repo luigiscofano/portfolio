@@ -150,7 +150,7 @@
       ],
       "details": "The campaign contains 200 regular levels, 16 optional bosses and 15 bonus levels. Improvisation Island offers standalone levels with dedicated filters. The interface includes a text map, screen-reader announcements and reduced-motion support.",
       "contribution": "An original project by Luigi Scofano de Araujo: rules, campaign progression, implementation, pixel-art identity, interface and audio. JavaScript manages turns and Canvas 2D draws the board; Python assembles the offline edition.",
-      "limitation": "The source code and playable edition remain private. This portfolio shares only the logo and two authorized frames, with no full video or game download. Switching PT/EN does not restart the level; normal reopening or reloading starts the game in Portuguese. Progress and preferences stay in the browser, with no account or cloud sync.",
+      "limitation": "The full game is not hosted in this portfolio. This showcase shares only the logo and two authorized frames, with no full video or game download. Switching PT/EN does not restart the level; normal reopening or reloading starts the game in Portuguese. Progress and preferences stay in the browser, with no account or cloud sync.",
       "url": "",
       "demo": "",
       "demoLabel": "",
@@ -162,7 +162,7 @@
       "imageWidth": 180,
       "imageHeight": 94,
       "imageKind": "logo",
-      "sourceAccess": "private"
+      "sourceAccess": "showcase"
     },
     {
       "id": "tupi",

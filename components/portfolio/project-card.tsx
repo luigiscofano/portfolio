@@ -133,7 +133,7 @@ export function ProjectCard({
             {t('Repositório')}
           </a>
         ) : (
-          <span>{t('Código privado')}</span>
+          <span>{t('Vitrine do projeto')}</span>
         )}
         {project.demo && (
           <a href={project.demo} {...external}>
