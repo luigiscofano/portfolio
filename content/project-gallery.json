@@ -536,14 +536,14 @@
     "projectId": "mare-miuda",
     "image": "/images/projects/mare-miuda/porto.png",
     "width": 1600,
-    "height": 900,
+    "height": 848,
     "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/porto.png",
     "caption": {
-      "pt": "Porto de Partida na edição Sem Direcional: captura do jogo em execução, com tipografia legível nos controles e a marca original em pixel art.",
-      "en": "Departure Harbour in the No Directional Pad edition: a live gameplay screenshot, with readable control labels and the original pixel-art logo.",
-      "es": "Puerto de Partida en la edición sin cruceta: captura del juego en ejecución, con etiquetas legibles y la marca original en pixel art."
+      "pt": "Tela inicial completa do Porto de Partida, com controles em tipografia legível e sem a barra inferior de idioma.",
+      "en": "Full Departure Harbour title screen, with readable control labels and without the bottom language bar.",
+      "es": "Pantalla inicial completa del Puerto de Partida, con etiquetas legibles y sin la barra inferior de idioma."
     },
-    "crop": "menu"
+    "showFullSize": true
   },
   {
     "projectId": "mare-miuda",

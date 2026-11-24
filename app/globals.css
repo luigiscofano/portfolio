@@ -1991,23 +1991,7 @@ nav a > .icon {
   image-rendering: pixelated;
 }
 
-/* Enquadra o menu (265 × 236 px do PNG original), sem reamostrar o arquivo. */
-.project-capture-menu {
-  position: relative;
-  aspect-ratio: 265 / 236;
-  max-width: 500px;
-  overflow: hidden;
-}
-.project-gallery-items .project-capture-menu img {
-  position: absolute;
-  width: 603.7736%;
-  max-width: none;
-  left: -364.5283%;
-  top: -57.6271%;
-  border: 0;
-}
-
 /* A captura do Porto usa texto de interface suave; não aplique o filtro dos tabuleiros. */
-#projeto-mare-miuda .project-capture-menu img {
+#projeto-mare-miuda .project-capture-full img {
   image-rendering: auto;
 }
