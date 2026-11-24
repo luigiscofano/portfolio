@@ -43,8 +43,8 @@ export function ProjectGallery({
               className={
                 item.crop === 'top'
                   ? 'project-capture-top'
-                  : item.crop === 'menu'
-                    ? 'project-capture-menu'
+                  : item.showFullSize
+                    ? 'project-capture-full'
                     : undefined
               }
             >
@@ -59,7 +59,7 @@ export function ProjectGallery({
             </div>
             <figcaption>
               {item.caption[language]}{' '}
-              {item.crop === 'menu' && (
+              {item.showFullSize && (
                 <>
                   <a href={sitePath(item.image)} {...externalLink}>
                     {labels[2]}

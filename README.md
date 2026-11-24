@@ -175,7 +175,7 @@ Veja [fontes e manutenção da galeria](docs/MIUDEZAS.md) e o [código do jogo](
 <details>
 <summary>Expandir Maré Miúda</summary>
 
-A [vitrine do projeto](https://luigiscofano.github.io/portfolio/#projeto-mare-miuda) apresenta 8 mundos e 231 fases, com textos PT/EN/ES. O jogo possui alternância local PT/EN. Marca e cinco imagens autorizadas seguem a apresentação compacta dos demais cartões; a galeria explica a origem de cada imagem, aproxima os controles legíveis do Porto da edição Sem Direcional e oferece o PNG completo. O estudo de caso documenta as regras e a implementação. O botão Repositório abre o [código público do projeto](https://github.com/luigiscofano/mare-miuda-entre-ilhas). O portfólio não hospeda código, edição jogável ou vídeo completo do jogo.
+A [vitrine do projeto](https://luigiscofano.github.io/portfolio/#projeto-mare-miuda) apresenta 8 mundos e 231 fases, com textos PT/EN/ES. O jogo possui alternância local PT/EN. Marca e cinco imagens autorizadas seguem a apresentação compacta dos demais cartões; a galeria explica a origem de cada imagem, exibe a tela inicial inteira do Porto da edição Sem Direcional, sem a barra de idiomas, e oferece o mesmo PNG em tamanho original. O estudo de caso documenta as regras e a implementação. O botão Repositório abre o [código público do projeto](https://github.com/luigiscofano/mare-miuda-entre-ilhas). O portfólio não hospeda código, edição jogável ou vídeo completo do jogo.
 
 Veja [escopo, fontes e manutenção](docs/MARE-MIUDA.md).
 

@@ -39,7 +39,7 @@ test('only the approved original PNGs are published and captions explain their o
     'mundo-01-baixa.png':
       '3f93a690085c916b244a9dbab60b8fa423bd8a0a5403a07e013b9900f277e8b8',
     'porto.png':
-      'd2e9d3b99193b52af04489b5651fff82000a3d357c487ad411d7bf380c8ad48f',
+      '869fa07cba248162ca8994a43a95c69755f1f1ed3a834429400b946c80b88415',
     'logo-oficial.png':
       '3d96700e26c84adb3d222ade23c741fea37a3828606e415c5a949eec8e762e7c',
     'mundo-01-alta.png':
@@ -63,7 +63,10 @@ test('only the approved original PNGs are published and captions explain their o
     (p) => p.projectId === 'mare-miuda',
   );
   assert.equal(gallery.length, 5);
-  assert.equal(gallery[0].crop, 'menu');
+  assert.equal(gallery[0].crop, undefined);
+  assert.equal(gallery[0].showFullSize, true);
+  assert.equal(gallery[0].width, 1600);
+  assert.equal(gallery[0].height, 848);
   const porto = fs.readFileSync(dir + 'porto.png');
   assert.equal(porto.readUInt32BE(16), gallery[0].width);
   assert.equal(porto.readUInt32BE(20), gallery[0].height);
@@ -74,8 +77,8 @@ test('only the approved original PNGs are published and captions explain their o
     for (const lang of ['pt', 'en', 'es'])
       assert.ok(item.caption[lang].length > 50);
   }
-  assert.match(gallery[0].caption.pt, /captura do jogo em execução/);
-  assert.match(gallery[0].caption.en, /live gameplay screenshot/);
+  assert.match(gallery[0].caption.pt, /sem a barra inferior de idioma/);
+  assert.match(gallery[0].caption.en, /without the bottom language bar/);
   assert.ok(
     gallery.every(
       (item) =>
@@ -86,12 +89,13 @@ test('only the approved original PNGs are published and captions explain their o
   );
 });
 
-test('the close-up keeps the original image reachable and the case study is localized', () => {
+test('the full image stays reachable without the language bar and the case study is localized', () => {
   const gallery = fs.readFileSync(
     'components/portfolio/project-gallery.tsx',
     'utf8',
   );
   assert.match(gallery, /Abrir PNG completo/);
+  assert.doesNotMatch(gallery, /project-capture-menu/);
   assert.match(gallery, /href=\{sitePath\(item.image\)\}/);
   for (const locale of ['pt', 'en', 'es']) {
     const rows = read('content/project-cases.json')[locale]['mare-miuda'];
