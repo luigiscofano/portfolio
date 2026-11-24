@@ -2006,8 +2006,3 @@ nav a > .icon {
   top: -47.73%;
   border: 0;
 }
-.resource-links .showcase-repository {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}

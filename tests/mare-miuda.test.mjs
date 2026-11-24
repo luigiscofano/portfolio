@@ -10,8 +10,10 @@ test('Maré keeps its playable release separate from the multilingual showcase',
     const project = read(`content/portfolio${suffix}.json`).projects.find(
       (p) => p.id === 'mare-miuda',
     );
-    assert.equal(project.sourceAccess, 'showcase');
-    assert.equal(project.url, '');
+    assert.equal(
+      project.url,
+      'https://github.com/luigiscofano/mare-miuda-entre-ilhas',
+    );
     assert.equal(project.demo, '');
     assert.equal(project.showImagePreview, false);
     assert.equal(project.imageKind, 'logo');
@@ -29,7 +31,7 @@ test('Maré keeps its playable release separate from the multilingual showcase',
   const card = fs.readFileSync('components/portfolio/project-card.tsx', 'utf8');
   assert.match(card, /id=\{`projeto-\$\{project.id\}`\}/);
   assert.match(card, /project.url \?/);
-  assert.match(card, /Acesso restrito/);
+  assert.match(card, /Repositório/);
 });
 
 test('only the approved original PNGs are published and captions explain their origin', () => {
@@ -71,18 +73,14 @@ test('only the approved original PNGs are published and captions explain their o
   }
   assert.match(gallery[0].caption.pt, /não uma captura de execução/);
   assert.match(gallery[0].caption.en, /not a runtime screenshot/);
-  for (const file of [
-    'portfolio.json',
-    'portfolio.en.json',
-    'portfolio.es.json',
-    'project-gallery.json',
-  ]) {
-    assert.ok(
-      !fs
-        .readFileSync('content/' + file, 'utf8')
-        .includes('github.com/luigiscofano/mare-miuda-entre-ilhas'),
-    );
-  }
+  assert.ok(
+    gallery.every(
+      (item) =>
+        !item.source.includes(
+          'https://github.com/luigiscofano/mare-miuda-entre-ilhas',
+        ),
+    ),
+  );
 });
 
 test('the close-up keeps the original image reachable and the case study is localized', () => {
