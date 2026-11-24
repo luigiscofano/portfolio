@@ -1993,5 +1993,6 @@ nav a > .icon {
 
 /* A captura do Porto usa texto de interface suave; não aplique o filtro dos tabuleiros. */
 #projeto-mare-miuda .project-capture-full img {
+  border: 0;
   image-rendering: auto;
 }

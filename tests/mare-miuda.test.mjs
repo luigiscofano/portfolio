@@ -39,7 +39,7 @@ test('only the approved original PNGs are published and captions explain their o
     'mundo-01-baixa.png':
       '3f93a690085c916b244a9dbab60b8fa423bd8a0a5403a07e013b9900f277e8b8',
     'porto.png':
-      '869fa07cba248162ca8994a43a95c69755f1f1ed3a834429400b946c80b88415',
+      'cd1471917edf99cb6a618cbe5347046fe725f80c6903c10179ee76131ecbe3ec',
     'logo-oficial.png':
       '3d96700e26c84adb3d222ade23c741fea37a3828606e415c5a949eec8e762e7c',
     'mundo-01-alta.png':
@@ -65,8 +65,8 @@ test('only the approved original PNGs are published and captions explain their o
   assert.equal(gallery.length, 5);
   assert.equal(gallery[0].crop, undefined);
   assert.equal(gallery[0].showFullSize, true);
-  assert.equal(gallery[0].width, 1600);
-  assert.equal(gallery[0].height, 848);
+  assert.equal(gallery[0].width, 960);
+  assert.equal(gallery[0].height, 540);
   const porto = fs.readFileSync(dir + 'porto.png');
   assert.equal(porto.readUInt32BE(16), gallery[0].width);
   assert.equal(porto.readUInt32BE(20), gallery[0].height);
@@ -77,8 +77,14 @@ test('only the approved original PNGs are published and captions explain their o
     for (const lang of ['pt', 'en', 'es'])
       assert.ok(item.caption[lang].length > 50);
   }
-  assert.match(gallery[0].caption.pt, /sem a barra inferior de idioma/);
-  assert.match(gallery[0].caption.en, /without the bottom language bar/);
+  assert.match(
+    gallery[0].caption.pt,
+    /sem margens externas nem barra de idioma/,
+  );
+  assert.match(
+    gallery[0].caption.en,
+    /without outer margins or a language bar/,
+  );
   assert.ok(
     gallery.every(
       (item) =>

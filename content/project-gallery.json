@@ -535,13 +535,13 @@
   {
     "projectId": "mare-miuda",
     "image": "/images/projects/mare-miuda/porto.png",
-    "width": 1600,
-    "height": 848,
+    "width": 960,
+    "height": 540,
     "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/porto.png",
     "caption": {
-      "pt": "Tela inicial completa do Porto de Partida, com controles em tipografia legível e sem a barra inferior de idioma.",
-      "en": "Full Departure Harbour title screen, with readable control labels and without the bottom language bar.",
-      "es": "Pantalla inicial completa del Puerto de Partida, con etiquetas legibles y sin la barra inferior de idioma."
+      "pt": "Tela inicial completa do Porto de Partida, com controles em tipografia legível, sem margens externas nem barra de idioma.",
+      "en": "Full Departure Harbour title screen, with readable control labels, without outer margins or a language bar.",
+      "es": "Pantalla inicial completa del Puerto de Partida, con etiquetas legibles, sin márgenes externos ni barra de idioma."
     },
     "showFullSize": true
   },
