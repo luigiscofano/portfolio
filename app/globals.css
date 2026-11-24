@@ -1990,3 +1990,24 @@ nav a > .icon {
 #projeto-mare-miuda .project-gallery img {
   image-rendering: pixelated;
 }
+
+/* Enquadra o menu (500 × 440 px do PNG original), sem reamostrar o arquivo. */
+.project-capture-menu {
+  position: relative;
+  aspect-ratio: 500 / 440;
+  max-width: 500px;
+  overflow: hidden;
+}
+.project-gallery-items .project-capture-menu img {
+  position: absolute;
+  width: 320%;
+  max-width: none;
+  left: -208%;
+  top: -47.73%;
+  border: 0;
+}
+.resource-links .showcase-repository {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

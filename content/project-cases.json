@@ -80,6 +80,28 @@
         "text": "Não há treinamento de modelos próprios nem OCR para reconhecer palavras escritas no ar. Os testes documentados usam dados sintéticos e fotos, sem validação com webcam física; não são uma medição de desempenho ao vivo.",
         "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
       }
+    ],
+    "mare-miuda": [
+      {
+        "title": "Problema",
+        "text": "Fazer a maré mudar as rotas de um quebra-cabeça sem depender de reflexos.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Minha contribuição",
+        "text": "Desenhei a regra de três movimentos, a progressão de 231 fases, o visual em pixel art e a interface de teclado e toque.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Decisões técnicas",
+        "text": "JavaScript valida movimentos e atualiza a maré a cada três passos válidos. Canvas 2D desenha o tabuleiro; caminho firme e baixio se distinguem também por textura.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Verificação e limites",
+        "text": "A documentação do jogo registra soluções executadas para as 231 fases. Esta vitrine mostra quadros do motor oficial, mas não hospeda a edição jogável.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      }
     ]
   },
   "en": {
@@ -163,6 +185,28 @@
         "text": "No custom models are trained, and there is no OCR for recognizing words written in the air. The documented tests use synthetic data and photos, with no physical webcam validation; they do not measure live performance.",
         "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
       }
+    ],
+    "mare-miuda": [
+      {
+        "title": "Problem",
+        "text": "Make the tide change the available routes in a puzzle without relying on reflexes.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "My contribution",
+        "text": "I designed the three-move rule, the progression across 231 levels, the pixel-art identity, and the keyboard and touch interface.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Technical decisions",
+        "text": "JavaScript validates movement and updates the tide every three valid steps. Canvas 2D renders the board; texture also distinguishes dry ground from shallows.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Verification and limitations",
+        "text": "The game documentation records executed solutions for all 231 levels. This showcase includes frames from the official renderer but does not host the playable edition.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      }
     ]
   },
   "es": {
@@ -245,6 +289,28 @@
         "title": "Limitaciones",
         "text": "No se entrenan modelos propios ni hay OCR para reconocer palabras escritas en el aire. Las pruebas documentadas usan datos sintéticos y fotos, sin validación con una webcam física; no son una medición del rendimiento en directo.",
         "url": "https://github.com/luigiscofano/gesturelab/blob/main/docs/VALIDACAO.md"
+      }
+    ],
+    "mare-miuda": [
+      {
+        "title": "Problema",
+        "text": "Hacer que la marea cambie las rutas de un rompecabezas sin depender de los reflejos.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Mi contribución",
+        "text": "Diseñé la regla de tres movimientos, la progresión de 231 niveles, la identidad de pixel art y los controles por teclado y tacto.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Decisiones técnicas",
+        "text": "JavaScript valida los movimientos y actualiza la marea cada tres pasos válidos. Canvas 2D dibuja el tablero; la textura también distingue la tierra firme del bajío.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
+      },
+      {
+        "title": "Verificación y límites",
+        "text": "La documentación registra soluciones ejecutadas para los 231 niveles. Esta presentación incluye cuadros del motor oficial, pero no aloja la edición jugable.",
+        "url": "https://github.com/luigiscofano/portfolio/blob/main/docs/MARE-MIUDA.md"
       }
     ]
   }
