@@ -11,9 +11,13 @@ export function ProjectGallery({
 }) {
   const items = gallery.filter((item) => item.projectId === projectId);
   const labels = {
-    pt: ['Imagens reais do projeto', 'Fonte da imagem'],
-    en: ['Actual project images', 'Image source'],
-    es: ['Imágenes reales del proyecto', 'Fuente de la imagen'],
+    pt: ['Imagens reais do projeto', 'Fonte da imagem', 'Abrir PNG completo'],
+    en: ['Actual project images', 'Image source', 'Open full-size PNG'],
+    es: [
+      'Imágenes reales del proyecto',
+      'Fuente de la imagen',
+      'Abrir PNG completo',
+    ],
   }[language];
   return (
     <details className="project-details project-gallery">
@@ -37,7 +41,11 @@ export function ProjectGallery({
           <figure key={item.image}>
             <div
               className={
-                item.crop === 'top' ? 'project-capture-top' : undefined
+                item.crop === 'top'
+                  ? 'project-capture-top'
+                  : item.crop === 'menu'
+                    ? 'project-capture-menu'
+                    : undefined
               }
             >
               <img
@@ -51,6 +59,14 @@ export function ProjectGallery({
             </div>
             <figcaption>
               {item.caption[language]}{' '}
+              {item.crop === 'menu' && (
+                <>
+                  <a href={sitePath(item.image)} {...externalLink}>
+                    {labels[2]}
+                  </a>
+                  {' · '}
+                </>
+              )}
               <a href={item.source} {...externalLink}>
                 {labels[1]}
               </a>

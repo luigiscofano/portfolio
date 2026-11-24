@@ -133,7 +133,10 @@ export function ProjectCard({
             {t('Repositório')}
           </a>
         ) : (
-          <span>{t('Vitrine do projeto')}</span>
+          <span className="showcase-repository">
+            <Icon name="github" size={15} />
+            {t('Repositório')} · {t('Acesso restrito')}
+          </span>
         )}
         {project.demo && (
           <a href={project.demo} {...external}>

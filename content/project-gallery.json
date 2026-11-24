@@ -542,7 +542,8 @@
       "pt": "Porto de Partida: quadro de divulgação recomposto com a arte e o estado real da interface, não uma captura de execução.",
       "en": "Departure Harbour: promotional frame recomposed from the actual interface artwork and state, not a runtime screenshot.",
       "es": "Puerto de Partida: cuadro promocional recompuesto con el arte y el estado real de la interfaz, no una captura de ejecución."
-    }
+    },
+    "crop": "menu"
   },
   {
     "projectId": "mare-miuda",
@@ -554,6 +555,42 @@
       "pt": "Praia das Conchas: quadro em maré baixa produzido pelo motor e pela câmera oficiais. A água muda após três movimentos válidos.",
       "en": "Shell Beach: low-tide frame produced by the official renderer and camera. The water changes after three valid moves.",
       "es": "Playa de las Conchas: cuadro en marea baja generado por el motor y la cámara oficiales. El agua cambia tras tres movimientos válidos."
+    }
+  },
+  {
+    "projectId": "mare-miuda",
+    "image": "/images/projects/mare-miuda/mundo-01-alta.png",
+    "width": 1200,
+    "height": 808,
+    "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/mundo-01-alta.png",
+    "caption": {
+      "pt": "Praia das Conchas após três movimentos válidos: a maré alta cobre o baixio. Quadro do motor oficial.",
+      "en": "Shell Beach after three valid moves: high tide covers the shallows. Frame from the official game renderer.",
+      "es": "Playa de las Conchas tras tres movimientos válidos: la marea alta cubre el bajío. Cuadro del motor oficial."
+    }
+  },
+  {
+    "projectId": "mare-miuda",
+    "image": "/images/projects/mare-miuda/mundo-04-baixa.png",
+    "width": 1200,
+    "height": 808,
+    "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/mundo-04-baixa.png",
+    "caption": {
+      "pt": "Enseada da Garça em maré baixa: juncos e áreas de areia cercam a travessia. Quadro do motor oficial.",
+      "en": "Heron Cove at low tide: reeds and sandy ground frame the crossing. Frame from the official game renderer.",
+      "es": "Ensenada de la Garza en marea baja: juncos y arena rodean la travesía. Cuadro del motor oficial."
+    }
+  },
+  {
+    "projectId": "mare-miuda",
+    "image": "/images/projects/mare-miuda/mundo-08-baixa.png",
+    "width": 1200,
+    "height": 808,
+    "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/mundo-08-baixa.png",
+    "caption": {
+      "pt": "Arquipélago do Farol em maré baixa: uma travessia do oitavo mundo. Quadro do motor oficial.",
+      "en": "Lighthouse Archipelago at low tide: a crossing from world eight. Frame from the official game renderer.",
+      "es": "Archipiélago del Faro en marea baja: una travesía del octavo mundo. Cuadro del motor oficial."
     }
   }
 ]
