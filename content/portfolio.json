@@ -134,6 +134,37 @@
       "imageKind": "logo"
     },
     {
+      "id": "mare-miuda",
+      "name": "Maré Miúda: Entre Ilhas",
+      "subtitle": "Quebra-cabeça por turnos em pixel art",
+      "category": "Software",
+      "type": "Projeto pessoal · Edição offline",
+      "featured": false,
+      "summary": "Planeje a travessia do Siri em 8 mundos e 231 fases: a maré muda a cada três movimentos válidos. Edição offline com teclado, toque e troca local entre português e inglês.",
+      "technologies": [
+        "JavaScript",
+        "Canvas 2D",
+        "HTML/CSS",
+        "Python",
+        "Node.js"
+      ],
+      "details": "Campanha com 200 fases regulares, 16 chefes opcionais e 15 bônus. A Ilha de Improviso oferece fases avulsas com filtros próprios. A interface inclui mapa em texto, avisos para leitores de tela e preferência de movimento reduzido.",
+      "contribution": "Projeto autoral de Luigi Scofano de Araujo: regras, progressão da campanha, implementação, identidade visual em pixel art, interface e áudio. JavaScript organiza os turnos e Canvas 2D desenha o tabuleiro; Python monta a edição offline.",
+      "limitation": "O jogo completo não é hospedado neste portfólio. A vitrine apresenta somente a marca e dois quadros autorizados, sem vídeo completo nem download do jogo. A troca PT/EN não reinicia a partida; ao reabrir ou recarregar normalmente, o jogo começa em português. Progresso e preferências ficam no navegador, sem conta ou sincronização.",
+      "url": "",
+      "demo": "",
+      "demoLabel": "",
+      "image": "/images/projects/mare-miuda/logo-oficial.png",
+      "imageAlt": "Logo oficial de Maré Miúda: Entre Ilhas, com Siri Coral sobre placa de areia",
+      "caption": "Marca original do projeto. Todos os direitos reservados.",
+      "imageSource": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/logo-oficial.png",
+      "showImagePreview": false,
+      "imageWidth": 180,
+      "imageHeight": 94,
+      "imageKind": "logo",
+      "sourceAccess": "showcase"
+    },
+    {
       "id": "tupi",
       "name": "IC · Tupi Antigo",
       "subtitle": "Da fonte histórica ao dado",

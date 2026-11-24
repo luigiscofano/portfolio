@@ -134,6 +134,37 @@
       "imageKind": "logo"
     },
     {
+      "id": "mare-miuda",
+      "name": "Maré Miúda: Entre Ilhas",
+      "subtitle": "Rompecabezas por turnos en pixel art",
+      "category": "Software",
+      "type": "Proyecto personal · Edición sin conexión",
+      "featured": false,
+      "summary": "Planifica la travesía del cangrejo por 8 mundos y 231 niveles: la marea cambia cada tres movimientos válidos. Edición sin conexión con teclado, controles táctiles y cambio local entre portugués e inglés.",
+      "technologies": [
+        "JavaScript",
+        "Canvas 2D",
+        "HTML/CSS",
+        "Python",
+        "Node.js"
+      ],
+      "details": "La campaña contiene 200 niveles regulares, 16 jefes opcionales y 15 niveles de bonificación. La Isla de Improvisación ofrece niveles independientes con filtros propios. La interfaz incluye un mapa en texto, avisos para lectores de pantalla y movimiento reducido.",
+      "contribution": "Proyecto original de Luigi Scofano de Araujo: reglas, progresión de campaña, implementación, identidad en pixel art, interfaz y audio. JavaScript organiza los turnos y Canvas 2D dibuja el tablero; Python genera la edición sin conexión.",
+      "limitation": "El juego completo no se aloja en este portafolio. Esta presentación comparte solo la marca y dos cuadros autorizados, sin vídeo completo ni descarga del juego. Cambiar PT/EN no reinicia la partida; al volver a abrir o recargar normalmente, el juego empieza en portugués. El progreso y las preferencias quedan en el navegador, sin cuenta ni sincronización. El juego no tiene edición en español.",
+      "url": "",
+      "demo": "",
+      "demoLabel": "",
+      "image": "/images/projects/mare-miuda/logo-oficial.png",
+      "imageAlt": "Marca oficial de Maré Miúda: Entre Ilhas, con Siri Coral sobre un cartel de arena",
+      "caption": "Marca original del proyecto. Todos los derechos reservados.",
+      "imageSource": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/logo-oficial.png",
+      "showImagePreview": false,
+      "imageWidth": 180,
+      "imageHeight": 94,
+      "imageKind": "logo",
+      "sourceAccess": "showcase"
+    },
+    {
       "id": "tupi",
       "name": "IC · Tupi Antigo",
       "subtitle": "De la fuente histórica al dato",

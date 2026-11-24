@@ -37,6 +37,7 @@ export function ProjectCard({
     : null;
   return (
     <article
+      id={`projeto-${project.id}`}
       className="resource-card"
       style={
         {
@@ -110,10 +111,14 @@ export function ProjectCard({
         <span>{project.type}</span>
       </div>
       <h3>
-        <a href={project.url} {...external}>
-          {project.name}
-          <ExternalIcon />
-        </a>
+        {project.url ? (
+          <a href={project.url} {...external}>
+            {project.name}
+            <ExternalIcon />
+          </a>
+        ) : (
+          project.name
+        )}
       </h3>
       <p>{project.summary}</p>
       <ul className="tags" aria-label={t('Tecnologias')}>
@@ -122,10 +127,14 @@ export function ProjectCard({
         ))}
       </ul>
       <div className="resource-links">
-        <a href={project.url} {...external}>
-          <Icon name="github" size={15} />
-          {t('Repositório')}
-        </a>
+        {project.url ? (
+          <a href={project.url} {...external}>
+            <Icon name="github" size={15} />
+            {t('Repositório')}
+          </a>
+        ) : (
+          <span>{t('Vitrine do projeto')}</span>
+        )}
         {project.demo && (
           <a href={project.demo} {...external}>
             {project.demoLabel}

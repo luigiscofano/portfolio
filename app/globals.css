@@ -1976,3 +1976,17 @@ nav a > .icon {
 .projects-intro {
   font-weight: 700;
 }
+
+/* A marca mantém a grade nativa; a âncora respeita o cabeçalho fixo. */
+.resource-card[id] {
+  scroll-margin-top: 90px;
+}
+#projeto-mare-miuda .project-logo img {
+  width: 180px;
+  height: 94px;
+  max-width: 100%;
+  image-rendering: pixelated;
+}
+#projeto-mare-miuda .project-gallery img {
+  image-rendering: pixelated;
+}

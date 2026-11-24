@@ -53,7 +53,7 @@ export default function Credits() {
         {copy.items.map(([title, text], index) => (
           <li key={title}>
             <strong>{title}:</strong> {text}{' '}
-            {links[index].map((link, i) => (
+            {(links[index] ?? []).map((link, i) => (
               <span key={link.href}>
                 {i > 0 ? ' · ' : ''}
                 <a href={link.href}>{link.label}</a>
