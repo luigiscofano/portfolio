@@ -2,14 +2,61 @@
   {
     "projectId": "trilha-viva",
     "image": "/images/projects/captures/trilha-viva-painel.jpg",
-    "width": 1165,
-    "height": 747,
-    "crop": "top",
-    "source": "https://github.com/luigiscofano/trilha-viva/blob/main/docs/images/painel.jpg",
+    "width": 1348,
+    "height": 1073,
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/a1b23f08fcbb669bd60965f67d7df30ecee09ec5/src/app.mjs",
     "caption": {
-      "pt": "Recorte superior da captura real do painel, publicada na documentação do projeto.",
-      "en": "Top crop of the actual dashboard screenshot published in the project documentation.",
-      "es": "Recorte superior de la captura real del panel publicada en la documentación del proyecto."
+      "pt": "Painel do Trilha Viva com três materiais fictícios, uma sugestão para conferir e três revisões planejadas.",
+      "en": "Trilha Viva dashboard with three fictional study materials, one item awaiting review and three planned reviews.",
+      "es": "Panel de Trilha Viva con tres materiales ficticios, un contenido pendiente de revisión y tres repasos programados."
+    }
+  },
+  {
+    "projectId": "trilha-viva",
+    "image": "/images/projects/captures/trilha-viva-biblioteca.jpg",
+    "width": 1363,
+    "height": 936,
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/a1b23f08fcbb669bd60965f67d7df30ecee09ec5/src/app.mjs",
+    "caption": {
+      "pt": "Biblioteca com três materiais fictícios, campo de busca e acesso aos trechos de origem.",
+      "en": "Library with three fictional study materials, a search field and access to source excerpts.",
+      "es": "Biblioteca con tres materiales ficticios, un campo de búsqueda y acceso a los fragmentos de origen."
+    }
+  },
+  {
+    "projectId": "trilha-viva",
+    "image": "/images/projects/captures/trilha-viva-revisao.jpg",
+    "width": 1348,
+    "height": 987,
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/a1b23f08fcbb669bd60965f67d7df30ecee09ec5/src/app.mjs",
+    "caption": {
+      "pt": "Pergunta de estudo fictícia sobre fluxo de energia, com resposta, trecho de origem e opções de aceitar, editar ou descartar.",
+      "en": "Fictional study question about energy flow, with its answer, source excerpt and options to accept, edit or discard.",
+      "es": "Pregunta de estudio ficticia sobre el flujo de energía, con respuesta, fragmento de origen y opciones para aceptar, editar o descartar."
+    }
+  },
+  {
+    "projectId": "trilha-viva",
+    "image": "/images/projects/captures/trilha-viva-planejamento.jpg",
+    "width": 1363,
+    "height": 936,
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/a1b23f08fcbb669bd60965f67d7df30ecee09ec5/src/app.mjs",
+    "caption": {
+      "pt": "Plano de estudos fictício com uma tarefa para agora, duas próximas revisões e uma tarefa concluída.",
+      "en": "Fictional study plan with one current task, two upcoming reviews and one completed task.",
+      "es": "Plan de estudio ficticio con una tarea actual, dos próximos repasos y una tarea completada."
+    }
+  },
+  {
+    "projectId": "trilha-viva",
+    "image": "/images/projects/captures/trilha-viva-historico.jpg",
+    "width": 1363,
+    "height": 936,
+    "source": "https://github.com/luigiscofano/trilha-viva/blob/a1b23f08fcbb669bd60965f67d7df30ecee09ec5/src/app.mjs",
+    "caption": {
+      "pt": "Histórico real de quatro ações realizadas com dados fictícios: salvar e aceitar uma anotação, concluir uma tarefa e criar outra.",
+      "en": "Actual history of four actions performed with fictional data: saving and accepting a note, completing one task and creating another.",
+      "es": "Historial real de cuatro acciones realizadas con datos ficticios: guardar y aceptar una nota, completar una tarea y crear otra."
     }
   },
   {
