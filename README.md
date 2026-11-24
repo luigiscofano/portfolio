@@ -43,9 +43,9 @@ npm start
 - `public/images/`: imagens locais. Os JSONs usam caminhos como `/images/foto.jpg`; a aplicação acrescenta o prefixo `/portfolio`.
 - `public/documents/`: currículos português e inglês em PDF. O DOCX português sanitizado permanece preservado no repositório, sem ser o download principal. O PDF inglês é uma tradução da edição portuguesa de novembro de 2026. Não atualize datas ou conteúdos por inferência.
 
-Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual reúne 15 projetos públicos, com busca sem distinção de acentos e filtros por área. Imagens, autoria e limites são acessíveis em detalhes expansíveis. Veja a [reformulação editorial e suas fontes](docs/REFORMULACAO-EDITORIAL.md).
+Ao incluir um projeto, mantenha um `id` único, autoria e limitações explícitas, links verificáveis e uma das categorias internas `IA`, `Dados`, `Software` ou `Hardware`. Revise também a apresentação de ícones/cores e os destaques quando necessário. O catálogo atual reúne 16 projetos, incluindo uma vitrine de projeto privado, com busca sem distinção de acentos e filtros por área. Imagens, autoria e limites são acessíveis em detalhes expansíveis. Veja a [reformulação editorial e suas fontes](docs/REFORMULACAO-EDITORIAL.md).
 
-`showImagePreview` permanece desativado nos cartões: não mostramos mockups de interfaces. A pedido do autor, capturas reais e resultados verificáveis ficam em uma galeria expansível separada (`content/project-gallery.json`), com origem e legendas PT/EN/ES. Veja [galeria real e limites](docs/GALERIA-REAL.md). Logos próprias verificadas (Intuição, Pokédex, GestureLab, Trilha Viva e Miudezas) aparecem primeiro nos cartões; gráficos, capas e diagramas documentais permanecem nos detalhes. `imageKind` distingue `logo`, `document` e `none`. Quando não há arte adequada, `imageOmissionReason` registra o motivo, sem inventar uma marca. A logo B/Páginas do Trilha Viva usa o mesmo recorte CSS do projeto de origem.
+`showImagePreview` permanece desativado nos cartões: não mostramos mockups de interfaces. A pedido do autor, capturas reais e resultados verificáveis ficam em uma galeria expansível separada (`content/project-gallery.json`), com origem e legendas PT/EN/ES. Veja [galeria real e limites](docs/GALERIA-REAL.md). Logos próprias verificadas (Intuição, Pokédex, GestureLab, Trilha Viva, Miudezas e Maré Miúda) aparecem primeiro nos cartões; gráficos, capas e diagramas documentais permanecem nos detalhes. `imageKind` distingue `logo`, `document` e `none`. Quando não há arte adequada, `imageOmissionReason` registra o motivo, sem inventar uma marca. A logo B/Páginas do Trilha Viva usa o mesmo recorte CSS do projeto de origem.
 
 A foto atual é `public/images/luigi-original.jpg`, original de 1152 × 1536 px, enquadrado por CSS. `profile.nameSprite.enabled` está desativado nos três idiomas: o bem-te-vi não aparece junto ao nome. A assinatura independente com folhas permanece habilitada por `visualSignature`, na lateral e no rodapé. Ativos e créditos históricos foram preservados.
 
@@ -167,5 +167,16 @@ O [Miudezas](https://luigiscofano.github.io/Miudezas/) integra o catálogo nos t
 ![Marca do Miudezas](public/images/projects/miudezas-logo.png)
 
 Veja [fontes e manutenção da galeria](docs/MIUDEZAS.md) e o [código do jogo](https://github.com/luigiscofano/Miudezas).
+
+</details>
+
+## Maré Miúda: Entre Ilhas
+
+<details>
+<summary>Expandir Maré Miúda</summary>
+
+A [vitrine do projeto](https://luigiscofano.github.io/portfolio/#projeto-mare-miuda) apresenta 8 mundos e 231 fases, com textos PT/EN/ES. O jogo possui alternância local PT/EN. Marca e dois quadros autorizados seguem a apresentação compacta dos demais cartões; a galeria explica a origem de cada imagem. Código, edição jogável e vídeo completo não são publicados.
+
+Veja [escopo, fontes e manutenção](docs/MARE-MIUDA.md).
 
 </details>

@@ -24,11 +24,13 @@ test('complete distinct catalog and required truthful content', () => {
       'details',
       'contribution',
       'limitation',
-      'url',
     ])
       assert.ok(p[key], `${p.id}.${key}`);
     assert.ok(['IA', 'Dados', 'Software', 'Hardware'].includes(p.category));
-    assert.ok(p.url.startsWith('https://github.com/luigiscofano/'));
+    if (p.sourceAccess === 'private') {
+      assert.equal(p.url, '');
+      assert.equal(p.demo, '');
+    } else assert.ok(p.url.startsWith('https://github.com/luigiscofano/'));
   }
 });
 test('all referenced local images exist and have descriptions', () => {

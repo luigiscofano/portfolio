@@ -484,5 +484,29 @@
       "en": "Music and sound effect settings. Actual desktop screenshot, without a cursor.",
       "es": "Configuración de música y efectos sonoros. Captura real de escritorio, sin cursor."
     }
+  },
+  {
+    "projectId": "mare-miuda",
+    "image": "/images/projects/mare-miuda/porto.png",
+    "width": 1600,
+    "height": 900,
+    "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/porto.png",
+    "caption": {
+      "pt": "Porto de Partida: quadro de divulgação recomposto com a arte e o estado real da interface, não uma captura de execução.",
+      "en": "Departure Harbour: promotional frame recomposed from the actual interface artwork and state, not a runtime screenshot.",
+      "es": "Puerto de Partida: cuadro promocional recompuesto con el arte y el estado real de la interfaz, no una captura de ejecución."
+    }
+  },
+  {
+    "projectId": "mare-miuda",
+    "image": "/images/projects/mare-miuda/mundo-01-baixa.png",
+    "width": 1200,
+    "height": 808,
+    "source": "https://github.com/luigiscofano/portfolio/blob/main/public/images/projects/mare-miuda/mundo-01-baixa.png",
+    "caption": {
+      "pt": "Praia das Conchas: quadro em maré baixa produzido pelo motor e pela câmera oficiais. A água muda após três movimentos válidos.",
+      "en": "Shell Beach: low-tide frame produced by the official renderer and camera. The water changes after three valid moves.",
+      "es": "Playa de las Conchas: cuadro en marea baja generado por el motor y la cámara oficiales. El agua cambia tras tres movimientos válidos."
+    }
   }
 ]
